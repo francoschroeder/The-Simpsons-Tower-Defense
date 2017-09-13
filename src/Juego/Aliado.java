@@ -1,5 +1,5 @@
 package Juego;
 
-public abstract class Aliado {
-	int costo;
+public abstract class Aliado extends Personaje {
+	int costo; 
 }

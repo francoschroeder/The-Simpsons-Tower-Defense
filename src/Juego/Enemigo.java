@@ -1,5 +1,5 @@
 package Juego;
 
-public abstract class Enemigo {
+public abstract class Enemigo extends Personaje {
 	
 }
