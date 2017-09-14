@@ -29,7 +29,7 @@ public abstract class Enemigo extends Personaje {
 		maxMonedas = m;
 	}
 	
-	public void atacar(Personaje p) {
+	public void atacar(Enemigo p) {
 		p.reducirVida(getAtaque());		
 	}
 	

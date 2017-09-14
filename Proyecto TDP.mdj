@@ -83,7 +83,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 39,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -109,7 +113,7 @@
 											"containerExtending": false,
 											"left": 496,
 											"top": -16,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -155,7 +159,11 @@
 									"containerExtending": false,
 									"left": 408,
 									"top": 32,
+<<<<<<< Updated upstream
 									"width": 140.431640625,
+=======
+									"width": 140.01904296875,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -201,7 +209,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 62,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -230,7 +242,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 77,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -259,7 +275,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 92,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -280,7 +300,11 @@
 									"containerExtending": false,
 									"left": 408,
 									"top": 57,
+<<<<<<< Updated upstream
 									"width": 140.431640625,
+=======
+									"width": 140.01904296875,
+>>>>>>> Stashed changes
 									"height": 53,
 									"autoResize": false
 								},
@@ -314,7 +338,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 115,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -343,7 +371,11 @@
 											"containerExtending": false,
 											"left": 413,
 											"top": 130,
+<<<<<<< Updated upstream
 											"width": 130.431640625,
+=======
+											"width": 130.01904296875,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -364,7 +396,11 @@
 									"containerExtending": false,
 									"left": 408,
 									"top": 110,
+<<<<<<< Updated upstream
 									"width": 140.431640625,
+=======
+									"width": 140.01904296875,
+>>>>>>> Stashed changes
 									"height": 38,
 									"autoResize": false
 								},
@@ -428,7 +464,11 @@
 							"containerExtending": false,
 							"left": 408,
 							"top": 32,
+<<<<<<< Updated upstream
 							"width": 140.431640625,
+=======
+							"width": 140.01904296875,
+>>>>>>> Stashed changes
 							"height": 152,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -546,7 +586,7 @@
 											"containerExtending": false,
 											"left": 48,
 											"top": -74,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1008,7 +1048,7 @@
 											"containerExtending": false,
 											"left": 1196,
 											"top": -32,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1502,7 +1542,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 599,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1528,7 +1572,7 @@
 											"containerExtending": false,
 											"left": 592,
 											"top": 212,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1574,7 +1618,11 @@
 									"containerExtending": false,
 									"left": 552,
 									"top": 592,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -1620,7 +1668,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 622,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1649,7 +1701,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 637,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1678,7 +1734,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 652,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1707,7 +1767,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 667,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1736,7 +1800,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 682,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1765,7 +1833,11 @@
 											"containerExtending": false,
 											"left": 557,
 											"top": 697,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -1786,7 +1858,11 @@
 									"containerExtending": false,
 									"left": 552,
 									"top": 617,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 98,
 									"autoResize": false
 								},
@@ -1810,7 +1886,11 @@
 									"containerExtending": false,
 									"left": 552,
 									"top": 715,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -1874,7 +1954,11 @@
 							"containerExtending": false,
 							"left": 552,
 							"top": 592,
+<<<<<<< Updated upstream
 							"width": 117,
+=======
+							"width": 121.4267578125,
+>>>>>>> Stashed changes
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -2033,7 +2117,11 @@
 								"$ref": "AAAAAAFeWStwNI+irlk="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "661:591;805:401",
+=======
+							"points": "662:591;805:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -2109,7 +2197,11 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 495,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2135,7 +2227,7 @@
 											"containerExtending": false,
 											"left": -528,
 											"top": 20,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2181,7 +2273,11 @@
 									"containerExtending": false,
 									"left": 16,
 									"top": 488,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -2227,7 +2323,11 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 518,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2256,7 +2356,11 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 533,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2285,7 +2389,11 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 548,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2314,7 +2422,11 @@
 											"containerExtending": false,
 											"left": 21,
 											"top": 563,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2335,7 +2447,11 @@
 									"containerExtending": false,
 									"left": 16,
 									"top": 513,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 68,
 									"autoResize": false
 								},
@@ -2359,7 +2475,11 @@
 									"containerExtending": false,
 									"left": 16,
 									"top": 581,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -2423,7 +2543,11 @@
 							"containerExtending": false,
 							"left": 16,
 							"top": 488,
+<<<<<<< Updated upstream
 							"width": 101,
+=======
+							"width": 96.353515625,
+>>>>>>> Stashed changes
 							"height": 105,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -2582,7 +2706,11 @@
 								"$ref": "AAAAAAFeWS8dgo//U8U="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "111:487;183:401",
+=======
+							"points": "108:487;183:400",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -2658,7 +2786,11 @@
 											"containerExtending": false,
 											"left": 133,
 											"top": 495,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2684,7 +2816,7 @@
 											"containerExtending": false,
 											"left": -409.83984375,
 											"top": 20,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2730,7 +2862,11 @@
 									"containerExtending": false,
 									"left": 128,
 									"top": 488,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -2776,7 +2912,11 @@
 											"containerExtending": false,
 											"left": 133,
 											"top": 518,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2805,7 +2945,11 @@
 											"containerExtending": false,
 											"left": 133,
 											"top": 533,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2834,7 +2978,11 @@
 											"containerExtending": false,
 											"left": 133,
 											"top": 548,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2863,7 +3011,11 @@
 											"containerExtending": false,
 											"left": 133,
 											"top": 563,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -2884,7 +3036,11 @@
 									"containerExtending": false,
 									"left": 128,
 									"top": 513,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 68,
 									"autoResize": false
 								},
@@ -2908,7 +3064,11 @@
 									"containerExtending": false,
 									"left": 128,
 									"top": 581,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -2972,7 +3132,11 @@
 							"containerExtending": false,
 							"left": 128,
 							"top": 488,
+<<<<<<< Updated upstream
 							"width": 101,
+=======
+							"width": 96.353515625,
+>>>>>>> Stashed changes
 							"height": 105,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -3030,7 +3194,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 194,
+=======
+									"left": 192,
+>>>>>>> Stashed changes
 									"top": 433,
 									"width": 0,
 									"height": 13,
@@ -3064,7 +3232,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 180,
+=======
+									"left": 178,
+>>>>>>> Stashed changes
 									"top": 428,
 									"width": 0,
 									"height": 13,
@@ -3098,7 +3270,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 223,
+=======
+									"left": 221,
+>>>>>>> Stashed changes
 									"top": 442,
 									"width": 0,
 									"height": 13,
@@ -3131,7 +3307,11 @@
 								"$ref": "AAAAAAFeWS8nypA5zVs="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "195:487;223:401",
+=======
+							"points": "193:487;222:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -3207,7 +3387,11 @@
 											"containerExtending": false,
 											"left": 237,
 											"top": 495,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3233,7 +3417,7 @@
 											"containerExtending": false,
 											"left": -339.6796875,
 											"top": 20,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3279,7 +3463,11 @@
 									"containerExtending": false,
 									"left": 232,
 									"top": 488,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -3325,7 +3513,11 @@
 											"containerExtending": false,
 											"left": 237,
 											"top": 518,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3354,7 +3546,11 @@
 											"containerExtending": false,
 											"left": 237,
 											"top": 533,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3383,7 +3579,11 @@
 											"containerExtending": false,
 											"left": 237,
 											"top": 548,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3412,7 +3612,11 @@
 											"containerExtending": false,
 											"left": 237,
 											"top": 563,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3433,7 +3637,11 @@
 									"containerExtending": false,
 									"left": 232,
 									"top": 513,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 68,
 									"autoResize": false
 								},
@@ -3457,7 +3665,11 @@
 									"containerExtending": false,
 									"left": 232,
 									"top": 581,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -3521,7 +3733,11 @@
 							"containerExtending": false,
 							"left": 232,
 							"top": 488,
+<<<<<<< Updated upstream
 							"width": 101,
+=======
+							"width": 96.353515625,
+>>>>>>> Stashed changes
 							"height": 105,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -3579,7 +3795,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 252,
+=======
+									"left": 250,
+>>>>>>> Stashed changes
 									"top": 440,
 									"width": 0,
 									"height": 13,
@@ -3613,7 +3833,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 237,
+=======
+									"left": 235,
+>>>>>>> Stashed changes
 									"top": 442,
 									"width": 0,
 									"height": 13,
@@ -3647,7 +3871,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 281,
+=======
+									"left": 279,
+>>>>>>> Stashed changes
 									"top": 435,
 									"width": 0,
 									"height": 13,
@@ -3680,7 +3908,11 @@
 								"$ref": "AAAAAAFeWS8qcJBz1bU="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "274:487;260:401",
+=======
+							"points": "271:487;259:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -3756,7 +3988,11 @@
 											"containerExtending": false,
 											"left": 341,
 											"top": 495,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3782,7 +4018,7 @@
 											"containerExtending": false,
 											"left": -253.51953125,
 											"top": 20,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3828,7 +4064,11 @@
 									"containerExtending": false,
 									"left": 336,
 									"top": 488,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -3874,7 +4114,11 @@
 											"containerExtending": false,
 											"left": 341,
 											"top": 518,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3903,7 +4147,11 @@
 											"containerExtending": false,
 											"left": 341,
 											"top": 533,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3932,7 +4180,11 @@
 											"containerExtending": false,
 											"left": 341,
 											"top": 548,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3961,7 +4213,11 @@
 											"containerExtending": false,
 											"left": 341,
 											"top": 563,
+<<<<<<< Updated upstream
 											"width": 91,
+=======
+											"width": 86.353515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -3982,7 +4238,11 @@
 									"containerExtending": false,
 									"left": 336,
 									"top": 513,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 68,
 									"autoResize": false
 								},
@@ -4006,7 +4266,11 @@
 									"containerExtending": false,
 									"left": 336,
 									"top": 581,
+<<<<<<< Updated upstream
 									"width": 101,
+=======
+									"width": 96.353515625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -4070,7 +4334,11 @@
 							"containerExtending": false,
 							"left": 336,
 							"top": 488,
+<<<<<<< Updated upstream
 							"width": 101,
+=======
+							"width": 96.353515625,
+>>>>>>> Stashed changes
 							"height": 105,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -4128,7 +4396,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 311,
+=======
+									"left": 310,
+>>>>>>> Stashed changes
 									"top": 445,
 									"width": 0,
 									"height": 13,
@@ -4162,7 +4434,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 298,
+=======
+									"left": 297,
+>>>>>>> Stashed changes
 									"top": 453,
 									"width": 0,
 									"height": 13,
@@ -4196,7 +4472,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 336,
+=======
+									"left": 335,
+>>>>>>> Stashed changes
 									"top": 430,
 									"width": 0,
 									"height": 13,
@@ -4229,7 +4509,11 @@
 								"$ref": "AAAAAAFeWS8s+5CtzFs="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "352:487;297:401",
+=======
+							"points": "350:487;296:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -4305,7 +4589,11 @@
 											"containerExtending": false,
 											"left": 445,
 											"top": 495,
+<<<<<<< Updated upstream
 											"width": 99,
+=======
+											"width": 92.853515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4331,7 +4619,7 @@
 											"containerExtending": false,
 											"left": -167.359375,
 											"top": 20,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4377,7 +4665,11 @@
 									"containerExtending": false,
 									"left": 440,
 									"top": 488,
+<<<<<<< Updated upstream
 									"width": 109,
+=======
+									"width": 102.853515625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4423,7 +4715,11 @@
 											"containerExtending": false,
 											"left": 445,
 											"top": 518,
+<<<<<<< Updated upstream
 											"width": 99,
+=======
+											"width": 92.853515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4452,7 +4748,11 @@
 											"containerExtending": false,
 											"left": 445,
 											"top": 533,
+<<<<<<< Updated upstream
 											"width": 99,
+=======
+											"width": 92.853515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4481,7 +4781,11 @@
 											"containerExtending": false,
 											"left": 445,
 											"top": 548,
+<<<<<<< Updated upstream
 											"width": 99,
+=======
+											"width": 92.853515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4510,7 +4814,11 @@
 											"containerExtending": false,
 											"left": 445,
 											"top": 563,
+<<<<<<< Updated upstream
 											"width": 99,
+=======
+											"width": 92.853515625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4531,7 +4839,11 @@
 									"containerExtending": false,
 									"left": 440,
 									"top": 513,
+<<<<<<< Updated upstream
 									"width": 109,
+=======
+									"width": 102.853515625,
+>>>>>>> Stashed changes
 									"height": 68,
 									"autoResize": false
 								},
@@ -4555,7 +4867,11 @@
 									"containerExtending": false,
 									"left": 440,
 									"top": 581,
+<<<<<<< Updated upstream
 									"width": 109,
+=======
+									"width": 102.853515625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -4619,7 +4935,11 @@
 							"containerExtending": false,
 							"left": 440,
 							"top": 488,
+<<<<<<< Updated upstream
 							"width": 109,
+=======
+							"width": 102.853515625,
+>>>>>>> Stashed changes
 							"height": 105,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -4778,7 +5098,11 @@
 								"$ref": "AAAAAAFeWS9hqZDovvw="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "439:492;313:381",
+=======
+							"points": "439:494;313:382",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -4837,7 +5161,11 @@
 								"$ref": "AAAAAAFeWS8s+5CtzFs="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "386:593;385:623"
+=======
+							"points": "384:593;385:623"
+>>>>>>> Stashed changes
 						},
 						{
 							"_type": "UMLClassView",
@@ -4901,7 +5229,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 599,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4927,7 +5255,7 @@
 											"containerExtending": false,
 											"left": -313.83984375,
 											"top": 256,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -4973,7 +5301,7 @@
 									"containerExtending": false,
 									"left": 672,
 									"top": 592,
-									"width": 119.8017578125,
+									"width": 126.42626953125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -5019,7 +5347,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 622,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5048,7 +5376,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 637,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5077,7 +5405,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 652,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5106,7 +5434,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 667,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5135,7 +5463,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 682,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5164,7 +5492,7 @@
 											"containerExtending": false,
 											"left": 677,
 											"top": 697,
-											"width": 109.8017578125,
+											"width": 116.42626953125,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5185,7 +5513,7 @@
 									"containerExtending": false,
 									"left": 672,
 									"top": 617,
-									"width": 119.8017578125,
+									"width": 126.42626953125,
 									"height": 98,
 									"autoResize": false
 								},
@@ -5209,7 +5537,7 @@
 									"containerExtending": false,
 									"left": 672,
 									"top": 715,
-									"width": 119.8017578125,
+									"width": 126.42626953125,
 									"height": 10,
 									"autoResize": false
 								},
@@ -5273,7 +5601,7 @@
 							"containerExtending": false,
 							"left": 672,
 							"top": 592,
-							"width": 119.8017578125,
+							"width": 126.42626953125,
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -5331,7 +5659,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 781,
+									"left": 782,
 									"top": 484,
 									"width": 0,
 									"height": 13,
@@ -5365,8 +5693,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 767,
-									"top": 478,
+									"left": 768,
+									"top": 479,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -5399,7 +5727,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 808,
+									"left": 809,
 									"top": 495,
 									"width": 0,
 									"height": 13,
@@ -5432,7 +5760,7 @@
 								"$ref": "AAAAAAFeWUEmuJKgINI="
 							},
 							"lineStyle": 1,
-							"points": "757:591;833:401",
+							"points": "760:591;833:401",
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -5508,7 +5836,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 599,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5534,7 +5866,7 @@
 											"containerExtending": false,
 											"left": -179.6796875,
 											"top": 256,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5580,7 +5912,11 @@
 									"containerExtending": false,
 									"left": 800,
 									"top": 592,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -5626,7 +5962,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 622,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5655,7 +5995,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 637,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5684,7 +6028,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 652,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5713,7 +6061,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 667,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5742,7 +6094,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 682,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5771,7 +6127,11 @@
 											"containerExtending": false,
 											"left": 805,
 											"top": 697,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -5792,7 +6152,11 @@
 									"containerExtending": false,
 									"left": 800,
 									"top": 617,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 98,
 									"autoResize": false
 								},
@@ -5816,7 +6180,11 @@
 									"containerExtending": false,
 									"left": 800,
 									"top": 715,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -5880,7 +6248,11 @@
 							"containerExtending": false,
 							"left": 800,
 							"top": 592,
+<<<<<<< Updated upstream
 							"width": 117,
+=======
+							"width": 121.4267578125,
+>>>>>>> Stashed changes
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -5938,7 +6310,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 845,
+=======
+									"left": 846,
+>>>>>>> Stashed changes
 									"top": 489,
 									"width": 0,
 									"height": 13,
@@ -5972,7 +6348,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 830,
+=======
+									"left": 831,
+>>>>>>> Stashed changes
 									"top": 489,
 									"width": 0,
 									"height": 13,
@@ -6006,7 +6386,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 874,
+=======
+									"left": 875,
+>>>>>>> Stashed changes
 									"top": 490,
 									"width": 0,
 									"height": 13,
@@ -6039,7 +6423,11 @@
 								"$ref": "AAAAAAFeWUEsapLaZoA="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "859:591;862:401",
+=======
+							"points": "861:591;862:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -6115,7 +6503,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 599,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6141,7 +6533,7 @@
 											"containerExtending": false,
 											"left": -61.51953125,
 											"top": 256,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6187,7 +6579,11 @@
 									"containerExtending": false,
 									"left": 920,
 									"top": 592,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -6233,7 +6629,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 622,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6262,7 +6662,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 637,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6291,7 +6695,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 652,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6320,7 +6728,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 667,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6349,7 +6761,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 682,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6378,7 +6794,11 @@
 											"containerExtending": false,
 											"left": 925,
 											"top": 697,
+<<<<<<< Updated upstream
 											"width": 107,
+=======
+											"width": 111.4267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6399,7 +6819,11 @@
 									"containerExtending": false,
 									"left": 920,
 									"top": 617,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 98,
 									"autoResize": false
 								},
@@ -6423,7 +6847,11 @@
 									"containerExtending": false,
 									"left": 920,
 									"top": 715,
+<<<<<<< Updated upstream
 									"width": 117,
+=======
+									"width": 121.4267578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -6487,7 +6915,11 @@
 							"containerExtending": false,
 							"left": 920,
 							"top": 592,
+<<<<<<< Updated upstream
 							"width": 117,
+=======
+							"width": 121.4267578125,
+>>>>>>> Stashed changes
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -6545,7 +6977,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 907,
+=======
+									"left": 908,
+>>>>>>> Stashed changes
 									"top": 494,
 									"width": 0,
 									"height": 13,
@@ -6579,7 +7015,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 893,
+=======
+									"left": 894,
+>>>>>>> Stashed changes
 									"top": 499,
 									"width": 0,
 									"height": 13,
@@ -6613,7 +7053,11 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 936,
+=======
+									"left": 937,
+>>>>>>> Stashed changes
 									"top": 485,
 									"width": 0,
 									"height": 13,
@@ -6646,7 +7090,11 @@
 								"$ref": "AAAAAAFeWUExYJMUgvk="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "955:591;890:401",
+=======
+							"points": "957:591;890:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -6722,7 +7170,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 599,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6748,7 +7200,7 @@
 											"containerExtending": false,
 											"left": 848,
 											"top": 244,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6794,7 +7246,11 @@
 									"containerExtending": false,
 									"left": 1048,
 									"top": 592,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -6840,7 +7296,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 622,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6869,7 +7329,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 637,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6898,7 +7362,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 652,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6927,7 +7395,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 667,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6956,7 +7428,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 682,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -6985,7 +7461,11 @@
 											"containerExtending": false,
 											"left": 1053,
 											"top": 697,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7006,7 +7486,11 @@
 									"containerExtending": false,
 									"left": 1048,
 									"top": 617,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 98,
 									"autoResize": false
 								},
@@ -7030,7 +7514,11 @@
 									"containerExtending": false,
 									"left": 1048,
 									"top": 715,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -7094,7 +7582,11 @@
 							"containerExtending": false,
 							"left": 1048,
 							"top": 592,
+<<<<<<< Updated upstream
 							"width": 125,
+=======
+							"width": 127.9267578125,
+>>>>>>> Stashed changes
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -7253,7 +7745,11 @@
 								"$ref": "AAAAAAFeWUE205NOcD4="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1060:591;920:401",
+=======
+							"points": "1061:591;920:401",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -7329,7 +7825,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 599,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7355,7 +7855,7 @@
 											"containerExtending": false,
 											"left": 1136,
 											"top": 244,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7401,7 +7901,11 @@
 									"containerExtending": false,
 									"left": 1192,
 									"top": 592,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -7447,7 +7951,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 622,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7476,7 +7984,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 637,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7505,7 +8017,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 652,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7534,7 +8050,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 667,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7563,7 +8083,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 682,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7592,7 +8116,11 @@
 											"containerExtending": false,
 											"left": 1197,
 											"top": 697,
+<<<<<<< Updated upstream
 											"width": 115,
+=======
+											"width": 117.9267578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -7613,7 +8141,11 @@
 									"containerExtending": false,
 									"left": 1192,
 									"top": 617,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 98,
 									"autoResize": false
 								},
@@ -7637,7 +8169,11 @@
 									"containerExtending": false,
 									"left": 1192,
 									"top": 715,
+<<<<<<< Updated upstream
 									"width": 125,
+=======
+									"width": 127.9267578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -7701,7 +8237,11 @@
 							"containerExtending": false,
 							"left": 1192,
 							"top": 592,
+<<<<<<< Updated upstream
 							"width": 125,
+=======
+							"width": 127.9267578125,
+>>>>>>> Stashed changes
 							"height": 133,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -7860,7 +8400,11 @@
 								"$ref": "AAAAAAFeWUE8DJOIVoI="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1191:604;944:393",
+=======
+							"points": "1191:603;944:393",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -7960,9 +8504,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1245.0966796875,
 											"top": 352,
 											"width": 73.67724609375,
+=======
+											"left": 1053.0966796875,
+											"top": 144,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -8221,8 +8771,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 931,
 									"top": 212,
+=======
+									"left": 997,
+									"top": 260,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8255,8 +8810,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 931,
 									"top": 227,
+=======
+									"left": 993,
+									"top": 274,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8289,8 +8849,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 932,
 									"top": 183,
+=======
+									"left": 1004,
+									"top": 231,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -8322,7 +8887,11 @@
 								"$ref": "AAAAAAFeWV8x2ZXD8vY="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1551:462;1088:208;776:200;548:129",
+=======
+							"points": "1455:377;548:127",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -8469,9 +9038,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -672,
 											"top": 1236,
 											"width": 73.67724609375,
+=======
+											"left": -176,
+											"top": 260,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -8989,9 +9564,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -393.83984375,
 											"top": 1268,
 											"width": 73.67724609375,
+=======
+											"left": -41.83984375,
+											"top": 260,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -9366,9 +9947,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -131.6796875,
 											"top": 1236,
 											"width": 73.67724609375,
+=======
+											"left": 92.3203125,
+											"top": 260,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -9860,9 +10447,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1669,
 											"top": 1087,
 											"width": 117.025390625,
+=======
+											"left": 1741,
+											"top": 599,
+											"width": 124.61767578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -9886,9 +10479,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 98.48046875,
 											"top": 1236,
 											"width": 73.67724609375,
+=======
+											"left": 242.48046875,
+											"top": 260,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -9932,9 +10531,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1664,
 									"top": 1080,
 									"width": 127.025390625,
+=======
+									"left": 1736,
+									"top": 592,
+									"width": 134.61767578125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -9978,9 +10583,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1669,
 											"top": 1110,
 											"width": 117.025390625,
+=======
+											"left": 1741,
+											"top": 622,
+											"width": 124.61767578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10007,9 +10618,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1669,
 											"top": 1125,
 											"width": 117.025390625,
+=======
+											"left": 1741,
+											"top": 637,
+											"width": 124.61767578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10036,9 +10653,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1669,
 											"top": 1140,
 											"width": 117.025390625,
+=======
+											"left": 1741,
+											"top": 652,
+											"width": 124.61767578125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10057,9 +10680,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1664,
 									"top": 1105,
 									"width": 127.025390625,
+=======
+									"left": 1736,
+									"top": 617,
+									"width": 134.61767578125,
+>>>>>>> Stashed changes
 									"height": 53,
 									"autoResize": false
 								},
@@ -10081,9 +10710,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1664,
 									"top": 1158,
 									"width": 127.025390625,
+=======
+									"left": 1736,
+									"top": 670,
+									"width": 134.61767578125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -10145,10 +10780,17 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
+<<<<<<< Updated upstream
 							"left": 1664,
 							"top": 1080,
 							"width": 127.025390625,
 							"height": 145,
+=======
+							"left": 1736,
+							"top": 592,
+							"width": 134.61767578125,
+							"height": 137,
+>>>>>>> Stashed changes
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -10205,8 +10847,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1626,
 									"top": 1005,
+=======
+									"left": 1653,
+									"top": 533,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -10239,8 +10886,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1613,
 									"top": 1012,
+=======
+									"left": 1643,
+									"top": 544,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -10273,8 +10925,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1653,
 									"top": 990,
+=======
+									"left": 1674,
+									"top": 512,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -10306,7 +10963,11 @@
 								"$ref": "AAAAAAFeWWDok5bHK7I="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1684:1079;1597:929",
+=======
+							"points": "1735:596;1593:462",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -10429,7 +11090,7 @@
 											"containerExtending": false,
 											"left": 861,
 											"top": 39,
-											"width": 188.9697265625,
+											"width": 200.2685546875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10455,7 +11116,7 @@
 											"containerExtending": false,
 											"left": 500,
 											"top": -16,
-											"width": 73.67724609375,
+											"width": 80.49462890625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10501,7 +11162,7 @@
 									"containerExtending": false,
 									"left": 856,
 									"top": 32,
-									"width": 198.9697265625,
+									"width": 210.2685546875,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -10547,7 +11208,7 @@
 											"containerExtending": false,
 											"left": 861,
 											"top": 62,
-											"width": 188.9697265625,
+											"width": 200.2685546875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10568,7 +11229,7 @@
 									"containerExtending": false,
 									"left": 856,
 									"top": 57,
-									"width": 198.9697265625,
+									"width": 210.2685546875,
 									"height": 23,
 									"autoResize": false
 								},
@@ -10602,7 +11263,7 @@
 											"containerExtending": false,
 											"left": 861,
 											"top": 85,
-											"width": 188.9697265625,
+											"width": 200.2685546875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10631,7 +11292,7 @@
 											"containerExtending": false,
 											"left": 861,
 											"top": 100,
-											"width": 188.9697265625,
+											"width": 200.2685546875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -10652,7 +11313,7 @@
 									"containerExtending": false,
 									"left": 856,
 									"top": 80,
-									"width": 198.9697265625,
+									"width": 210.2685546875,
 									"height": 38,
 									"autoResize": false
 								},
@@ -10716,7 +11377,7 @@
 							"containerExtending": false,
 							"left": 856,
 							"top": 32,
-							"width": 198.9697265625,
+							"width": 210.2685546875,
 							"height": 153,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -10808,7 +11469,7 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 609,
+									"left": 608,
 									"top": 60,
 									"width": 0,
 									"height": 13,
@@ -10944,9 +11605,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 559,
 									"top": 105,
 									"width": 22,
+=======
+									"left": 560,
+									"top": 105,
+									"width": 20,
+>>>>>>> Stashed changes
 									"height": 13,
 									"autoResize": false,
 									"alpha": -0.5235987755982988,
@@ -10979,9 +11646,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 822,
 									"top": 83,
 									"width": 14.82177734375,
+=======
+									"left": 829,
+									"top": 82,
+									"width": 0,
+>>>>>>> Stashed changes
 									"height": 13,
 									"autoResize": false,
 									"alpha": -0.5235987755982988,
@@ -11015,7 +11688,7 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 827,
-									"top": 69,
+									"top": 68,
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -11048,9 +11721,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 829,
 									"top": 110,
 									"width": 7.22998046875,
+=======
+									"left": 832,
+									"top": 109,
+									"width": 0,
+>>>>>>> Stashed changes
 									"height": 13,
 									"autoResize": false,
 									"alpha": 0.5235987755982988,
@@ -11130,7 +11809,11 @@
 								"$ref": "AAAAAAFeWSQk4Y7A8zE="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "548:101;608:96;855:105",
+=======
+							"points": "548:101;608:96;855:104",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -11230,9 +11913,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 1941,
 											"top": 1087,
 											"width": 132.9072265625,
+=======
+											"left": 1885,
+											"top": 599,
+											"width": 141.775390625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -11256,9 +11945,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 3248,
 											"top": 1920,
 											"width": 73.67724609375,
+=======
+											"left": 3136,
+											"top": 944,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -11302,9 +11997,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1936,
 									"top": 1080,
 									"width": 142.9072265625,
+=======
+									"left": 1880,
+									"top": 592,
+									"width": 151.775390625,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -11338,9 +12039,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1936,
 									"top": 1105,
 									"width": 142.9072265625,
+=======
+									"left": 1880,
+									"top": 617,
+									"width": 151.775390625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -11362,9 +12069,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1936,
 									"top": 1115,
 									"width": 142.9072265625,
+=======
+									"left": 1880,
+									"top": 627,
+									"width": 151.775390625,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -11426,10 +12139,17 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
+<<<<<<< Updated upstream
 							"left": 1936,
 							"top": 1080,
 							"width": 142.9072265625,
 							"height": 129,
+=======
+							"left": 1880,
+							"top": 592,
+							"width": 151.775390625,
+							"height": 137,
+>>>>>>> Stashed changes
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -11544,9 +12264,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -160,
 											"top": 1008,
 											"width": 73.67724609375,
+=======
+											"left": -320,
+											"top": 32,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -11806,9 +12532,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 2245,
 											"top": 1087,
 											"width": 103,
+=======
+											"left": 2141,
+											"top": 599,
+											"width": 109.94189453125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -11832,9 +12564,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -144,
 											"top": 992,
 											"width": 73.67724609375,
+=======
+											"left": -352,
+											"top": 16,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -11878,9 +12616,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2240,
 									"top": 1080,
 									"width": 113,
+=======
+									"left": 2136,
+									"top": 592,
+									"width": 119.94189453125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -11914,9 +12658,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2240,
 									"top": 1105,
 									"width": 113,
+=======
+									"left": 2136,
+									"top": 617,
+									"width": 119.94189453125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -11938,9 +12688,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2240,
 									"top": 1115,
 									"width": 113,
+=======
+									"left": 2136,
+									"top": 627,
+									"width": 119.94189453125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -12002,9 +12758,15 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
+<<<<<<< Updated upstream
 							"left": 2240,
 							"top": 1080,
 							"width": 113,
+=======
+							"left": 2136,
+							"top": 592,
+							"width": 119.94189453125,
+>>>>>>> Stashed changes
 							"height": 137,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -12094,9 +12856,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": 2397,
 											"top": 1087,
 											"width": 106.93896484375,
+=======
+											"left": 2269,
+											"top": 599,
+											"width": 114.125,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -12120,9 +12888,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -96,
 											"top": 1008,
 											"width": 73.67724609375,
+=======
+											"left": -352,
+											"top": 32,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -12166,9 +12940,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2392,
 									"top": 1080,
 									"width": 116.93896484375,
+=======
+									"left": 2264,
+									"top": 592,
+									"width": 124.125,
+>>>>>>> Stashed changes
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -12202,9 +12982,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2392,
 									"top": 1105,
 									"width": 116.93896484375,
+=======
+									"left": 2264,
+									"top": 617,
+									"width": 124.125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -12226,9 +13012,15 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2392,
 									"top": 1115,
 									"width": 116.93896484375,
+=======
+									"left": 2264,
+									"top": 627,
+									"width": 124.125,
+>>>>>>> Stashed changes
 									"height": 10,
 									"autoResize": false
 								},
@@ -12290,9 +13082,15 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
+<<<<<<< Updated upstream
 							"left": 2392,
 							"top": 1080,
 							"width": 116.93896484375,
+=======
+							"left": 2264,
+							"top": 592,
+							"width": 124.125,
+>>>>>>> Stashed changes
 							"height": 137,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
@@ -12408,9 +13206,15 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
+<<<<<<< Updated upstream
 											"left": -112,
 											"top": 1008,
 											"width": 73.67724609375,
+=======
+											"left": -416,
+											"top": 32,
+											"width": 80.49462890625,
+>>>>>>> Stashed changes
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -12638,8 +13442,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1803,
 									"top": 829,
+=======
+									"left": 1728,
+									"top": 531,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -12672,8 +13481,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1790,
 									"top": 837,
+=======
+									"left": 1720,
+									"top": 544,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -12706,8 +13520,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1828,
 									"top": 814,
+=======
+									"left": 1743,
+									"top": 506,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -12739,7 +13558,11 @@
 								"$ref": "AAAAAAFeWcAKBWBo9rA="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1967:1079;1666:577",
+=======
+							"points": "1879:613;1593:438",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -13067,8 +13890,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2023,
 									"top": 798,
+=======
+									"left": 2182,
+									"top": 480,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13592,8 +14420,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1556,
 									"top": 664,
+=======
+									"left": 2180,
+									"top": 495,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13626,8 +14459,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1600,
 									"top": 672,
+=======
+									"left": 2185,
+									"top": 451,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13659,7 +14497,11 @@
 								"$ref": "AAAAAAFegecv3SWkGUQ="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1567:775;1605:577",
+=======
+							"points": "2191:591;2184:472;1593:404",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -13701,8 +14543,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1441,
 									"top": 989,
+=======
+									"left": 2327,
+									"top": 456,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13735,8 +14582,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1428,
 									"top": 981,
+=======
+									"left": 2326,
+									"top": 471,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13769,8 +14621,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 1466,
 									"top": 1006,
+=======
+									"left": 2328,
+									"top": 427,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13802,7 +14659,11 @@
 								"$ref": "AAAAAAFeWWDb75ZTiAY="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "1406:1079;1502:929",
+=======
+							"points": "2326:591;2328:448;1593:400",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,
@@ -13844,8 +14705,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2064,
 									"top": 759,
+=======
+									"left": 2431,
+									"top": 424,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13878,8 +14744,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2057,
 									"top": 772,
+=======
+									"left": 2431,
+									"top": 439,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13912,8 +14783,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
+<<<<<<< Updated upstream
 									"left": 2079,
 									"top": 732,
+=======
+									"left": 2432,
+									"top": 395,
+>>>>>>> Stashed changes
 									"width": 0,
 									"height": 13,
 									"autoResize": false,
@@ -13945,7 +14821,11 @@
 								"$ref": "AAAAAAFeWcGKMWLU8mY="
 							},
 							"lineStyle": 1,
+<<<<<<< Updated upstream
 							"points": "2551:1117;2072:752;1689:538",
+=======
+							"points": "2438:591;2432:416;1593:398",
+>>>>>>> Stashed changes
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
 							"showProperty": true,

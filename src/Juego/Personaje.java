@@ -1,6 +1,8 @@
 package Juego;
 
-public abstract class Personaje {
+import javax.swing.JLabel;
+
+public abstract class Personaje extends JLabel {
 	protected int vidaMax;
 	protected int ataque;
 	protected int rango;
@@ -26,5 +28,6 @@ public abstract class Personaje {
 	public void reducirVida(int i) {
 		vidaMax-=i;
 	}
+	
 	
 }
