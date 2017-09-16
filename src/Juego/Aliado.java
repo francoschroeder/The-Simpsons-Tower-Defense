@@ -1,7 +1,7 @@
 package Juego;
 
 public abstract class Aliado extends Personaje {
-	private int costo; 
+	protected int costo; 
 	
 	public int getCosto() {
 		return costo;

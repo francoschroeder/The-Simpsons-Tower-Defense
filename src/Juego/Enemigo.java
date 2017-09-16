@@ -1,8 +1,8 @@
 package Juego;
 
 public abstract class Enemigo extends Personaje {
-	private float velocidad;
-	private int minMonedas, maxMonedas;
+	protected float velocidad;
+	protected int minMonedas, maxMonedas;
 	
 
 	public float getVelocidad(){
