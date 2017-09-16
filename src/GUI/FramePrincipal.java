@@ -1,17 +1,21 @@
 package GUI;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
 import Juego.Personaje;
 import Personajes.Homero;
 
 public class FramePrincipal extends JFrame {
-
+	private static final long seralVersionUID = 1L;
+	
 	private JPanel contentPane;
 
 	/**
@@ -34,8 +38,10 @@ public class FramePrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public FramePrincipal() {
+		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1134 , 794);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane = new JPanel();
 		contentPane.setLayout(null);
 				
@@ -44,7 +50,8 @@ public class FramePrincipal extends JFrame {
 		p.setBounds(10, 10, 10, 10);
 		contentPane.add(p);
 		setContentPane(contentPane);
-
+		
+		
 	
 	
 	}
