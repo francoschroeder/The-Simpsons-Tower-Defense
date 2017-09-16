@@ -20,16 +20,16 @@ public class Map {
 		
 		
 	}
-	public void agregarPersonaje(String p, Point po) {
+	public void agregarPersonaje(String p, int x, int y) {
 		p=p.toUpperCase();
 		Personaje per = null;
+		Point po = new Point(x, y);
 		
 		if (p.equals("HOMERO")) {
-			per = new Homero();
+			per = new Homero(po);
 		}
 		
-		matriz[(int) po.getX()][(int) po.getY()] = per;
-		
+		matriz[x][y] = per;
 	}
 	public Personaje getBlanco(Point p, int alcance) {
 		return null;
