@@ -44,11 +44,6 @@ public class FramePrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane = new JPanel();
 		contentPane.setLayout(null);
-				
-		Personaje p=new Homero();
-		p.setVisible(true);
-		p.setBounds(10, 10, 10, 10);
-		contentPane.add(p);
 		setContentPane(contentPane);
 		
 		
