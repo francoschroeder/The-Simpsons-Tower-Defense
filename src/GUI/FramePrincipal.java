@@ -2,6 +2,7 @@ package GUI;
 
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -16,8 +17,8 @@ import Personajes.Homero;
 public class FramePrincipal extends JFrame {
 	private static final long seralVersionUID = 1L;
 	
-	private JPanel contentPane;
-
+	private PanelMatriz matriz;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -41,8 +42,9 @@ public class FramePrincipal extends JFrame {
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1134 , 794);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane = new JPanel();
+		matriz.setBorder(new EmptyBorder(5, 5, 5, 5));
+		ImageIcon imag= new ImageIcon(getClass().getResource("/sprite/fondo.png"));
+		matriz = new PanelMatriz(imag);
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		
