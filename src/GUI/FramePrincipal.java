@@ -13,6 +13,8 @@ import java.awt.event.KeyEvent;
 
 import Juego.Personaje;
 import Personajes.Homero;
+import javax.swing.border.BevelBorder;
+import java.awt.Color;
 
 public class FramePrincipal extends JFrame {
 	private static final long seralVersionUID = 1L;
@@ -39,19 +41,22 @@ public class FramePrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public FramePrincipal() {
+		getContentPane().setBackground(new Color(154, 205, 50));
+		getContentPane().setForeground(new Color(154, 205, 50));
+		setBackground(new Color(154, 205, 50));
+		
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1134 , 794);
+		this.setLocationRelativeTo(null);
 		//Agrego y seteo panel que contiene en mapa en el frame.
 		ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
-		//panelMapa = new PanelMapa(img.getImage());
-		//panelMapa.setBorder(new EmptyBorder(5, 5, 5, 5));
-		//panelMapa.setLayout(null);
-		//this.getContentPane().add(panelMapa);
-		//this.panelMapa.setVisible(true);
-	
+		panelMapa = new PanelMapa(img.getImage());
+		panelMapa.setLocation(185, 80);
+		getContentPane().add(panelMapa);
+		
+		
 	
 	}
-
 }
  
