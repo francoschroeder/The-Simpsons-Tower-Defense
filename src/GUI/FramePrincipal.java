@@ -15,6 +15,9 @@ import Juego.Personaje;
 import Personajes.Homero;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
 
 public class FramePrincipal extends JFrame {
 	private static final long seralVersionUID = 1L;
@@ -54,6 +57,20 @@ public class FramePrincipal extends JFrame {
 		panelMapa = new PanelMapa(img.getImage());
 		panelMapa.setLocation(185, 80);
 		getContentPane().add(panelMapa);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(185, 605, 749, 161);
+		getContentPane().add(panel);
+		GroupLayout gl_panel = new GroupLayout(panel);
+		gl_panel.setHorizontalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 749, Short.MAX_VALUE)
+		);
+		gl_panel.setVerticalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 161, Short.MAX_VALUE)
+		);
+		panel.setLayout(gl_panel);
 		
 		
 	
