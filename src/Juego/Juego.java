@@ -7,17 +7,20 @@ import java.util.Stack;
 import GUI.FramePrincipal;
 import Personajes.*;
 
-public class Map {
+public class Juego {
 	private Personaje [][] matriz;
 	private LinkedList<Personaje> aliadosActivos;
 	private LinkedList<Personaje> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
 	private FramePrincipal gui;
 	
-	public void generar(FramePrincipal gui) 
+	public Juego(FramePrincipal gui) 
 		{// asignar las listas
 		this.gui=gui;
-		
+		//Para probar si se ven los personajes
+			Personaje p = new Homero(new Point(1, 2));
+			gui.getPanelMapa().add(p.getImagen());
+			p.getImagen().setVisible(true);
 		
 	}
 	public void agregarPersonaje(String p, int x, int y) {
