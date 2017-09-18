@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import Juego.Enemigo;
+import Juego.Personaje;
 
 public class Skinner extends Enemigo {
 	
@@ -27,6 +28,7 @@ public class Skinner extends Enemigo {
 		
 		this.imActual = new HashMap<String, Icon>();
 		this.imActual.put(Enemigo.forward_key, new ImageIcon("/sprites/skinner/skinnerWalk.gif"));
+		this.imActual.put(Personaje.shoot_key, new ImageIcon("/sprites/skinner/skinnerAttack.gif"));
 	}
 	
 }
