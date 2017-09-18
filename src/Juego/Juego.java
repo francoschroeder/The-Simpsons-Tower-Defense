@@ -21,6 +21,11 @@ public class Juego {
 			Personaje p = new Homero(new Point(1, 2));
 			gui.getPanelMapa().add(p.getImagen());
 			p.getImagen().setVisible(true);
+			
+		//Skinner
+			Personaje p2 = new Skinner(new Point(2, 1));
+			gui.getPanelMapa().add(p2.getImagen());
+			p2.getImagen().setVisible(true);
 		
 	}
 	public void agregarPersonaje(String p, int x, int y) {
