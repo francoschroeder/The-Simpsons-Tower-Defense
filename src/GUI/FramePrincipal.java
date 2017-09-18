@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Point;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -72,6 +73,11 @@ public class FramePrincipal extends JFrame {
 		);
 		panel.setLayout(gl_panel);
 		
+		//Para probar si se ven los personajes
+		Personaje p = new Homero(new Point(1, 2));
+		panelMapa.add(p.getImagen());
+		p.getImagen().setBounds(75, 75, 75, 75);
+		p.getImagen().setVisible(true);
 		
 	
 	}

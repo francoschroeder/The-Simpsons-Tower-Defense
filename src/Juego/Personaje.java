@@ -15,7 +15,7 @@ public abstract class Personaje{
 	protected JLabel imagen;
 	protected Map<String, Icon> imActual;
 	
-	public static  final String still_key = "Still";
+	public static final String still_key = "Still";
 	public static final String shoot_key = "Shoot";
 	
 	public Point getPosiscion(){
@@ -32,7 +32,7 @@ public abstract class Personaje{
 
 	public void setImagen(String dir){
 		this.imagen.setIcon(this.imActual.get(dir));
-		this.imagen.setBounds(this.posicion.x, this.posicion.y, width, height);
+		this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
 	}
 	
 	public int getVidaMax() {
@@ -52,7 +52,7 @@ public abstract class Personaje{
 	public void atacar(Personaje p) {}
 	
 	public void reducirVida(int i) {
-		vidaMax-=i;
+		vidaActual-=i;
 	}
 	
 	

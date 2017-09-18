@@ -6,12 +6,9 @@ public abstract class Aliado extends Personaje {
 	public int getCosto() {
 		return costo;
 	}
-	public void setCosto(int c) {
-		costo = c;
-	}
 	
 	public void atacar(Enemigo p){
-		p.setVidaMax(p.getAtaque());
+		p.reducirVida(this.ataque);
 	}
 	
 	public void atacar(Aliado p){
