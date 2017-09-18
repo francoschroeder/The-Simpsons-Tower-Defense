@@ -26,6 +26,9 @@ public class Juego {
 			Personaje p2 = new Skinner(new Point(2, 1));
 			gui.getPanelMapa().add(p2.getImagen());
 			p2.getImagen().setVisible(true);
+			
+			Tiempo t = new Tiempo(p2, gui);
+			t.start();
 		
 	}
 	public void agregarPersonaje(String p, int x, int y) {
