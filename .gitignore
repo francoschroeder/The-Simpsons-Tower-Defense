@@ -64,3 +64,5 @@ hs_err_pid*
 /bin/
 
 *.mdj
+
+src/GUI/PanelMatriz.java
