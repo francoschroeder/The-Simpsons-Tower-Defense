@@ -22,7 +22,6 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 
-//test
 public class FramePrincipal extends JFrame {
 	private static final long seralVersionUID = 1L;
 	
