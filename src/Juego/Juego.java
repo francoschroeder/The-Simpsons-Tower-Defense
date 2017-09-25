@@ -17,14 +17,10 @@ public class Juego {
 	public Juego(FramePrincipal gui) 
 		{// asignar las listas
 		this.gui=gui;
-		//Para probar si se ven los personajes
-			
-			
-		//Skinner
-			
-			
-			
-		
+		aliadosActivos = new LinkedList<Personaje>();
+		enemigosActivos = new LinkedList<Personaje>();
+		enemigosPorSalir = new Stack<Personaje>();
+		matriz = new Personaje[10][6];
 	}
 	public void agregarPersonaje(String p, int x, int y) {
 		p=p.toUpperCase();
