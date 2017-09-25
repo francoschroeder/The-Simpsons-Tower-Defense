@@ -7,14 +7,7 @@ public abstract class Aliado extends Personaje {
 		return costo;
 	}
 	
-	public void atacar(Enemigo p){
-		p.reducirVida(this.ataque);
+	public void serAtacado(Proyectil p) {
+		p.atacarAliado(this);
 	}
-	
-	public void atacar(Aliado p){
-	}
-	public void atacar(Objecto p){
-	}
-	
-	
 }

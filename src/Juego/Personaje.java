@@ -48,12 +48,10 @@ public abstract class Personaje{
 	public int getRango() {
 		return rango;
 	}
+
+	public abstract void serAtacado(Proyectil p);
 	
-	public void atacar(Personaje p) {}
-	
-	public void reducirVida(int i) {
-		vidaActual-=i;
+	public void reducirVida(int v) {
+		vidaActual-=v;
 	}
-	
-	
 }

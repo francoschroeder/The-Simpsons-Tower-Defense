@@ -6,4 +6,8 @@ public class Milhouse extends Objecto implements Comprable {
 		super.vidaMax=0;
 		super.tiempo=10;
 	}
+	
+	public void serAtacado(Proyectil p) {
+		p.atacarObjeto(this);
+	}
 }
