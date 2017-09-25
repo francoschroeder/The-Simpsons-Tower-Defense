@@ -34,11 +34,7 @@ public abstract class Enemigo extends Personaje {
 		maxMonedas = m;
 	}
 	
-	public void atacar(Enemigo p) {
-		p.reducirVida(getAtaque());		
-		this.imActual.put(Personaje.still_key, new ImageIcon(this.getClass().getResource("/sprites/still.png")));
-	
+	public void serAtacado(Proyectil p) {
+		p.atacarEnemigo(this);
 	}
-	
-
 }
