@@ -18,17 +18,12 @@ public class Juego {
 		{// asignar las listas
 		this.gui=gui;
 		//Para probar si se ven los personajes
-			Personaje p = new Homero(new Point(1, 2));
-			gui.getPanelMapa().add(p.getImagen());
-			p.getImagen().setVisible(true);
+			
 			
 		//Skinner
-			Personaje p2 = new Skinner(new Point(2, 1));
-			gui.getPanelMapa().add(p2.getImagen());
-			p2.getImagen().setVisible(true);
 			
-			Tiempo t = new Tiempo(p2, gui);
-			t.start();
+			
+			
 		
 	}
 	public void agregarPersonaje(String p, int x, int y) {
@@ -44,5 +39,17 @@ public class Juego {
 	}
 	public Personaje getBlanco(Point p, int alcance) {
 		return null;
+	}
+	
+	public void CrearHomero(){
+		Personaje p = new Homero(new Point(1, 2));
+		gui.getPanelMapa().add(p.getImagen());
+		p.getImagen().setVisible(true);
+	}
+	
+	public void CrearSkinner(){
+		Personaje p2 = new Skinner(new Point(2, 1));
+		gui.getPanelMapa().add(p2.getImagen());
+		p2.getImagen().setVisible(true);
 	}
 }
