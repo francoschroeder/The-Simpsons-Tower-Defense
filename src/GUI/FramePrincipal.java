@@ -21,6 +21,7 @@ import java.awt.Color;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class FramePrincipal extends JFrame {
 	private static final long seralVersionUID = 1L;
@@ -72,20 +73,83 @@ public class FramePrincipal extends JFrame {
 		);
 		panelMapa.setLayout(gl_panelMapa);
 		
+		
+		//CREACION DE BOTONES y PANEL.
+		
 		JPanel panel = new JPanel();
-		panel.setBounds(185, 605, 749, 161);
+		panel.setBounds(185, 530, 749, 236);
 		getContentPane().add(panel);
+		
+		JButton Bart = new JButton("");
+		
+		JButton Flander = new JButton("New button");
+		
+		JButton Homero = new JButton("");
+		
+		JButton Milhouse = new JButton("New button");
+		
+		JButton Lisa = new JButton("");
+		
+		JButton MatarSkinner = new JButton("MatarSkinner\n");
+		
+		JButton Marge = new JButton("");
+		
+		JButton button_6 = new JButton("New button");
+		
+		JButton Maggie = new JButton("");
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 749, Short.MAX_VALUE)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap(12, Short.MAX_VALUE)
+					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(Bart, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(Homero, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(Lisa, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(Marge, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(Maggie, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(21))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(Flander, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(Milhouse, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(MatarSkinner, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(button_6, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+							.addGap(93))))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 161, Short.MAX_VALUE)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(Maggie, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Marge, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Lisa, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Homero, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Bart, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(button_6, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(MatarSkinner, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Milhouse, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+						.addComponent(Flander, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap())
 		);
 		panel.setLayout(gl_panel);
-		 //Inicia el juego
+		 
+		
+		
+		
+		
+		
+		//Inicia el juego
 		
 		j = new Juego(this);
 		
@@ -95,8 +159,5 @@ public class FramePrincipal extends JFrame {
 	public PanelMapa getPanelMapa() {
 		return panelMapa;
 	}
-
-
-	
 }
  
