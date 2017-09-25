@@ -43,13 +43,29 @@ public class Juego {
 	
 	public void CrearHomero(){
 		Personaje p = new Homero(new Point(1, 2));
+		matriz[1][2] = p;
+		aliadosActivos.add(p);
+		
 		gui.getPanelMapa().add(p.getImagen());
 		p.getImagen().setVisible(true);
 	}
 	
 	public void CrearSkinner(){
 		Personaje p2 = new Skinner(new Point(2, 1));
+		matriz[2][1] = p2;
+		enemigosActivos.add(p2);
+		
 		gui.getPanelMapa().add(p2.getImagen());
 		p2.getImagen().setVisible(true);
 	}
+	
+	public void eliminar() {
+		enemigosActivos.remove(matriz[2][1]);
+		matriz[2][1].getImagen().setVisible(false);
+		gui.getPanelMapa().remove(matriz[2][1].getImagen());
+		gui.getPanelMapa().revalidate();
+		gui.getPanelMapa().repaint();
+		matriz[2][1] = null;
+	}
+	
 }
