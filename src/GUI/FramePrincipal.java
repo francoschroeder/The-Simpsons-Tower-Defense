@@ -28,10 +28,20 @@ import java.awt.event.ActionListener;
 
 
 public class FramePrincipal implements ActionListener {
+	
+	
 	private static final long seralVersionUID = 1L;
 	private JFrame FramePrincipal;
 	private PanelMapa panelMapa;
 	private Juego j;
+	private JButton Homero;
+	private JButton	Bart;
+	private JButton Lisa;
+	private JButton	Marge;
+	private JButton Maggie;
+	private JButton Flander;
+	private JButton Milhouse;
+	private JButton MatarSkinner;
 	/**
 	 * Launch the application.
 	 */
@@ -61,6 +71,7 @@ public class FramePrincipal implements ActionListener {
 		FramePrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		FramePrincipal.setBounds(100, 100, 1134 , 794);
 		FramePrincipal.setLocationRelativeTo(null);
+		
 		//Agrego y seteo panel que contiene en mapa en el frame.
 		ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
 		panelMapa = new PanelMapa(img.getImage());
@@ -85,17 +96,18 @@ public class FramePrincipal implements ActionListener {
 		panel.setBounds(185, 530, 749, 236);
 		FramePrincipal.getContentPane().add(panel);
 		
-		JButton Bart = new JButton("");
+		Bart = new JButton("");
 		
-		JButton Flander = new JButton("New button");
+		Flander = new JButton("New button");
 		
-		JButton Homero = new JButton(new ImageIcon(FramePrincipal.class.getResource("/sprites/homero/CaraHomeroBoton.jpg")));
+		Homero = new JButton(new ImageIcon(FramePrincipal.class.getResource("/sprites/homero/CaraHomeroBoton.jpg")));
 		Homero.addActionListener(this);
-		JButton Milhouse = new JButton("New button");
 		
-		JButton Lisa = new JButton("");
+		Milhouse = new JButton("New button");
 		
-		JButton MatarSkinner = new JButton("MatarSkinner\n");
+		Lisa = new JButton("");
+		
+		MatarSkinner = new JButton("MatarSkinner\n");
 		
 		JButton Marge = new JButton("");
 		
@@ -164,10 +176,23 @@ public class FramePrincipal implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e){
 		String evento=e.getActionCommand();
+		/*Inicia la logica y pone todos los botones en visbles.*/
+		if(e.getSource() == Homero){
+			j.CrearHomero();
 		}
+		if(e.getSource() == Bart){
+			j.CrearSkinner();
+		}
+		if(e.getSource() == MatarSkinner){
+			j.eliminar();
+		}
+	
+	}
 
 	public PanelMapa getPanelMapa() {
 		return panelMapa;
+	
+		
 	}
 }
  
