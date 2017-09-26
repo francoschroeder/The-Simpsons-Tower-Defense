@@ -43,6 +43,7 @@ public class Juego {
 		aliadosActivos.add(p);
 		
 		gui.getPanelMapa().add(p.getImagen());
+		p.getImagen().setBounds(300, 50, 75, 75);;
 		p.getImagen().setVisible(true);
 	}
 	
@@ -52,6 +53,7 @@ public class Juego {
 		enemigosActivos.add(p2);
 		
 		gui.getPanelMapa().add(p2.getImagen());
+		p2.getImagen().setBounds(188, 50, 75, 75);
 		p2.getImagen().setVisible(true);
 	}
 	

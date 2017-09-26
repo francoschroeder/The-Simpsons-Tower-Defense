@@ -20,7 +20,7 @@ public class Skinner extends Enemigo {
 		minMonedas=5;
 		maxMonedas=8;
 		
-		ImageIcon img = new ImageIcon(getClass().getResource("/sprites/skinner/skinnerWalk.gif"));
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerWalk.gif"));
 		
 		this.imagen = new JLabel();
 		this.imagen.setIcon(img);

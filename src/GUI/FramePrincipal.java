@@ -96,8 +96,9 @@ public class FramePrincipal implements ActionListener {
 		panel.setBounds(185, 530, 749, 236);
 		FramePrincipal.getContentPane().add(panel);
 		
-		Bart = new JButton("");
-		
+		Bart = new JButton("Skinner");
+		Bart.addActionListener(this)
+		;
 		Flander = new JButton("New button");
 		
 		Homero = new JButton(new ImageIcon(FramePrincipal.class.getResource("/sprites/homero/CaraHomeroBoton.jpg")));
@@ -108,6 +109,7 @@ public class FramePrincipal implements ActionListener {
 		Lisa = new JButton("");
 		
 		MatarSkinner = new JButton("MatarSkinner\n");
+		MatarSkinner.addActionListener(this);
 		
 		JButton Marge = new JButton("");
 		
