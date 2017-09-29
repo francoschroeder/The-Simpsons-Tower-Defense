@@ -24,6 +24,7 @@ public abstract class Personaje{
 	
 	public void setPosicion(Point p){
 		posicion = p;
+		this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
 	}
 
 	public JLabel getImagen(){

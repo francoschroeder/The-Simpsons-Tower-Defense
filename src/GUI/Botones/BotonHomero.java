@@ -1,7 +1,6 @@
-package GUI;
+package GUI.Botones;
 
-import javax.swing.JButton;
-
+ import javax.swing.JButton;
 import Juego.Personaje;
 import Personajes.Homero;
 

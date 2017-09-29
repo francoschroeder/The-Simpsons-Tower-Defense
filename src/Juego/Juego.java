@@ -4,7 +4,8 @@ import java.awt.Point;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import GUI.FramePrincipal;
+
+import GUI.GUIPrincipal;
 import Personajes.*;
 
 public class Juego {
@@ -13,9 +14,9 @@ public class Juego {
 	private LinkedList<Personaje> aliadosActivos;
 	private LinkedList<Personaje> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
-	private FramePrincipal gui;
+	private GUIPrincipal gui;
 	
-	public Juego(FramePrincipal gui) 
+	public Juego(GUIPrincipal gui) 
 		{// asignar las listas
 		this.gui=gui;
 		aliadosActivos = new LinkedList<Personaje>();
@@ -38,9 +39,6 @@ public class Juego {
 	public void eliminar() {
 		enemigosActivos.remove(matriz[2][1]);
 		matriz[2][1].getImagen().setVisible(false);
-		gui.getPanelMapa().remove(matriz[2][1].getImagen());
-		gui.getPanelMapa().revalidate();
-		gui.getPanelMapa().repaint();
 		matriz[2][1] = null;
 	}
 	
