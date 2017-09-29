@@ -47,7 +47,7 @@ public class GUIPrincipal extends JFrame {
 	private BotonCreacion maggie;
 	private BotonCreacion flander;
 	private BotonCreacion milhouse;
-	
+	private JPanel panelBotones;
 	private JPanel contentPane;
 		
 	/**
@@ -102,25 +102,17 @@ public class GUIPrincipal extends JFrame {
 				
 		//PAnel de los botones
 				
-		JPanel panel = new JPanel();
-		panel.setBounds(177, 553, 757, 219);
-		getContentPane().add(panel);
-		GroupLayout gl_panel = new GroupLayout(panel);
-		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addComponent(homero, GroupLayout.PREFERRED_SIZE, 757, GroupLayout.PREFERRED_SIZE)
-		);
-		gl_panel.setVerticalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addComponent(homero, GroupLayout.PREFERRED_SIZE, 219, GroupLayout.PREFERRED_SIZE)
-		);
-		panel.setLayout(gl_panel);
+		panelBotones = new JPanel();
+		panelBotones.setBounds(177, 553, 757, 219);
+		getContentPane().add(panelBotones);
+		
+	
 		
 		//Creo los botones y los agregos al panel
 	
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
-		
+		panelBotones.add(homero);
 	}
 	
 	
@@ -135,11 +127,13 @@ public class GUIPrincipal extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e){
 			Personaje p;
-			Point punto =new Point(300,50); 
+			Point punto =new Point(675,375); 
 			p = b.factory();
-			p.setPosicion(punto);
+			panelMapa.add(p.getImagen());
 			j.agregarPersonaje(p, 2,5 );
-		
+			
+			p.setPosicion(punto);
+
 		
 	
 	}
