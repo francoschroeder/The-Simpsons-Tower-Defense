@@ -14,8 +14,8 @@ import Juego.Personaje;
 
 public class Homero extends Aliado {
 	
-	public Homero(Point p){	
-		posicion = p;
+	public Homero(){	
+		posicion = null;
 		vidaMax = 25;
 		vidaActual = vidaMax;
 		ataque = 4;
@@ -26,7 +26,7 @@ public class Homero extends Aliado {
 		
 		this.imagen = new JLabel();
 		this.imagen.setIcon(img);
-		this.imagen.setBounds(188, 85, 75, 75);
+		this.imagen.setBounds(0, 0, 75, 75);
 		
 		this.imActual = new HashMap<String, Icon>();
 		this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/homero/homeroStill.gif"));

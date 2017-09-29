@@ -27,14 +27,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class FramePrincipal implements ActionListener {
+public class FramePrincipal {
 	
 	
 	private static final long seralVersionUID = 1L;
 	private JFrame FramePrincipal;
 	private PanelMapa panelMapa;
 	private Juego j;
-	private JButton Homero;
+	private BotonCreacion Homero;
 	private JButton	Bart;
 	private JButton Lisa;
 	private JButton	Marge;
@@ -97,11 +97,11 @@ public class FramePrincipal implements ActionListener {
 		FramePrincipal.getContentPane().add(panel);
 		
 		Bart = new JButton("Skinner");
-		Bart.addActionListener(this)
+		Bart.addActionListener(new oyenteBoton(Bart));
 		;
 		Flander = new JButton("New button");
 		
-		Homero = new JButton(new ImageIcon(FramePrincipal.class.getResource("/sprites/homero/CaraHomeroBoton.jpg")));
+		Homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		Homero.addActionListener(this);
 		
 		Milhouse = new JButton("New button");
@@ -176,21 +176,21 @@ public class FramePrincipal implements ActionListener {
 		}
 /* Acciones de los botones*/
 	
-	public void actionPerformed(ActionEvent e){
-		String evento=e.getActionCommand();
-		/*Inicia la logica y pone todos los botones en visbles.*/
-		if(e.getSource() == Homero){
-			j.CrearHomero();
+	private class OyenteBoton implements ActionListener{
+		BotonCreacion b;
+		
+		public OyenteBoton(BotonCreacion b){
+			this.b = b;
 		}
-		if(e.getSource() == Bart){
-			j.CrearSkinner();
-		}
-		if(e.getSource() == MatarSkinner){
-			j.eliminar();
-		}
+		public void actionPerformed(ActionEvent e){
+			Personaje p;
+			p = b.factory();
+			j.agregarPersonaje(p, , );
+		
+		
 	
 	}
-
+	}
 	public PanelMapa getPanelMapa() {
 		return panelMapa;
 	
