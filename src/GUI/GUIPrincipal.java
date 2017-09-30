@@ -8,15 +8,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import com.sun.glass.events.MouseEvent;
 import com.sun.javafx.collections.MappingChange.Map;
 
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.BotonHomero;
 
+import GUI.Botones.PersoSelec;
 
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
 
 import Juego.Juego;
 import Juego.Personaje;
@@ -49,7 +53,7 @@ public class GUIPrincipal extends JFrame {
 	private BotonCreacion milhouse;
 	private JPanel panelBotones;
 	private JPanel contentPane;
-		
+	private PersoSelec seleccionado;	
 	/**
 	 * Launch the application.
 	 */
@@ -80,6 +84,7 @@ public class GUIPrincipal extends JFrame {
 
 	
 		//Agrego y seteo panel que contiene en mapa en el frame.
+		
 				ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
 				panelMapa = new PanelMapa(img.getImage());
 				panelMapa.setForeground(Color.WHITE);
@@ -95,10 +100,15 @@ public class GUIPrincipal extends JFrame {
 						.addGap(0, 446, Short.MAX_VALUE)
 				);
 				panelMapa.setLayout(gl_panelMapa);
+				panelMapa.addMouseListener(new OyenteClick(panelMapa));
+					
+					
+               
+		
 				
 		//Crear juego
 			j = new Juego(this);
-				
+			seleccionado = new PersoSelec(j);	
 				
 		//PAnel de los botones
 				
@@ -113,6 +123,8 @@ public class GUIPrincipal extends JFrame {
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		panelBotones.add(homero);
+	
+	
 	}
 	
 	
@@ -127,16 +139,42 @@ public class GUIPrincipal extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e){
 			Personaje p;
-			Point punto =new Point(675,375); 
-			p = b.factory();
-			panelMapa.add(p.getImagen());
-			j.agregarPersonaje(p, 2,5 );
+			seleccionado.serPersonaje(b);
 			
-			p.setPosicion(punto);
-
-		
+		}
+	}
+	
+	private class OyenteClick extends MouseAdapter{
+		JPanel p;
+		Personaje opa;
+		public OyenteClick(JPanel p){
+			this.p = p;
+		}
+		 public void mouseClicked(MouseEvent evento) {
+			 Point punto = (p.getMousePosition());
+			 System.out.println("se clic¡keoo");
+			 opa = seleccionado.generarPersonaje(punto);
+			 panelMapa.add(opa.getImagen());
+		 	}
+			 
+			 public void mousePressed(MouseEvent evento) {
+			  
+			 }
+			 
+			 public void mouseReleased(MouseEvent evento) {
+			  
+			 }
+			 
+			 public void mouseExited(MouseEvent evento) {
+			  
+			 }
+			 
+			 public void mouseEntered(MouseEvent evento) {
+			  
+			 }
 	
 	}
-	}
+	
+	
 }
 

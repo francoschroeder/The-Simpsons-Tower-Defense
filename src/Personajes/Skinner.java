@@ -11,7 +11,8 @@ import Juego.Personaje;
 
 public class Skinner extends Enemigo {
 	
-	public Skinner(Point p) {
+	public Skinner() {
+		posicion=null;
 		vidaMax=40;
 		vidaActual = vidaMax;
 		ataque=15;

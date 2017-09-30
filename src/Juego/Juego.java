@@ -25,7 +25,7 @@ public class Juego {
 		matriz = new Personaje[10][6];
 		tc=75;
 	}
-	public void agregarPersonaje(Personaje p, int x, int y) {
+	public void agregarPersonaje(Personaje p,int x,int y) {
 		matriz[x][y] = p;
 	}
 	
