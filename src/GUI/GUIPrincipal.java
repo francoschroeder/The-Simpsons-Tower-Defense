@@ -154,7 +154,7 @@ public class GUIPrincipal extends JFrame {
 			 Point punto = (p.getMousePosition());
 			 System.out.println("se clic¡keoo");
 			 opa = seleccionado.generarPersonaje(punto);
-			 panelMapa.add(opa.getImagen());
+			 p.add(opa.getImagen());
 		 	}
 			 
 			 public void mousePressed(MouseEvent evento) {
