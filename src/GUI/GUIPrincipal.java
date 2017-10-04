@@ -90,7 +90,9 @@ public class GUIPrincipal extends JFrame {
 				panelMapa = new PanelMapa(img.getImage());
 				panelMapa.setForeground(Color.WHITE);
 				panelMapa.setLocation(185, 80);
+				
 				getContentPane().add(panelMapa);
+				
 				GroupLayout gl_panelMapa = new GroupLayout(panelMapa);
 				gl_panelMapa.setHorizontalGroup(
 					gl_panelMapa.createParallelGroup(Alignment.LEADING)
@@ -110,7 +112,8 @@ public class GUIPrincipal extends JFrame {
 		//Crear juego
 			j = new Juego(this);
 			seleccionado = new PersoSelec(j);	
-			
+			panelMapa.setPerso(seleccionado);
+			seleccionado.setPanel(panelMapa);
 		//PAnel de los botones
 				
 		panelBotones = new JPanel();
@@ -124,7 +127,7 @@ public class GUIPrincipal extends JFrame {
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		panelBotones.add(homero);
-	
+		bart = new BotonBart("/sprites/skinner/skinnerWalk.gif"
 	
 	}
 	
@@ -140,7 +143,7 @@ public class GUIPrincipal extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e){
 			Personaje p;
-			seleccionado.setPersonaje(b);
+			seleccionado.setBotonPersonaje(b);
 			
 		}
 	}

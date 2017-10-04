@@ -1,9 +1,12 @@
-package GUI;
+package GUI.Botones;
+
+
 
 import javax.swing.JButton;
 
 import Juego.Personaje;
 import Personajes.Homero;
+import Personajes.Skinner;
 
 public class BotonBart extends BotonCreacion {
 	
@@ -15,7 +18,7 @@ public class BotonBart extends BotonCreacion {
 	}
 	
 	public Personaje factory(){
-		return new Bart();
+		return new Skinner();
 		
 	}
 }

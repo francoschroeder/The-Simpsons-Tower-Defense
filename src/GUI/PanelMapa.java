@@ -2,6 +2,9 @@ package GUI;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -9,7 +12,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
+import com.sun.javafx.scene.paint.GradientUtils.Point;
+
+import GUI.Botones.BotonCreacion;
 import GUI.Botones.PersoSelec;
+import Juego.Personaje;
  
 /**
  * 
@@ -20,9 +27,11 @@ import GUI.Botones.PersoSelec;
  * 
  */
  
-public class PanelMapa extends JPanel implements MouseListener{
+public class PanelMapa extends JPanel {
 	PersoSelec selec;
- 
+	Personaje perso;
+	
+	
 	public void setPerso(PersoSelec p){
 		selec = p;
 	}
@@ -43,6 +52,10 @@ public class PanelMapa extends JPanel implements MouseListener{
 			this.setMaximumSize(dimension);
 			this.setLayout(null);
 			this.setPreferredSize(dimension);
+			addMouseListener(new OyentePanel(this));
+		
+		
+		
 		}	
 	// Metodo que es llamado automaticamente por la maquina virtual Java cada vez que repinta
 	public void paintComponent(Graphics g) {
@@ -56,16 +69,32 @@ public class PanelMapa extends JPanel implements MouseListener{
 	  g.drawImage(this.background, 0, 0, width, height, null);
 		
 	}
- 
-	 public void mouseClicked(MouseEvent e) {
-		this.add((selec.generarPersonaje(e.getPoint()).getImagen()));
-		
-	 }
-	 public void mousePressed(MouseEvent e) {}
-	 public void mouseReleased(MouseEvent e) {}
-	 public void mouseEntered(MouseEvent e) {}
-	 public void mouseExited(MouseEvent e) {}
-		
 	
-}
+	private class OyentePanel implements MouseListener{
+		PanelMapa b;
+		
+		public OyentePanel(PanelMapa b){
+			this.b = b;
+		}
+		 public void mousePressed(MouseEvent e) {
+			selec.generarPersonaje(e.getPoint());
+			System.out.println("holaa");
+			 
+		    }
 
+		    public void mouseReleased(MouseEvent e) {
+		   
+		    }
+
+		    public void mouseEntered(MouseEvent e) {
+		      
+		    }
+
+		    public void mouseExited(MouseEvent e) {
+		       		    }
+
+		    public void mouseClicked(MouseEvent e) {
+		       
+		    }
+		}
+}
