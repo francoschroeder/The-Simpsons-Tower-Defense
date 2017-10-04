@@ -54,6 +54,7 @@ public class GUIPrincipal extends JFrame {
 	private JPanel panelBotones;
 	private JPanel contentPane;
 	private PersoSelec seleccionado;	
+
 	/**
 	 * Launch the application.
 	 */
@@ -100,7 +101,7 @@ public class GUIPrincipal extends JFrame {
 						.addGap(0, 446, Short.MAX_VALUE)
 				);
 				panelMapa.setLayout(gl_panelMapa);
-				panelMapa.addMouseListener(new OyenteClick(panelMapa));
+			
 					
 					
                
@@ -109,7 +110,7 @@ public class GUIPrincipal extends JFrame {
 		//Crear juego
 			j = new Juego(this);
 			seleccionado = new PersoSelec(j);	
-				
+			
 		//PAnel de los botones
 				
 		panelBotones = new JPanel();
@@ -139,41 +140,12 @@ public class GUIPrincipal extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e){
 			Personaje p;
-			seleccionado.serPersonaje(b);
+			seleccionado.setPersonaje(b);
 			
 		}
 	}
 	
-	private class OyenteClick extends MouseAdapter{
-		JPanel p;
-		Personaje opa;
-		public OyenteClick(JPanel p){
-			this.p = p;
-		}
-		 public void mouseClicked(MouseEvent evento) {
-			 Point punto = (p.getMousePosition());
-			 System.out.println("se clic¡keoo");
-			 opa = seleccionado.generarPersonaje(punto);
-			 p.add(opa.getImagen());
-		 	}
-			 
-			 public void mousePressed(MouseEvent evento) {
-			  
-			 }
-			 
-			 public void mouseReleased(MouseEvent evento) {
-			  
-			 }
-			 
-			 public void mouseExited(MouseEvent evento) {
-			  
-			 }
-			 
-			 public void mouseEntered(MouseEvent evento) {
-			  
-			 }
 	
-	}
 	
 	
 }

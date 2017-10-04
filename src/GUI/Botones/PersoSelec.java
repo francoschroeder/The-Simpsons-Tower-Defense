@@ -15,7 +15,7 @@ public class PersoSelec {
 		this.j = j; 
 		boton=null;
 	}
-	public void serPersonaje(BotonCreacion boton){
+	public void setPersonaje(BotonCreacion boton){
 		this.boton = boton;
 	}
 	
@@ -26,7 +26,6 @@ public class PersoSelec {
 		this.p = boton.factory();
 		punto = new Point(75,75);
 		p.setPosicion(punto);
-		j.agregarPersonaje(p, (int) Math.floor(punto.getX()/75),(int) Math.floor(punto.getY()/75));
 		return p;
 	}
 }

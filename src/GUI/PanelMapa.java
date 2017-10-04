@@ -2,10 +2,14 @@ package GUI;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
- 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
+
+import GUI.Botones.PersoSelec;
  
 /**
  * 
@@ -16,7 +20,12 @@ import javax.swing.border.BevelBorder;
  * 
  */
  
-public class PanelMapa extends JPanel {
+public class PanelMapa extends JPanel implements MouseListener{
+	PersoSelec selec;
+ 
+	public void setPerso(PersoSelec p){
+		selec = p;
+	}
  
 	private static final long serialVersionUID = 1L;
 	// Atributo que guardara la imagen de Background que le pasemos.
@@ -46,11 +55,17 @@ public class PanelMapa extends JPanel {
 		// Mandamos que pinte la imagen en el panel
 	  g.drawImage(this.background, 0, 0, width, height, null);
 		
- }
+	}
  
+	 public void mouseClicked(MouseEvent e) {
+		this.add((selec.generarPersonaje(e.getPoint()).getImagen()));
+		
+	 }
+	 public void mousePressed(MouseEvent e) {}
+	 public void mouseReleased(MouseEvent e) {}
+	 public void mouseEntered(MouseEvent e) {}
+	 public void mouseExited(MouseEvent e) {}
+		
 	
-		
-		
- 
 }
 
