@@ -1,5 +1,8 @@
 package Objetos;
 
-public interface Comprable {
+import Juego.Objeto;
+
+public abstract class Comprable extends Objeto{
+	protected int costo;
 
 }
