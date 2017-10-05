@@ -13,7 +13,7 @@ import com.sun.javafx.collections.MappingChange.Map;
 
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.BotonHomero;
-
+import GUI.Botones.BotonSkinner;
 import GUI.Botones.PersoSelec;
 
 import java.awt.event.ActionListener;
@@ -25,6 +25,8 @@ import java.awt.event.MouseListener;
 import Juego.Juego;
 import Juego.Personaje;
 import Personajes.Homero;
+import Personajes.Skinner;
+
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 import javax.swing.GroupLayout;
@@ -54,7 +56,8 @@ public class GUIPrincipal extends JFrame {
 	private JPanel panelBotones;
 	private JPanel contentPane;
 	private PersoSelec seleccionado;	
-
+	private JButton skinner;
+	private JButton BorrarSkinner;
 	/**
 	 * Launch the application.
 	 */
@@ -123,12 +126,17 @@ public class GUIPrincipal extends JFrame {
 	
 		
 		//Creo los botones y los agregos al panel
-	
+		
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		panelBotones.add(homero);
-		bart = new BotonBart("/sprites/skinner/skinnerWalk.gif"
-	
+		skinner = new JButton("Skinner");
+		skinner.addActionListener(new OyenteBoton2());
+		panelBotones.add(skinner);
+		BorrarSkinner = new JButton("BorrarSkinner");
+		BorrarSkinner.addActionListener(new OyenteBoton3());
+		panelBotones.add(BorrarSkinner);
+		
 	}
 	
 	
@@ -147,8 +155,30 @@ public class GUIPrincipal extends JFrame {
 			
 		}
 	}
-	
-	
+	private class OyenteBoton2 implements ActionListener{
+		
+		public OyenteBoton2(){
+			
+		}
+		public void actionPerformed(ActionEvent e){
+			Point punto = new Point(150,75);
+			Personaje p = new Skinner();
+			j.agregarPersonaje(p, punto);
+			panelMapa.add(p.getImagen());
+			p.getImagen().setBounds(180, 80, 75, 75);
+			
+		}
+	}
+private class OyenteBoton3 implements ActionListener{
+		
+		public OyenteBoton3(){
+			
+		}
+		public void actionPerformed(ActionEvent e){
+			j.eliminar();
+			
+		}
+	}
 	
 	
 }

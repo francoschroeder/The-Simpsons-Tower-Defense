@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
 import com.sun.javafx.scene.paint.GradientUtils.Point;
-
+import java.awt.geom.Point2D;
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.PersoSelec;
 import Juego.Personaje;
@@ -30,7 +30,7 @@ import Juego.Personaje;
 public class PanelMapa extends JPanel {
 	PersoSelec selec;
 	Personaje perso;
-	
+	Point puntoNuevo;
 	
 	public void setPerso(PersoSelec p){
 		selec = p;

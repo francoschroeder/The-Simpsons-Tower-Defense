@@ -32,6 +32,7 @@ public class PersoSelec {
 	}
 	
 	public Personaje generarPersonaje(Point punto){
+		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75),(int)Math.floorDiv((int) punto.getY(), 75));
 		this.p = boton.factory();
 		panel.add(p.getImagen());
 		p.setPosicion(punto);

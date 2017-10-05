@@ -27,7 +27,8 @@ public class Juego {
 	}
 	public void agregarPersonaje(Personaje p, Point punto) {
 		
-		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		matriz[Math.floorDiv((int)punto.getX(), tc)][Math.floorDiv((int)punto.getY(), tc)] = p;
+		
 	}
 	
 	public Personaje getBlanco(Point p, int alcance) {
