@@ -14,6 +14,7 @@ public class BotonHomero extends BotonCreacion {
 	}
 	
 	public Personaje factory(){
+		System.out.println("crea a homero");
 		return new Homero();
 		
 	}
