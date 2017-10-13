@@ -8,18 +8,19 @@ import GUI.PanelMapa;
 import Juego.Juego;
 import Juego.Personaje;
 
-public class PersoSelec {
+public class Market {
 	JPanel panel;
 	Personaje p;
 	Juego j;
 	BotonCreacion boton;
 	
-	public PersoSelec(Juego j){
+	public Market(Juego j){
 		p=null;
 		this.j = j; 
 		boton=null;
 	}
 	public void setBotonPersonaje(BotonCreacion boton){
+		System.out.println("seteo el factory");
 		this.boton = boton;
 	}
 	
@@ -28,11 +29,13 @@ public class PersoSelec {
 	}
 	
 	public void setPanel(JPanel p){ 
+		System.out.println("agrege panel al market");
 		panel = p;
 	}
 	
 	public Personaje generarPersonaje(Point punto){
-		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75)*75,(int)Math.floorDiv((int) punto.getY(), 75)*75);
+		System.out.println("Entro a generar personaje");
+		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75),(int)Math.floorDiv((int) punto.getY(), 75));
 		System.out.println((int)Math.floorDiv((int) punto.getX(), 75));
 		System.out.println((int)Math.floorDiv((int) punto.getY(), 75));
 		this.p = boton.factory();

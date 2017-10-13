@@ -12,21 +12,21 @@ import Juego.Personaje;
 public class Bart extends Aliado {
 	
 	public Bart(){
-	posicion=null;
-	vidaMax=20;
-	ataque=5;
-	rango=3;
-	costo=10;
-	
-	ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/homero/homeroStill.gif"));
-	
-	this.imagen = new JLabel();
-	this.imagen.setIcon(img);
-	this.imagen.setBounds(0, 0, 75, 75);
-	
-	this.imActual = new HashMap<String, Icon>();
-	this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/homero/homeroStill.gif"));
-	this.imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/homero/homeroAttack.gif"));
+		posicion=null;
+		vidaMax=20;
+		ataque=5;
+		rango=3;
+		costo=10;
+		
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/homero/homeroStill.gif"));
+		
+		this.imagen = new JLabel();
+		this.imagen.setIcon(img);
+		this.imagen.setBounds(0, 0, 75, 75);
+		
+		this.imActual = new HashMap<String, Icon>();
+		this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/homero/homeroStill.gif"));
+		this.imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/homero/homeroAttack.gif"));
 
 	
 	}

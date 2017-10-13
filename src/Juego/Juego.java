@@ -16,9 +16,9 @@ public class Juego {
 	private Stack<Personaje> enemigosPorSalir;
 	private GUIPrincipal gui;
 	
-	public Juego(GUIPrincipal gui) 
+	public Juego(GUIPrincipal p) 
 		{// asignar las listas
-		this.gui=gui;
+		this.gui=p;
 		aliadosActivos = new LinkedList<Personaje>();
 		enemigosActivos = new LinkedList<Personaje>();
 		enemigosPorSalir = new Stack<Personaje>();
@@ -31,8 +31,18 @@ public class Juego {
 		
 	}
 	
-	public Personaje getBlanco(Point p, int alcance) {
+	public Personaje getBlanco(Personaje p) {
+		
+		int y = (int) p.getPosicion().getY();
+		
+		for(int i =  (int) p.getPosicion().getX(); i <= i+ p.getRango(); i++){
+			
+			if (matriz[i][y] != null)
+				return matriz[i][y];
+		}
+		
 		return null;
+		
 	}
 	
 	

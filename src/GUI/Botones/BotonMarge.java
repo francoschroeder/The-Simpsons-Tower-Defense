@@ -1,9 +1,10 @@
-package GUI;
+package GUI.Botones;
 
 import javax.swing.JButton;
 
 import Juego.Personaje;
 import Personajes.Homero;
+import Personajes.Marge;
 
 public class BotonMarge extends BotonCreacion {
 	

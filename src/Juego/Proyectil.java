@@ -7,5 +7,5 @@ public abstract class Proyectil {
 	
 	public abstract void atacarEnemigo(Enemigo e);
 	
-	public abstract void atacarObjeto(Objecto o);
+	public abstract void atacarObjeto(Objeto o);
 }

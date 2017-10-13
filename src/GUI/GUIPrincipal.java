@@ -10,11 +10,15 @@ import javax.swing.border.EmptyBorder;
 
 import com.sun.glass.events.MouseEvent;
 import com.sun.javafx.collections.MappingChange.Map;
-
+import GUI.Botones.BotonMaggie;
+import GUI.Botones.BotonMarge;
+import GUI.Botones.BotonBart;
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.BotonHomero;
+import GUI.Botones.BotonLisa;
 import GUI.Botones.BotonSkinner;
-import GUI.Botones.PersoSelec;
+import GUI.Botones.Market;
+
 
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -55,7 +59,7 @@ public class GUIPrincipal extends JFrame {
 	private BotonCreacion milhouse;
 	private JPanel panelBotones;
 	private JPanel contentPane;
-	private PersoSelec seleccionado;	
+	private Market mercado;	
 	private JButton skinner;
 	private JButton BorrarSkinner;
 	/**
@@ -85,7 +89,7 @@ public class GUIPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1134 , 794);
 		setLocationRelativeTo(null);
-
+		
 	
 		//Agrego y seteo panel que contiene en mapa en el frame.
 		
@@ -113,11 +117,12 @@ public class GUIPrincipal extends JFrame {
 		
 				
 		//Crear juego
-			j = new Juego(this);
-			seleccionado = new PersoSelec(j);	
-			panelMapa.setPerso(seleccionado);
-			seleccionado.setPanel(panelMapa);
-		//PAnel de los botones
+			
+		
+		
+			
+			
+		//Panel de los botones
 				
 		panelBotones = new JPanel();
 		panelBotones.setBounds(177, 553, 757, 219);
@@ -130,16 +135,38 @@ public class GUIPrincipal extends JFrame {
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		panelBotones.add(homero);
-		skinner = new JButton("Skinner");
-		skinner.addActionListener(new OyenteBoton2());
-		panelBotones.add(skinner);
-		BorrarSkinner = new JButton("BorrarSkinner");
-		BorrarSkinner.addActionListener(new OyenteBoton3());
-		panelBotones.add(BorrarSkinner);
+		bart = new BotonBart("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.addActionListener(new OyenteBoton(homero));
+		panelBotones.add(homero);
+		lisa = new BotonLisa("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.addActionListener(new OyenteBoton(homero));
+		panelBotones.add(homero);
+		maggie = new BotonMaggie("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.addActionListener(new OyenteBoton(homero));
+		panelBotones.add(homero);
+		marge = new BotonMarge("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.addActionListener(new OyenteBoton(homero));
+		panelBotones.add(homero);
+		panelBotones.add(bart);
+		panelBotones.add(lisa);
+		panelBotones.add(maggie);
+		panelBotones.add(marge);
+		
+		
+	}
+	 // juego 
+	
+	public void setJuego(Juego j){
+		this.j = j;
 		
 	}
 	
-	
+	public void setMarket(Market mercado){
+		this.mercado = mercado;
+		panelMapa.setPerso(this.mercado);
+		this.mercado.setPanel(panelMapa);
+		System.out.println("aca se creo too");
+	}
 	
 	//oyente boton con Factory 
 	
@@ -150,35 +177,11 @@ public class GUIPrincipal extends JFrame {
 			this.b = b;
 		}
 		public void actionPerformed(ActionEvent e){
-			Personaje p;
-			seleccionado.setBotonPersonaje(b);
+			mercado.setBotonPersonaje(b);
 			
 		}
 	}
-	private class OyenteBoton2 implements ActionListener{
-		
-		public OyenteBoton2(){
-			
-		}
-		public void actionPerformed(ActionEvent e){
-			Point punto = new Point(150,75);
-			Personaje p = new Skinner();
-			j.agregarPersonaje(p, punto);
-			panelMapa.add(p.getImagen());
-			p.getImagen().setBounds(180, 80, 75, 75);
-			
-		}
-	}
-private class OyenteBoton3 implements ActionListener{
-		
-		public OyenteBoton3(){
-			
-		}
-		public void actionPerformed(ActionEvent e){
-			j.eliminar();
-			
-		}
-	}
+	
 	
 	
 }

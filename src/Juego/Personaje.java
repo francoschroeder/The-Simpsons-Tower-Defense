@@ -11,20 +11,20 @@ public abstract class Personaje{
 	protected int ataque;
 	protected int rango;
 	
-	protected Point posicion;
+	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
 	protected Map<String, Icon> imActual;
 	
 	public static final String still_key = "Still";
 	public static final String shoot_key = "Shoot";
 	
-	public Point getPosiscion(){
+	public Point getPosicion(){
 		return posicion;
 	}
 	
 	public void setPosicion(Point p){
 		posicion = p;
-		this.imagen.setBounds((int)this.posicion.getX(), (int)this.posicion.getY(), 75, 75);
+		this.imagen.setBounds((int)this.posicion.getX()*75, (int)this.posicion.getY()*75, 75, 75);
 	}
 
 	public JLabel getImagen(){
