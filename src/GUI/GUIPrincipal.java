@@ -136,13 +136,13 @@ public class GUIPrincipal extends JFrame {
 		homero.addActionListener(new OyenteBoton(homero));
 		panelBotones.add(homero);
 		bart = new BotonBart("/sprites/bart/boton.png");
-		homero.addActionListener(new OyenteBoton(homero));
+		bart.addActionListener(new OyenteBoton(bart));
 		lisa = new BotonLisa("/sprites/lisa/boton.png");
-		homero.addActionListener(new OyenteBoton(homero));
+		lisa.addActionListener(new OyenteBoton(lisa));
 		maggie = new BotonMaggie("/sprites/maggie/boton.png");
-		homero.addActionListener(new OyenteBoton(homero));
+		maggie.addActionListener(new OyenteBoton(maggie));
 		marge = new BotonMarge("/sprites/marge/boton.png");
-		homero.addActionListener(new OyenteBoton(homero));
+		marge.addActionListener(new OyenteBoton(marge));
 		
 		panelBotones.add(bart);
 		panelBotones.add(lisa);
