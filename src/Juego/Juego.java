@@ -11,16 +11,16 @@ import Personajes.*;
 public class Juego {
 	private int tc;
 	private Personaje [][] matriz;
-	private LinkedList<Personaje> aliadosActivos;
-	private LinkedList<Personaje> enemigosActivos;
+	private LinkedList<Aliado> aliadosActivos;
+	private LinkedList<Enemigo> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
 		{// asignar las listas
 		this.gui=p;
-		aliadosActivos = new LinkedList<Personaje>();
-		enemigosActivos = new LinkedList<Personaje>();
+		aliadosActivos = new LinkedList<Aliado>();
+		enemigosActivos = new LinkedList<Enemigo>();
 		enemigosPorSalir = new Stack<Personaje>();
 		matriz = new Personaje[10][6];
 		tc=75;
@@ -52,6 +52,10 @@ public class Juego {
 		enemigosActivos.remove(matriz[2][1]);
 		matriz[2][1].getImagen().setVisible(false);
 		matriz[2][1] = null;
+	}
+	
+	public LinkedList getEnemigos() {
+		return enemigosActivos;
 	}
 	
 }

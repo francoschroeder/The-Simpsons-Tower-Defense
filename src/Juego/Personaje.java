@@ -55,4 +55,8 @@ public abstract class Personaje{
 	public void reducirVida(int v) {
 		vidaActual-=v;
 	}
+	
+	public boolean estaMuerto() {
+		return vidaActual<=0;
+	}
 }

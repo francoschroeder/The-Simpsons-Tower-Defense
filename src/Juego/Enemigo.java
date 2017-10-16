@@ -5,16 +5,16 @@ import javax.swing.ImageIcon;
 
 public abstract class Enemigo extends Personaje {
 
-	protected float velocidad;
+	protected int velocidad;
 	protected int minMonedas, maxMonedas;
 	public static final String forward_key = "Forward";
 		
 
-	public float getVelocidad(){
+	public int getVelocidad(){
 		return velocidad;
 	}
 	
-	public void setVelocidad(float v){
+	public void setVelocidad(int v){
 		velocidad = v;
 	}
 	
