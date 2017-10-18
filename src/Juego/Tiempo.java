@@ -1,12 +1,12 @@
 package Juego;
 
-import GUI.FramePrincipal;
+import GUI.GUIPrincipal;
 
 public class Tiempo extends Thread {
 	private Personaje skinner;
-	private FramePrincipal gui;
+	private GUIPrincipal gui;
 	
-	public Tiempo(Personaje p, FramePrincipal gui) {
+	public Tiempo(Personaje p, GUIPrincipal gui) {
 		skinner=p;
 		this.gui=gui;
 	}
