@@ -17,7 +17,7 @@ public class Skinner extends Enemigo {
 		vidaActual = vidaMax;
 		ataque=15;
 		rango=4;
-		velocidad=2.5f;
+		velocidad=2;
 		minMonedas=5;
 		maxMonedas=8;
 		
@@ -27,7 +27,7 @@ public class Skinner extends Enemigo {
 		this.imagen.setIcon(img);
 		this.imagen.setBounds(178, 75, 75, 75);
 		
-		this.imActual = new HashMap<String, Icon>();
+		this.imActual = new HashMap<String, ImageIcon>();
 		this.imActual.put(Enemigo.forward_key, new ImageIcon("/sprites/skinner/skinnerWalk.gif"));
 		this.imActual.put(Personaje.shoot_key, new ImageIcon("/sprites/skinner/skinnerAttack.gif"));
 	}

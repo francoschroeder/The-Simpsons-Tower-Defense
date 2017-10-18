@@ -2,6 +2,8 @@ package Juego;
 
 import javax.swing.JLabel;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 import java.awt.Point;
 import java.util.Map;
 
@@ -13,7 +15,7 @@ public abstract class Personaje{
 	
 	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
-	protected Map<String, Icon> imActual;
+	protected Map<String, ImageIcon> imActual;
 	
 	public static final String still_key = "Still";
 	public static final String shoot_key = "Shoot";

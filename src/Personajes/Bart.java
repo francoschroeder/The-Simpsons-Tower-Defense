@@ -24,7 +24,7 @@ public class Bart extends Aliado {
 		this.imagen.setIcon(img);
 		this.imagen.setBounds(0, 0, 75, 75);
 		
-		this.imActual = new HashMap<String, Icon>();
+		this.imActual = new HashMap<String, ImageIcon>();
 		this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/bart/bartStill.gif"));
 		this.imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/bart/bartAttack.gif"));
 

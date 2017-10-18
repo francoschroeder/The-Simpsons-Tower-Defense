@@ -21,7 +21,7 @@ public class Juego {
 		this.gui=p;
 		aliadosActivos = new LinkedList<Aliado>();
 		enemigosActivos = new LinkedList<Enemigo>();
-		enemigosPorSalir = new Stack<Personaje>();
+		//enemigosPorSalir = new Stack<Personaje>();
 		matriz = new Personaje[10][6];
 		tc=75;
 	}
@@ -46,7 +46,21 @@ public class Juego {
 	}
 	
 	
-
+	/*Avanza el enemigo 1 cuadro hacia adelante
+	 * Retorna true si se pudo avanzar (si no hay nadie en frente) y false en caso contrario
+	 */
+	public boolean moverEnemigo(Enemigo e) {
+		Point posE = e.getPosicion();
+		
+		if (matriz[((int) posE.getX())+1][(int) posE.getY()] == null) {
+			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
+			matriz[(int) posE.getX()][(int) posE.getY()] = null;
+			return true;
+		}
+			
+		return false;
+	}
+	
 	
 	public void eliminar() {
 		enemigosActivos.remove(matriz[2][1]);

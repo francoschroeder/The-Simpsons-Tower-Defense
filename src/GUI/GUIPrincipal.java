@@ -134,7 +134,6 @@ public class GUIPrincipal extends JFrame {
 		
 		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
-		panelBotones.add(homero);
 		bart = new BotonBart("/sprites/bart/boton.png");
 		bart.addActionListener(new OyenteBoton(bart));
 		lisa = new BotonLisa("/sprites/lisa/boton.png");
@@ -144,6 +143,7 @@ public class GUIPrincipal extends JFrame {
 		marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
 		
+		panelBotones.add(homero);
 		panelBotones.add(bart);
 		panelBotones.add(lisa);
 		panelBotones.add(maggie);
