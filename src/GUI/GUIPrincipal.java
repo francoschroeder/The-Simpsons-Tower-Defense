@@ -179,7 +179,9 @@ public class GUIPrincipal extends JFrame {
 		}
 	}
 	
-	
+	public PanelMapa getPanelMapa() {
+		return panelMapa;
+	}
 	
 }
 
