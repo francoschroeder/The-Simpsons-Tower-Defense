@@ -35,7 +35,7 @@ public class Juego {
 		
 		int y = (int) p.getPosicion().getY();
 		
-		for(int i =  (int) p.getPosicion().getX(); i <= i+ p.getRango() && i<=9; i++){
+		for(int i =  (int) p.getPosicion().getX(); i <= i+ p.getRango(); i++){
 			
 			if (matriz[i][y] != null)
 				return matriz[i][y];
@@ -51,13 +51,10 @@ public class Juego {
 	 */
 	public boolean moverEnemigo(Enemigo e) {
 		Point posE = e.getPosicion();
-		Point nuevaPosicion = new Point((int) posE.getX(), (int) posE.getY());
 		
 		if (matriz[((int) posE.getX())+1][(int) posE.getY()] == null) {
 			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
-			
-			e.setPosicion(nuevaPosicion);
 			return true;
 		}
 			
@@ -65,8 +62,10 @@ public class Juego {
 	}
 	
 	
-	public void eliminar(Personaje p) {
-		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
+	public void eliminar() {
+		enemigosActivos.remove(matriz[2][1]);
+		matriz[2][1].getImagen().setVisible(false);
+		matriz[2][1] = null;
 	}
 	
 	public LinkedList getEnemigos() {

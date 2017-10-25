@@ -35,7 +35,7 @@ public abstract class Personaje{
 
 	public void setImagen(String dir){
 		this.imagen.setIcon(this.imActual.get(dir));
-		//this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
+		this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
 	}
 	
 	public int getVidaMax() {

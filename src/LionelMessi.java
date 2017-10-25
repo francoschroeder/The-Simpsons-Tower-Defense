@@ -8,7 +8,7 @@ public class LionelMessi {
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);
 		Market market = new Market(j);
-		HiloEnemigos h = new HiloEnemigos(j, gui);
+		HiloEnemigos h = new HiloEnemigos(j);
 		
 		gui.setJuego(j);
 		gui.setMarket(market);
