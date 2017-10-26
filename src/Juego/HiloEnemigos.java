@@ -1,64 +1,118 @@
 package Juego;
 
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.util.LinkedList;
 import java.util.Stack;
 
+import GUI.GUIPrincipal;
+import GUI.PanelMapa;
 import Personajes.Skinner;
 
 public class HiloEnemigos extends Thread {
 	private Juego j;
 	private boolean seguir;
 	private Stack<Enemigo> enemigosPorSalir;
+	private PanelMapa panel;
 	
-	public HiloEnemigos(Juego j) {
+	public HiloEnemigos(Juego j, GUIPrincipal gui) {
 		this.j=j;
 		seguir=true;
+		panel = gui.getPanelMapa();
+		enemigosPorSalir = new Stack<Enemigo>();
 	}
 	
 	public void detener() {
 		seguir=false;
 	}
 	
+	public void crearEnemigosPorSalir() {
+		Skinner s1 = new Skinner();
+		s1.setPosicion(new Point(0, 0));
+		s1.getImagen().setBounds(0*75+1, 0*75, 75, 75);
+		panel.add(s1.getImagen());
+		s1.getImagen().setVisible(false);
+		enemigosPorSalir.push(s1);
+		
+		Skinner s2 = new Skinner();
+		s2.setPosicion(new Point(0, 3));
+		s2.getImagen().setBounds(0*75+1, 3*75, 75, 75);
+		panel.add(s2.getImagen());
+		s2.getImagen().setVisible(false);
+		enemigosPorSalir.push(s2);
+		
+		Skinner s3 = new Skinner();
+		s3.setPosicion(new Point(0, 5));
+		s3.getImagen().setBounds(0*75+1, 5*75, 75, 75);
+		panel.add(s3.getImagen());
+		s3.getImagen().setVisible(false);
+		enemigosPorSalir.push(s3);
+		
+		Skinner s4 = new Skinner();
+		s4.setPosicion(new Point(0, 2));
+		s4.getImagen().setBounds(0*75+1, 2*75, 75, 75);
+		panel.add(s4.getImagen());
+		s4.getImagen().setVisible(false);
+		enemigosPorSalir.push(s4);
+		
+		Skinner s5 = new Skinner();
+		s5.setPosicion(new Point(0, 5));
+		s5.getImagen().setBounds(0*75+1, 5*75, 75, 75);
+		panel.add(s5.getImagen());
+		s5.getImagen().setVisible(false);
+		enemigosPorSalir.push(s5);
+		
+	}
+	
 	public void run() {
+		int cont=0;
+		Rectangle r;
+		Enemigo aSalir;
 		LinkedList<Enemigo> enemigos = j.getEnemigos();
 		LinkedList<Enemigo> aEliminar = new LinkedList<Enemigo>();
 		
-		enemigosPorSalir = new Stack<Enemigo>();
-		enemigosPorSalir.push(new Skinner());
-		enemigosPorSalir.push(new Skinner());
-		enemigosPorSalir.push(new Skinner());
-		enemigosPorSalir.push(new Skinner());
-		enemigosPorSalir.push(new Skinner());
+		crearEnemigosPorSalir();
 		
-		enemigos.add(enemigosPorSalir.pop());
+		aSalir = enemigosPorSalir.pop();
+		aSalir.getImagen().setVisible(true);
+		enemigos.add(aSalir);
 		
 		Personaje blanco;
 		
 		while(seguir) {
-			int cont=0;
 			
 			for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
-					Thread.sleep(actual.getVelocidad()*10);
+					Thread.sleep((actual.getVelocidad()*20)/enemigos.size());
 				} catch(Exception e) {}
 				
 				//Muevo al personaje
-				if ((actual.getImagen().getAlignmentX()%75)==0)
-					if (j.moverEnemigo(actual))
-							actual.getImagen().setAlignmentX(actual.getImagen().getAlignmentX()+1);
-					else {}
-				else
-					actual.getImagen().setAlignmentX(actual.getImagen().getAlignmentX()+1);
-				
+				if (((actual.getImagen().getLocation().getX()+30)%75)==0){ // llega al borde
+					System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
+					if (j.moverEnemigo(actual)){
+						System.out.println("punto: "+actual.getPosicion().getX()+", "+actual.getPosicion().getY());
+							actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
+					}
+					else {System.out.println("esta quieto");
+						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
+					}
+				}
+				else{
+					System.out.println("entro al if del borde"+actual.getImagen().getLocation().getX()%75);
+					actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
+				}
 				//Ataco (si se puede)
 				blanco = j.getBlanco(actual);
 				if (blanco!=null) {
+					actual.setImagen(Personaje.shoot_key);
+					
+					System.out.println("ataca");
 					Proyectil pr = new ProyectilEnemigo(actual.getAtaque());
 					blanco.serAtacado(pr);
 				}
 				} else {
-					//Mando a eliminar, si es que está muerto
+					//Mando a eliminar, si es que estï¿½ muerto
 					aEliminar.add(actual);
 				}
 			}
@@ -69,8 +123,10 @@ public class HiloEnemigos extends Thread {
 			
 			cont++;
 			
-			if (cont==80) {
-				enemigos.add(enemigosPorSalir.pop());
+			if (cont==80 && !enemigosPorSalir.isEmpty()) {
+				aSalir = enemigosPorSalir.pop();
+				aSalir.getImagen().setVisible(true);
+				enemigos.add(aSalir);
 				cont=0;
 			}
 			

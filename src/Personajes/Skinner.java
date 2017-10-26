@@ -28,8 +28,8 @@ public class Skinner extends Enemigo {
 		this.imagen.setBounds(178, 75, 75, 75);
 		
 		this.imActual = new HashMap<String, ImageIcon>();
-		this.imActual.put(Enemigo.forward_key, new ImageIcon("/sprites/skinner/skinnerWalk.gif"));
-		this.imActual.put(Personaje.shoot_key, new ImageIcon("/sprites/skinner/skinnerAttack.gif"));
+		this.imActual.put(Enemigo.forward_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerWalk.gif")));
+		this.imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
 	}
 	
 }
