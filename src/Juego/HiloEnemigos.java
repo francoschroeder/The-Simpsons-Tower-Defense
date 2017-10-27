@@ -14,12 +14,14 @@ public class HiloEnemigos extends Thread {
 	private boolean seguir;
 	private Stack<Enemigo> enemigosPorSalir;
 	private PanelMapa panel;
-	
-	public HiloEnemigos(Juego j, GUIPrincipal gui) {
+	private HiloDisparo disparos;
+	public HiloEnemigos(Juego j, GUIPrincipal gui,HiloDisparo disparos) {
 		this.j=j;
 		seguir=true;
 		panel = gui.getPanelMapa();
+		this.disparos = disparos;
 		enemigosPorSalir = new Stack<Enemigo>();
+	
 	}
 	
 	public void detener() {
@@ -84,32 +86,35 @@ public class HiloEnemigos extends Thread {
 			for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
-					Thread.sleep((actual.getVelocidad()*20)/enemigos.size());
+					Thread.sleep((actual.getVelocidad()*50)/enemigos.size());
 				} catch(Exception e) {}
 				
 				//Muevo al personaje
 				if (((actual.getImagen().getLocation().getX()+30)%75)==0){ // llega al borde
-					System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
+					
 					if (j.moverEnemigo(actual)){
-						System.out.println("punto: "+actual.getPosicion().getX()+", "+actual.getPosicion().getY());
+					
 							actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
 					}
-					else {System.out.println("esta quieto");
+					else {
 						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
 					}
 				}
 				else{
-					System.out.println("entro al if del borde"+actual.getImagen().getLocation().getX()%75);
+					
 					actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
 				}
 				//Ataco (si se puede)
 				blanco = j.getBlanco(actual);
 				if (blanco!=null) {
 					actual.setImagen(Personaje.shoot_key);
-					
 					System.out.println("ataca");
 					Proyectil pr = new ProyectilEnemigo(actual.getAtaque());
-					blanco.serAtacado(pr);
+					Disparo bala = new Disparo(pr,blanco);
+					panel.add(bala.getImagen());
+					bala.getImagen().setBounds((int) actual.getImagen().getLocation().getX(), (int) actual.getImagen().getLocation().getY(), 75, 75);
+				
+					
 				}
 				} else {
 					//Mando a eliminar, si es que est� muerto
