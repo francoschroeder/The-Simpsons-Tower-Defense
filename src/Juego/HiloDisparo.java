@@ -9,7 +9,7 @@ public class HiloDisparo extends Thread {
 	
 	private boolean seguir;
 	private LinkedList<Disparo> disparos;
-	
+	private LinkedList<Disparo> morirDisparo;
 	public HiloDisparo(){
 		seguir = true;
 		disparos = new LinkedList<Disparo>();
@@ -25,20 +25,20 @@ public class HiloDisparo extends Thread {
 						actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1),
 										(int) (actual.getImagen().getLocation().getY()), 75, 75);
 						}
-				
-					
+					else{
+						morirDisparo.add(actual);
+						}
 				}
-				
 			}
 			
-			
-			
-			
-			
+			for(Disparo actual : morirDisparo){
+				disparos.remove(actual);
+						}
+			}
+		
 		}
-		
-		
-		
+	
+	public void agregarDisparo(Disparo disparo){
 		
 		
 	}
