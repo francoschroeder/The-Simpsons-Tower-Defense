@@ -72,6 +72,7 @@ public class HiloDisparo extends Thread {
 			disparos.add(disparo);
 			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX(),(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
 			gui.getPanelMapa().add(disparo.getImagen());
+			disparo.getImagen().setVisible(true);
 		}
 	}
 	
