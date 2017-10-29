@@ -1,8 +1,12 @@
 package Juego;
 import Juego.Objeto;
 
-public abstract class Proyectil {
+import javax.swing.JLabel;
+
+public abstract class Proyectil{
 	protected int ataque;
+	
+	protected JLabel imagen;
 	
 	public abstract void atacarAliado(Aliado a);
 	

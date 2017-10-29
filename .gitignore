@@ -66,3 +66,4 @@ hs_err_pid*
 *.mdj
 
 src/GUI/PanelMatriz.java
+src/Juego/HiloEnemigos.java

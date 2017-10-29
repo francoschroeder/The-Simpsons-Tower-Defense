@@ -7,15 +7,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
-
 import com.sun.javafx.scene.paint.GradientUtils.Point;
-
+import java.awt.geom.Point2D;
 import GUI.Botones.BotonCreacion;
-import GUI.Botones.PersoSelec;
+import GUI.Botones.Market;
+
 import Juego.Personaje;
  
 /**
@@ -28,11 +27,12 @@ import Juego.Personaje;
  */
  
 public class PanelMapa extends JPanel {
-	PersoSelec selec;
+	Market selec;
 	Personaje perso;
+	Point puntoNuevo;
 	
-	
-	public void setPerso(PersoSelec p){
+	public void setPerso(Market p){
+		System.out.println("agrege el mercado al panel mapa");
 		selec = p;
 	}
  
@@ -77,8 +77,9 @@ public class PanelMapa extends JPanel {
 			this.b = b;
 		}
 		 public void mousePressed(MouseEvent e) {
-			selec.generarPersonaje(e.getPoint());
-			System.out.println("holaa");
+			
+			 selec.generarPersonaje(e.getPoint());
+			
 			 
 		    }
 

@@ -12,7 +12,7 @@ public class ProyectilEnemigo extends Proyectil {
 	
 	public void atacarEnemigo(Enemigo e) {}
 	
-	public void atacarObjeto(Objecto o) {
+	public void atacarObjeto(Objeto o) {
 		o.reducirVida(ataque);
 	}
 }

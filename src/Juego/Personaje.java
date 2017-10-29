@@ -2,6 +2,8 @@ package Juego;
 
 import javax.swing.JLabel;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 import java.awt.Point;
 import java.util.Map;
 
@@ -11,20 +13,20 @@ public abstract class Personaje{
 	protected int ataque;
 	protected int rango;
 	
-	protected Point posicion;
+	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
-	protected Map<String, Icon> imActual;
+	protected Map<String, ImageIcon> imActual;
 	
 	public static final String still_key = "Still";
 	public static final String shoot_key = "Shoot";
 	
-	public Point getPosiscion(){
+	public Point getPosicion(){
 		return posicion;
 	}
 	
 	public void setPosicion(Point p){
 		posicion = p;
-		this.imagen.setBounds((int)this.posicion.getX(), (int)this.posicion.getY(), 75, 75);
+		this.imagen.setBounds((int)this.posicion.getX()*75, (int)this.posicion.getY()*75, 75, 75);
 	}
 
 	public JLabel getImagen(){
@@ -33,7 +35,7 @@ public abstract class Personaje{
 
 	public void setImagen(String dir){
 		this.imagen.setIcon(this.imActual.get(dir));
-		this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
+		//this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
 	}
 	
 	public int getVidaMax() {
@@ -54,5 +56,9 @@ public abstract class Personaje{
 	
 	public void reducirVida(int v) {
 		vidaActual-=v;
+	}
+	
+	public boolean estaMuerto() {
+		return vidaActual<=0;
 	}
 }

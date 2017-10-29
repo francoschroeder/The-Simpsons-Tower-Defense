@@ -4,6 +4,7 @@ import javax.swing.JButton;
 
 import Juego.Personaje;
 import Personajes.Homero;
+import Personajes.Maggie;
 
 public class BotonMaggie extends BotonCreacion {
 	
