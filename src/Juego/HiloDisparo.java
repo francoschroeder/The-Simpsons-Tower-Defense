@@ -31,7 +31,7 @@ public class HiloDisparo extends Thread {
 			try {
 				System.out.println("aentro al sleep");
 				 Thread.sleep(5);
-				} catch(Exception e) {} 
+			
 			if(!disparos.isEmpty()){
 				
 				for(Disparo actual : disparos){
@@ -49,6 +49,7 @@ public class HiloDisparo extends Thread {
 										(int) (actual.getImagen().getLocation().getY()), 75, 75);
 							}
 							else{
+								actual.Atacar();
 								morirDisparo.add(actual);
 						}
 					}
@@ -59,6 +60,7 @@ public class HiloDisparo extends Thread {
 				gui.getPanelMapa().remove(actual.getImagen());
 						}
 				}
+				} catch(Exception e) {} 
 			}
 		
 		}

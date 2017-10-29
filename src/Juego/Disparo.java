@@ -44,7 +44,9 @@ public class Disparo {
 		this.inicio = inicio;
 	}
 	
-	
+	public void Atacar(){
+		destino.serAtacado(bala);
+	}
 
 
 	
