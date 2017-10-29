@@ -102,6 +102,7 @@ public class HiloEnemigos extends Thread {
 					actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
 				}
 			}
+			}
 			
 			cont++;
 			
