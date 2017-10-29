@@ -1,7 +1,6 @@
 package Juego;
 
 import java.awt.Point;
-import java.awt.Rectangle;
 import java.util.LinkedList;
 import java.util.Stack;
 
@@ -11,7 +10,7 @@ import Personajes.Skinner;
 
 public class HiloEnemigos extends Thread {
 	private Juego j;
-	private boolean seguir;
+	private volatile boolean seguir;
 	private Stack<Enemigo> enemigosPorSalir;
 	private PanelMapa panel;
 	private HiloDisparo disparos;
@@ -68,7 +67,6 @@ public class HiloEnemigos extends Thread {
 	
 	public void run() {
 		int cont=0;
-		Rectangle r;
 		Enemigo aSalir;
 		LinkedList<Enemigo> enemigos = j.getEnemigos();
 		LinkedList<Enemigo> aEliminar = new LinkedList<Enemigo>();
@@ -117,7 +115,7 @@ public class HiloEnemigos extends Thread {
 					
 				}
 				} else {
-					//Mando a eliminar, si es que est� muerto
+					//Mando a eliminar, si es que esta muerto
 					aEliminar.add(actual);
 				}
 			}

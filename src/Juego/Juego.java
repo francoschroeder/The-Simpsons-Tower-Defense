@@ -31,7 +31,7 @@ public class Juego {
 		
 	}
 	
-	public Personaje getBlanco(Personaje p) {
+	public Personaje getBlanco(Enemigo p) {
 		int y = (int) p.getPosicion().getY();
 		int rango = (int) p.getPosicion().getX() + p.getRango();
 		
@@ -41,8 +41,20 @@ public class Juego {
 				return matriz[i][y];
 		}
 		
-		return null;
+		return null;	
+	}
+	
+	public Personaje getBlanco(Aliado p) {
+		int y = (int) p.getPosicion().getY();
+		int rango = (int) p.getPosicion().getX() - p.getRango();
 		
+		for(int i =  (int) p.getPosicion().getX(); i >= rango && i>=0; i--){
+			
+			if (matriz[i][y] != null)
+				return matriz[i][y];
+		}
+		
+		return null;
 	}
 	
 	
@@ -70,8 +82,12 @@ public class Juego {
 		matriz[2][1] = null;
 	}
 	
-	public LinkedList getEnemigos() {
+	public LinkedList<Enemigo> getEnemigos() {
 		return enemigosActivos;
+	}
+	
+	public LinkedList<Aliado> getAliados() {
+		return aliadosActivos;
 	}
 	
 }
