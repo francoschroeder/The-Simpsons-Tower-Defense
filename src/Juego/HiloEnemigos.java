@@ -121,7 +121,7 @@ public class HiloEnemigos extends Thread {
 			}
 			
 			for (Enemigo e : aEliminar) {
-				enemigos.remove(e);
+				j.eliminar(e);
 			}
 			
 			cont++;

@@ -29,16 +29,19 @@ public class HiloAliados extends Thread {
 			if (a.estaMuerto())
 				aEliminar.add(a);
 			else {
+				//Pide un blanco dentro del rango de ataque
 				aAtacar = juego.getBlanco(a);
 				
+				//Ataca al blanco
 				if (aAtacar!=null) {
 					
 				}
 			}
 		}
 		
+		//Se eliminan los personajes muertos
 		for (Aliado a:aEliminar) {
-			listaAliados.remove(a);
+			juego.eliminar(a);
 		}
 	}
 }

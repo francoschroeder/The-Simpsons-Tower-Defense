@@ -6,6 +6,7 @@ import java.util.Stack;
 
 
 import GUI.GUIPrincipal;
+import GUI.PanelMapa;
 import Personajes.*;
 
 public class Juego {
@@ -14,9 +15,9 @@ public class Juego {
 	private LinkedList<Aliado> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
-	private GUIPrincipal gui;
+	private PanelMapa gui;
 	
-	public Juego(GUIPrincipal p) 
+	public Juego(PanelMapa p) 
 		{// asignar las listas
 		this.gui=p;
 		aliadosActivos = new LinkedList<Aliado>();
@@ -76,10 +77,10 @@ public class Juego {
 	}
 	
 	
-	public void eliminar() {
-		enemigosActivos.remove(matriz[2][1]);
-		matriz[2][1].getImagen().setVisible(false);
-		matriz[2][1] = null;
+	public void eliminar(Personaje p) {
+		gui.getPanelMapa().remove(p.getImagen());
+		enemigosActivos.remove(p);
+		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 	}
 	
 	public LinkedList<Enemigo> getEnemigos() {
