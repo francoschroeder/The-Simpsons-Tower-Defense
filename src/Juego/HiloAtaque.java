@@ -18,6 +18,7 @@ public class HiloAtaque extends Thread {
 	}
 	
 	public void run() {
+		
 		LinkedList<Aliado> listaAliados = juego.getAliados();
 		LinkedList<Enemigo> listaEnemigos = juego.getEnemigos();
 		LinkedList<Personaje> aEliminar = new LinkedList<Personaje>();
@@ -25,8 +26,11 @@ public class HiloAtaque extends Thread {
 		Proyectil pr;
 		Disparo bala;
 		Personaje aAtacar;
+		
 		while (seguir) {
+			
 			for (Aliado a:listaAliados) {
+				System.out.println("entro lista de aliados");
 				try {
 					Thread.sleep(75);
 				} catch(InterruptedException e) {}
@@ -35,10 +39,12 @@ public class HiloAtaque extends Thread {
 					aEliminar.add(a);
 				else {
 					//Pide un blanco dentro del rango de ataque
+					
 					aAtacar = juego.getBlanco(a);
 				
 					//Ataca al blanco
 					if (aAtacar!=null) {
+					
 						a.setImagen(a.shoot_key);
 						pr = new ProyectilAliado(a.getAtaque());
 						bala = new Disparo(pr, a, aAtacar);
@@ -53,9 +59,10 @@ public class HiloAtaque extends Thread {
 			}
 			
 			aEliminar = new LinkedList<Personaje>();
-		}
+		
 		
 		for (Enemigo e:listaEnemigos) {
+			System.out.println("entro lista de aliados");
 			try {
 				Thread.sleep(75);
 			} catch(InterruptedException ex) {}
@@ -83,5 +90,9 @@ public class HiloAtaque extends Thread {
 		
 		aEliminar = new LinkedList<Personaje>();
 		}
-}
+
+	
+	  }
+	
+	}
 
