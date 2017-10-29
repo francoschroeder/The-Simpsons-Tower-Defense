@@ -15,7 +15,7 @@ public class HiloEnemigos extends Thread {
 	private Stack<Enemigo> enemigosPorSalir;
 	private PanelMapa panel;
 	private HiloDisparo disparos;
-	public HiloEnemigos(Juego j, GUIPrincipal gui,HiloDisparo disparos) {
+	public HiloEnemigos(Juego j, GUIPrincipal gui, HiloDisparo disparos) {
 		this.j=j;
 		seguir=true;
 		panel = gui.getPanelMapa();

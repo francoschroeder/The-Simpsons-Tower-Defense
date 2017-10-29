@@ -10,11 +10,16 @@ public class HiloDisparo extends Thread {
 	private boolean seguir;
 	private LinkedList<Disparo> disparos;
 	private LinkedList<Disparo> morirDisparo;
+	
 	public HiloDisparo(){
 		seguir = true;
+		morirDisparo = new LinkedList<Disparo>();
 		disparos = new LinkedList<Disparo>();
 	}
 
+
+	
+	
 	public void run(){
 		
 		while (seguir){

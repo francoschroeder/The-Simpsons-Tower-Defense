@@ -1,5 +1,6 @@
 import GUI.GUIPrincipal;
 import GUI.Botones.Market;
+import Juego.HiloDisparo;
 import Juego.HiloEnemigos;
 import Juego.Juego;
 
@@ -8,7 +9,8 @@ public class LionelMessi {
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);
 		Market market = new Market(j);
-		HiloEnemigos h = new HiloEnemigos(j, gui);
+		HiloDisparo disparo = new HiloDisparo(); 
+		HiloEnemigos h = new HiloEnemigos(j, gui,disparo);
 		
 		gui.setJuego(j);
 		gui.setMarket(market);
