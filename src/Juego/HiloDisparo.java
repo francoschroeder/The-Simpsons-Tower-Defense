@@ -31,20 +31,22 @@ public class HiloDisparo extends Thread {
 			try {
 				Thread.sleep(20);
 			} catch(Exception e) {} 
-			if(!disparos.isEmpty()){
+			synchronized(disparos){
+				if(!disparos.isEmpty()){
 				System.out.println("entro a la lista de balas");
 				for(Disparo actual : disparos){
 					if (actual.getImagen().getLocation() != actual.getDestino().getImagen().getLocation()) {
 							//EN el caso que la bala deba ir hacia a la derecha
-							if(actual.getDestino().getImagen().getLocation().getX() > actual.getImagen().getLocation().getX())
+							if(actual.getDestino().getImagen().getLocation().getX() < actual.getImagen().getLocation().getX())
 							{
 								System.out.println("moviendo a la derecha");
-								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1),(int) (actual.getImagen().getLocation().getY()), 75, 75);
+								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()-1),(int) (actual.getImagen().getLocation().getY()), 75, 75);
 								
 							}
 							// en caso de que la bala deba ir a la izquierda.
-							if(actual.getDestino().getImagen().getLocation().getX() < actual.getImagen().getLocation().getX()){
-								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()-1),
+							System.out.println("moviendo a la derecha 1");
+							if(actual.getDestino().getImagen().getLocation().getX() > actual.getImagen().getLocation().getX()){
+								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1),
 										(int) (actual.getImagen().getLocation().getY()), 75, 75);
 							}
 							else{
@@ -52,6 +54,7 @@ public class HiloDisparo extends Thread {
 								morirDisparo.add(actual);
 						}
 					}
+				 }
 				}
 			
 			for(Disparo actual : morirDisparo){
@@ -70,7 +73,8 @@ public class HiloDisparo extends Thread {
 		synchronized(disparos){
 			System.out.println("agregando bala");
 			disparos.add(disparo);
-			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX()+2,(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
+			disparo.getImagen().setBounds((int) disparo.getInicio().getImagen().getLocation().getX() + 3,(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
+			System.out.println("get X: "+ disparo.getInicio().getImagen().getLocation().getX());
 			panel.add(disparo.getImagen());
 			disparo.getImagen().setVisible(true);
 		}

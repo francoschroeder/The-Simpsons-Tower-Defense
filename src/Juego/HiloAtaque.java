@@ -7,6 +7,7 @@ public class HiloAtaque extends Thread {
 	private Juego juego;
 	private volatile boolean seguir;
 	private HiloDisparo disparos;
+
 	
 	public HiloAtaque(Juego j, HiloDisparo h) {
 		juego = j;
@@ -36,7 +37,7 @@ public class HiloAtaque extends Thread {
 				for (Aliado a:listaAliados) {
 				System.out.println("entro lista de aliados");
 				try {
-					Thread.sleep(75);
+					Thread.sleep(300);
 				} catch(InterruptedException e) {}
 			
 				if (a.estaMuerto())
@@ -73,7 +74,7 @@ public class HiloAtaque extends Thread {
 			for (Enemigo e:listaEnemigos) {
 			System.out.println("entro lista de enemigos");
 			try {
-				Thread.sleep(75);
+				Thread.sleep(300);
 			} catch(InterruptedException ex) {}
 		
 			if (e.estaMuerto())
@@ -83,11 +84,12 @@ public class HiloAtaque extends Thread {
 				aAtacar = juego.getBlanco(e);
 			
 				//Ataca al blanco
-				if (aAtacar!=null) {
+				if (aAtacar!=null){
 					e.setImagen(e.shoot_key);
 					pr = new ProyectilEnemigo(e.getAtaque());
 					bala = new Disparo(pr, e, aAtacar);
 					disparos.agregarDisparo(bala);
+					
 				}
 			}
 		}
