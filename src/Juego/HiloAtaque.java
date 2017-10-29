@@ -29,7 +29,10 @@ public class HiloAtaque extends Thread {
 		
 		while (seguir) {
 			
-			for (Aliado a:listaAliados) {
+			if (listaAliados.isEmpty())
+				System.out.println("lista aliados vacia");
+			synchronized (listaAliados) {
+				for (Aliado a:listaAliados) {
 				System.out.println("entro lista de aliados");
 				try {
 					Thread.sleep(75);
@@ -52,6 +55,8 @@ public class HiloAtaque extends Thread {
 					}
 				}
 			}
+			}
+			
 		
 			//Se eliminan los personajes muertos
 			for (Personaje p:aEliminar) {
@@ -60,9 +65,12 @@ public class HiloAtaque extends Thread {
 			
 			aEliminar = new LinkedList<Personaje>();
 		
+		if (listaEnemigos.isEmpty())
+			System.out.println("lista enemigos vacia");
 		
-		for (Enemigo e:listaEnemigos) {
-			System.out.println("entro lista de aliados");
+		synchronized (listaEnemigos) {
+			for (Enemigo e:listaEnemigos) {
+			System.out.println("entro lista de enemigos");
 			try {
 				Thread.sleep(75);
 			} catch(InterruptedException ex) {}
@@ -82,6 +90,8 @@ public class HiloAtaque extends Thread {
 				}
 			}
 		}
+		}
+		
 	
 		//Se eliminan los personajes muertos
 		for (Personaje p:aEliminar) {
