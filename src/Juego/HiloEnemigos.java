@@ -67,10 +67,8 @@ public class HiloEnemigos extends Thread {
 	
 	public void run() {
 		int cont=0;
-		boolean disparar=true;
 		Enemigo aSalir;
 		LinkedList<Enemigo> enemigos = j.getEnemigos();
-		LinkedList<Enemigo> aEliminar = new LinkedList<Enemigo>();
 		
 		crearEnemigosPorSalir();
 		
@@ -103,28 +101,6 @@ public class HiloEnemigos extends Thread {
 					
 					actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
 				}
-				//Ataco (si se puede)
-				blanco = j.getBlanco(actual);
-				if (blanco!=null) {
-					disparar = false;
-					actual.setImagen(Personaje.shoot_key);
-					System.out.println("ataca");
-					Proyectil pr = new ProyectilEnemigo(actual.getAtaque());
-					Disparo bala = new Disparo(pr,blanco);
-					disparos.agregarDisparo(bala);
-					panel.add(bala.getImagen());
-					bala.getImagen().setBounds((int) actual.getImagen().getLocation().getX(), (int) actual.getImagen().getLocation().getY(), 75, 75);
-				
-					
-				}
-				} else {
-					//Mando a eliminar, si es que esta muerto
-					aEliminar.add(actual);
-				}
-			}
-			
-			for (Enemigo e : aEliminar) {
-				j.eliminar(e);
 			}
 			
 			cont++;
@@ -135,8 +111,7 @@ public class HiloEnemigos extends Thread {
 				enemigos.add(aSalir);
 				cont=0;
 			}
-			
-			aEliminar = new LinkedList<Enemigo>();
 		}
 	}
+}
 }
