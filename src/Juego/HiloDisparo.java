@@ -31,6 +31,9 @@ public class HiloDisparo extends Thread {
 			 
 			if(!disparos.isEmpty()){
 				for(Disparo actual : disparos){
+					try {
+						Thread.sleep(25);
+					} catch(Exception e) {}
 					if (actual.getImagen().getLocation() != actual.getDestino().getImagen().getLocation()) {
 							//EN el caso que la bala deba ir hacia a la derecha
 							if(actual.getDestino().getImagen().getLocation().getX() > actual.getImagen().getLocation().getX()){
