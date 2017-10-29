@@ -13,13 +13,13 @@ public class HiloDisparo extends Thread {
 	private boolean seguir;
 	private LinkedList<Disparo> disparos;
 	private LinkedList<Disparo> morirDisparo;
-	private GUIPrincipal gui;
+	private PanelMapa panel;
 	
-	public HiloDisparo(GUIPrincipal gui){
+	public HiloDisparo(PanelMapa gui){
 		seguir = true;
 		morirDisparo = new LinkedList<Disparo>();
 		disparos = new LinkedList<Disparo>();
-		this.gui = gui;
+		this.panel = gui;
 	}
 
 
@@ -29,9 +29,8 @@ public class HiloDisparo extends Thread {
 		
 		while (seguir){
 			try {
-				
-				 Thread.sleep(5);
-			
+				Thread.sleep(20);
+			} catch(Exception e) {} 
 			if(!disparos.isEmpty()){
 				System.out.println("entro a la lista de balas");
 				for(Disparo actual : disparos){
@@ -57,10 +56,11 @@ public class HiloDisparo extends Thread {
 			
 			for(Disparo actual : morirDisparo){
 				disparos.remove(actual);
-				gui.getPanelMapa().remove(actual.getImagen());
+				panel.remove(actual.getImagen());
 						}
 				}
-				} catch(Exception e) {} 
+			
+				
 			}
 		
 		}
@@ -70,16 +70,11 @@ public class HiloDisparo extends Thread {
 		synchronized(disparos){
 			System.out.println("agregando bala");
 			disparos.add(disparo);
-			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX(),(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
-			gui.getPanelMapa().add(disparo.getImagen());
+			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX()+2,(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
+			panel.add(disparo.getImagen());
 			disparo.getImagen().setVisible(true);
 		}
 	}
-	
-	
-	
-	
-	
 	
 }
 	
