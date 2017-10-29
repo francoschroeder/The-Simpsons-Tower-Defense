@@ -35,6 +35,14 @@ public class Disparo {
 	public void setImagen(JLabel imagen) {
 		this.imagen = imagen;
 	}
+
+	public Personaje getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Personaje inicio) {
+		this.inicio = inicio;
+	}
 	
 	
 

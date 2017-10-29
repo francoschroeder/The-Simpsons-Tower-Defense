@@ -68,6 +68,8 @@ public class HiloDisparo extends Thread {
 		synchronized(disparos){
 			System.out.println("agregando bala");
 			disparos.add(disparo);
+			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX(),(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
+			gui.getPanelMapa().add(disparo.getImagen());
 		}
 	}
 	
