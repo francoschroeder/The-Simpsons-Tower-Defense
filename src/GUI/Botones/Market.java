@@ -5,6 +5,7 @@ import java.awt.Point;
 import javax.swing.JPanel;
 
 import GUI.PanelMapa;
+import Juego.Aliado;
 import Juego.Juego;
 import Juego.Personaje;
 
