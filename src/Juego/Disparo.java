@@ -9,7 +9,7 @@ public class Disparo {
 	protected Personaje destino;
 	protected JLabel imagen;
 	
-	public Disparo(Proyectil bala, Personaje destino){
+	public Disparo(Proyectil bala, Personaje inicio, Personaje destino){
 		this.bala = bala;
 		this.destino = destino;
 		this.inicio = inicio;

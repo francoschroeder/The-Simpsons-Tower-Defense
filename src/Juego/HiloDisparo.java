@@ -29,11 +29,11 @@ public class HiloDisparo extends Thread {
 		
 		while (seguir){
 			try {
-				System.out.println("aentro al sleep");
+				
 				 Thread.sleep(5);
 			
 			if(!disparos.isEmpty()){
-				
+				System.out.println("entro a la lista de balas");
 				for(Disparo actual : disparos){
 					if (actual.getImagen().getLocation() != actual.getDestino().getImagen().getLocation()) {
 							//EN el caso que la bala deba ir hacia a la derecha
