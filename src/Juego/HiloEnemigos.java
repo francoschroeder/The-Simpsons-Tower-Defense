@@ -84,7 +84,7 @@ public class HiloEnemigos extends Thread {
 			for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
-					Thread.sleep((actual.getVelocidad()*50)/enemigos.size());
+					Thread.sleep((actual.getVelocidad()*80)/enemigos.size());
 				} catch(Exception e) {}
 				
 				//Muevo al personaje

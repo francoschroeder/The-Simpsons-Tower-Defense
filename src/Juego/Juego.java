@@ -78,7 +78,7 @@ public class Juego {
 	
 	
 	public void eliminar(Personaje p) {
-		gui.getPanelMapa().remove(p.getImagen());
+		gui.remove(p.getImagen());
 		enemigosActivos.remove(p);
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 	}

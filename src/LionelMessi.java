@@ -16,5 +16,6 @@ public class LionelMessi {
 		gui.setMarket(market);
 		gui.setVisible(true);
 		h.start();
+		disparo.start();
 	}
 }
