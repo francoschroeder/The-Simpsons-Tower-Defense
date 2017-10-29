@@ -109,6 +109,7 @@ public class HiloEnemigos extends Thread {
 					System.out.println("ataca");
 					Proyectil pr = new ProyectilEnemigo(actual.getAtaque());
 					Disparo bala = new Disparo(pr,blanco);
+					disparos.agregarDisparo(bala);
 					panel.add(bala.getImagen());
 					bala.getImagen().setBounds((int) actual.getImagen().getLocation().getX(), (int) actual.getImagen().getLocation().getY(), 75, 75);
 				
