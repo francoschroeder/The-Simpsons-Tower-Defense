@@ -1,4 +1,5 @@
 package Juego;
+import Juego.Objeto;
 
 import javax.swing.JLabel;
 
