@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 83b147ae87d5b9003ee22fce465bc55058e77060
 package Juego;
 
 import java.util.LinkedList;
@@ -102,8 +98,4 @@ public class HiloAtaque extends Thread {
 	
 	  }
 	
-<<<<<<< HEAD
 	}
-=======
-	}
->>>>>>> 83b147ae87d5b9003ee22fce465bc55058e77060
