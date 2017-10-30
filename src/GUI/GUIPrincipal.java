@@ -5,6 +5,7 @@ import java.awt.Point;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -46,6 +47,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
+import javax.swing.SwingConstants;
 
 public class GUIPrincipal extends JFrame {
 	private PanelMapa panelMapa;
@@ -57,6 +60,7 @@ public class GUIPrincipal extends JFrame {
 	private BotonCreacion maggie;
 	private BotonCreacion flander;
 	private BotonCreacion milhouse;
+	private JLabel fondo;
 	private JPanel panelBotones;
 	private JPanel contentPane;
 	private Market mercado;	
@@ -86,40 +90,29 @@ public class GUIPrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public GUIPrincipal() {
+		getContentPane().setEnabled(false);
 		setTitle("Simpsons\n");
 		getContentPane().setBackground(new Color(154, 205, 50));
 		getContentPane().setForeground(new Color(154, 205, 50));
 		setBackground(new Color(154, 205, 50));
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1134 , 794);
+		setBounds(100, 100, 1500 , 800);
 		setLocationRelativeTo(null);
 		
-	
+		// fondo del frame pricipal
+		fondo = new JLabel();
+		fondo.setBounds(0,0, 1500, 800);
+		fondo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/fondito.png")));
+        getContentPane().add(fondo);
+
 		//Agrego y seteo panel que contiene en mapa en el frame.
 		
 				ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
 				panelMapa = new PanelMapa(img.getImage());
 				panelMapa.setForeground(Color.WHITE);
-				panelMapa.setLocation(185, 80);
-				
-				getContentPane().add(panelMapa);
-				
-				GroupLayout gl_panelMapa = new GroupLayout(panelMapa);
-				gl_panelMapa.setHorizontalGroup(
-					gl_panelMapa.createParallelGroup(Alignment.LEADING)
-						.addGap(0, 749, Short.MAX_VALUE)
-				);
-				gl_panelMapa.setVerticalGroup(
-					gl_panelMapa.createParallelGroup(Alignment.LEADING)
-						.addGap(0, 446, Short.MAX_VALUE)
-				);
-				panelMapa.setLayout(gl_panelMapa);
-			
-					
-					
-               
-		
+				panelMapa.setLocation(375, 75);;
+				fondo.add(panelMapa);
 				
 		//Crear juego
 			
@@ -130,8 +123,8 @@ public class GUIPrincipal extends JFrame {
 		//Panel de los botones
 				
 		panelBotones = new JPanel();
-		panelBotones.setBounds(177, 553, 757, 219);
-		getContentPane().add(panelBotones);
+		panelBotones.setBounds(326, 628, 757, 219);
+		fondo.add(panelBotones);
 		
 	
 		
