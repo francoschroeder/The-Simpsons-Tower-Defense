@@ -117,15 +117,16 @@ public class HiloDisparo extends Thread {
 			try {
 				Thread.sleep(20);
 			} catch(Exception e) {} 
+			
 			if(!disparos.isEmpty()){
 				System.out.println("entro a la lista de balas");
 				for(Disparo actual : disparos){
-					if (actual.getImagen().getLocation() != actual.getDestino().getImagen().getLocation()) {
-							//EN el caso que la bala deba ir hacia a la derecha
+					//EN el caso que la bala deba ir hacia a la derech
 							if(actual.getDestino().getImagen().getLocation().getX() > actual.getImagen().getLocation().getX())
 							{
 								System.out.println("moviendo a la derecha");
-								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1),(int) (actual.getImagen().getLocation().getY()), 75, 75);
+								actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1),
+										(int) (actual.getImagen().getLocation().getY()), 75, 75);
 								
 							}
 							// en caso de que la bala deba ir a la izquierda.
@@ -149,14 +150,14 @@ public class HiloDisparo extends Thread {
 				
 			}
 		
-		}
+		
 	
 	public void agregarDisparo(Disparo disparo){
 		
 		synchronized(disparos){
-			System.out.println("agregando bala");
+			
 			disparos.add(disparo);
-			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX()+2,(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
+			disparo.getImagen().setBounds((int)disparo.getInicio().getImagen().getLocation().getX(),(int)disparo.getInicio().getImagen().getLocation().getY(), 75, 75);
 			panel.add(disparo.getImagen());
 			disparo.getImagen().setVisible(true);
 		}

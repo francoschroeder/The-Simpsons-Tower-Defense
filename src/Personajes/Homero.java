@@ -29,8 +29,8 @@ public class Homero extends Aliado {
 		this.imagen.setBounds(0, 0, 75, 75);
 		
 		this.imActual = new HashMap<String, ImageIcon>();
-		this.imActual.put(Personaje.still_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroStill.gif")));
-		this.imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroAttack.gif")));
+		this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/homero/homeroStill.gif"));
+		this.imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/homero/homeroAttack.gif"));
 	}
 	
 }
