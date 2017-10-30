@@ -124,6 +124,7 @@ public class GUIPrincipal extends JFrame {
 		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
+		bart.setIcon(new ImageIcon(GUIPrincipal.class.getResource("/sprites/milhouse/boton.png")));
 		bart.addActionListener(new OyenteBoton(bart));
 		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
 		lisa.addActionListener(new OyenteBoton(lisa));
