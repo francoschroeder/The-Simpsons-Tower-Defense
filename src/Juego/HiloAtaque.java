@@ -32,12 +32,13 @@ public class HiloAtaque extends Thread {
 			synchronized (listaAliados) {
 				for (Aliado a:listaAliados) {
 				try {
-					Thread.sleep(200);
+					Thread.sleep(500/listaAliados.size());
 				} catch(InterruptedException e) {}
 			
 				if (a.estaMuerto())
 					aEliminar.add(a);
 				else {
+					a.setImagen(Personaje.still_key);
 					//Pide un blanco dentro del rango de ataque
 					
 					aAtacar = juego.getBlanco(a);
@@ -65,12 +66,13 @@ public class HiloAtaque extends Thread {
 		synchronized (listaEnemigos) {
 			for (Enemigo e:listaEnemigos) {
 			try {
-				Thread.sleep(200);
+				Thread.sleep(500/listaEnemigos.size());
 			} catch(InterruptedException ex) {}
 		
 			if (e.estaMuerto())
 				aEliminar.add(e);
 			else {
+				e.setImagen(Enemigo.forward_key);
 				//Pide un blanco dentro del rango de ataque
 				aAtacar = juego.getBlanco(e);
 			
