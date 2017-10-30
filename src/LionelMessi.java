@@ -6,9 +6,11 @@ import Juego.HiloEnemigos;
 import Juego.Juego;
 
 public class LionelMessi {
+	
+	
 	public static void main(String[] args){
 		GUIPrincipal gui = new GUIPrincipal();
-		Juego j = new Juego(gui.getPanelMapa());
+		Juego j = new Juego(gui);
 		Market market = new Market(j);
 		HiloDisparo disparo = new HiloDisparo(gui.getPanelMapa()); 
 		HiloEnemigos h = new HiloEnemigos(j, gui,disparo);
