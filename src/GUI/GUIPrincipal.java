@@ -13,8 +13,12 @@ import com.sun.glass.events.MouseEvent;
 import com.sun.javafx.collections.MappingChange.Map;
 import GUI.Botones.BotonMaggie;
 import GUI.Botones.BotonMarge;
+import GUI.Botones.BotonMilhouse;
+import GUI.Botones.BotonAyudanteSanta;
 import GUI.Botones.BotonBart;
+import GUI.Botones.BotonBolaNieve;
 import GUI.Botones.BotonCreacion;
+import GUI.Botones.BotonFlanders;
 import GUI.Botones.BotonHomero;
 import GUI.Botones.BotonLisa;
 import GUI.Botones.BotonSkinner;
@@ -127,17 +131,28 @@ public class GUIPrincipal extends JFrame {
 		maggie.addActionListener(new OyenteBoton(maggie));
 		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
+		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
+		marge.addActionListener(new OyenteBoton(milhouse));
+		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
+		marge.addActionListener(new OyenteBoton(flanders));
+		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/bolaDeNieve/boton.png");
+		marge.addActionListener(new OyenteBoton(bolaDeNieve));
+		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
+		marge.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		
 		
-		
+		// Agrego al panel de los botones
 		
 		panelBotones.add(homero);
 		panelBotones.add(bart);
 		panelBotones.add(lisa);
 		panelBotones.add(maggie);
 		panelBotones.add(marge);
-	
+		panelBotones.add(milhouse);
+		panelBotones.add(flanders);
+		panelBotones.add(bolaDeNieve);
+		panelBotones.add(ayudanteDeSanta);
 		
 	}
 	 // juego 
