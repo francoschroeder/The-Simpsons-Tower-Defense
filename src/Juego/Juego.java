@@ -68,7 +68,7 @@ public class Juego {
 	public boolean moverEnemigo(Enemigo e) {
 		Point posE = e.getPosicion();
 		
-		if (matriz[((int) posE.getX())+1][(int) posE.getY()] == null) {
+		if (((int) posE.getX() != 9) && (matriz[((int) posE.getX())+1][(int) posE.getY()] == null)) {
 			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX())+1, (int) posE.getY()));
