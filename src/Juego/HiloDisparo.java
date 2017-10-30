@@ -34,7 +34,6 @@ public class HiloDisparo extends Thread {
 			} catch(Exception e) {} 
 			synchronized(disparos){
 				if(!disparos.isEmpty()){
-				System.out.println("entro a la lista de balas");
 				for(Disparo actual : disparos){
 					if (actual.getImagen().getLocation() != actual.getDestino().getImagen().getLocation()) {
 							//EN el caso que la bala deba ir hacia a la derecha
