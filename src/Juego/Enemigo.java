@@ -1,7 +1,7 @@
 package Juego;
 
 import javax.swing.ImageIcon;
-
+import java.util.Random;
 
 public abstract class Enemigo extends Personaje {
 
@@ -37,4 +37,9 @@ public abstract class Enemigo extends Personaje {
 	public void serAtacado(Proyectil p) {
 		p.atacarEnemigo(this);
 	}
+	
+	public int serEliminado(){
+		Random r = new Random();
+		return r.nextInt((getMaxMonedas() - getMinMonedas()) + 1) + getMinMonedas();
+	} 
 }

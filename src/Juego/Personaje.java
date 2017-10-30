@@ -54,6 +54,8 @@ public abstract class Personaje{
 
 	public abstract void serAtacado(Proyectil p);
 	
+	public abstract int serEliminado();
+	
 	public void reducirVida(int v) {
 		vidaActual-=v;
 	}

@@ -10,4 +10,8 @@ public abstract class Aliado extends Personaje {
 	public void serAtacado(Proyectil p) {
 		p.atacarAliado(this);
 	}
+	
+	public int serEliminado(){
+		return 0;
+	}
 }

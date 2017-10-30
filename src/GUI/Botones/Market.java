@@ -13,6 +13,7 @@ public class Market {
 	Personaje p;
 	Juego j;
 	BotonCreacion boton;
+	int monedas;
 	
 	public Market(Juego j){
 		p=null;
@@ -32,6 +33,11 @@ public class Market {
 		System.out.println("agrege panel al market");
 		panel = p;
 	}
+	
+	public void sumarMonedas(int m){
+		monedas+=m;
+	}
+	
 	
 	public Personaje generarPersonaje(Point punto){
 		System.out.println("Entro a generar personaje");

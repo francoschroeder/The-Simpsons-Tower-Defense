@@ -77,6 +77,10 @@ public class GUIPrincipal extends JFrame {
 			}
 		});
 	}
+	
+	public Market getMarket(){
+		return mercado;
+	}
 
 	/**
 	 * Create the frame.

@@ -15,9 +15,9 @@ public class Juego {
 	private LinkedList<Aliado> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
-	private PanelMapa gui;
+	private GUIPrincipal gui;
 	
-	public Juego(PanelMapa p) 
+	public Juego(GUIPrincipal p) 
 		{// asignar las listas
 		this.gui=p;
 		aliadosActivos = new LinkedList<Aliado>();
@@ -78,9 +78,11 @@ public class Juego {
 	
 	
 	public void eliminar(Personaje p) {
-		gui.remove(p.getImagen());
+		gui.getPanelMapa().remove(p.getImagen());
 		enemigosActivos.remove(p);
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
+		gui.getMarket().sumarMonedas(p.serEliminado());
+		
 	}
 	
 	public LinkedList<Enemigo> getEnemigos() {
