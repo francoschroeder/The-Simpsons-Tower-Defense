@@ -1,6 +1,6 @@
 package Objetos;
 import Juego.*;
 
-public class CampoDeProteccion extends Objecto {
+public class CampoDeProteccion extends Objeto {
 
 }
