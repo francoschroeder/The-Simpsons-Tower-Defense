@@ -86,6 +86,7 @@ public class GUIPrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public GUIPrincipal() {
+		setTitle("Simpsons\n");
 		getContentPane().setBackground(new Color(154, 205, 50));
 		getContentPane().setForeground(new Color(154, 205, 50));
 		setBackground(new Color(154, 205, 50));
