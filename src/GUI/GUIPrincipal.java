@@ -114,16 +114,10 @@ public class GUIPrincipal extends JFrame {
 				panelMapa.setLocation(375, 75);;
 				fondo.add(panelMapa);
 				
-		//Crear juego
-			
-		
-		
-			
-			
 		//Panel de los botones
 				
 		panelBotones = new JPanel();
-		panelBotones.setBounds(326, 628, 757, 219);
+		panelBotones.setBounds(370, 525, 760, 250);
 		fondo.add(panelBotones);
 		
 	
@@ -140,6 +134,10 @@ public class GUIPrincipal extends JFrame {
 		maggie.addActionListener(new OyenteBoton(maggie));
 		marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
+		
+		
+		
+		
 		
 		panelBotones.add(homero);
 		panelBotones.add(bart);
