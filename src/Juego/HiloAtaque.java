@@ -29,10 +29,10 @@ public class HiloAtaque extends Thread {
 		
 		while (seguir) {
 			
-			for (Aliado a:listaAliados) {
-				System.out.println("entro lista de aliados");
+			synchronized (listaAliados) {
+				for (Aliado a:listaAliados) {
 				try {
-					Thread.sleep(75);
+					Thread.sleep(150);
 				} catch(InterruptedException e) {}
 			
 				if (a.estaMuerto())
@@ -44,7 +44,7 @@ public class HiloAtaque extends Thread {
 				
 					//Ataca al blanco
 					if (aAtacar!=null) {
-					
+						System.out.println("Ataca aliado");
 						a.setImagen(a.shoot_key);
 						pr = new ProyectilAliado(a.getAtaque());
 						bala = new Disparo(pr, a, aAtacar);
@@ -52,6 +52,8 @@ public class HiloAtaque extends Thread {
 					}
 				}
 			}
+			}
+			
 		
 			//Se eliminan los personajes muertos
 			for (Personaje p:aEliminar) {
@@ -60,11 +62,10 @@ public class HiloAtaque extends Thread {
 			
 			aEliminar = new LinkedList<Personaje>();
 		
-		
-		for (Enemigo e:listaEnemigos) {
-			System.out.println("entro lista de aliados");
+		synchronized (listaEnemigos) {
+			for (Enemigo e:listaEnemigos) {
 			try {
-				Thread.sleep(75);
+				Thread.sleep(150);
 			} catch(InterruptedException ex) {}
 		
 			if (e.estaMuerto())
@@ -75,6 +76,7 @@ public class HiloAtaque extends Thread {
 			
 				//Ataca al blanco
 				if (aAtacar!=null) {
+					System.out.println("Ataca enemigo");
 					e.setImagen(e.shoot_key);
 					pr = new ProyectilEnemigo(e.getAtaque());
 					bala = new Disparo(pr, e, aAtacar);
@@ -82,6 +84,8 @@ public class HiloAtaque extends Thread {
 				}
 			}
 		}
+		}
+		
 	
 		//Se eliminan los personajes muertos
 		for (Personaje p:aEliminar) {
@@ -95,4 +99,3 @@ public class HiloAtaque extends Thread {
 	  }
 	
 	}
-

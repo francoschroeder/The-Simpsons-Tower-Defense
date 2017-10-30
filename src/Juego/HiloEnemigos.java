@@ -74,8 +74,10 @@ public class HiloEnemigos extends Thread {
 		
 		aSalir = enemigosPorSalir.pop();
 		aSalir.getImagen().setVisible(true);
-		enemigos.add(aSalir);
-		
+		synchronized (enemigos) {
+			enemigos.add(aSalir);
+		}
+			
 		Personaje blanco;
 		
 		while(seguir) {
@@ -109,7 +111,9 @@ public class HiloEnemigos extends Thread {
 			if (cont==80 && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
 				aSalir.getImagen().setVisible(true);
-				enemigos.add(aSalir);
+				synchronized (enemigos) {
+					enemigos.add(aSalir);
+				}
 				cont=0;
 			}
 		}

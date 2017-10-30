@@ -30,6 +30,9 @@ public class Juego {
 		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
 		matriz[Math.floorDiv((int)punto.getX(), tc)][Math.floorDiv((int)punto.getY(), tc)] = p;
 		
+		synchronized (aliadosActivos) {
+			aliadosActivos.add((Aliado) p);
+		}
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
