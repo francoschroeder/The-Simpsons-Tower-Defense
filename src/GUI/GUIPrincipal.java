@@ -53,13 +53,6 @@ import javax.swing.SwingConstants;
 public class GUIPrincipal extends JFrame {
 	private PanelMapa panelMapa;
 	private Juego j;
-	private BotonCreacion homero;
-	private BotonCreacion bart;
-	private BotonCreacion lisa;
-	private BotonCreacion marge;
-	private BotonCreacion maggie;
-	private BotonCreacion flander;
-	private BotonCreacion milhouse;
 	private JLabel fondo;
 	private JPanel panelBotones;
 	private JPanel contentPane;
@@ -124,15 +117,15 @@ public class GUIPrincipal extends JFrame {
 		
 		//Creo los botones y los agregos al panel
 		
-		homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
+		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
-		bart = new BotonBart("/sprites/bart/boton.png");
+		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
 		bart.addActionListener(new OyenteBoton(bart));
-		lisa = new BotonLisa("/sprites/lisa/boton.png");
+		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
 		lisa.addActionListener(new OyenteBoton(lisa));
-		maggie = new BotonMaggie("/sprites/maggie/boton.png");
+		BotonCreacion maggie = new BotonMaggie("/sprites/maggie/boton.png");
 		maggie.addActionListener(new OyenteBoton(maggie));
-		marge = new BotonMarge("/sprites/marge/boton.png");
+		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
 		
 		
