@@ -131,14 +131,14 @@ public class GUIPrincipal extends JFrame {
 		maggie.addActionListener(new OyenteBoton(maggie));
 		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
-		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
-		marge.addActionListener(new OyenteBoton(milhouse));
+		//BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
+		//milhouse.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
-		marge.addActionListener(new OyenteBoton(flanders));
-		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/bolaDeNieve/boton.png");
-		marge.addActionListener(new OyenteBoton(bolaDeNieve));
-		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
-		marge.addActionListener(new OyenteBoton(ayudanteDeSanta));
+		flanders.addActionListener(new OyenteBoton(flanders));
+		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/maggie/boton.png");
+		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
+		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/maggie/boton.png");
+		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		
 		
@@ -149,7 +149,7 @@ public class GUIPrincipal extends JFrame {
 		panelBotones.add(lisa);
 		panelBotones.add(maggie);
 		panelBotones.add(marge);
-		panelBotones.add(milhouse);
+		//panelBotones.add(milhouse);
 		panelBotones.add(flanders);
 		panelBotones.add(bolaDeNieve);
 		panelBotones.add(ayudanteDeSanta);
