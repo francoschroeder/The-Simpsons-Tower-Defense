@@ -124,7 +124,6 @@ public class GUIPrincipal extends JFrame {
 		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
 		homero.addActionListener(new OyenteBoton(homero));
 		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
-		bart.setIcon(new ImageIcon(GUIPrincipal.class.getResource("/sprites/milhouse/boton.png")));
 		bart.addActionListener(new OyenteBoton(bart));
 		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
 		lisa.addActionListener(new OyenteBoton(lisa));
@@ -132,7 +131,7 @@ public class GUIPrincipal extends JFrame {
 		maggie.addActionListener(new OyenteBoton(maggie));
 		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
-		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
+		BotonCreacion milhouse = new BotonMilhouse("/sprites/flanders/boton.png");
 		marge.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
 		marge.addActionListener(new OyenteBoton(flanders));
