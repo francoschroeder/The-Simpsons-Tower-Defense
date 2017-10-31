@@ -41,14 +41,13 @@ public class Market {
 	
 	
 	public Personaje generarPersonaje(Point punto){
-		System.out.println("Entro a generar personaje");
 		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75),(int)Math.floorDiv((int) punto.getY(), 75));
-		System.out.println((int)Math.floorDiv((int) punto.getX(), 75));
-		System.out.println((int)Math.floorDiv((int) punto.getY(), 75));
+		System.out.println("X:"+(int) puntoNuevo.getX()+"Y: "+ (int)puntoNuevo.getY());
 		this.p = boton.factory();
-		panel.add(p.getImagen());
-		p.setPosicion(puntoNuevo);
-		j.agregarPersonaje(p, punto);
+		if (! j.estaOcupado(puntoNuevo)){ panel.add(p.getImagen());
+			p.setPosicion(puntoNuevo);
+			j.agregarPersonaje(p, punto);
+			}
 		return p;
 	}
 }

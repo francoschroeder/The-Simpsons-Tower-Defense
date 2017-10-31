@@ -72,7 +72,7 @@ public class Juego {
 			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX())+1, (int) posE.getY()));
-			System.out.println("Se mueve el enemigo");
+			System.out.println("EX: "+(int) (posE.getX()+1)+"EY: "+(int) posE.getY());
 			return true;
 		}
 			
@@ -94,6 +94,12 @@ public class Juego {
 	
 	public LinkedList<Aliado> getAliados() {
 		return aliadosActivos;
+	}
+	
+	public boolean estaOcupado(Point p){
+		
+		return (matriz[(int) p.getX()][(int) p.getY()] != null);
+		
 	}
 	
 }

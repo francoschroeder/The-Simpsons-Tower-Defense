@@ -3,17 +3,17 @@ package Juego;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Disparo {
+public abstract class Disparo {
 	protected Proyectil bala;
 	protected Personaje inicio;
 	protected Personaje destino;
 	protected JLabel imagen;
 	
-	public Disparo(Proyectil bala, Personaje inicio, Personaje destino){
+	public Disparo(Proyectil bala, Personaje inicio, Personaje destino, String URL){
 		this.bala = bala;
 		this.destino = destino;
 		this.inicio = inicio;
-		ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/homero/bola.gif"));
+		ImageIcon img = new ImageIcon(this.getClass().getResource(URL));
 		
 		this.imagen = new JLabel();
 		this.imagen.setIcon(img);
@@ -48,6 +48,9 @@ public class Disparo {
 		destino.serAtacado(bala);
 	}
 
-
+	public abstract void move();
 	
+	public boolean colisione(){
+		return destino.getImagen().getLocation().getX() == this.getImagen().getLocation().getX();
+	}
 }
