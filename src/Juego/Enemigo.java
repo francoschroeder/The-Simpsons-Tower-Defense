@@ -42,4 +42,8 @@ public abstract class Enemigo extends Personaje {
 		Random r = new Random();
 		return r.nextInt((getMaxMonedas() - getMinMonedas()) + 1) + getMinMonedas();
 	} 
+	
+	public Disparo generarDisparo(Personaje p) {
+		return new DisparoEnemigo(new ProyectilEnemigo(ataque), this, p);
+	}
 }

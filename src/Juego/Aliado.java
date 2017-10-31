@@ -14,4 +14,8 @@ public abstract class Aliado extends Personaje {
 	public int serEliminado(){
 		return 0;
 	}
+	
+	public Disparo generarDisparo(Personaje p) {
+		return new DisparoAliado(new ProyectilAliado(ataque), this, p);
+	}
 }

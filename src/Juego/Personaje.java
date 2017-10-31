@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import java.awt.Point;
 import java.util.Map;
 
-public abstract class Personaje{
+public abstract class Personaje {
 	protected static int vidaMax;
 	protected int vidaActual;
 	protected int ataque;
@@ -63,4 +63,7 @@ public abstract class Personaje{
 	public boolean estaMuerto() {
 		return vidaActual<=0;
 	}
+	
+	//Genera un disparo dirigido hacia el personaje p
+	public abstract Disparo generarDisparo(Personaje p);
 }

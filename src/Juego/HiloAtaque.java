@@ -47,10 +47,8 @@ public class HiloAtaque extends Thread {
 					if (aAtacar!=null) {
 						System.out.println("Ataca aliado");
 						a.setImagen(a.shoot_key);
-						pr = new ProyectilAliado(a.getAtaque());
-						bala = new DisparoAliado(pr, a, aAtacar);
 						
-						disparos.agregarDisparo(bala);
+						disparos.agregarDisparo(a.generarDisparo(aAtacar));
 					}
 				}
 			}
@@ -81,9 +79,8 @@ public class HiloAtaque extends Thread {
 				if (aAtacar!=null) {
 					System.out.println("Ataca enemigo");
 					e.setImagen(e.shoot_key);
-					pr = new ProyectilEnemigo(e.getAtaque());
-					bala = new DisparoAliado(pr, e, aAtacar);
-					disparos.agregarDisparo(bala);
+					
+					disparos.agregarDisparo(e.generarDisparo(aAtacar));
 				}
 			}
 		}
