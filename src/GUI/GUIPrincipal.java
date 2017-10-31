@@ -131,7 +131,7 @@ public class GUIPrincipal extends JFrame {
 		maggie.addActionListener(new OyenteBoton(maggie));
 		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
 		marge.addActionListener(new OyenteBoton(marge));
-		BotonCreacion milhouse = new BotonMilhouse("/sprites/flanders/boton.png");
+		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
 		marge.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
 		marge.addActionListener(new OyenteBoton(flanders));
