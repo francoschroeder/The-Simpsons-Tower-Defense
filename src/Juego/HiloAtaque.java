@@ -23,8 +23,6 @@ public class HiloAtaque extends Thread {
 		LinkedList<Enemigo> listaEnemigos = juego.getEnemigos();
 		LinkedList<Personaje> aEliminar = new LinkedList<Personaje>();
 		
-		Proyectil pr;
-		Disparo bala;
 		Personaje aAtacar;
 		
 		while (seguir) {
