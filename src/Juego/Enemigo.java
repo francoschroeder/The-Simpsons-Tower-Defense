@@ -46,4 +46,9 @@ public abstract class Enemigo extends Personaje {
 	public Disparo generarDisparo(Personaje p) {
 		return new DisparoEnemigo(new ProyectilEnemigo(ataque), this, p);
 	}
+	
+	public void avanzar() {
+		imagen.setLocation((int) (imagen.getLocation().getX()+1), (int) (imagen.getLocation().getY()));
+		barraDeVida.setLocation((int) barraDeVida.getLocation().getX()+1, (int) barraDeVida.getLocation().getY());
+	}
 }

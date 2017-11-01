@@ -20,10 +20,15 @@ public class Maggie extends Aliado {
 		costo=100;
 		
 		ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/maggie/maggieStill.gif"));
+		ImageIcon img2 = new ImageIcon(this.getClass().getResource("/sprites/vida.png"));
 		
 		this.imagen = new JLabel();
 		this.imagen.setIcon(img);
 		this.imagen.setBounds(0, 0, 75, 75);
+		
+		this.barraDeVida = new JLabel();
+		this.barraDeVida.setIcon(img2);
+		this.actualizarVida();
 		
 		this.imActual = new HashMap<String, ImageIcon>();
 		this.imActual.put(Personaje.still_key,new ImageIcon("/sprites/maggie/caminar.gif"));

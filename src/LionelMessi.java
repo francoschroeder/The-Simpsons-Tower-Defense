@@ -18,6 +18,9 @@ public class LionelMessi {
 		s1.setPosicion(new Point(0, 0));
 		s1.getImagen().setBounds(0*75+1, 0*75, 75, 75);
 		panel.add(s1.getImagen());
+		s1.actualizarVida();
+		panel.add(s1.getBarraDeVida());
+		s1.getBarraDeVida().setVisible(true);
 		s1.getImagen().setVisible(false);
 		enemigosPorSalir.push(s1);
 		
@@ -25,6 +28,9 @@ public class LionelMessi {
 		s2.setPosicion(new Point(0, 3));
 		s2.getImagen().setBounds(0*75+1, 3*75, 75, 75);
 		panel.add(s2.getImagen());
+		s2.actualizarVida();
+		panel.add(s2.getBarraDeVida());
+		s2.getBarraDeVida().setVisible(true);
 		s2.getImagen().setVisible(false);
 		enemigosPorSalir.push(s2);
 		
@@ -32,6 +38,9 @@ public class LionelMessi {
 		s3.setPosicion(new Point(0, 5));
 		s3.getImagen().setBounds(0*75+1, 5*75, 75, 75);
 		panel.add(s3.getImagen());
+		s3.actualizarVida();
+		panel.add(s3.getBarraDeVida());
+		s3.getBarraDeVida().setVisible(true);
 		s3.getImagen().setVisible(false);
 		enemigosPorSalir.push(s3);
 		
@@ -39,6 +48,9 @@ public class LionelMessi {
 		s4.setPosicion(new Point(0, 2));
 		s4.getImagen().setBounds(0*75+1, 2*75, 75, 75);
 		panel.add(s4.getImagen());
+		s4.actualizarVida();
+		panel.add(s4.getBarraDeVida());
+		s4.getBarraDeVida().setVisible(true);
 		s4.getImagen().setVisible(false);
 		enemigosPorSalir.push(s4);
 		
@@ -46,6 +58,9 @@ public class LionelMessi {
 		s5.setPosicion(new Point(0, 5));
 		s5.getImagen().setBounds(0*75+1, 5*75, 75, 75);
 		panel.add(s5.getImagen());
+		s5.actualizarVida();
+		panel.add(s5.getBarraDeVida());
+		s5.getBarraDeVida().setVisible(true);
 		s5.getImagen().setVisible(false);
 		enemigosPorSalir.push(s5);
 		

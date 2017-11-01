@@ -51,7 +51,7 @@ public class HiloEnemigos extends Thread {
 					
 					if (j.moverEnemigo(actual)){
 					
-							actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
+							actual.avanzar();
 					}
 					else {
 						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
@@ -59,7 +59,7 @@ public class HiloEnemigos extends Thread {
 				}
 				else{
 					
-					actual.getImagen().setBounds((int) (actual.getImagen().getLocation().getX()+1), (int) (actual.getImagen().getLocation().getY()), 75, 75);
+					actual.avanzar();
 				}
 			}
 			}

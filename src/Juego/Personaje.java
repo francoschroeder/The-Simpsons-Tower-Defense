@@ -15,6 +15,7 @@ public abstract class Personaje {
 	
 	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
+	protected JLabel barraDeVida;
 	protected Map<String, ImageIcon> imActual;
 	
 	public static final String still_key = "Still";
@@ -29,8 +30,12 @@ public abstract class Personaje {
 		this.imagen.setBounds((int)this.posicion.getX()*75, (int)this.posicion.getY()*75, 75, 75);
 	}
 
-	public JLabel getImagen(){
+	public JLabel getImagen() {
 		return imagen;
+	}
+	
+	public JLabel getBarraDeVida() {
+		return barraDeVida;
 	}
 
 	public void setImagen(String dir){
@@ -57,7 +62,12 @@ public abstract class Personaje {
 	public abstract int serEliminado();
 	
 	public void reducirVida(int v) {
-		vidaActual-=v;
+		if (v>vidaActual)
+			vidaActual=0;
+		else
+			vidaActual-=v;
+		
+		actualizarVida();
 	}
 	
 	public boolean estaMuerto() {
@@ -66,4 +76,8 @@ public abstract class Personaje {
 	
 	//Genera un disparo dirigido hacia el personaje p
 	public abstract Disparo generarDisparo(Personaje p);
+	
+	public void actualizarVida() {
+		barraDeVida.setBounds((int) barraDeVida.getLocation().getX(), (int) barraDeVida.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
+	}
 }

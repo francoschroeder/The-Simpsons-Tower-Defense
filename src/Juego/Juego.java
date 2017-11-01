@@ -52,9 +52,9 @@ public class Juego {
 		int y = (int) p.getPosicion().getY();
 		int rango = (int) p.getPosicion().getX() - p.getRango();
 		
-		for(int i =  (int) p.getPosicion().getX(); i >= rango && i>=0; i--){
+		for(int i =  (int) p.getPosicion().getX(); i >= rango && i>=1; i--){
 			
-			if (matriz[i][y] != null)
+			if (matriz[i+1][y] != null)
 				return matriz[i][y];
 		}
 		
