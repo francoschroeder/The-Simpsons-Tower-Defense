@@ -79,7 +79,6 @@ public class HiloAtaque extends Thread {
 				if (aAtacar!=null) {
 					System.out.println("Ataca enemigo");
 					e.setImagen(e.shoot_key);
-					
 					disparos.agregarDisparo(e.generarDisparo(aAtacar));
 				}
 			}
