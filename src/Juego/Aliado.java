@@ -3,6 +3,10 @@ package Juego;
 public abstract class Aliado extends Comprable {
 	protected int costo; 
 	
+	public Aliado() {
+		super();
+	}
+	
 	public int getCosto() {
 		return costo;
 	}
@@ -16,6 +20,6 @@ public abstract class Aliado extends Comprable {
 	}
 	
 	public Disparo generarDisparo(Personaje p) {
-		return new DisparoAliado(new ProyectilAliado(ataque), this, p);
+		return new DisparoAliado(miProyectil, this, p);
 	}
 }

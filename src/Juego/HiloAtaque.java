@@ -27,16 +27,15 @@ public class HiloAtaque extends Thread {
 		
 		while (seguir) {
 			
-			synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 				try {
-					Thread.sleep(250/listaAliados.size());
+					Thread.sleep(100/listaAliados.size());
 				} catch(InterruptedException e) {}
 			
 				if (a.estaMuerto())
 					aEliminar.add(a);
 				else {
-					a.setImagen(Personaje.still_key);
+					a.setImagen(Personaje.neutral_key);
 					//Pide un blanco dentro del rango de ataque
 					
 					aAtacar = juego.getBlanco(a);
@@ -50,7 +49,6 @@ public class HiloAtaque extends Thread {
 					}
 				}
 			}
-			}
 			
 		
 			//Se eliminan los personajes muertos
@@ -60,16 +58,15 @@ public class HiloAtaque extends Thread {
 			
 			aEliminar = new LinkedList<Personaje>();
 		
-		synchronized (listaEnemigos) {
 			for (Enemigo e:listaEnemigos) {
 			try {
-				Thread.sleep(1000/listaEnemigos.size());
+				Thread.sleep(100/listaEnemigos.size());
 			} catch(InterruptedException ex) {}
 		
 			if (e.estaMuerto())
 				aEliminar.add(e);
 			else {
-				e.setImagen(Enemigo.forward_key);
+				e.setImagen(Personaje.neutral_key);
 				//Pide un blanco dentro del rango de ataque
 				aAtacar = juego.getBlanco(e);
 			
@@ -80,7 +77,6 @@ public class HiloAtaque extends Thread {
 					disparos.agregarDisparo(e.generarDisparo(aAtacar));
 				}
 			}
-		}
 		}
 		
 	

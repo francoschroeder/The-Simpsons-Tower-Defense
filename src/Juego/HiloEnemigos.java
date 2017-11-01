@@ -36,30 +36,28 @@ public class HiloEnemigos extends Thread {
 		Personaje blanco;
 		
 		while(seguir) {
-			
-			for (Enemigo actual : enemigos) {
-				if (!actual.estaMuerto()) {
-				try {
-					Thread.sleep((actual.getVelocidad()*80)/enemigos.size());
-				} catch(Exception e) {}
+				for (Enemigo actual : enemigos) {
+					if (!actual.estaMuerto()) {
+						try {
+							Thread.sleep((actual.getVelocidad()*50)/enemigos.size());
+						} catch(Exception e) {}
 				
-				//Muevo al personaje
-				if (((actual.getImagen().getLocation().getX()+30)%75)==0){ // llega al borde
+						//Muevo al personaje
+						if (((actual.getImagen().getLocation().getX()+30)%75)==0){ // llega al borde
 					
-					if (j.moverEnemigo(actual)){
+							if (j.moverEnemigo(actual)){
 					
+								actual.avanzar();
+							}
+							else {
+								System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
+							}
+						}
+						else {
 							actual.avanzar();
-					}
-					else {
-						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
+						}
 					}
 				}
-				else{
-					
-					actual.avanzar();
-				}
-			}
-			}
 			
 			cont++;
 			

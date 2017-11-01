@@ -7,9 +7,11 @@ public abstract class Enemigo extends Personaje {
 
 	protected int velocidad;
 	protected int minMonedas, maxMonedas;
-	public static final String forward_key = "Forward";
 		
-
+	public Enemigo() {
+		super();
+	}
+	
 	public int getVelocidad(){
 		return velocidad;
 	}
@@ -44,11 +46,11 @@ public abstract class Enemigo extends Personaje {
 	} 
 	
 	public Disparo generarDisparo(Personaje p) {
-		return new DisparoEnemigo(new ProyectilEnemigo(ataque), this, p);
+		return new DisparoEnemigo(miProyectil, this, p);
 	}
 	
 	public void avanzar() {
 		imagen.setLocation((int) (imagen.getLocation().getX()+1), (int) (imagen.getLocation().getY()));
-		barraDeVida.setLocation((int) barraDeVida.getLocation().getX()+1, (int) barraDeVida.getLocation().getY());
+		actualizarVida();
 	}
 }

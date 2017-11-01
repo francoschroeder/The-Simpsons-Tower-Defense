@@ -46,7 +46,7 @@ public class Juego {
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
-		synchronized (enemigosActivos) {aliadosActivos.add(p);}
+		synchronized (aliadosActivos) {aliadosActivos.add(p);}
 		p.setPosicion(punto);
 	}
 	
