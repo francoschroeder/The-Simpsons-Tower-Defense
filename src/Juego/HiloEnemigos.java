@@ -31,7 +31,8 @@ public class HiloEnemigos extends Thread {
 		LinkedList<Enemigo> enemigos = j.getEnemigos();
 		
 		aSalir = enemigosPorSalir.pop();
-		aSalir.getImagen().setVisible(true);
+		j.agregarPersonaje(aSalir, aSalir.getPosicion());
+		
 		synchronized (enemigos) {
 			enemigos.add(aSalir);
 		}
@@ -68,6 +69,7 @@ public class HiloEnemigos extends Thread {
 			
 			if (cont==80 && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
+				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				aSalir.getImagen().setVisible(true);
 				synchronized (enemigos) {
 					enemigos.add(aSalir);

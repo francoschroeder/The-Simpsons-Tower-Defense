@@ -4,6 +4,7 @@ package GUI.Botones;
 
 import javax.swing.JButton;
 
+import Juego.Comprable;
 import Juego.Personaje;
 import Personajes.Bart;
 import Personajes.Homero;
@@ -18,7 +19,7 @@ public class BotonBart extends BotonCreacion {
 		
 	}
 	
-	public Personaje factory(){
+	public Comprable factory(){
 		return new Bart();
 		
 	}

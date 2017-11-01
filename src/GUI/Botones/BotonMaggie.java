@@ -2,6 +2,7 @@ package GUI.Botones;
 
 import javax.swing.JButton;
 
+import Juego.Comprable;
 import Juego.Personaje;
 import Personajes.Homero;
 import Personajes.Maggie;
@@ -15,7 +16,7 @@ public class BotonMaggie extends BotonCreacion {
 		
 	}
 	
-	public Personaje factory(){
+	public Comprable factory(){
 		return new Maggie();
 		
 	}

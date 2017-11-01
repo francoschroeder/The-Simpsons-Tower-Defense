@@ -9,10 +9,11 @@ import GUI.PanelMapa;
 import Juego.Juego;
 import Juego.Personaje;
 import Juego.Aliado;
+import Juego.Comprable;
 
 public class Market {
 	JPanel panel;
-	Personaje p;
+	Comprable p;
 	Juego j;
 	BotonCreacion boton;
 	int monedas;
@@ -27,7 +28,7 @@ public class Market {
 		this.boton = boton;
 	}
 	
-	public Personaje getPersonaje(){
+	public Comprable getPersonaje(){
 		return p;
 	}
 	
@@ -41,15 +42,14 @@ public class Market {
 	}
 	
 	
-	public Personaje generarPersonaje(Point punto){
+	public Comprable generarPersonaje(Point punto){
 		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75),(int)Math.floorDiv((int) punto.getY(), 75));
 		System.out.println("X:"+(int) puntoNuevo.getX()+"Y: "+ (int)puntoNuevo.getY());
 		this.p = boton.factory();
-		if (! j.estaOcupado(puntoNuevo)){ panel.add(p.getImagen());
+		if (! j.estaOcupado(puntoNuevo)){ 
+			panel.add(p.getImagen());
 			p.setPosicion(puntoNuevo);
 			j.agregarPersonaje(p, puntoNuevo);
-			//CORREGIR
-			synchronized (j.getAliados()){j.getAliados().add((Aliado) p);} 
 			}
 		return p;
 	}

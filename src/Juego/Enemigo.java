@@ -3,7 +3,7 @@ package Juego;
 import javax.swing.ImageIcon;
 import java.util.Random;
 
-public abstract class Enemigo extends Personaje {
+public abstract class Enemigo extends Comprable {
 
 	protected int velocidad;
 	protected int minMonedas, maxMonedas;

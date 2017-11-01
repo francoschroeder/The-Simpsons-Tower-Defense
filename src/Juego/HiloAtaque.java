@@ -19,7 +19,7 @@ public class HiloAtaque extends Thread {
 	
 	public void run() {
 		
-		LinkedList<Aliado> listaAliados = juego.getAliados();
+		LinkedList<Comprable> listaAliados = juego.getAliados();
 		LinkedList<Enemigo> listaEnemigos = juego.getEnemigos();
 		LinkedList<Personaje> aEliminar = new LinkedList<Personaje>();
 		
@@ -30,7 +30,7 @@ public class HiloAtaque extends Thread {
 		while (seguir) {
 			
 			synchronized (listaAliados) {
-				for (Aliado a:listaAliados) {
+				for (Comprable a:listaAliados) {
 				try {
 					Thread.sleep(250/listaAliados.size());
 				} catch(InterruptedException e) {}

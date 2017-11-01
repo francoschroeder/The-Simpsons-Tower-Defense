@@ -12,7 +12,7 @@ import Personajes.*;
 public class Juego {
 	private int tc;
 	private Personaje [][] matriz;
-	private LinkedList<Aliado> aliadosActivos;
+	private LinkedList<Comprable> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
 	private Stack<Personaje> enemigosPorSalir;
 	private GUIPrincipal gui;
@@ -20,17 +20,32 @@ public class Juego {
 	public Juego(GUIPrincipal p) 
 		{// asignar las listas
 		this.gui=p;
-		aliadosActivos = new LinkedList<Aliado>();
+		aliadosActivos = new LinkedList<Comprable>();
 		enemigosActivos = new LinkedList<Enemigo>();
 		//enemigosPorSalir = new Stack<Personaje>();
 		matriz = new Personaje[10][6];
 		tc=75;
 	}
 	
-	public void agregarPersonaje(Personaje p, Point punto) {
+	public void agregarPersonaje(Enemigo p, Point punto) {
 		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		p.getImagen().setBounds((int)punto.getX()*75,(int)punto.getY()* 75,tc,tc);
+		p.actualizarVida();
+		gui.getPanelMapa().add(p.getImagen());
+		gui.getPanelMapa().add(p.getBarraDeVida());
+		p.getImagen().setVisible(true);
+		p.getBarraDeVida().setVisible(true);
+		synchronized (enemigosActivos) {enemigosActivos.add(p);}
 	}
+	
+	public void agregarPersonaje(Comprable p, Point punto) {
+		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
+		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		synchronized (enemigosActivos) {aliadosActivos.add(p);}
+	}
+	
+	
 	
 	public Personaje getBlanco(Enemigo p) {
 		int y = (int) p.getPosicion().getY();
@@ -45,7 +60,7 @@ public class Juego {
 		return null;	
 	}
 	
-	public Personaje getBlanco(Aliado p) {
+	public Personaje getBlanco(Comprable p) {
 		int y = (int) p.getPosicion().getY();
 		int rango = (int) p.getPosicion().getX() - p.getRango();
 		
@@ -89,7 +104,7 @@ public class Juego {
 		return enemigosActivos;
 	}
 	
-	public LinkedList<Aliado> getAliados() {
+	public LinkedList<Comprable> getAliados() {
 		return aliadosActivos;
 	}
 	

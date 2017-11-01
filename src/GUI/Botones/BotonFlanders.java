@@ -1,6 +1,8 @@
 package GUI.Botones;
 
+import Juego.Comprable;
 import Juego.Personaje;
+import Objetos.Flanders;
 import Personajes.Skinner;
 
 public class BotonFlanders extends BotonCreacion {
@@ -12,7 +14,7 @@ public class BotonFlanders extends BotonCreacion {
 		
 	}
 	
-	public Personaje factory(){
+	public Comprable factory(){
 		return new Flanders();
 		
 	}

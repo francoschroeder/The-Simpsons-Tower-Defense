@@ -5,6 +5,7 @@ import javax.swing.JButton;
 
 
 import GUI.GUIPrincipal;
+import Juego.Comprable;
 import Juego.Personaje;
 
 public abstract class BotonCreacion extends JButton {
@@ -14,7 +15,7 @@ public abstract class BotonCreacion extends JButton {
 		super(new ImageIcon(GUIPrincipal.class.getResource(a)));
 	}
 	
-	public abstract Personaje factory();
+	public abstract Comprable factory();
 
 
 }

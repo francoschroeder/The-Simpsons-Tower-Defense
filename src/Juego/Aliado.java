@@ -1,6 +1,6 @@
 package Juego;
 
-public abstract class Aliado extends Personaje {
+public abstract class Aliado extends Comprable {
 	protected int costo; 
 	
 	public int getCosto() {

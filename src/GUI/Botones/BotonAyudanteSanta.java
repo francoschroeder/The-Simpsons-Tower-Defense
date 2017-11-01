@@ -1,6 +1,8 @@
 package GUI.Botones;
 
+import Juego.Comprable;
 import Juego.Personaje;
+import Objetos.AyudanteDeSanta;
 import Personajes.Skinner;
 
 public class BotonAyudanteSanta extends BotonCreacion {
@@ -12,7 +14,7 @@ public class BotonAyudanteSanta extends BotonCreacion {
 		
 	}
 	
-	public Personaje factory(){
+	public Comprable factory(){
 		return new AyudanteDeSanta();
 		
 	}
