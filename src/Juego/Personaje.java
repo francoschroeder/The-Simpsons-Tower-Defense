@@ -5,6 +5,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import java.awt.Point;
+import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Personaje {
@@ -12,14 +13,28 @@ public abstract class Personaje {
 	protected int vidaActual;
 	protected int ataque;
 	protected int rango;
+	protected Proyectil miProyectil;
 	
 	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
 	protected JLabel barraDeVida;
 	protected Map<String, ImageIcon> imActual;
 	
-	public static final String still_key = "Still";
+	public static final String neutral_key = "Neutral";
 	public static final String shoot_key = "Shoot";
+	
+	public Personaje() {
+		posicion = null;
+		
+		imagen = new JLabel();
+		imagen.setBounds(0, 0, 75, 75);
+		
+		barraDeVida = new JLabel();
+		barraDeVida.setIcon(new ImageIcon(this.getClass().getResource("/sprites/vida.png")));
+		actualizarVida();
+		
+		imActual = new HashMap<String, ImageIcon>();
+	}
 	
 	public Point getPosicion(){
 		return posicion;
@@ -40,7 +55,7 @@ public abstract class Personaje {
 
 	public void setImagen(String dir){
 		this.imagen.setIcon(this.imActual.get(dir));
-		//this.imagen.setBounds(this.posicion.x, this.posicion.y, 75, 75);
+		actualizarVida();
 	}
 	
 	public int getVidaMax() {
@@ -80,7 +95,7 @@ public abstract class Personaje {
 	public abstract Disparo generarDisparo(Personaje p);
 	
 	public void actualizarVida() {
-		barraDeVida.setBounds((int) barraDeVida.getLocation().getX(), (int) barraDeVida.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
+		barraDeVida.setBounds((int) imagen.getLocation().getX(), (int) imagen.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
 	}
 	
 	

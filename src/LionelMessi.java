@@ -36,7 +36,7 @@ public class LionelMessi {
 		
 	}
 	
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);

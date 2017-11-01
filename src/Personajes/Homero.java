@@ -1,41 +1,27 @@
 package Personajes;
 
-import java.awt.Dimension;
-import java.awt.Point;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 import Juego.Aliado;
 import Juego.Personaje;
+import Juego.ProyectilAliado;
 
 public class Homero extends Aliado {
 	
 	public Homero(){	
-		posicion = null;
+		super();
+		
 		vidaMax = 25;
 		vidaActual = vidaMax;
 		ataque = 25;
 		rango = 3;
 		costo = 10;
+		miProyectil = new ProyectilAliado(ataque);
 		
-		ImageIcon img = new ImageIcon(this.getClass().getResource("/sprites/homero/homeroStill.gif"));
-		ImageIcon img2 = new ImageIcon(this.getClass().getResource("/sprites/vida.png"));
+		imActual.put(Personaje.neutral_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroNeutral.gif")));
+		imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroAttack.gif")));
 		
-		this.imagen = new JLabel();
-		this.imagen.setIcon(img);
-		this.imagen.setBounds(0, 0, 75, 75);
-		
-		this.barraDeVida = new JLabel();
-		this.barraDeVida.setIcon(img2);
-		this.actualizarVida();
-		
-		this.imActual = new HashMap<String, ImageIcon>();
-		this.imActual.put(Personaje.still_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroStill.gif")));
-		this.imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroAttack.gif")));
+		setImagen(Personaje.neutral_key);
 	}
 	
 }

@@ -26,9 +26,22 @@ public class HiloAtaque extends Thread {
 		Personaje aAtacar;
 		
 		while (seguir) {
+<<<<<<< HEAD
 			
 			LinkedList<Comprable> listaAliados = (LinkedList<Comprable>) juego.getAliados().clone();
 				for (Comprable a:listaAliados) {
+=======
+			synchronized (listaAliados) {
+				for (Comprable a:listaAliados) {
+				try {
+					Thread.sleep(100/listaAliados.size());
+				} catch(InterruptedException e) {}
+			
+				if (a.estaMuerto())
+					aEliminar.add(a);
+				else {
+					a.setImagen(Personaje.neutral_key);
+>>>>>>> c8f7e346671c60bd595b26729f38c18f364a1468
 					//Pide un blanco dentro del rango de ataque
 					
 					aAtacar = juego.getBlanco(a);
@@ -51,6 +64,14 @@ public class HiloAtaque extends Thread {
 						}
 				}
 				}
+<<<<<<< HEAD
+=======
+			}
+			
+			}
+				
+		
+>>>>>>> c8f7e346671c60bd595b26729f38c18f364a1468
 			//Se eliminan los personajes muertos
 			
 				for (Personaje p:aEliminar) {
@@ -58,10 +79,23 @@ public class HiloAtaque extends Thread {
 				}
 			
 			aEliminar = new LinkedList<Personaje>();
+<<<<<<< HEAD
 			
 			LinkedList<Enemigo> listaEnemigos = (LinkedList<Enemigo>) juego.getEnemigos().clone();
 			
 			for (Enemigo e:listaEnemigos) {
+=======
+		synchronized (listaEnemigos) {
+			for (Enemigo e:listaEnemigos) {
+			try {
+				Thread.sleep(100/listaEnemigos.size());
+			} catch(InterruptedException ex) {}
+		
+			if (e.estaMuerto())
+				aEliminar.add(e);
+			else {
+				e.setImagen(Personaje.neutral_key);
+>>>>>>> c8f7e346671c60bd595b26729f38c18f364a1468
 				//Pide un blanco dentro del rango de ataque
 				
 				aAtacar = juego.getBlanco(e);
@@ -84,6 +118,12 @@ public class HiloAtaque extends Thread {
 					}
 			}
 			}
+<<<<<<< HEAD
+=======
+		}
+		}
+			
+>>>>>>> c8f7e346671c60bd595b26729f38c18f364a1468
 		
 		
 			//Se eliminan los personajes muertos
