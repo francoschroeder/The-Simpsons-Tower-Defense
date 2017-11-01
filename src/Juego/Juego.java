@@ -32,7 +32,7 @@ public class Juego {
 	public void agregarPersonaje(Enemigo p, Point punto) {
 		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
-		p.getImagen().setBounds((int)punto.getX()*75,(int)punto.getY()* 75,tc,tc);
+		p.getImagen().setBounds((int)(punto.getY())*75,(int)(punto.getX())* 75,tc,tc);
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getImagen());
 		gui.getPanelMapa().add(p.getBarraDeVida());
@@ -44,7 +44,8 @@ public class Juego {
 	public void agregarPersonaje(Comprable p, Point punto) {
 		System.out.println("Posicion del Comprado: " + p.getImagen().getLocation().getX());
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
-		p.getImagen().setBounds((int)punto.getX()*75,(int)punto.getY()* 75,tc,tc);
+		mostrarMatriz();
+		p.getImagen().setBounds((int)(punto.getX())*75,(int)(punto.getY())* 75,tc,tc);
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getImagen());
 		gui.getPanelMapa().add(p.getBarraDeVida());
@@ -55,26 +56,26 @@ public class Juego {
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
-		int y = (int) p.getPosicion().getY();
-		int rango = (int) p.getPosicion().getX() + p.getRango();
+		int x = (int) p.getPosicion().getX();
+		int rango = (int) p.getPosicion().getY() + p.getRango();
 		
-		for(int i =  (int) p.getPosicion().getX(); i <= rango && i<=8; i++){
+		for(int i = (int) p.getPosicion().getY(); i <= rango && i<=8; i++){
 			
-			if (matriz[i+1][y] != null)
-				return matriz[i+1][y];
+			if (matriz[x][i+1] != null)
+				return matriz[x][i+1];
 		}
 		
 		return null;	
 	}
 	
 	public Personaje getBlanco(Comprable p) {
-		int y = (int) p.getPosicion().getY();
-		int rango = (int) p.getPosicion().getX() - p.getRango();
+		int x = (int) p.getPosicion().getX();
+		int rango = (int) p.getPosicion().getY() - p.getRango();
 		
-		for(int i =  (int) p.getPosicion().getX(); i >= rango && i>=1; i--){
+		for(int i =  (int) p.getPosicion().getY(); i >= rango && i>=1; i--){
 			
-			if (matriz[i-1][y] != null)
-				return matriz[i-1][y];
+			if (matriz[x][i-1] != null)
+				return matriz[x][i-1];
 		}
 		
 		return null;
@@ -87,10 +88,10 @@ public class Juego {
 	public boolean moverEnemigo(Enemigo e) {
 		Point posE = e.getPosicion();
 		
-		if (((int) posE.getX() != 9) && (matriz[((int) posE.getX())+1][(int) posE.getY()] == null)) {
-			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
+		if (((int) posE.getY() != 9) && (matriz[((int) posE.getX())][(int) posE.getY()+1] == null)) {
+			matriz[((int) posE.getX())][(int) posE.getY()+1] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
-			e.setPosicion(new Point((int)( posE.getX())+1, (int) posE.getY()));
+			e.setPosicion(new Point((int)( posE.getX()), (int) posE.getY()+1));
 			this.mostrarMatriz();
 			return true;
 			

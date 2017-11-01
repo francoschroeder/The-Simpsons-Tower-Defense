@@ -48,7 +48,7 @@ public class HiloAtaque extends Thread {
 					if (a.estaMuerto()) {
 						aEliminar.add(a);
 						} else {
-						a.setImagen(Personaje.still_key);
+						a.setImagen(Personaje.neutral_key);
 						}
 				
 					}
@@ -86,7 +86,7 @@ public class HiloAtaque extends Thread {
 				if (e.estaMuerto()) {
 					aEliminar.add(e);
 					} else {
-					e.setImagen(e.still_key);
+					e.setImagen(Personaje.neutral_key);
 					}
 				}
 			
