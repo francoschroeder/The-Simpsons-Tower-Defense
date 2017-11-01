@@ -32,7 +32,7 @@ public class HiloAtaque extends Thread {
 			synchronized (listaAliados) {
 				for (Aliado a:listaAliados) {
 				try {
-					Thread.sleep(500/listaAliados.size());
+					Thread.sleep(250/listaAliados.size());
 				} catch(InterruptedException e) {}
 			
 				if (a.estaMuerto())
@@ -65,7 +65,7 @@ public class HiloAtaque extends Thread {
 		synchronized (listaEnemigos) {
 			for (Enemigo e:listaEnemigos) {
 			try {
-				Thread.sleep(500/listaEnemigos.size());
+				Thread.sleep(1000/listaEnemigos.size());
 			} catch(InterruptedException ex) {}
 		
 			if (e.estaMuerto())

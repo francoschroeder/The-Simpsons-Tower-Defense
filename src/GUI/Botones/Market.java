@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import GUI.PanelMapa;
 import Juego.Juego;
 import Juego.Personaje;
+import Juego.Aliado;
 
 public class Market {
 	JPanel panel;
@@ -46,7 +47,9 @@ public class Market {
 		this.p = boton.factory();
 		if (! j.estaOcupado(puntoNuevo)){ panel.add(p.getImagen());
 			p.setPosicion(puntoNuevo);
-			j.agregarPersonaje(p, punto);
+			j.agregarPersonaje(p, puntoNuevo);
+			//CORREGIR
+			synchronized (j.getAliados()){j.getAliados().add((Aliado) p);} 
 			}
 		return p;
 	}

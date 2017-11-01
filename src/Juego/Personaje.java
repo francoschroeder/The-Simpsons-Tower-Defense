@@ -67,6 +67,8 @@ public abstract class Personaje {
 		else
 			vidaActual-=v;
 		
+		System.out.println("vida: "+vidaActual);
+		
 		actualizarVida();
 	}
 	
@@ -80,4 +82,6 @@ public abstract class Personaje {
 	public void actualizarVida() {
 		barraDeVida.setBounds((int) barraDeVida.getLocation().getX(), (int) barraDeVida.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
 	}
+	
+	public abstract void avanzar();
 }

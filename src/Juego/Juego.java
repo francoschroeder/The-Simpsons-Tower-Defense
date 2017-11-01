@@ -26,23 +26,20 @@ public class Juego {
 		matriz = new Personaje[10][6];
 		tc=75;
 	}
+	
 	public void agregarPersonaje(Personaje p, Point punto) {
 		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
-		matriz[Math.floorDiv((int)punto.getX(), tc)][Math.floorDiv((int)punto.getY(), tc)] = p;
-		
-		synchronized (aliadosActivos) {
-			aliadosActivos.add((Aliado) p);
-		}
+		matriz[(int)punto.getX()][(int)punto.getY()] = p;
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
 		int y = (int) p.getPosicion().getY();
 		int rango = (int) p.getPosicion().getX() + p.getRango();
 		
-		for(int i =  (int) p.getPosicion().getX(); i <= rango && i<=9; i++){
+		for(int i =  (int) p.getPosicion().getX(); i <= rango && i<=8; i++){
 			
-			if (matriz[i][y] != null)
-				return matriz[i][y];
+			if (matriz[i+1][y] != null)
+				return matriz[i+1][y];
 		}
 		
 		return null;	
@@ -54,8 +51,8 @@ public class Juego {
 		
 		for(int i =  (int) p.getPosicion().getX(); i >= rango && i>=1; i--){
 			
-			if (matriz[i+1][y] != null)
-				return matriz[i][y];
+			if (matriz[i-1][y] != null)
+				return matriz[i-1][y];
 		}
 		
 		return null;

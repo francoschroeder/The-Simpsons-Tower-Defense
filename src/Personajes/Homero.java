@@ -18,7 +18,7 @@ public class Homero extends Aliado {
 		posicion = null;
 		vidaMax = 25;
 		vidaActual = vidaMax;
-		ataque = 4;
+		ataque = 25;
 		rango = 3;
 		costo = 10;
 		

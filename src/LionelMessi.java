@@ -13,9 +13,10 @@ import Personajes.Skinner;
 
 public class LionelMessi {
 	
-	private static void crearEnemigosPorSalir(PanelMapa panel, Stack<Enemigo> enemigosPorSalir) {
+	private static void crearEnemigosPorSalir(PanelMapa panel, Stack<Enemigo> enemigosPorSalir, Juego j) {
 		Skinner s1 = new Skinner();
 		s1.setPosicion(new Point(0, 0));
+		j.agregarPersonaje(s1, s1.getPosicion());
 		s1.getImagen().setBounds(0*75+1, 0*75, 75, 75);
 		panel.add(s1.getImagen());
 		s1.actualizarVida();
@@ -26,6 +27,7 @@ public class LionelMessi {
 		
 		Skinner s2 = new Skinner();
 		s2.setPosicion(new Point(0, 3));
+		j.agregarPersonaje(s2, s2.getPosicion());
 		s2.getImagen().setBounds(0*75+1, 3*75, 75, 75);
 		panel.add(s2.getImagen());
 		s2.actualizarVida();
@@ -36,6 +38,7 @@ public class LionelMessi {
 		
 		Skinner s3 = new Skinner();
 		s3.setPosicion(new Point(0, 5));
+		j.agregarPersonaje(s3, s3.getPosicion());
 		s3.getImagen().setBounds(0*75+1, 5*75, 75, 75);
 		panel.add(s3.getImagen());
 		s3.actualizarVida();
@@ -46,6 +49,7 @@ public class LionelMessi {
 		
 		Skinner s4 = new Skinner();
 		s4.setPosicion(new Point(0, 2));
+		j.agregarPersonaje(s4, s4.getPosicion());
 		s4.getImagen().setBounds(0*75+1, 2*75, 75, 75);
 		panel.add(s4.getImagen());
 		s4.actualizarVida();
@@ -56,6 +60,7 @@ public class LionelMessi {
 		
 		Skinner s5 = new Skinner();
 		s5.setPosicion(new Point(0, 5));
+		j.agregarPersonaje(s5, s5.getPosicion());
 		s5.getImagen().setBounds(0*75+1, 5*75, 75, 75);
 		panel.add(s5.getImagen());
 		s5.actualizarVida();
@@ -69,8 +74,8 @@ public class LionelMessi {
 	public static void main(String[] args){
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
-		crearEnemigosPorSalir(gui.getPanelMapa(), enemigosPorSalir);
 		Juego j = new Juego(gui);
+		crearEnemigosPorSalir(gui.getPanelMapa(), enemigosPorSalir, j);
 		Market market = new Market(j);
 		HiloDisparo disparo = new HiloDisparo(gui.getPanelMapa()); 
 		HiloEnemigos h = new HiloEnemigos(j, disparo, enemigosPorSalir);
