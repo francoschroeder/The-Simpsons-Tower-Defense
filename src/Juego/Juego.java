@@ -72,7 +72,6 @@ public class Juego {
 			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX())+1, (int) posE.getY()));
-			System.out.println("EX: "+(int) (posE.getX()+1)+"EY: "+(int) posE.getY());
 			return true;
 		}
 			
