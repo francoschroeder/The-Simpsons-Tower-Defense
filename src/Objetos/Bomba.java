@@ -1,6 +1,6 @@
 package Objetos;
 import Juego.*;
 
-public class Bomba extends Objeto {
+public class Bomba {
 
 }

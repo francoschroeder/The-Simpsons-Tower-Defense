@@ -21,7 +21,6 @@ import GUI.Botones.BotonCreacion;
 import GUI.Botones.BotonFlanders;
 import GUI.Botones.BotonHomero;
 import GUI.Botones.BotonLisa;
-import GUI.Botones.BotonSkinner;
 import GUI.Botones.Market;
 
 

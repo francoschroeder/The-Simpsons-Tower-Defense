@@ -83,5 +83,5 @@ public abstract class Personaje {
 		barraDeVida.setBounds((int) barraDeVida.getLocation().getX(), (int) barraDeVida.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
 	}
 	
-	public abstract void avanzar();
+	
 }

@@ -1,7 +1,7 @@
 package Objetos;
 import Juego.*;
 
-public class AyudanteDeSanta extends Objeto implements Comprable {
+public class AyudanteDeSanta extends Objeto {
 	
 	public AyudanteDeSanta() {
 		super.vidaMax=40;

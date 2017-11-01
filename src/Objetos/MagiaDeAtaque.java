@@ -1,7 +1,7 @@
 package Objetos;
 import Juego.*;
 
-public class MagiaDeAtaque extends Objeto {
+public class MagiaDeAtaque  {
 	
 	
 }
