@@ -53,6 +53,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import javax.swing.SwingConstants;
+import javax.swing.JTextField;
 
 public class GUIPrincipal extends JFrame {
 	private PanelMapa panelMapa;
@@ -63,6 +64,7 @@ public class GUIPrincipal extends JFrame {
 	private Market mercado;	
 	private JButton skinner;
 	private JButton BorrarSkinner;
+	private JTextField textField;
 	/**
 	 * Launch the application.
 	 */
@@ -154,6 +156,12 @@ public class GUIPrincipal extends JFrame {
 		panelBotones.add(bolaDeNieve);
 		panelBotones.add(ayudanteDeSanta);
 		
+		textField = new JTextField();
+		fondo.add(textField);
+		textField.setBounds(604, 18, 266, 34);
+		textField.setColumns(10);
+		textField.setText("Monedas: ");
+		
 	}
 	 // juego 
 	
@@ -186,6 +194,10 @@ public class GUIPrincipal extends JFrame {
 	public PanelMapa getPanelMapa() {
 		return panelMapa;
 	}
-	
+
+	public void modificarMarket(int monedas){
+		textField.setText("Monedas: "+monedas);
+	}
+
 }
 
