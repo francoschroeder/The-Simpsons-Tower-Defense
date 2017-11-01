@@ -28,26 +28,25 @@ public class HiloEnemigos extends Thread {
 	public void run() {
 		int cont=0;
 		Enemigo aSalir;
-		LinkedList<Enemigo> enemigos = j.getEnemigos();
-		
 		aSalir = enemigosPorSalir.pop();
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
 			
 		Personaje blanco;
 		
 		while(seguir) {
+			LinkedList<Enemigo> enemigos = (LinkedList<Enemigo>) j.getEnemigos().clone();
 			
 			for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
-					Thread.sleep((actual.getVelocidad()*80)/enemigos.size());
+					Thread.sleep((actual.getVelocidad()*100)/enemigos.size());
 				} catch(Exception e) {}
 				
 				//Muevo al personaje
-				if (((actual.getImagen().getLocation().getX()+30)%75)==0){ // llega al borde
+				if (((actual.getImagen().getLocation().getX()+5)%75)==0){ // llega al borde
 					
 					if (j.moverEnemigo(actual)){
-					
+							
 							actual.avanzar();
 					}
 					else {
@@ -55,12 +54,11 @@ public class HiloEnemigos extends Thread {
 					}
 				}
 				else{
-					
 					actual.avanzar();
+					}
 				}
-			}
-			}
 			
+			}
 			cont++;
 			
 			if (cont==80 && !enemigosPorSalir.isEmpty()) {

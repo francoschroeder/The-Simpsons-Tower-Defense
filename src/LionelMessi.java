@@ -15,23 +15,23 @@ public class LionelMessi {
 	
 	private static void crearEnemigosPorSalir(Stack<Enemigo> enemigosPorSalir) {
 		Skinner s1 = new Skinner();
-		s1.setPosicion(new Point(0, 0));
+		s1.setPosicion(new Point(5, 0));
 		enemigosPorSalir.push(s1);
 		
 		Skinner s2 = new Skinner();
-		s2.setPosicion(new Point(0, 3));
+		s2.setPosicion(new Point(3, 0));
 		enemigosPorSalir.push(s2);
 		
 		Skinner s3 = new Skinner();
-		s3.setPosicion(new Point(0, 5));
+		s3.setPosicion(new Point(5, 0));
 		enemigosPorSalir.push(s3);
 		
 		Skinner s4 = new Skinner();
-		s4.setPosicion(new Point(0, 2));
+		s4.setPosicion(new Point(2, 0));
 		enemigosPorSalir.push(s4);
 		
 		Skinner s5 = new Skinner();
-		s5.setPosicion(new Point(0, 5));
+		s5.setPosicion(new Point(1, 0));
 		enemigosPorSalir.push(s5);
 		
 	}

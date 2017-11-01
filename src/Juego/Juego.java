@@ -17,13 +17,17 @@ public class Juego {
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
-		{// asignar las listas
+		{
+		// asignar las listas
 		this.gui=p;
 		aliadosActivos = new LinkedList<Comprable>();
 		enemigosActivos = new LinkedList<Enemigo>();
-		matriz = new Personaje[10][6];
+		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		tc=75;
-	}
+	
+		
+		
+		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
 		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
@@ -46,11 +50,9 @@ public class Juego {
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
-		synchronized (enemigosActivos) {aliadosActivos.add(p);}
+		synchronized (aliadosActivos) {aliadosActivos.add(p);}
 		p.setPosicion(punto);
 	}
-	
-	
 	
 	public Personaje getBlanco(Enemigo p) {
 		int y = (int) p.getPosicion().getY();
@@ -89,6 +91,7 @@ public class Juego {
 			matriz[((int) posE.getX())+1][(int) posE.getY()] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX())+1, (int) posE.getY()));
+			this.mostrarMatriz();
 			return true;
 			
 		}
@@ -119,4 +122,15 @@ public class Juego {
 		
 	}
 	
+	public void mostrarMatriz(){
+		System.out.println("------------------------------------------------");
+		for(int i = 0; i< matriz.length; i++) {
+			for(int e = 0; e < matriz[0].length; e++) {
+				if(matriz[i][e] != null) System.out.print(" 1 ");
+				else System.out.print(" 0 ");
+				}
+			System.out.println(" . ");
+		}
+		
+	}
 }

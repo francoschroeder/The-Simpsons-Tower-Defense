@@ -16,7 +16,7 @@ public class Skinner extends Enemigo {
 		vidaMax=40;
 		vidaActual = vidaMax;
 		ataque=15;
-		rango=4;
+		rango=2;
 		velocidad=2;
 		minMonedas=5;
 		maxMonedas=8;
