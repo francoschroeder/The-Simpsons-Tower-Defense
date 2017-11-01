@@ -46,7 +46,7 @@ public class HiloAtaque extends Thread {
 					//Ataca al blanco
 					if (aAtacar!=null) {
 						System.out.println("Ataca aliado");
-						a.setImagen(a.shoot_key);
+						a.setImagen(Personaje.shoot_key);
 						
 						disparos.agregarDisparo(a.generarDisparo(aAtacar));
 					}
@@ -78,7 +78,7 @@ public class HiloAtaque extends Thread {
 				//Ataca al blanco
 				if (aAtacar!=null) {
 					System.out.println("Ataca enemigo");
-					e.setImagen(e.shoot_key);
+					e.setImagen(Personaje.shoot_key);
 					disparos.agregarDisparo(e.generarDisparo(aAtacar));
 				}
 			}

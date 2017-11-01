@@ -42,16 +42,13 @@ public class Market {
 	}
 	
 	
-	public Comprable generarPersonaje(Point punto){
+	public void generarPersonaje(Point punto){
 		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getX(), 75),(int)Math.floorDiv((int) punto.getY(), 75));
-		System.out.println("X:"+(int) puntoNuevo.getX()+"Y: "+ (int)puntoNuevo.getY());
 		this.p = boton.factory();
-		if (! j.estaOcupado(puntoNuevo)){ 
-			panel.add(p.getImagen());
-			p.setPosicion(puntoNuevo);
+		if (! j.estaOcupado(puntoNuevo))
+			{ 
 			j.agregarPersonaje(p, puntoNuevo);
 			}
-		return p;
 	}
 }
 

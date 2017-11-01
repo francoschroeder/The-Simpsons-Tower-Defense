@@ -13,7 +13,7 @@ import Personajes.Skinner;
 
 public class LionelMessi {
 	
-	private static void crearEnemigosPorSalir(PanelMapa panel, Stack<Enemigo> enemigosPorSalir, Juego j) {
+	private static void crearEnemigosPorSalir(Stack<Enemigo> enemigosPorSalir) {
 		Skinner s1 = new Skinner();
 		s1.setPosicion(new Point(0, 0));
 		enemigosPorSalir.push(s1);
@@ -40,7 +40,7 @@ public class LionelMessi {
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);
-		crearEnemigosPorSalir(gui.getPanelMapa(), enemigosPorSalir, j);
+		crearEnemigosPorSalir(enemigosPorSalir);
 		Market market = new Market(j);
 		HiloDisparo disparo = new HiloDisparo(gui.getPanelMapa()); 
 		HiloEnemigos h = new HiloEnemigos(j, disparo, enemigosPorSalir);

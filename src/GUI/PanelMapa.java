@@ -14,7 +14,7 @@ import com.sun.javafx.scene.paint.GradientUtils.Point;
 import java.awt.geom.Point2D;
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.Market;
-
+import Juego.Comprable;
 import Juego.Personaje;
  
 /**
@@ -28,7 +28,7 @@ import Juego.Personaje;
  
 public class PanelMapa extends JPanel {
 	Market selec;
-	Personaje perso;
+	Comprable perso;
 	Point puntoNuevo;
 	
 	public void setPerso(Market p){

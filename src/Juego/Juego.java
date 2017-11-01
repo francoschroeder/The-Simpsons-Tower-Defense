@@ -14,7 +14,6 @@ public class Juego {
 	private Personaje [][] matriz;
 	private LinkedList<Comprable> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
-	private Stack<Personaje> enemigosPorSalir;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
@@ -22,7 +21,6 @@ public class Juego {
 		this.gui=p;
 		aliadosActivos = new LinkedList<Comprable>();
 		enemigosActivos = new LinkedList<Enemigo>();
-		//enemigosPorSalir = new Stack<Personaje>();
 		matriz = new Personaje[10][6];
 		tc=75;
 	}
@@ -40,9 +38,16 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
+		System.out.println("Posicion del Comprado: " + p.getImagen().getLocation().getX());
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		p.getImagen().setBounds((int)punto.getX()*75,(int)punto.getY()* 75,tc,tc);
+		p.actualizarVida();
+		gui.getPanelMapa().add(p.getImagen());
+		gui.getPanelMapa().add(p.getBarraDeVida());
+		p.getImagen().setVisible(true);
+		p.getBarraDeVida().setVisible(true);
 		synchronized (enemigosActivos) {aliadosActivos.add(p);}
+		p.setPosicion(punto);
 	}
 	
 	
