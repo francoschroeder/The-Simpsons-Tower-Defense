@@ -26,7 +26,7 @@ public class HiloAtaque extends Thread {
 		Personaje aAtacar;
 		
 		while (seguir) {
-			
+			synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 				try {
 					Thread.sleep(100/listaAliados.size());
@@ -50,6 +50,8 @@ public class HiloAtaque extends Thread {
 				}
 			}
 			
+			}
+				
 		
 			//Se eliminan los personajes muertos
 			for (Personaje p:aEliminar) {
@@ -57,7 +59,7 @@ public class HiloAtaque extends Thread {
 			}
 			
 			aEliminar = new LinkedList<Personaje>();
-		
+		synchronized (listaEnemigos) {
 			for (Enemigo e:listaEnemigos) {
 			try {
 				Thread.sleep(100/listaEnemigos.size());
@@ -78,6 +80,8 @@ public class HiloAtaque extends Thread {
 				}
 			}
 		}
+		}
+			
 		
 	
 		//Se eliminan los personajes muertos

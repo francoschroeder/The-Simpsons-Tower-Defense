@@ -55,6 +55,7 @@ public abstract class Personaje {
 
 	public void setImagen(String dir){
 		this.imagen.setIcon(this.imActual.get(dir));
+		actualizarVida();
 	}
 	
 	public int getVidaMax() {
