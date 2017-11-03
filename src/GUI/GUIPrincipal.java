@@ -34,6 +34,8 @@ import Juego.Juego;
 import Juego.Personaje;
 import Personajes.Homero;
 import Personajes.Skinner;
+import PowerUp.PowerUp;
+import PowerUp.bomba;
 
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
@@ -140,6 +142,13 @@ public class GUIPrincipal extends JFrame {
 		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
 		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
+		
+		//botone de power up
+		
+		PowerUp agregar = new bomba();
+		panelMapa.add(agregar);
+		agregar.setBounds(375, 300,75,75);
+		agregar.setVisible(true);
 		
 		
 		

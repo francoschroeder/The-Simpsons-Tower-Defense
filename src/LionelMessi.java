@@ -53,5 +53,8 @@ public class LionelMessi {
 		h.start();
 		disparo.start();
 		a.start();
+		
+		
+	
 	}
 }
