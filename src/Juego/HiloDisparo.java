@@ -23,9 +23,6 @@ public class HiloDisparo extends Thread {
 		this.panel = gui;
 	}
 
-
-	
-	
 	public void run(){
 		
 		while (seguir){

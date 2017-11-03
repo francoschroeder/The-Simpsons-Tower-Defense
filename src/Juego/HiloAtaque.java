@@ -96,11 +96,6 @@ public class HiloAtaque extends Thread {
 			
 			}
 			
-			
-
-
-		
-		
 			//Se eliminan los personajes muertos
 				for (Enemigo p:aEliminar2) {
 					juego.eliminar(p);
@@ -108,7 +103,7 @@ public class HiloAtaque extends Thread {
 				aEliminar2 = new LinkedList<Enemigo>();
 				
 			try {
-					Thread.sleep(700);}
+					Thread.sleep(1000);}
 					catch (InterruptedException j) {}
 			}// del while
 		}// del run

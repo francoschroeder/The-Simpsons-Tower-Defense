@@ -43,17 +43,16 @@ public class Market {
 	
 	
 	public void generarPersonaje(Point punto){
+		if(boton != null) {
 		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getY(), 75),(int)Math.floorDiv((int) punto.getX(), 75));
-		
-		
 		this.p = boton.factory();
-		
-		
 		if (!j.estaOcupado(puntoNuevo))
 			{ 
-			
 			j.agregarPersonaje(p, puntoNuevo);
+			boton = null;
 			}
+		}
+		
 	}
 }
 
