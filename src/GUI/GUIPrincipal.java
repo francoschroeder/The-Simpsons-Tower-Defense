@@ -168,6 +168,7 @@ public class GUIPrincipal extends JFrame {
 		fondo.add(textField);
 		textField.setBounds(604, 18, 266, 34);
 		textField.setColumns(10);
+		textField.setEditable(false);
 		textField.setText("Monedas: ");
 		
 	}
