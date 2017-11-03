@@ -9,6 +9,7 @@ import Juego.HiloAtaque;
 import Juego.HiloDisparo;
 import Juego.HiloEnemigos;
 import Juego.Juego;
+import Personajes.Nelson;
 import Personajes.Skinner;
 
 public class LionelMessi {
@@ -30,13 +31,13 @@ public class LionelMessi {
 		s4.setPosicion(new Point(2, 0));
 		enemigosPorSalir.push(s4);
 		
-		Skinner s5 = new Skinner();
+		Nelson s5 = new Nelson();
 		s5.setPosicion(new Point(1, 0));
 		enemigosPorSalir.push(s5);
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);

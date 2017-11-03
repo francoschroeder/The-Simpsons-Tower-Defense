@@ -1,7 +1,7 @@
 package Juego;
 
 import java.awt.Point;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 import GUI.GUIPrincipal;
@@ -32,12 +32,13 @@ public class HiloEnemigos extends Thread {
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
 			
 		Personaje blanco;
+		List<Enemigo> enemigos = j.getEnemigos();
 		
 		while(seguir) {
 
-			LinkedList<Enemigo> enemigos = (LinkedList<Enemigo>) j.getEnemigos().clone();
 			
-			for (Enemigo actual : enemigos) {
+			 
+				for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
 					Thread.sleep((actual.getVelocidad()*100)/enemigos.size());
@@ -62,6 +63,8 @@ public class HiloEnemigos extends Thread {
 				}
 			
 			}
+			
+			
 			cont++;
 			
 			if (cont==80 && !enemigosPorSalir.isEmpty()) {

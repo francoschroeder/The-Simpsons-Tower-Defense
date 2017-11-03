@@ -9,6 +9,6 @@ public class DisparoAliado extends Disparo{
 		
 	}
 	public void move(){
-		getImagen().setLocation((int)getImagen().getLocation().getX()-1,(int) getImagen().getLocation().getY());
+		getImagen().setLocation((int)getImagen().getLocation().getX()-2,(int) getImagen().getLocation().getY());
 	}
 }

@@ -1,8 +1,10 @@
 package Juego;
 
 import java.awt.Point;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Stack;
+import java.util.List;
 
 
 import GUI.GUIPrincipal;
@@ -12,16 +14,16 @@ import Personajes.*;
 public class Juego {
 	private int tc;
 	private Personaje [][] matriz;
-	private LinkedList<Comprable> aliadosActivos;
-	private LinkedList<Enemigo> enemigosActivos;
+	private List<Comprable> aliadosActivos;
+	private List<Enemigo> enemigosActivos;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
 		{
 		// asignar las listas
 		this.gui=p;
-		aliadosActivos = new LinkedList<Comprable>();
-		enemigosActivos = new LinkedList<Enemigo>();
+		aliadosActivos =  new LinkedList<Comprable>();
+		enemigosActivos =  new LinkedList<Enemigo>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		tc=75;
 	
@@ -30,11 +32,11 @@ public class Juego {
 		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
-		System.out.println("Posicion del aliado: " + p.getImagen().getLocation().getX());
-		matriz[(int)punto.getX()][(int)punto.getY()] = p;
-		p.getImagen().setBounds((int)(punto.getY())*75,(int)(punto.getX())* 75,tc,tc);
-		p.actualizarVida();
+		
 		gui.getPanelMapa().add(p.getImagen());
+		p.getImagen().setLocation((int)(punto.getY())*75,(int)(punto.getX())* 75);
+		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
@@ -42,17 +44,20 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-		System.out.println("Posicion del Comprado: " + p.getImagen().getLocation().getX());
+		
+		p.setPosicion(punto);
+		gui.getPanelMapa().add(p.getImagen());
+		System.out.println("X: "+punto.getX()+"Y "+punto.getY());
+		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
 		mostrarMatriz();
-		p.getImagen().setBounds((int)(punto.getX())*75,(int)(punto.getY())* 75,tc,tc);
 		p.actualizarVida();
-		gui.getPanelMapa().add(p.getImagen());
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
+		System.out.println("Por Agregar");
 		synchronized (aliadosActivos) {aliadosActivos.add(p);}
-		p.setPosicion(punto);
+		System.out.println("Agrego");
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
@@ -92,6 +97,7 @@ public class Juego {
 			matriz[((int) posE.getX())][(int) posE.getY()+1] = matriz[(int) posE.getX()][(int) posE.getY()];
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX()), (int) posE.getY()+1));
+			e.getImagen().setLocation((int) e.getPosicion().getY()*75, (int) e.getPosicion().getX()*75);
 			this.mostrarMatriz();
 			return true;
 			
@@ -101,19 +107,27 @@ public class Juego {
 	}
 	
 	
-	public void eliminar(Personaje p) {
+	public void eliminar(Enemigo p) {
 		gui.getPanelMapa().remove(p.getImagen());
-		enemigosActivos.remove(p);
+		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 		gui.getMarket().sumarMonedas(p.serEliminado());
 		
 	}
 	
-	public LinkedList<Enemigo> getEnemigos() {
+	public void eliminar(Comprable p) {
+		gui.getPanelMapa().remove(p.getImagen());
+		synchronized (aliadosActivos) {aliadosActivos.remove(p);}
+		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
+		gui.getMarket().sumarMonedas(p.serEliminado());
+		
+	}
+	
+	public List<Enemigo> getEnemigos() {
 		return enemigosActivos;
 	}
 	
-	public LinkedList<Comprable> getAliados() {
+	public List<Comprable> getAliados() {
 		return aliadosActivos;
 	}
 	
