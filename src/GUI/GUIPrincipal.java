@@ -171,7 +171,7 @@ public class GUIPrincipal extends JFrame {
 		
 		textField = new JTextField();
 		fondo.add(textField);
-		textField.setBounds(604, 18, 266, 34);
+		textField.setBounds(604, 18, 150, 34);
 		textField.setColumns(10);
 		textField.setEditable(false);
 	
@@ -191,6 +191,11 @@ public class GUIPrincipal extends JFrame {
 		textField.setText("Monedas: "+ mercado.getMonedas());
 		System.out.println("aca se creo too");
 	}
+	
+	public void actualizarCartel(){
+		textField.setText("Monedas: "+ mercado.getMonedas());
+	}
+		
 	
 	//oyente boton con Factory 
 	
