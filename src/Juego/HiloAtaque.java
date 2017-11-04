@@ -1,5 +1,6 @@
 package Juego;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,6 +21,8 @@ public class HiloAtaque extends Thread {
 	
 	public void run() {
 		
+		
+		
 		LinkedList<Comprable> aEliminar = new LinkedList<Comprable>();
 		LinkedList<Enemigo> aEliminar2 = new LinkedList<Enemigo>();
 		
@@ -27,7 +30,6 @@ public class HiloAtaque extends Thread {
 		
 		List<Comprable> listaAliados = juego.getAliados();
 		List<Enemigo> listaEnemigos =  juego.getEnemigos();
-		List<Objeto> listaObjetos = juego.getObjetos();
 		
 		while (seguir) {
 			
@@ -41,17 +43,17 @@ public class HiloAtaque extends Thread {
 					//Ataca al blanco
 					
 					if (aAtacar!=null) {
-						System.out.println("Dispara Aliado");
-						a.setImagen(Personaje.shoot_key); // Cambia imagen a disparo
-						disparos.agregarDisparo(a.generarDisparo(aAtacar));		
-					} else {
-						a.setImagen(Personaje.neutral_key);
-					}
-					
+						
+							
+							System.out.println("Dispara Aliado");
+							a.setImagen(Personaje.shoot_key); // Cambia imagen a disparo;
+							disparos.agregarDisparo(a.generarDisparo(aAtacar));
+							
+							}
 					if (a.estaMuerto()) {
 						aEliminar.add(a);
 						} else {
-						
+						a.setImagen(Personaje.neutral_key);
 						}
 				
 					}
@@ -70,7 +72,7 @@ public class HiloAtaque extends Thread {
 			// recorrer los enemigos
 			synchronized (listaEnemigos) {
 				for (Enemigo e:listaEnemigos) {
-				
+
 				//Pide un blanco dentro del rango de ataque
 				
 				aAtacar = juego.getBlanco(e);
@@ -78,18 +80,17 @@ public class HiloAtaque extends Thread {
 				//Ataca al blanco
 				
 				if (aAtacar!=null) {
-					System.out.println("Dispara Enemigo");
-					e.setImagen(Personaje.shoot_key); // Cambia imagen a disparo
-					disparos.agregarDisparo(e.generarDisparo(aAtacar));
-				}  else {
-					e.setImagen(Personaje.neutral_key);
-				}
+					
+						System.out.println("Dispara Enemigo");
+						e.setImagen(Personaje.shoot_key); // Cambia imagen a disparo;
+						disparos.agregarDisparo(e.generarDisparo(aAtacar));
+						}  
 						
 						
 				if (e.estaMuerto()) {
 					aEliminar2.add(e);
 					} else {
-					
+					e.setImagen(Personaje.neutral_key);
 					}
 				}
 			
@@ -102,16 +103,8 @@ public class HiloAtaque extends Thread {
 				aEliminar2 = new LinkedList<Enemigo>();
 				
 			try {
-					Thread.sleep(1000);	}
+					Thread.sleep(1000);}
 					catch (InterruptedException j) {}
-			
-			if (!listaObjetos.isEmpty()) 
-				for (Objeto o:listaObjetos) {
-					o.pasarTiempo(1000);
-					
-					if (o.pasoTiempo())
-						juego.eliminar(o);
-				}
 			}// del while
 		}// del run
 	}// del thread
