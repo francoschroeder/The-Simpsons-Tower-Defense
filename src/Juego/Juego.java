@@ -112,6 +112,8 @@ public class Juego {
 		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 		gui.getMarket().sumarMonedas(p.serEliminado());
+		gui.actualizarCartel();
+		
 		
 	}
 	
