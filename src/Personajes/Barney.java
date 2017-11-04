@@ -20,8 +20,8 @@ public class Barney extends Enemigo {
 		maxMonedas = 10;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/bart/jeffNeutral.gif")));
-		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/bart/jeffAttack.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/barney/barneyNeutral.gif")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/barney/barneyAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
 	}

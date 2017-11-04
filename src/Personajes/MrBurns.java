@@ -20,8 +20,8 @@ public class MrBurns extends Enemigo {
 		maxMonedas = 15;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/mrburns/mrburnsNeutral.gif")));
-		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/mrburns/mrburnsAttack.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
 	}

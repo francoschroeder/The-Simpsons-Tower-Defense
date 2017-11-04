@@ -20,8 +20,8 @@ public class PerrosBurns extends Enemigo {
 		maxMonedas = 3;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/perrosburns/perrosburnsNeutral.gif")));
-		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/perrosburns/perrosburnsAttack.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
 	}
