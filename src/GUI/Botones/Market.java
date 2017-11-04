@@ -22,7 +22,13 @@ public class Market {
 		p=null;
 		this.j = j; 
 		boton=null;
+		monedas = 0;
 	}
+	
+	public int getMonedas(){
+		return monedas;
+	}
+	
 	public void setBotonPersonaje(BotonCreacion boton){
 		System.out.println("seteo el factory");
 		this.boton = boton;

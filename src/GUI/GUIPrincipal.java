@@ -145,6 +145,7 @@ public class GUIPrincipal extends JFrame {
 		
 		//botone de power up
 		
+		
 		PowerUp agregar = new Bomba();
 		panelMapa.add(agregar);
 		agregar.setBounds(375, 300,75,75);
@@ -152,6 +153,8 @@ public class GUIPrincipal extends JFrame {
 		agregar.setOpaque(false);
 		agregar.setContentAreaFilled(false);
 		agregar.setBorderPainted(false);
+		
+		
 
 		
 		// Agrego al panel de los botones
@@ -171,7 +174,7 @@ public class GUIPrincipal extends JFrame {
 		textField.setBounds(604, 18, 266, 34);
 		textField.setColumns(10);
 		textField.setEditable(false);
-		textField.setText("Monedas: ");
+	
 		
 	}
 	 // juego 
@@ -185,6 +188,7 @@ public class GUIPrincipal extends JFrame {
 		this.mercado = mercado;
 		panelMapa.setPerso(this.mercado);
 		this.mercado.setPanel(panelMapa);
+		textField.setText("Monedas: "+ mercado.getMonedas());
 		System.out.println("aca se creo too");
 	}
 	
