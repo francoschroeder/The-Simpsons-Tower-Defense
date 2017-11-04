@@ -151,8 +151,8 @@ public class GUIPrincipal extends JFrame {
 		agregar.setVisible(true);
 		agregar.setOpaque(false);
 		agregar.setContentAreaFilled(false);
-		//agregar.setBorderPainted(false);
-		
+		agregar.setBorderPainted(false);
+
 		
 		// Agrego al panel de los botones
 		
