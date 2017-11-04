@@ -26,4 +26,7 @@ public class Skinner extends Enemigo {
 		setImagen(Personaje.neutral_key);
 	}
 	
+	public Enemigo clone() {
+		return new Skinner();
+	}
 }

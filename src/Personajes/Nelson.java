@@ -25,5 +25,9 @@ public class Nelson extends Enemigo {
 		
 		setImagen(Personaje.neutral_key);
 	}
+	
+	public Enemigo clone() {
+		return new Nelson();
+	}
 		
 }

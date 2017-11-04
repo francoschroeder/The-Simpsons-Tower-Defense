@@ -25,5 +25,7 @@ public class Smithers extends Enemigo {
 		
 		setImagen(Personaje.neutral_key);
 	}
-		
+		public Enemigo clone() {
+			return new Smithers();
+		}
 }

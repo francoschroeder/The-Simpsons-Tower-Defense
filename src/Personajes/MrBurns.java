@@ -26,4 +26,8 @@ public class MrBurns extends Enemigo {
 		setImagen(Personaje.neutral_key);
 	}
 	
+	public Enemigo clone() {
+		return new MrBurns();
+	}
+	
 }

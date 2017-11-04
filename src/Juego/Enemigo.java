@@ -61,4 +61,7 @@ public abstract class Enemigo extends Personaje {
 		imagen.setLocation((int) (imagen.getLocation().getX()+1), (int) (imagen.getLocation().getY()));
 		actualizarVida();
 	}
+	
+	public abstract Enemigo clone();
+	
 }

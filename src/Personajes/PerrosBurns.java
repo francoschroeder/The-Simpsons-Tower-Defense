@@ -25,4 +25,8 @@ public class PerrosBurns extends Enemigo {
 		
 		setImagen(Personaje.neutral_key);
 	}
+	
+	public Enemigo clone() {
+		return new PerrosBurns();
+	}
 }
