@@ -37,7 +37,8 @@ public class HiloEnemigos extends Thread {
 		while(seguir) {
 
 			
-			 
+			 if(!enemigos.isEmpty()) {
+				 
 				for (Enemigo actual : enemigos) {
 				if (!actual.estaMuerto()) {
 				try {
@@ -63,6 +64,7 @@ public class HiloEnemigos extends Thread {
 				}
 			
 			}
+			 }
 			
 			
 			cont++;
