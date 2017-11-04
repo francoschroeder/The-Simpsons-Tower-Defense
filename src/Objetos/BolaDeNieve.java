@@ -4,7 +4,8 @@ import Juego.*;
 public class BolaDeNieve extends Objeto  {
 	
 	public BolaDeNieve() {
-		vidaMax=20;
+		super.vidaMax=20;
+		super.tiempo=0;
 	}
 	
 	public void serAtacado(Proyectil p) {
