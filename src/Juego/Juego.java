@@ -1,21 +1,18 @@
 package Juego;
 
 import java.awt.Point;
-import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Stack;
 import java.util.List;
 
-
 import GUI.GUIPrincipal;
-import GUI.PanelMapa;
-import Personajes.*;
 
 public class Juego {
+	
 	private int tc;
 	private Personaje [][] matriz;
 	private List<Comprable> aliadosActivos;
 	private List<Enemigo> enemigosActivos;
+	private List<Objeto> objetosActivos;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
@@ -24,11 +21,9 @@ public class Juego {
 		this.gui=p;
 		aliadosActivos =  new LinkedList<Comprable>();
 		enemigosActivos =  new LinkedList<Enemigo>();
+		objetosActivos = new LinkedList<Objeto>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		tc=75;
-	
-		
-		
 		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
@@ -44,10 +39,8 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-		
 		p.setPosicion(punto);
 		gui.getPanelMapa().add(p.getImagen());
-		System.out.println("X: "+punto.getX()+"Y "+punto.getY());
 		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
 		mostrarMatriz();
@@ -55,9 +48,15 @@ public class Juego {
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
-		System.out.println("Por Agregar");
 		synchronized (aliadosActivos) {aliadosActivos.add(p);}
-		System.out.println("Agrego");
+	}
+	
+	public void agregarPersonaje(Objeto o, Point punto) {
+		gui.getPanelMapa().add(o.getImagen());
+		o.getImagen().setLocation((int)(punto.getY())*75,(int)(punto.getX())* 75);
+		matriz[(int)punto.getX()][(int)punto.getY()] = o;
+		o.getImagen().setVisible(true);
+		synchronized (objetosActivos) {objetosActivos.add(o);}
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
@@ -109,6 +108,8 @@ public class Juego {
 	
 	public void eliminar(Enemigo p) {
 		gui.getPanelMapa().remove(p.getImagen());
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 		gui.getMarket().sumarMonedas(p.serEliminado());
@@ -117,10 +118,18 @@ public class Juego {
 	
 	public void eliminar(Comprable p) {
 		gui.getPanelMapa().remove(p.getImagen());
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 		synchronized (aliadosActivos) {aliadosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
-		gui.getMarket().sumarMonedas(p.serEliminado());
-		
+	}
+	
+	public void eliminar(Objeto o) {
+		gui.getPanelMapa().remove(o.getImagen());
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
+		synchronized (objetosActivos) {objetosActivos.remove(o);}
+		matriz[(int) o.getPosicion().getX()][(int) o.getPosicion().getY()] = null;
 	}
 	
 	public List<Enemigo> getEnemigos() {
@@ -129,6 +138,10 @@ public class Juego {
 	
 	public List<Comprable> getAliados() {
 		return aliadosActivos;
+	}
+	
+	public List<Objeto> getObjetos() {
+		return objetosActivos;
 	}
 	
 	public boolean estaOcupado(Point p){
