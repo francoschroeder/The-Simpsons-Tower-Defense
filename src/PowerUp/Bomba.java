@@ -6,4 +6,7 @@ public class Bomba extends PowerUp {
 		super("/sprites/powerUP/bomba.png");
 	}
 
+	public VisitorPowerUp factory() {
+		return new VisitorBomba();
+	}
 }

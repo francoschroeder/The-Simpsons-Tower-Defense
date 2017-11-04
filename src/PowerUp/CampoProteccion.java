@@ -1,4 +1,4 @@
-package PowerUp;
+/* package PowerUp;
 
 public class CampoProteccion extends PowerUp{
 	
@@ -7,4 +7,4 @@ public class CampoProteccion extends PowerUp{
 	}
 	
 	
-}
+} */

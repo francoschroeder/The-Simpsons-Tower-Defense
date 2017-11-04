@@ -39,6 +39,22 @@ public abstract class Personaje {
 		imActual = new HashMap<String, ImageIcon>();
 	}
 	
+	public int getVidaActual() {
+		return vidaActual;
+	}
+
+	public void setVidaActual(int vidaActual) {
+		this.vidaActual = vidaActual;
+	}
+
+	public static void setVidaMax(int vidaMax) {
+		Personaje.vidaMax = vidaMax;
+	}
+
+	public void setRango(int rango) {
+		this.rango = rango;
+	}
+
 	public Point getPosicion(){
 		return posicion;
 	}
