@@ -1,5 +1,7 @@
 package Juego;
 
+import PowerUp.VisitorPowerUp;
+
 public abstract class Aliado extends Comprable {
 	protected int costo; 
 	
@@ -17,6 +19,10 @@ public abstract class Aliado extends Comprable {
 	
 	public int serEliminado(){
 		return 0;
+	}
+	
+	public void afectar(VisitorPowerUp p) {
+		p.afectar(this);
 	}
 	
 	public Disparo generarDisparo(Personaje p) {

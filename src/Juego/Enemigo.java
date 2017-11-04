@@ -1,6 +1,9 @@
 package Juego;
 
 import javax.swing.ImageIcon;
+
+import PowerUp.VisitorPowerUp;
+
 import java.util.Random;
 
 public abstract class Enemigo extends Personaje {
@@ -38,6 +41,10 @@ public abstract class Enemigo extends Personaje {
 	
 	public void serAtacado(Proyectil p) {
 		p.atacarEnemigo(this);
+	}
+	
+	public void afectar(VisitorPowerUp p) {
+		p.afectar(this);
 	}
 	
 	public int serEliminado(){

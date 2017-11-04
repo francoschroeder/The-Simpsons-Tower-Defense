@@ -1,6 +1,9 @@
 package Juego;
 
 import javax.swing.JLabel;
+
+import PowerUp.VisitorPowerUp;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -90,6 +93,8 @@ public abstract class Personaje {
 	public boolean estaMuerto() {
 		return vidaActual<=0;
 	}
+	
+	public abstract void afectar(VisitorPowerUp p);
 	
 	//Genera un disparo dirigido hacia el personaje p
 	public abstract Disparo generarDisparo(Personaje p);
