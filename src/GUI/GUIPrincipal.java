@@ -35,7 +35,7 @@ import Juego.Personaje;
 import Personajes.Homero;
 import Personajes.Skinner;
 import PowerUp.PowerUp;
-import PowerUp.bomba;
+import PowerUp.Bomba;
 
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
@@ -145,11 +145,13 @@ public class GUIPrincipal extends JFrame {
 		
 		//botone de power up
 		
-		PowerUp agregar = new bomba();
+		PowerUp agregar = new Bomba();
 		panelMapa.add(agregar);
 		agregar.setBounds(375, 300,75,75);
 		agregar.setVisible(true);
-		
+		agregar.setOpaque(false);
+		agregar.setContentAreaFilled(false);
+		//agregar.setBorderPainted(false);
 		
 		
 		// Agrego al panel de los botones
