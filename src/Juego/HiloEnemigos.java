@@ -35,7 +35,6 @@ public class HiloEnemigos extends Thread {
 		List<Enemigo> enemigos = j.getEnemigos();
 		
 		while(seguir) {
-
 			
 			 if(!enemigos.isEmpty()) {
 				 

@@ -4,7 +4,6 @@ import javax.swing.JLabel;
 
 import PowerUp.VisitorPowerUp;
 
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import java.awt.Point;
@@ -73,7 +72,7 @@ public abstract class Personaje {
 	}
 
 	public void setImagen(String dir){
-		this.imagen.setIcon(this.imActual.get(dir));
+		imagen.setIcon(imActual.get(dir));
 		actualizarVida();
 	}
 	
@@ -92,8 +91,6 @@ public abstract class Personaje {
 	}
 
 	public abstract void serAtacado(Proyectil p);
-	
-	public abstract int serEliminado();
 	
 	public void reducirVida(int v) {
 		if (v>vidaActual)
