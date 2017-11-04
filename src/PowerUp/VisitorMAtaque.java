@@ -4,18 +4,17 @@ import Juego.Aliado;
 import Juego.Enemigo;
 import Juego.Objeto;
 
-public class VisitorBomba extends VisitorPowerUp {
+public class VisitorMAtaque extends VisitorPowerUp {
 
-	public VisitorBomba() {
+	public VisitorMAtaque() {
 		
 	}
-	
 	public void afectar(Aliado a) {
-		a.setVidaActual(a.getVidaActual()-15);
+		a.setAtaque(a.getAtaque()+5);
 	}
 	
 	public void afectar(Enemigo e) {
-		e.setVidaActual(e.getVidaActual()-15);
+		
 	}
 	
 	public void afectar(Objeto o) {

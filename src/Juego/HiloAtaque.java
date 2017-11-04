@@ -1,6 +1,5 @@
 package Juego;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -21,8 +20,6 @@ public class HiloAtaque extends Thread {
 	
 	public void run() {
 		
-		
-		
 		LinkedList<Comprable> aEliminar = new LinkedList<Comprable>();
 		LinkedList<Enemigo> aEliminar2 = new LinkedList<Enemigo>();
 		
@@ -30,6 +27,7 @@ public class HiloAtaque extends Thread {
 		
 		List<Comprable> listaAliados = juego.getAliados();
 		List<Enemigo> listaEnemigos =  juego.getEnemigos();
+		List<Objeto> listaObjetos = juego.getObjetos();
 		
 		while (seguir) {
 			
@@ -103,8 +101,16 @@ public class HiloAtaque extends Thread {
 				aEliminar2 = new LinkedList<Enemigo>();
 				
 			try {
-					Thread.sleep(1000);}
+					Thread.sleep(1000);	}
 					catch (InterruptedException j) {}
+			
+			if (!listaObjetos.isEmpty()) 
+				for (Objeto o:listaObjetos) {
+					o.pasarTiempo(1000);
+					
+					if (o.pasoTiempo())
+						juego.eliminar(o);
+				}
 			}// del while
 		}// del run
 	}// del thread
