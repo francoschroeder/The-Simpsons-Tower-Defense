@@ -1,4 +1,5 @@
 import java.awt.Point;
+import java.util.LinkedList;
 import java.util.Stack;
 
 import GUI.GUIPrincipal;
@@ -9,33 +10,17 @@ import Juego.HiloAtaque;
 import Juego.HiloDisparo;
 import Juego.HiloEnemigos;
 import Juego.Juego;
+import Personajes.MrBurns;
 import Personajes.Nelson;
+import Personajes.PerrosBurns;
 import Personajes.Skinner;
+import Personajes.Smithers;
 
 public class LionelMessi {
 	
-	private static void crearEnemigosPorSalir(Stack<Enemigo> enemigosPorSalir) {
-		Skinner s1 = new Skinner();
-		s1.setPosicion(new Point(5, 0));
-		enemigosPorSalir.push(s1);
+	
 		
-		Skinner s2 = new Skinner();
-		s2.setPosicion(new Point(3, 0));
-		enemigosPorSalir.push(s2);
-		
-		Skinner s3 = new Skinner();
-		s3.setPosicion(new Point(5, 0));
-		enemigosPorSalir.push(s3);
-		
-		Skinner s4 = new Skinner();
-		s4.setPosicion(new Point(2, 0));
-		enemigosPorSalir.push(s4);
-		
-		Nelson s5 = new Nelson();
-		s5.setPosicion(new Point(1, 0));
-		enemigosPorSalir.push(s5);
-		
-	}
+	
 	
 	public static void main(String[] args){
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
@@ -53,6 +38,16 @@ public class LionelMessi {
 		h.start();
 		disparo.start();
 		a.start();
+		
+	}
+	private static void crearEnemigosPorSalir(Stack<Enemigo> enemigosPorSalir) {
+		
+		LinkedList<Enemigo> enemigos = new LinkedList<Enemigo>();
+		
+		Enemigo s1 = new Skinner();
+		Enemigo s2 = new PerrosBurns();
+		Enemigo s3 = new MrBurns();
+		Enemigo s4 = new Smithers();
 		
 		
 	

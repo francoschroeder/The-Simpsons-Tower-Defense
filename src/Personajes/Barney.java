@@ -6,9 +6,9 @@ import Juego.Enemigo;
 import Juego.Personaje;
 import Juego.ProyectilEnemigo;
 
-public class Jeff extends Enemigo {
+public class Barney extends Enemigo {
 
-	public Jeff() {
+	public Barney() {
 		super();
 		
 		vidaMax = 50;
