@@ -16,7 +16,6 @@ public class Juego {
 	private Personaje [][] matriz;
 	private List<Comprable> aliadosActivos;
 	private List<Enemigo> enemigosActivos;
-	private List<Objeto> objetosActivos;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
@@ -25,9 +24,11 @@ public class Juego {
 		this.gui=p;
 		aliadosActivos =  new LinkedList<Comprable>();
 		enemigosActivos =  new LinkedList<Enemigo>();
-		objetosActivos = new LinkedList<Objeto>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		tc=75;
+	
+		
+		
 		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
@@ -43,8 +44,10 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
+		
 		p.setPosicion(punto);
 		gui.getPanelMapa().add(p.getImagen());
+		System.out.println("X: "+punto.getX()+"Y "+punto.getY());
 		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
 		mostrarMatriz();
@@ -52,11 +55,9 @@ public class Juego {
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
+		System.out.println("Por Agregar");
 		synchronized (aliadosActivos) {aliadosActivos.add(p);}
-	}
-	
-	public void agregarPersonaje(Objeto o, Point punto) {
-		
+		System.out.println("Agrego");
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
@@ -120,12 +121,8 @@ public class Juego {
 		gui.getPanelMapa().remove(p.getImagen());
 		synchronized (aliadosActivos) {aliadosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
-	}
-	
-	public void eliminar(Objeto o) {
-		gui.getPanelMapa().remove(o.getImagen());
-		synchronized (objetosActivos) {objetosActivos.remove(o);}
-		matriz[(int) o.getPosicion().getX()][(int) o.getPosicion().getY()] = null;
+		gui.getMarket().sumarMonedas(p.serEliminado());
+		
 	}
 	
 	public List<Enemigo> getEnemigos() {
@@ -134,10 +131,6 @@ public class Juego {
 	
 	public List<Comprable> getAliados() {
 		return aliadosActivos;
-	}
-	
-	public List<Objeto> getObjetos() {
-		return objetosActivos;
 	}
 	
 	public boolean estaOcupado(Point p){

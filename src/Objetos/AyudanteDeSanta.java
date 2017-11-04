@@ -4,7 +4,8 @@ import Juego.*;
 public class AyudanteDeSanta extends Objeto {
 	
 	public AyudanteDeSanta() {
-		vidaMax=40;
+		super.vidaMax=40;
+		super.tiempo=0;
 	}
 	
 	public void serAtacado(Proyectil p) {

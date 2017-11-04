@@ -17,6 +17,10 @@ public abstract class Aliado extends Comprable {
 		p.atacarAliado(this);
 	}
 	
+	public int serEliminado(){
+		return 0;
+	}
+	
 	public void afectar(VisitorPowerUp p) {
 		p.afectar(this);
 	}
