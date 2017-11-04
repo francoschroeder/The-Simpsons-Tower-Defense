@@ -2,11 +2,7 @@
 package Juego;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
-import GUI.GUIPrincipal;
 import GUI.PanelMapa;
 
 public class HiloDisparo extends Thread {
@@ -42,6 +38,8 @@ public class HiloDisparo extends Thread {
 			for(Disparo actual : morirDisparo){
 				disparos.remove(actual);
 				panel.remove(actual.getImagen());
+				panel.validate();
+				panel.repaint();
 						}
 				}
 			
