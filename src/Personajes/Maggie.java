@@ -19,7 +19,7 @@ public class Maggie extends Aliado {
 		miProyectil = new ProyectilAliado(ataque);
 		
 		imActual.put(Personaje.neutral_key,new ImageIcon("/sprites/maggie/maggieNeutral.gif"));
-		imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/homero/maggieAtaque.gif"));
+		imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/maggie/maggieAtaque.gif"));
 
 		setImagen(Personaje.neutral_key);
 	}
