@@ -18,8 +18,8 @@ public class Maggie extends Aliado {
 		costo=100;
 		miProyectil = new ProyectilAliado(ataque);
 		
-		imActual.put(Personaje.neutral_key,new ImageIcon("/sprites/maggie/maggieNeutral.gif"));
-		imActual.put(Personaje.shoot_key,new ImageIcon("/sprites/maggie/maggieAtaque.gif"));
+		imActual.put(Personaje.neutral_key,new ImageIcon(this.getClass().getResource("/sprites/maggie/maggieNeutral.gif")));
+		imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/maggie/maggieAtaque.gif")));
 
 		setImagen(Personaje.neutral_key);
 	}
