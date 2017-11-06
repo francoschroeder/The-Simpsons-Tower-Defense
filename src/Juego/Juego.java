@@ -1,18 +1,20 @@
 package Juego;
 
 import java.awt.Point;
+import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Random;
 
 import GUI.GUIPrincipal;
+import PowerUp.*;
 
 public class Juego {
 	
 	private int tc;
 	private Personaje [][] matriz;
-	private List<Comprable> aliadosActivos;
-	private List<Enemigo> enemigosActivos;
-	private List<Objeto> objetosActivos;
+	private LinkedList<Comprable> aliadosActivos;
+	private LinkedList<Enemigo> enemigosActivos;
+	private LinkedList<Objeto> objetosActivos;
 	private GUIPrincipal gui;
 	
 	public Juego(GUIPrincipal p) 
@@ -114,6 +116,24 @@ public class Juego {
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 		gui.getMarket().sumarMonedas(p.serEliminado());
 		gui.actualizarCartel();		
+		double x = Math.random();
+		
+		HashMap<String,PowerUp> mapeoPowerUp = new HashMap<String,PowerUp>();
+		mapeoPowerUp.put("bomba", new Bomba());	
+		mapeoPowerUp.put("curacion", new Curacion());
+		mapeoPowerUp.put("magiaAlcance", new MagiaAlcance());
+		mapeoPowerUp.put("magiaAtaque", new MagiaAtaque());
+		
+		//15% de posibilidades de generar powerUp
+		//Bomba, curacion, magia alcance, magia ataque
+		
+		if (x<=0.15){ 				
+			Random generator = new Random();
+			Object[] powerUps = mapeoPowerUp.values().toArray();
+			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];
+			
+			//PowerUp aPoner = randomPowerUp.clone();
+		}		
 	}
 	
 	public void eliminar(Comprable p) {
@@ -132,15 +152,15 @@ public class Juego {
 		matriz[(int) o.getPosicion().getX()][(int) o.getPosicion().getY()] = null;
 	}
 	
-	public List<Enemigo> getEnemigos() {
+	public LinkedList<Enemigo> getEnemigos() {
 		return enemigosActivos;
 	}
 	
-	public List<Comprable> getAliados() {
+	public LinkedList<Comprable> getAliados() {
 		return aliadosActivos;
 	}
 	
-	public List<Objeto> getObjetos() {
+	public LinkedList<Objeto> getObjetos() {
 		return objetosActivos;
 	}
 	
