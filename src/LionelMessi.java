@@ -3,6 +3,9 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Stack;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import GUI.GUIPrincipal;
 import GUI.PanelMapa;
 import GUI.Botones.Market;
@@ -17,14 +20,112 @@ import Personajes.Nelson;
 import Personajes.PerrosBurns;
 import Personajes.Skinner;
 import Personajes.Smithers;
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.JPanel;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class LionelMessi {
+public class LionelMessi extends JFrame {
+	
+	protected int cont; 
+	protected JLabel fondo;
 	
 	
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LionelMessi frame = new LionelMessi();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	
+	public LionelMessi() {
+		// frama
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setBounds(500, 500, 700, 500);
+		cont = 0;
+		
+		//panel del fondo
+		JPanel panelPrincipal = new JPanel();
+		
+		
+		// boton inicio
+		JButton jugar = new JButton("jugar\n\n");
+		jugar.addActionListener(new OyenteBoton());
+		jugar.setFont(new Font("Marker Felt", Font.BOLD, 25));
+		
+		//fondo del panel
+		fondo = new JLabel ();
+		fondo.setBounds(0, 0, 650, 400);
+		fondo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/fondoJuego.png")));
+		GroupLayout gl_panelPrincipal = new GroupLayout(panelPrincipal);
+		gl_panelPrincipal.setHorizontalGroup(
+			gl_panelPrincipal.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panelPrincipal.createSequentialGroup()
+					.addGroup(gl_panelPrincipal.createParallelGroup(Alignment.LEADING)
+						.addComponent(fondo)
+						.addGroup(gl_panelPrincipal.createSequentialGroup()
+							.addGap(170)
+							.addComponent(jugar, GroupLayout.PREFERRED_SIZE, 187, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(8, Short.MAX_VALUE))
+		);
+		gl_panelPrincipal.setVerticalGroup(
+			gl_panelPrincipal.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panelPrincipal.createSequentialGroup()
+					.addComponent(fondo)
+					.addGap(18)
+					.addComponent(jugar, GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+					.addGap(14))
+		);
+		panelPrincipal.setLayout(gl_panelPrincipal);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(6)
+					.addComponent(panelPrincipal, GroupLayout.PREFERRED_SIZE, 658, GroupLayout.PREFERRED_SIZE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addComponent(panelPrincipal, GroupLayout.PREFERRED_SIZE, 469, GroupLayout.PREFERRED_SIZE)
+		);
+		getContentPane().setLayout(groupLayout);
+	
+	}
+	
+	private class OyenteBoton implements ActionListener{
+		
+		public OyenteBoton(){}
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			jugar();
+		}
+	}
 		
 	
 	
-	public static void main(String[] args){
+	
+		
+		public void jugar() {	
+		
+		
+		cont++;
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);
