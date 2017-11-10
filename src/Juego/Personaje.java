@@ -6,6 +6,7 @@ import PowerUp.VisitorPowerUp;
 
 import javax.swing.ImageIcon;
 
+import java.awt.Color;
 import java.awt.Point;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +33,8 @@ public abstract class Personaje {
 		imagen.setBounds(0, 0, 75, 75);
 		
 		barraDeVida = new JLabel();
-		barraDeVida.setIcon(new ImageIcon(this.getClass().getResource("/sprites/vida.png")));
+		barraDeVida.setBackground(Color.GREEN);
+		barraDeVida.setOpaque(true);
 		actualizarVida();
 		
 		imActual = new HashMap<String, ImageIcon>();
