@@ -9,4 +9,9 @@ public class Bomba extends PowerUp {
 	public VisitorPowerUp factory() {
 		return new VisitorBomba();
 	}
+	
+	public PowerUp clone(){
+		Object clone =  super("/sprites/powerUP/bomba.png");
+		return clone;		
+	}
 }

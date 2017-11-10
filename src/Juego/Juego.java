@@ -164,9 +164,8 @@ public class Juego {
 		if (x<=0.15){ 				
 			Random generator = new Random();
 			Object[] powerUps = mapeoPowerUp.values().toArray();
-			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];
-			
-			//PowerUp aPoner = randomPowerUp.clone();
+			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];			
+			PowerUp aPoner = (PowerUp) randomPowerUp.clone();
 		}		
 	}
 	

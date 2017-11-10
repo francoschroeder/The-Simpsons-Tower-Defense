@@ -9,4 +9,10 @@ public class MagiaAlcance extends PowerUp{
 	public VisitorPowerUp factory() {
 		return new VisitorMAlcance();
 	}
+	
+	public Object clone() {
+		PowerUp clone = super("/sprites/powerUP/bomba.png");
+		return clone;
+	}
+	
 }
