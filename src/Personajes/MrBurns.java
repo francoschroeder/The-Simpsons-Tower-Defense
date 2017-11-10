@@ -15,7 +15,8 @@ public class MrBurns extends Enemigo {
 		vidaActual = vidaMax;
 		ataque = 25;
 		rango = 5;
-		velocidad = 1;
+		velocidadMaxima = 1;
+		velocidadActual = velocidadMaxima;
 		minMonedas = 12;
 		maxMonedas = 15;
 		miProyectil = new ProyectilEnemigo(ataque);

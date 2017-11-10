@@ -8,7 +8,8 @@ import java.util.Random;
 
 public abstract class Enemigo extends Personaje {
 
-	protected int velocidad;
+	protected int velocidadActual;
+	protected int velocidadMaxima;
 	protected int minMonedas, maxMonedas;
 		
 	public Enemigo() {
@@ -16,11 +17,11 @@ public abstract class Enemigo extends Personaje {
 	}
 	
 	public int getVelocidad(){
-		return velocidad;
+		return velocidadActual;
 	}
 	
 	public void setVelocidad(int v){
-		velocidad = v;
+		velocidadActual = v;
 	}
 	
 	public int getMinMonedas(){
@@ -58,10 +59,17 @@ public abstract class Enemigo extends Personaje {
 	
 	public void avanzar() {
 	
-		imagen.setLocation((int) (imagen.getLocation().getX()+1), (int) (imagen.getLocation().getY()));
+		imagen.setLocation((int) (imagen.getLocation().getX()+velocidadActual), (int) (imagen.getLocation().getY()));
 		actualizarVida();
 	}
 	
 	public abstract Enemigo clone();
 	
+	public void ralentizar() {
+		velocidadActual = 1;
+	}
+	
+	public void desralentizar() {
+		velocidadActual = velocidadMaxima;
+	}
 }
