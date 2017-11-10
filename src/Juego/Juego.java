@@ -1,6 +1,8 @@
 package Juego;
 
 import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
@@ -152,21 +154,42 @@ public class Juego {
 		gui.actualizarCartel();		
 		double x = Math.random();
 		
-		HashMap<String,PowerUp> mapeoPowerUp = new HashMap<String,PowerUp>();
-		mapeoPowerUp.put("bomba", new Bomba());	
-		mapeoPowerUp.put("curacion", new Curacion());
-		mapeoPowerUp.put("magiaAlcance", new MagiaAlcance());
-		mapeoPowerUp.put("magiaAtaque", new MagiaAtaque());
+		HashMap<Integer,PowerUp> mapeoPowerUp = new HashMap<Integer,PowerUp>();
+		mapeoPowerUp.put(1, new Bomba());	
+		mapeoPowerUp.put(2, new Curacion());
+		mapeoPowerUp.put(3, new MagiaAlcance());
+		mapeoPowerUp.put(4, new MagiaAtaque());
 		
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque
 		
-		if (x<=0.15){ 				
+		if (x<=0.9){ 	
+			
 			Random generator = new Random();
-			Object[] powerUps = mapeoPowerUp.values().toArray();
-			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];			
-			PowerUp aPoner = (PowerUp) randomPowerUp.clone();
+			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size())).clone();
+			agregar.addActionListener(new OyenteBoton( agregar));
+			
+			gui.getPanelMapa().add(agregar);
+			agregar.setBounds((int)p.getImagen().getLocation().getX(),(int) p.getImagen().getLocation().getY(),75,75);
+			agregar.setVisible(true);
+			agregar.setOpaque(false);
+			agregar.setContentAreaFilled(false);
+			agregar.setBorderPainted(false);
+			
+		
 		}		
+	}
+	
+	private class OyenteBoton implements ActionListener{
+		PowerUp p;
+
+		public OyenteBoton(PowerUp p){
+			this.p = p;
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			//aplicarPowerUp(p.factory());
+		}
 	}
 	
 	public void eliminar(Comprable p) {
