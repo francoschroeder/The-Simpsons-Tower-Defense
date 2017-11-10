@@ -22,6 +22,7 @@ public class Maggie extends Aliado {
 		imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/maggie/maggieAtaque.gif")));
 
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 }
 

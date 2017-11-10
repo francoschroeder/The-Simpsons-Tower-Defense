@@ -22,5 +22,6 @@ public class Bart extends Aliado {
 		imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/bart/bartAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 }

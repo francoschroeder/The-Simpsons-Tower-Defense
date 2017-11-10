@@ -24,6 +24,7 @@ public class Nelson extends Enemigo {
 		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/nelson/nelsonAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 	
 	public Enemigo clone() {

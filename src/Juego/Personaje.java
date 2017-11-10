@@ -35,7 +35,6 @@ public abstract class Personaje {
 		barraDeVida = new JLabel();
 		barraDeVida.setBackground(Color.GREEN);
 		barraDeVida.setOpaque(true);
-		actualizarVida();
 		
 		imActual = new HashMap<String, ImageIcon>();
 	}
@@ -115,8 +114,6 @@ public abstract class Personaje {
 	public abstract Disparo generarDisparo(Personaje p);
 	
 	public void actualizarVida() {
-		barraDeVida.setBounds((int) imagen.getLocation().getX(), (int) imagen.getLocation().getY()-10, vidaActual*(vidaMax/40), 5);
+		barraDeVida.setBounds((int) imagen.getLocation().getX(), (int) imagen.getLocation().getY()-6,(int) ((vidaActual*75/vidaMax)), 5);
 	}
-	
-	
 }
