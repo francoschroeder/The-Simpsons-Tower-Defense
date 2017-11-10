@@ -24,6 +24,7 @@ public class Smithers extends Enemigo {
 		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 		public Enemigo clone() {
 			return new Smithers();

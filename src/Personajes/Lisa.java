@@ -22,5 +22,6 @@ public class Lisa extends Aliado {
 		imActual.put(Personaje.shoot_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroAttack.gif")));
 	
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 }

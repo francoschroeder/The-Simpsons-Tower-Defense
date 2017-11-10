@@ -24,6 +24,7 @@ public class Barney extends Enemigo {
 		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/barney/barneyAttack.gif")));
 		
 		setImagen(Personaje.neutral_key);
+		actualizarVida();
 	}
 	
 	public Enemigo clone() {
