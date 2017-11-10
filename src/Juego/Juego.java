@@ -109,6 +109,7 @@ public class Juego {
 	
 	
 	public void eliminar(Enemigo p) {
+		
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
