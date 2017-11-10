@@ -1,11 +1,14 @@
 package Juego;
 
 import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
 
 import GUI.GUIPrincipal;
+import GUI.Botones.BotonCreacion;
 import PowerUp.*;
 
 public class Juego {
@@ -134,6 +137,24 @@ public class Juego {
 			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];
 			
 			//PowerUp aPoner = randomPowerUp.clone();
+		
+					
+			
+			
+			
+			// agregar el oyente a los botnes que se agregan.			
+			class OyenteBoton implements ActionListener{
+						PowerUp p;
+				
+						public OyenteBoton(PowerUp p){
+							this.p = p;
+						}
+						public void actionPerformed(ActionEvent e){
+							aplicarPowerUp(p.factory());
+					
+						}
+					}
+			
 		}		
 	}
 	
