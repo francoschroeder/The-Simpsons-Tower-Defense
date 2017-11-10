@@ -4,9 +4,11 @@ public class MagiaAtaque extends PowerUp{
 	
 	public MagiaAtaque() {
 		super("/sprites/powerUP/bomba.png");
+		visitor = new VisitorMAtaque();
 	}
-   
+	
 	public VisitorPowerUp factory() {
-		return new VisitorMAtaque();
+		return visitor;
 	}
 }
+
