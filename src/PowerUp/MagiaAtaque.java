@@ -10,5 +10,9 @@ public class MagiaAtaque extends PowerUp{
 	public VisitorPowerUp factory() {
 		return visitor;
 	}
+	
+	public PowerUp clone() {
+		return new MagiaAtaque();
+	}
 }
 

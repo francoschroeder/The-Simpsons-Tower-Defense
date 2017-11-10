@@ -10,4 +10,8 @@ public class Bomba extends PowerUp {
 	public VisitorPowerUp factory() {
 		return visitor;
 	}
+	
+	public PowerUp clone() {
+		return new Bomba();
+	}
 }

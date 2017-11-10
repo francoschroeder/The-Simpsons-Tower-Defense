@@ -15,5 +15,5 @@ public abstract class PowerUp extends JButton {
 	
 	public abstract VisitorPowerUp factory();
 	
-
+	public abstract PowerUp clone();
 }
