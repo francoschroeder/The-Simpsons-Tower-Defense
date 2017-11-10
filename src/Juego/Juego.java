@@ -37,13 +37,13 @@ public class Juego {
 		tc=75;
 		
 		JLabel obst1 = new JLabel();
-		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/barney/barneyNeutral.gif")));
+		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo1.png")));
 		obst1.setBounds(0, 0, 75, 75);
 		gui.getPanelMapa().add(obst1);
 		obst1.setLocation((int) OBSTACULO_1.getY()*75, (int) OBSTACULO_1.getX()*75);
 		
 		JLabel obst2 = new JLabel();
-		obst2.setIcon(new ImageIcon(this.getClass().getResource("/sprites/barney/barneyAttack.gif")));
+		obst2.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo2.png")));
 		obst2.setBounds(0, 0, 75, 75);
 		
 		
