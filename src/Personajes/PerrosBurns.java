@@ -15,7 +15,8 @@ public class PerrosBurns extends Enemigo {
 		vidaActual = vidaMax;
 		ataque = 5;
 		rango = 3;
-		velocidad = 10;
+		velocidadMaxima = 10;
+		velocidadActual = velocidadMaxima;
 		minMonedas = 1;
 		maxMonedas = 3;
 		miProyectil = new ProyectilEnemigo(ataque);

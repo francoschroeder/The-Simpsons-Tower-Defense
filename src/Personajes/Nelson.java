@@ -15,7 +15,8 @@ public class Nelson extends Enemigo {
 		vidaActual = vidaMax;
 		ataque = 7;
 		rango = 3;
-		velocidad = 4;
+		velocidadMaxima = 4;
+		velocidadActual = velocidadMaxima;
 		minMonedas = 2;
 		maxMonedas = 4;
 		miProyectil = new ProyectilEnemigo(ataque);

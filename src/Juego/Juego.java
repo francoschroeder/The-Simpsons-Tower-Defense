@@ -1,17 +1,20 @@
 package Juego;
 
 import java.awt.Point;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import GUI.GUIPrincipal;
-import GUI.Botones.BotonCreacion;
 import PowerUp.*;
 
 public class Juego {
+	
+	private final Point OBSTACULO_1;
+	private final Point OBSTACULO_2;
 	
 	private int tc;
 	private Personaje [][] matriz;
@@ -22,6 +25,9 @@ public class Juego {
 	
 	public Juego(GUIPrincipal p) 
 		{
+		OBSTACULO_1 = new Point(2, 2);
+		OBSTACULO_2 = new Point(5, 2);
+		
 		// asignar las listas
 		this.gui=p;
 		aliadosActivos =  new LinkedList<Comprable>();
@@ -29,18 +35,36 @@ public class Juego {
 		objetosActivos = new LinkedList<Objeto>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		tc=75;
+		
+		JLabel obst1 = new JLabel();
+		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/barney/barneyNeutral.gif")));
+		obst1.setBounds(0, 0, 75, 75);
+		gui.getPanelMapa().add(obst1);
+		obst1.setLocation((int) OBSTACULO_1.getY()*75, (int) OBSTACULO_1.getX()*75);
+		
+		JLabel obst2 = new JLabel();
+		obst2.setIcon(new ImageIcon(this.getClass().getResource("/sprites/barney/barneyAttack.gif")));
+		obst2.setBounds(0, 0, 75, 75);
+		
+		
+		gui.getPanelMapa().add(obst2);
+		obst2.setLocation((int) OBSTACULO_2.getY()*75, (int) OBSTACULO_2.getX()*75);
+		
 		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
 		
 		gui.getPanelMapa().add(p.getImagen());
-		p.getImagen().setLocation((int)(punto.getY())*75,(int)(punto.getX())* 75);
+		p.getImagen().setLocation((int)(punto.getY())*75+1,(int)(punto.getX())*75);
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
 		synchronized (enemigosActivos) {enemigosActivos.add(p);}
+		
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
@@ -54,6 +78,9 @@ public class Juego {
 		p.getImagen().setVisible(true);
 		p.getBarraDeVida().setVisible(true);
 		synchronized (aliadosActivos) {aliadosActivos.add(p);}
+		
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 	}
 	
 	public void agregarPersonaje(Objeto o, Point punto) {
@@ -62,6 +89,9 @@ public class Juego {
 		matriz[(int)punto.getX()][(int)punto.getY()] = o;
 		o.getImagen().setVisible(true);
 		synchronized (objetosActivos) {objetosActivos.add(o);}
+		
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 	}
 	
 	public Personaje getBlanco(Enemigo p) {
@@ -137,24 +167,6 @@ public class Juego {
 			PowerUp randomPowerUp = (PowerUp) powerUps[generator.nextInt(powerUps.length)];
 			
 			//PowerUp aPoner = randomPowerUp.clone();
-		
-					
-			
-			
-			
-			// agregar el oyente a los botnes que se agregan.			
-			class OyenteBoton implements ActionListener{
-						PowerUp p;
-				
-						public OyenteBoton(PowerUp p){
-							this.p = p;
-						}
-						public void actionPerformed(ActionEvent e){
-							aplicarPowerUp(p.factory());
-					
-						}
-					}
-			
 		}		
 	}
 	
@@ -192,6 +204,10 @@ public class Juego {
 		
 	}
 	
+	public boolean hayRalentizador(Enemigo e) {
+		return ((e.getPosicion().getX()==OBSTACULO_1.getX() && e.getPosicion().getY()==OBSTACULO_1.getY()) || (e.getPosicion().getX()==OBSTACULO_2.getX() && e.getPosicion().getY()==OBSTACULO_2.getY()));
+	}
+	
 	public void mostrarMatriz(){
 		System.out.println("------------------------------------------------");
 		for(int i = 0; i< matriz.length; i++) {
@@ -201,6 +217,5 @@ public class Juego {
 				}
 			System.out.println(" . ");
 		}
-		
 	}
 }
