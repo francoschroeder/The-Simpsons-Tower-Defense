@@ -20,7 +20,7 @@ public class Milhouse extends Objeto {
 	}
 	
 	public void serAtacado(Proyectil p) {
-		p.atacarObjeto(this);
+		
 	}
 	
 	public void pasarTiempo(int t) {
