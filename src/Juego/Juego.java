@@ -188,10 +188,19 @@ public class Juego {
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			//aplicarPowerUp(p.factory());
+			aplicarPowerUp(p.factory());
 		}
 	}
 	
+	public void aplicarPowerUp(VisitorPowerUp p) {
+		for(Enemigo e  : enemigosActivos ) {
+			e.afectar(p);
+		}
+		
+		for(Comprable a : aliadosActivos) {
+			a.afectar(p);
+		}
+	}
 	public void eliminar(Comprable p) {
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().validate();

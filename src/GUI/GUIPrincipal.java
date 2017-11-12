@@ -143,17 +143,6 @@ public class GUIPrincipal extends JFrame {
 		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
-		//botone de power up
-		
-		
-		PowerUp agregar = new Bomba();
-		panelMapa.add(agregar);
-		agregar.setBounds(375, 300,75,75);
-		agregar.setVisible(true);
-		agregar.setOpaque(false);
-		agregar.setContentAreaFilled(false);
-		agregar.setBorderPainted(false);
-		
 		
 
 		
