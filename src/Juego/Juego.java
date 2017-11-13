@@ -155,10 +155,10 @@ public class Juego {
 		double x = Math.random();
 		
 		HashMap<Integer,PowerUp> mapeoPowerUp = new HashMap<Integer,PowerUp>();
-		mapeoPowerUp.put(1, new Bomba());	
-		mapeoPowerUp.put(2, new Curacion());
-		mapeoPowerUp.put(3, new MagiaAlcance());
-		mapeoPowerUp.put(4, new MagiaAtaque());
+		mapeoPowerUp.put(0, new Bomba());	
+		mapeoPowerUp.put(1, new Curacion());
+		mapeoPowerUp.put(2, new MagiaAlcance());
+		mapeoPowerUp.put(3, new MagiaAtaque());
 		
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque

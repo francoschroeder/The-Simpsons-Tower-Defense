@@ -17,6 +17,7 @@ public class MagiaAtaque extends PowerUp{
 	}
 	
 	public PowerUp clone() {
+		System.out.println("Magia ataque");
 		return new MagiaAtaque();
 	}
 }
