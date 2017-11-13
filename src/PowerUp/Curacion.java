@@ -8,7 +8,7 @@ public class Curacion extends PowerUp {
 	private static final long serialVersionUID = 1L;
 
 	public Curacion() {
-		super("/sprites/powerUP/bomba.png");
+		super("/sprites/powerUP/curacion.png");
 		visitor = new VisitorCuracion();
 	}
 	
