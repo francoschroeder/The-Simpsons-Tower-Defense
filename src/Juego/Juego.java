@@ -70,19 +70,19 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-		p.setPosicion(punto);
-		gui.getPanelMapa().add(p.getImagen());
-		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
-		matriz[(int)punto.getX()][(int)punto.getY()] = p;
-		mostrarMatriz();
-		p.actualizarVida();
-		gui.getPanelMapa().add(p.getBarraDeVida());
-		p.getImagen().setVisible(true);
-		p.getBarraDeVida().setVisible(true);
-		synchronized (aliadosActivos) {aliadosActivos.add(p);}
-		
-		gui.getPanelMapa().validate();
-		gui.getPanelMapa().repaint();
+			p.setPosicion(punto);
+			gui.getPanelMapa().add(p.getImagen());
+			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
+			matriz[(int)punto.getX()][(int)punto.getY()] = p;
+			mostrarMatriz();
+			p.actualizarVida();
+			gui.getPanelMapa().add(p.getBarraDeVida());
+			p.getImagen().setVisible(true);
+			p.getBarraDeVida().setVisible(true);
+			synchronized (aliadosActivos) {aliadosActivos.add(p);}
+			
+			gui.getPanelMapa().validate();
+			gui.getPanelMapa().repaint();
 	}
 	
 	public void agregarPersonaje(Objeto o, Point punto) {

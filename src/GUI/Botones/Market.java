@@ -22,7 +22,7 @@ public class Market {
 		p=null;
 		this.j = j; 
 		boton=null;
-		monedas = 0;
+		monedas = 100;
 	}
 	
 	public int getMonedas(){
@@ -34,7 +34,7 @@ public class Market {
 		this.boton = boton;
 	}
 	
-	public Comprable getPersonaje(){
+    	public Comprable getPersonaje(){
 		return p;
 	}
 	
@@ -47,18 +47,22 @@ public class Market {
 		monedas+=m;
 	}
 	
+	public void restarMonedas(int m){
+		monedas-=m;
+	}
+	
 	
 	public void generarPersonaje(Point punto){
 		if(boton != null) {
-		Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getY(), 75),(int)Math.floorDiv((int) punto.getX(), 75));
-		this.p = boton.factory();
-		if (!j.estaOcupado(puntoNuevo))
-			{ 
-			j.agregarPersonaje(p, puntoNuevo);
-			boton = null;
+			Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getY(), 75),(int)Math.floorDiv((int) punto.getX(), 75));
+			this.p = boton.factory();
+			if(!j.estaOcupado(puntoNuevo)){ 
+				j.agregarPersonaje(p, puntoNuevo);
+				boton = null;
 			}
-		}
-		
+		}		
 	}
+
+	
 }
 
