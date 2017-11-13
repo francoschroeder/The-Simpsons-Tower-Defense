@@ -166,7 +166,8 @@ public class Juego {
 		if (x<=0.9){ 	
 			
 			Random generator = new Random();
-			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size())).clone();
+			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size()));
+			agregar = agregar.clone();
 			agregar.addActionListener(new OyenteBoton( agregar));
 			
 			gui.getPanelMapa().add(agregar);
@@ -189,6 +190,9 @@ public class Juego {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			aplicarPowerUp(p.factory());
+			gui.getPanelMapa().remove(p);
+			gui.getPanelMapa().validate();
+			gui.getPanelMapa().repaint();
 		}
 	}
 	
