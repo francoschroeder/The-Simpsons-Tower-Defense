@@ -18,7 +18,6 @@ public class Juego {
 	private final Point OBSTACULO_1;
 	private final Point OBSTACULO_2;
 	
-	private int tc;
 	private Personaje [][] matriz;
 	private LinkedList<Comprable> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
@@ -27,8 +26,9 @@ public class Juego {
 	
 	public Juego(GUIPrincipal p) 
 		{
-		OBSTACULO_1 = new Point(2, 2);
-		OBSTACULO_2 = new Point(5, 2);
+		Random rand = new Random();
+		OBSTACULO_1 = new Point(rand.nextInt(5), rand.nextInt(9));
+		OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
 		
 		// asignar las listas
 		this.gui=p;
@@ -36,7 +36,6 @@ public class Juego {
 		enemigosActivos =  new LinkedList<Enemigo>();
 		objetosActivos = new LinkedList<Objeto>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
-		tc=75;
 		
 		JLabel obst1 = new JLabel();
 		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo1.png")));
@@ -70,14 +69,18 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-		if(p.getCantCelda() != 1) {
-			matriz[(int)punto.getX()-1][(int)punto.getY()] = p;
-		}
 		
 		p.setPosicion(punto);
-		gui.getPanelMapa().add(p.getImagen());
-		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		gui.getPanelMapa().add(p.getImagen());
+		
+		if(p.getCantCelda() != 1) {
+			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);
+			matriz[(int)punto.getX()-1][(int)punto.getY()] = p;
+		} else {
+			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);
+		}
+		
 		mostrarMatriz();
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
@@ -238,10 +241,14 @@ public class Juego {
 		return objetosActivos;
 	}
 	
-	public boolean estaOcupado(Point p){
-		
+	public boolean estaOcupado(Comprable c, Point p){
+		if (c.getCantCelda()!=1) {
+			if (p.getX()==0)
+				return false;
+			else
+				return ((matriz[(int) p.getX()][(int) p.getY()] != null) && (matriz[(int) p.getX()-1][(int) p.getY()]!=null)); 
+		}
 		return (matriz[(int) p.getX()][(int) p.getY()] != null);
-		
 	}
 	
 	public boolean hayRalentizador(Enemigo e) {

@@ -48,7 +48,7 @@ public class HiloEnemigos extends Thread {
 					actual.desralentizar();
 					
 				//Muevo al personaje
-				if (((actual.getImagen().getLocation().getX()+5)%75)<=5){ // llega al borde
+				if (((actual.getPosicion().getY()+1)*75)-(actual.getImagen().getX()+5)<=5){ // llega al borde
 					
 					if (j.moverEnemigo(actual)){
 			

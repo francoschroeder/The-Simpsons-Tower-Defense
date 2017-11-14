@@ -54,12 +54,11 @@ public class Market {
 		if(boton != null) {
 			this.p = boton.factory();
 			Point puntoNuevo = new Point((int)Math.floorDiv((int) punto.getY(), 75),(int)Math.floorDiv((int) punto.getX(), 75));
-			if(!j.estaOcupado(puntoNuevo)){ 
+			if(!j.estaOcupado(p, puntoNuevo)){ 
 				if(monedas >= p.getCosto()) {
 					restarMonedas(p.getCosto());
 					j.agregarPersonaje(p, puntoNuevo);
 					boton = null;
-					
 				}
 			}
 		}		
