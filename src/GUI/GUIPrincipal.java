@@ -178,7 +178,7 @@ public class GUIPrincipal extends JFrame {
 		panelMapa.setPerso(this.mercado);
 		this.mercado.setPanel(panelMapa);
 		textField.setText("Monedas: "+ mercado.getMonedas());
-		System.out.println("aca se creo too");
+			
 	}
 	
 	public void actualizarCartel(){

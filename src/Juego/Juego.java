@@ -70,28 +70,33 @@ public class Juego {
 	}
 	
 	public void agregarPersonaje(Comprable p, Point punto) {
-			p.setPosicion(punto);
-			gui.getPanelMapa().add(p.getImagen());
-			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
-			matriz[(int)punto.getX()][(int)punto.getY()] = p;
-			mostrarMatriz();
-			p.actualizarVida();
-			gui.getPanelMapa().add(p.getBarraDeVida());
-			p.getImagen().setVisible(true);
-			p.getBarraDeVida().setVisible(true);
-			synchronized (aliadosActivos) {aliadosActivos.add(p);}
-			
-			gui.getPanelMapa().validate();
-			gui.getPanelMapa().repaint();
+		if(p.getCantCelda() != 1) {
+			matriz[(int)punto.getX()-1][(int)punto.getY()] = p;
+		}
+		
+		p.setPosicion(punto);
+		gui.getPanelMapa().add(p.getImagen());
+		p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);;
+		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		mostrarMatriz();
+		p.actualizarVida();
+		gui.getPanelMapa().add(p.getBarraDeVida());
+		p.getImagen().setVisible(true);
+		p.getBarraDeVida().setVisible(true);
+		synchronized (aliadosActivos) {aliadosActivos.add(p);}
+		gui.actualizarCartel();
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 	}
 	
 	public void agregarPersonaje(Objeto o, Point punto) {
+		
 		gui.getPanelMapa().add(o.getImagen());
 		o.getImagen().setLocation((int)(punto.getY())*75,(int)(punto.getX())* 75);
 		matriz[(int)punto.getX()][(int)punto.getY()] = o;
 		o.getImagen().setVisible(true);
 		synchronized (objetosActivos) {objetosActivos.add(o);}
-		
+		gui.actualizarCartel();
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 	}
@@ -163,7 +168,7 @@ public class Juego {
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque
 		
-		if (x<=0.9){ 	
+		if (x<=0.20){ 	
 			
 			Random generator = new Random();
 			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size()));

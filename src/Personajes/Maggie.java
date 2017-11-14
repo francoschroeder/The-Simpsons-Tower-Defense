@@ -15,7 +15,7 @@ public class Maggie extends Aliado {
 		vidaActual = vidaMax;
 		ataque=35;
 		rango=3;
-		costo=100;
+		costo=10;
 		miProyectil = new ProyectilAliado(ataque);
 		
 		imActual.put(Personaje.neutral_key,new ImageIcon(this.getClass().getResource("/sprites/maggie/maggieNeutral.gif")));

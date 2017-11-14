@@ -17,10 +17,9 @@ public abstract class Personaje {
 	protected int ataque;
 	protected int rango;
 	protected Proyectil miProyectil;
-	
 	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
-	protected JLabel barraDeVida;
+	protected BarraDeVida barraDeVida;
 	protected Map<String, ImageIcon> imActual;
 	
 	public static final String neutral_key = "Neutral";
@@ -31,14 +30,15 @@ public abstract class Personaje {
 		
 		imagen = new JLabel();
 		imagen.setBounds(0, 0, 75, 75);
-		
-		barraDeVida = new JLabel();
-		barraDeVida.setBackground(Color.GREEN);
-		barraDeVida.setOpaque(true);
-		
+		barraDeVida = new BarraDeVida(this);
 		imActual = new HashMap<String, ImageIcon>();
 	}
 	
+	public int getCantCelda() {
+		return 1;
+	}
+
+		
 	public int getVidaActual() {
 		return vidaActual;
 	}
@@ -114,6 +114,6 @@ public abstract class Personaje {
 	public abstract Disparo generarDisparo(Personaje p);
 	
 	public void actualizarVida() {
-		barraDeVida.setBounds((int) imagen.getLocation().getX(), (int) imagen.getLocation().getY()-6,(int) ((vidaActual*75/vidaMax)), 5);
+		barraDeVida.actualizar();
 	}
 }
