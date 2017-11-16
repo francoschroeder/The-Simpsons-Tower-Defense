@@ -65,7 +65,10 @@ public class GUIPrincipal extends JFrame {
 	private Market mercado;	
 	private JButton skinner;
 	private JButton BorrarSkinner;
-	private JTextField textField;
+	private JTextField monedas;
+	private JTextField puntos;
+	private JTextField nivel;
+	private JTextField vidas;
 	/**
 	 * Launch the application.
 	 */
@@ -99,6 +102,31 @@ public class GUIPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1500 , 800);
 		setLocationRelativeTo(null);
+		
+		vidas = new JTextField();
+		vidas.setText("Vidas: "+ j.getVidas());
+		vidas.setForeground(Color.YELLOW);
+		vidas.setColumns(10);
+		vidas.setBounds(1211, 722, 157, 50);
+		getContentPane().add(vidas);
+		
+		nivel = new JTextField();
+		nivel.setForeground(Color.YELLOW);
+		nivel.setColumns(10);
+		nivel.setBounds(1211, 660, 157, 50);
+		getContentPane().add(nivel);
+		
+		puntos = new JTextField();
+		puntos.setForeground(Color.YELLOW);
+		puntos.setBounds(1211, 598, 157, 50);
+		getContentPane().add(puntos);
+		puntos.setColumns(10);
+		
+		monedas = new JTextField();
+		getContentPane().add(monedas);
+		monedas.setBounds(1211, 536, 157, 50);
+		monedas.setColumns(10);
+		monedas.setEditable(false);
 		
 		// fondo del frame pricipal
 		fondo = new JLabel();
@@ -157,12 +185,6 @@ public class GUIPrincipal extends JFrame {
 		panelBotones.add(flanders);
 		panelBotones.add(bolaDeNieve);
 		panelBotones.add(ayudanteDeSanta);
-		
-		textField = new JTextField();
-		fondo.add(textField);
-		textField.setBounds(604, 18, 150, 34);
-		textField.setColumns(10);
-		textField.setEditable(false);
 	
 		
 	}
@@ -177,12 +199,12 @@ public class GUIPrincipal extends JFrame {
 		this.mercado = mercado;
 		panelMapa.setPerso(this.mercado);
 		this.mercado.setPanel(panelMapa);
-		textField.setText("Monedas: "+ mercado.getMonedas());
+		monedas.setText("Monedas: "+ mercado.getMonedas());
 			
 	}
 	
 	public void actualizarCartel(){
-		textField.setText("Monedas: "+ mercado.getMonedas());
+		monedas.setText("Monedas: "+ mercado.getMonedas());
 	}
 		
 	
@@ -204,9 +226,16 @@ public class GUIPrincipal extends JFrame {
 		return panelMapa;
 	}
 
-	public void modificarMarket(int monedas){
-		textField.setText("Monedas: "+monedas);
+	public void modificarMarket(int monedas1){
+		monedas.setText("Monedas: "+monedas1);
 	}
-
+	
+	public void modificarVida(int vida) {
+		vidas.setText("Vidas: "+vida);
+	}
+	
+	public void modificarNivel(int nivel1) {
+		nivel.setText("Nivel: "+ nivel1);
+	}
 }
 
