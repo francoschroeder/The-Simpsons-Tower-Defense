@@ -176,6 +176,7 @@ public class LionelMessi extends JFrame {
 	}
 	
 	private static void actualizarNivel() {
+		j.pasarDeNivel();
 		enemigosPorSalir = new Stack<Enemigo>();
 		crearEnemigosPorSalir();
 		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
