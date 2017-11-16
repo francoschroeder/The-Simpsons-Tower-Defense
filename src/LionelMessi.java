@@ -62,7 +62,7 @@ public class LionelMessi extends JFrame {
 	public LionelMessi() {
 		// frama
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setBounds(500, 500, 700, 500);
+		this.setBounds(400, 220, 665, 500);
 		
 		//panel del fondo
 		JPanel panelPrincipal = new JPanel();
@@ -144,12 +144,12 @@ public class LionelMessi extends JFrame {
 		disparo.start();
 		a.start();
 		
-		while (!j.perdio()) {
+		/*while (!j.perdio()) {
 			if (!h.hayEnemigosPorSalir()) {
 				h.detener();
 				ganarNivel();
 			}
-		}
+		}*/
 		
 	}
 	
