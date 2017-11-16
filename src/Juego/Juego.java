@@ -219,6 +219,10 @@ public class Juego {
 		gui.getPanelMapa().repaint();
 		synchronized (aliadosActivos) {aliadosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
+		
+		if (p.getCantCelda()!=1) {
+			matriz[(int) p.getPosicion().getX()-1][(int) p.getPosicion().getY()] = null;
+		}
 	}
 	
 	public void eliminar(Objeto o) {
