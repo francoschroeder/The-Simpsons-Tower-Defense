@@ -34,6 +34,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class LionelMessi extends JFrame {
 	protected JLabel fondo;
+	private static HiloEnemigos h;
+	private static HiloDisparo disparo;
+	private static HiloAtaque a;
+	private static Stack<Enemigo> enemigosPorSalir;
+	private static GUIPrincipal gui;
+	private static Juego j;
+	
 		
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -118,14 +125,14 @@ public class LionelMessi extends JFrame {
 	
 		
 	public void jugar() {		
-		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
-		GUIPrincipal gui = new GUIPrincipal();
-		Juego j = new Juego(gui);
-		crearEnemigosPorSalir(enemigosPorSalir);
+		enemigosPorSalir = new Stack<Enemigo>();
+		gui = new GUIPrincipal();
+		j = new Juego(gui);
+		crearEnemigosPorSalir();
 		Market market = new Market(j);
-		HiloDisparo disparo = new HiloDisparo(gui.getPanelMapa()); 
-		HiloEnemigos h = new HiloEnemigos(j, disparo, enemigosPorSalir);
-		HiloAtaque a = new HiloAtaque(j,disparo);
+		disparo = new HiloDisparo(gui.getPanelMapa()); 
+		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
+		a = new HiloAtaque(j,disparo);
 		
 		gui.setJuego(j);
 		gui.setMarket(market);
@@ -139,7 +146,8 @@ public class LionelMessi extends JFrame {
 		}*/
 		
 	}
-	private static void crearEnemigosPorSalir(Stack<Enemigo> enemigosPorSalir) {
+	
+	private static void crearEnemigosPorSalir() {
 		
 		LinkedList<Enemigo> enemigos = new LinkedList<Enemigo>();
 		Random r = new Random();
@@ -165,7 +173,11 @@ public class LionelMessi extends JFrame {
 			e.setPosicion(pos);
 			enemigosPorSalir.push(e);
 		}
-		
+	}
 	
+	private static void actualizarNivel() {
+		enemigosPorSalir = new Stack<Enemigo>();
+		crearEnemigosPorSalir();
+		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
 	}
 }
