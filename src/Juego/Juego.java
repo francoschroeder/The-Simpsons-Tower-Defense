@@ -234,7 +234,7 @@ public class Juego {
 			if (p.getX()==0)
 				return true;
 			else
-				return ((matriz[(int) p.getX()][(int) p.getY()] != null) && (matriz[(int) p.getX()-1][(int) p.getY()]!=null)); 
+				return ((matriz[(int) p.getX()][(int) p.getY()] != null) || (matriz[(int) p.getX()-1][(int) p.getY()]!=null)); 
 		}
 		return (matriz[(int) p.getX()][(int) p.getY()] != null);
 	}
