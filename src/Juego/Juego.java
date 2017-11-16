@@ -38,6 +38,9 @@ public class Juego {
 		
 		// asignar las listas
 		this.gui=p;
+		gui.modificarNivel(nivelActual);
+		gui.modificarVida(vidas);
+		gui.modificarPuntos(puntos);
 		aliadosActivos =  new LinkedList<Comprable>();
 		enemigosActivos =  new LinkedList<Enemigo>();
 		objetosActivos = new LinkedList<Objeto>();
@@ -281,24 +284,12 @@ public class Juego {
 		gui.modificarNivel(nivelActual);
 	}
 	
-	public int getNivelActual() {
-		return nivelActual;
-	}
-	
 	public boolean perdio() {
 		return vidas==0;
-	}
-	
-	public int getVidas() {
-		return vidas;
 	}
 	
 	public void restarVidas() {
 		vidas--;
 		gui.modificarVida(vidas);
-	}
-	
-	public int getPuntos() {
-		return puntos;
 	}
 }
