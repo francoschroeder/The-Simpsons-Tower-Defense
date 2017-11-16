@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 
 import GUI.GUIPrincipal;
 import GUI.PanelMapa;
+import GUI.Botones.BotonCreacion;
 import GUI.Botones.Market;
 import Juego.Enemigo;
 import Juego.HiloAtaque;
@@ -27,9 +28,11 @@ import javax.swing.JButton;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class LionelMessi extends JFrame {
@@ -180,4 +183,59 @@ public class LionelMessi extends JFrame {
 		crearEnemigosPorSalir();
 		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
 	}
-}
+
+
+
+	/**
+	 * 
+	 */
+ 	public void ganarNivel() {
+ 		JFrame GanadorNivel = new JFrame();
+ 		JTextField txtGanaste;
+ 		GanadorNivel.getContentPane().setBackground(Color.YELLOW);
+		JButton btnNewButton = new JButton("Siguiente nivel\n");
+		btnNewButton.addActionListener(new OyenteBoton1());
+		txtGanaste = new JTextField();
+		txtGanaste.setBackground(Color.YELLOW);
+		txtGanaste.setFont(new Font("Marker Felt", Font.PLAIN, 29));
+		txtGanaste.setText("GANASTE!");
+		txtGanaste.setColumns(10);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap(122, Short.MAX_VALUE)
+					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
+					.addGap(162))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(186)
+					.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(187, Short.MAX_VALUE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addGap(59)
+					.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
+					.addGap(34))
+		);
+		getContentPane().setLayout(groupLayout);
+	
+ 	
+		
+				
+			}
+ 	private class OyenteBoton1 implements ActionListener{
+		 
+		
+		public OyenteBoton1(){
+		
+		}
+		public void actionPerformed(ActionEvent e){
+			actualizarNivel();
+		}
+ 	
+ 		}
+ 	}
