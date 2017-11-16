@@ -248,7 +248,7 @@ public class Juego {
 	public boolean estaOcupado(Comprable c, Point p){
 		if (c.getCantCelda()!=1) {
 			if (p.getX()==0)
-				return false;
+				return true;
 			else
 				return ((matriz[(int) p.getX()][(int) p.getY()] != null) && (matriz[(int) p.getX()-1][(int) p.getY()]!=null)); 
 		}
