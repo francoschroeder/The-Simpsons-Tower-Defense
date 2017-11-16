@@ -19,6 +19,7 @@ public class Skinner extends Enemigo {
 		velocidadActual=velocidadMaxima;
 		minMonedas=5;
 		maxMonedas=8;
+		puntos = 125;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		this.imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));

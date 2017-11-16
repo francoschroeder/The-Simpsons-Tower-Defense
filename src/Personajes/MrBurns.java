@@ -19,6 +19,7 @@ public class MrBurns extends Enemigo {
 		velocidadActual = velocidadMaxima;
 		minMonedas = 12;
 		maxMonedas = 15;
+		puntos = 200;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));

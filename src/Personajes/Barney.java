@@ -19,6 +19,7 @@ public class Barney extends Enemigo {
 		velocidadActual = velocidadMaxima;
 		minMonedas = 7;
 		maxMonedas = 10;
+		puntos = 150;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/barney/barneyNeutral.gif")));
