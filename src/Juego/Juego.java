@@ -23,12 +23,18 @@ public class Juego {
 	private LinkedList<Enemigo> enemigosActivos;
 	private LinkedList<Objeto> objetosActivos;
 	private GUIPrincipal gui;
+	private int nivelActual;
+	private int vidas;
+	private int puntos;
 	
 	public Juego(GUIPrincipal p) 
 		{
 		Random rand = new Random();
 		OBSTACULO_1 = new Point(rand.nextInt(5), rand.nextInt(9));
 		OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
+		nivelActual = 1;
+		vidas = 3;
+		puntos = 0;
 		
 		// asignar las listas
 		this.gui=p;
@@ -152,14 +158,14 @@ public class Juego {
 	
 	
 	public void eliminar(Enemigo p) {
-		
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
 		matriz[(int) p.getPosicion().getX()][(int) p.getPosicion().getY()] = null;
 		gui.getMarket().sumarMonedas(p.serEliminado());
-		gui.actualizarCartel();		
+		gui.actualizarCartel();	
+		puntos += p.getPuntos();
 		double x = Math.random();
 		
 		HashMap<Integer,PowerUp> mapeoPowerUp = new HashMap<Integer,PowerUp>();
@@ -268,5 +274,31 @@ public class Juego {
 				}
 			System.out.println(" . ");
 		}
+	}
+	
+	public void pasarDeNivel() {
+		nivelActual++;
+		gui.modificarNivel(nivelActual);
+	}
+	
+	public int getNivelActual() {
+		return nivelActual;
+	}
+	
+	public boolean perdio() {
+		return vidas==0;
+	}
+	
+	public int getVidas() {
+		return vidas;
+	}
+	
+	public void restarVidas() {
+		vidas--;
+		gui.modificarVida(vidas);
+	}
+	
+	public int getPuntos() {
+		return puntos;
 	}
 }

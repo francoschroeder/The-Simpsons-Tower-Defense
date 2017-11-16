@@ -25,6 +25,10 @@ public class HiloEnemigos extends Thread {
 		seguir=false;
 	}
 	
+	public boolean hayEnemigosPorSalir() {
+		return !enemigosPorSalir.isEmpty();
+	}
+	
 	public void run() {
 		int cont=0;
 		Enemigo aSalir;
@@ -47,7 +51,11 @@ public class HiloEnemigos extends Thread {
 				else
 					actual.desralentizar();
 					
-				//Muevo al personaje
+				if ((int) actual.getPosicion().getY()==9) {
+					j.restarVidas();
+					actual.setVidaActual(0);
+				} else {
+					//Muevo al personaje
 				if (((actual.getPosicion().getY()+1)*75)-(actual.getImagen().getX()+5)<=5){ // llega al borde
 					
 					if (j.moverEnemigo(actual)){
@@ -58,11 +66,11 @@ public class HiloEnemigos extends Thread {
 					else {
 						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
 					}
-				}
-				else{
+				} else{
 					actual.avanzar();
-					}
-
+				}
+				}
+				
 				}
 			
 			}

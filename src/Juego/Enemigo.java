@@ -10,7 +10,7 @@ public abstract class Enemigo extends Personaje {
 
 	protected int velocidadActual;
 	protected int velocidadMaxima;
-	protected int minMonedas, maxMonedas;
+	protected int minMonedas, maxMonedas, puntos;
 		
 	public Enemigo() {
 		super();
@@ -71,5 +71,9 @@ public abstract class Enemigo extends Personaje {
 	
 	public void desralentizar() {
 		velocidadActual = velocidadMaxima;
+	}
+	
+	public int getPuntos() {
+		return puntos;
 	}
 }
