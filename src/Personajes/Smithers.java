@@ -19,6 +19,7 @@ public class Smithers extends Enemigo {
 		velocidadActual = velocidadMaxima;
 		minMonedas = 3;
 		maxMonedas = 6;
+		puntos = 100;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));

@@ -169,6 +169,7 @@ public class Juego {
 		gui.getMarket().sumarMonedas(p.serEliminado());
 		gui.actualizarCartel();	
 		puntos += p.getPuntos();
+		gui.modificarPuntos(puntos);
 		double x = Math.random();
 		
 		HashMap<Integer,PowerUp> mapeoPowerUp = new HashMap<Integer,PowerUp>();

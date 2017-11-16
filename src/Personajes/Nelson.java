@@ -19,6 +19,7 @@ public class Nelson extends Enemigo {
 		velocidadActual = velocidadMaxima;
 		minMonedas = 2;
 		maxMonedas = 4;
+		puntos = 75;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/nelson/nelsonNeutral.gif")));

@@ -19,6 +19,7 @@ public class PerrosBurns extends Enemigo {
 		velocidadActual = velocidadMaxima;
 		minMonedas = 1;
 		maxMonedas = 3;
+		puntos = 50;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));
