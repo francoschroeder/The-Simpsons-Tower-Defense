@@ -11,7 +11,7 @@ public class Marge extends Aliado {
 	public Marge() {
 		super();
 		
-		vidaMax=80;
+		vidaMax=160;
 		vidaActual = vidaMax;
 		ataque=20;
 		rango=2;

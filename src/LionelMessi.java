@@ -69,7 +69,7 @@ public class LionelMessi extends JFrame {
 		
 		
 		// boton inicio
-		JButton jugar = new JButton("jugar\n\n");
+		JButton jugar = new JButton("Jugar\n\n");
 		jugar.addActionListener(new OyenteBoton());
 		jugar.setFont(new Font("Marker Felt", Font.BOLD, 25));
 		
