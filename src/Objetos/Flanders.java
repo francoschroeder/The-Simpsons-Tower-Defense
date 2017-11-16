@@ -10,7 +10,7 @@ public class Flanders extends Objeto {
 									//vivo (en ms)
 	
 	public Flanders() {
-		vidaMax=0;
+		vidaMax=1;
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 20000;
 		

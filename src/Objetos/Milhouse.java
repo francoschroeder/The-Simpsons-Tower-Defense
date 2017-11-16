@@ -10,7 +10,7 @@ public class Milhouse extends Objeto {
 									//vivo (en ms)
 	
 	public Milhouse() {
-		vidaMax=0;
+		vidaMax=1;
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 10000;
 		
