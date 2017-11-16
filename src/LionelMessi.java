@@ -144,9 +144,12 @@ public class LionelMessi extends JFrame {
 		disparo.start();
 		a.start();
 		
-		/*while (!j.perdio()) {
-			
-		}*/
+		while (!j.perdio()) {
+			if (!h.hayEnemigosPorSalir()) {
+				h.detener();
+				ganarNivel();
+			}
+		}
 		
 	}
 	
