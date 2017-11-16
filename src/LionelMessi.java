@@ -233,13 +233,11 @@ public class LionelMessi extends JFrame {
 			}
  	private class OyenteBoton1 implements ActionListener{
 		 
-		
 		public OyenteBoton1(){
 		
 		}
 		public void actionPerformed(ActionEvent e){
 			actualizarNivel();
-		}
- 	
+			}
  		}
  	}
