@@ -19,15 +19,13 @@ public class Flanders extends Objeto {
 		setImagen(Personaje.neutral_key);
 	}
 	
-	public void serAtacado(Proyectil p) {
-		
-	}
+	public void serAtacado(Proyectil p) {}
 	
 	public void pasarTiempo(int t) {
 		tiempoTranscurrido+=t;
 	}
 	
-	public boolean pasoTiempo() {
+	public boolean estaMuerto() {
 		return tiempoTranscurrido>=tiempoDeVida;
 	}
 }
