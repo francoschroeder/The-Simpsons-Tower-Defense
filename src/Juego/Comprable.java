@@ -6,4 +6,8 @@ public abstract class Comprable extends Personaje {
 	public int getCosto(){
 		return costo;
 	}
+	
+	public Disparo generarDisparo(Personaje p) {
+		return new DisparoAliado(new ProyectilAliado(ataque), this, p);
+	}
 }
