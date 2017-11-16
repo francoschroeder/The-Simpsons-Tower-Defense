@@ -104,25 +104,29 @@ public class GUIPrincipal extends JFrame {
 		setLocationRelativeTo(null);
 		
 		vidas = new JTextField();
-		vidas.setText("Vidas: "+ j.getVidas());
-		vidas.setForeground(Color.YELLOW);
+		vidas.setBackground(Color.YELLOW);
+		vidas.setText("Vidas: ");
+		vidas.setForeground(Color.BLACK);
 		vidas.setColumns(10);
 		vidas.setBounds(1211, 722, 157, 50);
 		getContentPane().add(vidas);
 		
 		nivel = new JTextField();
-		nivel.setForeground(Color.YELLOW);
+		nivel.setBackground(Color.YELLOW);
+		nivel.setForeground(Color.BLACK);
 		nivel.setColumns(10);
 		nivel.setBounds(1211, 660, 157, 50);
 		getContentPane().add(nivel);
 		
 		puntos = new JTextField();
-		puntos.setForeground(Color.YELLOW);
+		puntos.setBackground(Color.YELLOW);
+		puntos.setForeground(Color.BLACK);
 		puntos.setBounds(1211, 598, 157, 50);
 		getContentPane().add(puntos);
 		puntos.setColumns(10);
 		
 		monedas = new JTextField();
+		monedas.setBackground(Color.YELLOW);
 		getContentPane().add(monedas);
 		monedas.setBounds(1211, 536, 157, 50);
 		monedas.setColumns(10);
@@ -236,6 +240,10 @@ public class GUIPrincipal extends JFrame {
 	
 	public void modificarNivel(int nivel1) {
 		nivel.setText("Nivel: "+ nivel1);
+	}
+	
+	public void modificarPuntos(int punto) {
+		puntos.setText("Puntos: "+ punto);
 	}
 }
 
