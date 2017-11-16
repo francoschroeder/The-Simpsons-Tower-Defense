@@ -33,12 +33,8 @@ import javax.swing.JPanel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class LionelMessi extends JFrame {
-	
-	protected int cont; 
 	protected JLabel fondo;
-	
-	
-	
+		
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -57,7 +53,6 @@ public class LionelMessi extends JFrame {
 		// frama
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(500, 500, 700, 500);
-		cont = 0;
 		
 		//panel del fondo
 		JPanel panelPrincipal = new JPanel();
@@ -122,10 +117,7 @@ public class LionelMessi extends JFrame {
 	
 	
 		
-		public void jugar() {	
-		
-		
-		cont++;
+	public void jugar() {		
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		GUIPrincipal gui = new GUIPrincipal();
 		Juego j = new Juego(gui);
