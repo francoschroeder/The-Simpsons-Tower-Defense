@@ -2,7 +2,7 @@ package GUI.Botones;
 
 import Juego.Comprable;
 import Juego.Personaje;
-import Objetos.BolaDeNieve;
+import Objetos.Martin;
 import Personajes.Skinner;
 
 public class BotonBolaNieve extends BotonCreacion {
@@ -15,7 +15,7 @@ public class BotonBolaNieve extends BotonCreacion {
 	}
 	
 	public Comprable factory(){
-		return new BolaDeNieve();
+		return new Martin();
 		
 	}
 }
