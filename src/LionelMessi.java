@@ -1,31 +1,16 @@
-import java.awt.Point;
-import java.util.LinkedList;
-import java.util.Random;
-import java.util.Stack;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import GUI.GUIPrincipal;
-import GUI.PanelMapa;
-import GUI.Botones.BotonCreacion;
 import GUI.Botones.Market;
-import Juego.Enemigo;
 import Juego.HiloAtaque;
 import Juego.HiloDisparo;
 import Juego.HiloEnemigos;
 import Juego.Juego;
-import Personajes.Barney;
-import Personajes.MrBurns;
-import Personajes.Nelson;
-import Personajes.PerrosBurns;
-import Personajes.Skinner;
-import Personajes.Smithers;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
@@ -36,6 +21,10 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class LionelMessi extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected JLabel fondo;
 	private static HiloEnemigos h;
 	private static HiloDisparo disparo;
@@ -130,10 +119,9 @@ public class LionelMessi extends JFrame {
 		j = new Juego(gui);
 		Market market = new Market(j);
 		disparo = new HiloDisparo(gui.getPanelMapa()); 
-		h = new HiloEnemigos(j);
+		h = new 	HiloEnemigos(j);
 		a = new HiloAtaque(j,disparo);
 		
-		gui.setJuego(j);
 		gui.setMarket(market);
 		gui.setVisible(true);
 		h.start();
