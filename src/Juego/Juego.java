@@ -239,7 +239,7 @@ public class Juego {
 		return ((e.getPosicion().getX()==OBSTACULO_1.getX() && e.getPosicion().getY()==OBSTACULO_1.getY()) || (e.getPosicion().getX()==OBSTACULO_2.getX() && e.getPosicion().getY()==OBSTACULO_2.getY()));
 	}
 	
-	public void pasarDeNivel() {
+	public void pasarDeNivel(HiloEnemigos e) {
 		nivelActual++;
 		gui.modificarNivel(nivelActual);
 	}
