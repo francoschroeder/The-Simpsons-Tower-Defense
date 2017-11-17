@@ -15,8 +15,8 @@ public class Milhouse extends Objeto {
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 10000;
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/bart/bartNeutral.gif")));
-		
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/milhouse/attack.gif")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/milhouse/attack.gif")));
 		setImagen(Personaje.neutral_key);
 	}
 	
