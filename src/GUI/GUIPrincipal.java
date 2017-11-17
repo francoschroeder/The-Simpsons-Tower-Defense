@@ -21,7 +21,7 @@ import GUI.Botones.BotonFlanders;
 import GUI.Botones.BotonHomero;
 import GUI.Botones.BotonLisa;
 import GUI.Botones.Market;
-
+import Juego.HiloEnemigos;
 
 import java.awt.event.ActionListener;
 
@@ -207,19 +207,21 @@ public class GUIPrincipal extends JFrame {
 		vidas.setText("Vidas: "+vida);
 	}
 	
-	public void modificarNivel1(int nivel1) {
+	public void modificarNivel(int nivel1) {
 		nivel.setText("Nivel: "+ nivel1);
 	}
 	
 	public void modificarPuntos(int punto) {
 		puntos.setText("Puntos: "+ punto);
 	}
-	int opa = 0;
-	public void modificarNivel(int a) {
-		modificarNivel1(a);
+	
+	public void pasarNivel(HiloEnemigos e, int a) {
+		try{ e.wait();}
+		catch (Exception o) {}
+		modificarNivel(a);
 		JFrame pantalla = new JFrame();
 		JButton pasarNivel = new JButton("Pasar de Nivel\n");
-		pasarNivel.addActionListener(new OyenteGanador());
+		pasarNivel.addActionListener(new OyenteGanador(e));
 		JTextField txtGanaste = new JTextField();
 		txtGanaste.setFont(new Font("Marker Felt", Font.PLAIN, 74));
 		txtGanaste.setText("Ganaste!!!");
@@ -247,17 +249,16 @@ public class GUIPrincipal extends JFrame {
 					.addContainerGap(45, Short.MAX_VALUE))
 		);
 		pantalla.getContentPane().setLayout(groupLayout);
-		while(opa == 0) {
-			}
+		
 	}
 	
 	private class OyenteGanador implements ActionListener{
-
-		public OyenteGanador(){
-			
+		HiloEnemigos a;
+		public OyenteGanador(HiloEnemigos a){
+			this.a = a;
 		}
 		public void actionPerformed(ActionEvent e){
-			opa=2;
+			a.start();
 			
 		}
 	}
