@@ -6,9 +6,7 @@ import javax.swing.JButton;
 import GUI.GUIPrincipal;
 
 public abstract class PowerUp extends JButton {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	VisitorPowerUp visitor;
 	public PowerUp(String a){

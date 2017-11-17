@@ -3,14 +3,9 @@ package Juego;
 import PowerUp.VisitorPowerUp;
 
 public abstract class Aliado extends Comprable {
-	protected int costo; 
 	
 	public Aliado() {
 		super();
-	}
-	
-	public int getCosto() {
-		return costo;
 	}
 	
 	public void serAtacado(Proyectil p) {
