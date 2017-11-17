@@ -1,12 +1,15 @@
 package GUI.Botones;
 
 import Juego.Comprable;
-import Juego.Personaje;
-import Objetos.BolaDeNieve;
-import Personajes.Skinner;
+import Objetos.Martin;
 
 public class BotonBolaNieve extends BotonCreacion {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public  BotonBolaNieve(String a){
 		
 		super(a);
@@ -15,7 +18,7 @@ public class BotonBolaNieve extends BotonCreacion {
 	}
 	
 	public Comprable factory(){
-		return new BolaDeNieve();
+		return new Martin();
 		
 	}
 }

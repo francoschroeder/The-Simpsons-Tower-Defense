@@ -1,16 +1,12 @@
 package GUI;
 
 import java.awt.EventQueue;
-import java.awt.Point;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
-import com.sun.glass.events.MouseEvent;
-import com.sun.javafx.collections.MappingChange.Map;
 import GUI.Botones.BotonMaggie;
 import GUI.Botones.BotonMarge;
 import GUI.Botones.BotonMilhouse;
@@ -25,46 +21,21 @@ import GUI.Botones.Market;
 
 
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseListener;
 
-import Juego.Juego;
-import Juego.Personaje;
-import Personajes.Homero;
-import Personajes.Skinner;
-import PowerUp.PowerUp;
-import PowerUp.Bomba;
-
-import javax.swing.border.BevelBorder;
 import java.awt.Color;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import java.awt.Toolkit;
-import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 
 public class GUIPrincipal extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private PanelMapa panelMapa;
-	private Juego j;
 	private JLabel fondo;
 	private JPanel panelBotones;
-	private JPanel contentPane;
 	private Market mercado;	
-	private JButton skinner;
-	private JButton BorrarSkinner;
 	private JTextField monedas;
 	private JTextField puntos;
 	private JTextField nivel;
@@ -170,9 +141,9 @@ public class GUIPrincipal extends JFrame {
 		milhouse.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
 		flanders.addActionListener(new OyenteBoton(flanders));
-		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/bolaDeNieve/boton.png");
+		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/martin/boton.png");
 		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
-		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
+		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/selma/boton.png");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		
@@ -190,12 +161,6 @@ public class GUIPrincipal extends JFrame {
 		panelBotones.add(bolaDeNieve);
 		panelBotones.add(ayudanteDeSanta);
 	
-		
-	}
-	 // juego 
-	
-	public void setJuego(Juego j){
-		this.j = j;
 		
 	}
 	

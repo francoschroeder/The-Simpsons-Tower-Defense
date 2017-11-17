@@ -1,17 +1,15 @@
 package GUI.Botones;
 
-
-
-import javax.swing.JButton;
-
 import Juego.Comprable;
-import Juego.Personaje;
 import Personajes.Bart;
-import Personajes.Homero;
-import Personajes.Skinner;
 
 public class BotonBart extends BotonCreacion {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public BotonBart(String a){
 		
 		super(a);

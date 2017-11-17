@@ -8,7 +8,7 @@ public class MagiaAlcance extends PowerUp{
 	private static final long serialVersionUID = 1L;
 
 	public MagiaAlcance() {
-		super("/sprites/powerUP/magiaDeCuracion.png");
+		super("/sprites/powerUP/magiaDeAlcance.png");
 		visitor = new VisitorMAlcance();
 	}
 	

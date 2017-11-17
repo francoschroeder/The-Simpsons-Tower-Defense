@@ -1,7 +1,5 @@
 package PowerUp;
 
-import javax.swing.JLabel;
-
 import Juego.Aliado;
 import Juego.Enemigo;
 import Juego.Objeto;
