@@ -30,6 +30,8 @@ public class HiloDisparo extends Thread {
 					actual.move();
 					if(actual.colisione()){
 								actual.Atacar();
+								panel.validate();
+								panel.repaint();
 								morirDisparo.add(actual);
 						}
 					

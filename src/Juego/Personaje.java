@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Personaje {
-	protected static int vidaMax;
+	protected int vidaMax;
 	protected int vidaActual;
 	protected int ataque;
 	protected int rango;
@@ -40,17 +40,13 @@ public abstract class Personaje {
 		return 1;
 	}
 
-		
 	public int getVidaActual() {
 		return vidaActual;
 	}
 
 	public void setVidaActual(int vidaActual) {
 		this.vidaActual = vidaActual;
-	}
-
-	public static void setVidaMax(int vidaMax) {
-		Personaje.vidaMax = vidaMax;
+		actualizarVida();
 	}
 
 	public void setRango(int rango) {
@@ -76,7 +72,6 @@ public abstract class Personaje {
 
 	public void setImagen(String dir){
 		imagen.setIcon(imActual.get(dir));
-		actualizarVida();
 	}
 	
 	public int getVidaMax() {
@@ -101,8 +96,6 @@ public abstract class Personaje {
 		else
 			vidaActual-=v;
 		
-		System.out.println("vida: "+vidaActual);
-		
 		actualizarVida();
 	}
 	
@@ -116,6 +109,6 @@ public abstract class Personaje {
 	public abstract Disparo generarDisparo(Personaje p);
 	
 	public void actualizarVida() {
-		barraDeVida.setBounds(getImagen().getX(), getImagen().getY(),vidaActual*75/vidaMax, 5);
+		barraDeVida.setBounds(getImagen().getX(), getImagen().getY()-4,(vidaActual*75)/vidaMax, 5);
 	}
 }

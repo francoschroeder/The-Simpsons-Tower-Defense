@@ -80,39 +80,34 @@ public class HiloEnemigos extends Thread {
 			 if(!enemigos.isEmpty()) {
 				 
 				for (Enemigo actual : enemigos) {
-				if (!actual.estaMuerto()) {
+					if (!actual.estaMuerto()) {
 					
-				if (j.hayRalentizador(actual)) 
-					actual.ralentizar();
-				else
-					actual.desralentizar();
+						if (j.hayRalentizador(actual)) 
+							actual.ralentizar();
+						else
+							actual.desralentizar();
+						
+					if ((int) actual.getPosicion().getY()==9) {
+						j.restarVidas();
+						actual.setVidaActual(0);
+					} else {
+						//Muevo al personaje
+						if (((actual.getPosicion().getY()+1)*75)-(actual.getImagen().getX()+5)<=5) { // llega al borde
 					
-				if ((int) actual.getPosicion().getY()==9) {
-					j.restarVidas();
-					actual.setVidaActual(0);
-				} else {
-					//Muevo al personaje
-				if (((actual.getPosicion().getY()+1)*75)-(actual.getImagen().getX()+5)<=5){ // llega al borde
-					
-					if (j.moverEnemigo(actual)){
+							if (j.moverEnemigo(actual)){
 							
+								actual.avanzar();
+								gui.getPanelMapa().validate();
+								gui.getPanelMapa().repaint();
+							}
+						} else {
 							actual.avanzar();
 							gui.getPanelMapa().validate();
 							gui.getPanelMapa().repaint();
-					}
-					else {
-						System.out.println("punto enemigo: "+actual.getImagen().getLocation().getX());
-					}
-				} else{
-					actual.avanzar();
-					gui.getPanelMapa().validate();
-					gui.getPanelMapa().repaint();
+						 }
+					  } 
+				   }
 				}
-				}
-				
-				}
-			
-			}
 			 }
 			
 			 try {
