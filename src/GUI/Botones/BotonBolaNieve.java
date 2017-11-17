@@ -1,12 +1,15 @@
 package GUI.Botones;
 
 import Juego.Comprable;
-import Juego.Personaje;
 import Objetos.Martin;
-import Personajes.Skinner;
 
 public class BotonBolaNieve extends BotonCreacion {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public  BotonBolaNieve(String a){
 		
 		super(a);

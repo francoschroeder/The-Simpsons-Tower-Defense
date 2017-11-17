@@ -1,12 +1,15 @@
 package GUI.Botones;
 
 import Juego.Comprable;
-import Juego.Personaje;
 import Objetos.Selma;
-import Personajes.Skinner;
 
 public class BotonAyudanteSanta extends BotonCreacion {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public BotonAyudanteSanta(String a){
 		
 		super(a);
