@@ -170,9 +170,9 @@ public class GUIPrincipal extends JFrame {
 		milhouse.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
 		flanders.addActionListener(new OyenteBoton(flanders));
-		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/bolaDeNieve/boton.png");
+		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/martin/boton.png");
 		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
-		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
+		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/selma/boton.png");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		
