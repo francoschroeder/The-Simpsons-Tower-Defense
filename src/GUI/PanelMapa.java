@@ -24,7 +24,6 @@ public class PanelMapa extends JPanel {
 	Point puntoNuevo;
 	
 	public void setPerso(Market p){
-		System.out.println("agrege el mercado al panel mapa");
 		selec = p;
 	}
  
