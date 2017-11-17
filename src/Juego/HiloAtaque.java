@@ -42,7 +42,6 @@ public class HiloAtaque extends Thread {
 					//Ataca al blanco
 					
 					if (aAtacar!=null) {
-						System.out.println("Dispara Aliado");
 						a.setImagen(Personaje.shoot_key); // Cambia imagen a disparo
 						disparos.agregarDisparo(a.generarDisparo(aAtacar));		
 					} else {
@@ -54,11 +53,8 @@ public class HiloAtaque extends Thread {
 						} else {
 						
 						}
-				
 					}
 				}
-			
-				
 
 				//Se eliminan los personajes muertos
 			
@@ -79,7 +75,6 @@ public class HiloAtaque extends Thread {
 				//Ataca al blanco
 				
 				if (aAtacar!=null) {
-					System.out.println("Dispara Enemigo");
 					e.setImagen(Personaje.shoot_key); // Cambia imagen a disparo
 					disparos.agregarDisparo(e.generarDisparo(aAtacar));
 				}  else {

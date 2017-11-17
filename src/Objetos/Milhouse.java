@@ -1,4 +1,6 @@
 package Objetos;
+import java.awt.Color;
+
 import javax.swing.ImageIcon;
 
 import Juego.*;
@@ -26,6 +28,13 @@ public class Milhouse extends Objeto {
 	}
 	
 	public boolean estaMuerto() {
+		if (tiempoTranscurrido==tiempoDeVida)
+			barraDeVida.setBackground(Color.GREEN);
+		else if (((tiempoDeVida-tiempoTranscurrido)*75)/tiempoDeVida<=40)
+			barraDeVida.setBackground(Color.RED);
+		else
+			barraDeVida.setBackground(Color.YELLOW);
+		
 		return tiempoTranscurrido>=tiempoDeVida;
 	}
 	

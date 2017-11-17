@@ -1,4 +1,6 @@
 package Objetos;
+import java.awt.Color;
+
 import javax.swing.ImageIcon;
 
 import Juego.*;
@@ -31,6 +33,13 @@ public class Flanders extends Objeto {
 	}
 	
 	public void actualizarVida() {
+		if (tiempoTranscurrido==tiempoDeVida)
+			barraDeVida.setBackground(Color.GREEN);
+		else if (((tiempoDeVida-tiempoTranscurrido)*75)/tiempoDeVida<=40)
+			barraDeVida.setBackground(Color.RED);
+		else
+			barraDeVida.setBackground(Color.YELLOW);
+		
 		barraDeVida.setBounds(getImagen().getX(), getImagen().getY()-4,((tiempoDeVida-tiempoTranscurrido)*75)/tiempoDeVida, 5);
 	}
 }

@@ -17,7 +17,6 @@ public class Curacion extends PowerUp {
 	}
 	
 	public PowerUp clone() {
-		System.out.println("Curacion");
 		return new Curacion();
 	}
 }

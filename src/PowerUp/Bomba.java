@@ -17,7 +17,6 @@ public class Bomba extends PowerUp {
 	}
 	
 	public PowerUp clone() {
-		System.out.println("Bomba");
 		return new Bomba();
 	}
 }

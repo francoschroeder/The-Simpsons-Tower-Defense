@@ -10,9 +10,9 @@ import javax.swing.JPanel;
 import GUI.Botones.BotonMaggie;
 import GUI.Botones.BotonMarge;
 import GUI.Botones.BotonMilhouse;
-import GUI.Botones.BotonAyudanteSanta;
+import GUI.Botones.BotonSelma;
 import GUI.Botones.BotonBart;
-import GUI.Botones.BotonBolaNieve;
+import GUI.Botones.BotonMartin;
 import GUI.Botones.BotonCreacion;
 import GUI.Botones.BotonFlanders;
 import GUI.Botones.BotonHomero;
@@ -141,9 +141,9 @@ public class GUIPrincipal extends JFrame {
 		milhouse.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
 		flanders.addActionListener(new OyenteBoton(flanders));
-		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/martin/boton.png");
+		BotonCreacion bolaDeNieve = new BotonMartin("/sprites/martin/boton.png");
 		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
-		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/selma/boton.png");
+		BotonCreacion ayudanteDeSanta = new BotonSelma("/sprites/selma/boton.png");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		

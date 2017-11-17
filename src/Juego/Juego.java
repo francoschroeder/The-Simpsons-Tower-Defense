@@ -15,8 +15,10 @@ import PowerUp.*;
 
 public class Juego {
 	
-	private final Point OBSTACULO_1;
-	private final Point OBSTACULO_2;
+	private Point OBSTACULO_1;
+	private JLabel obst1;
+	private Point OBSTACULO_2;
+	private JLabel obst2;
 	
 	private Personaje [][] matriz;
 	private LinkedList<Comprable> aliadosActivos;
@@ -28,14 +30,11 @@ public class Juego {
 	
 	public Juego(GUIPrincipal p) 
 		{
-		Random rand = new Random();
-		OBSTACULO_1 = new Point(rand.nextInt(5), rand.nextInt(9));
-		OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
 		nivelActual = 1;
 		vidas = 3;
 		puntos = 0;
 		
-		// asignar las listas
+		//Crear listas, matriz y preparar gui
 		this.gui=p;
 		gui.modificarNivel(nivelActual);
 		gui.modificarVida(vidas);
@@ -44,20 +43,17 @@ public class Juego {
 		enemigosActivos =  new LinkedList<Enemigo>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		
-		JLabel obst1 = new JLabel();
+		//Crear labels para los obstaculos
+		obst1 = new JLabel();
 		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo1.png")));
 		obst1.setBounds(0, 0, 75, 75);
-		gui.getPanelMapa().add(obst1);
-		obst1.setLocation((int) OBSTACULO_1.getY()*75, (int) OBSTACULO_1.getX()*75);
 		
-		JLabel obst2 = new JLabel();
+		obst2 = new JLabel();
 		obst2.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo2.png")));
 		obst2.setBounds(0, 0, 75, 75);
 		
-		
-		gui.getPanelMapa().add(obst2);
-		obst2.setLocation((int) OBSTACULO_2.getY()*75, (int) OBSTACULO_2.getX()*75);
-		
+		//Se crean y posicionan los obstaculos en el mapa
+		crearObstaculos();
 		}
 	
 	public void agregarPersonaje(Enemigo p, Point punto) {
@@ -268,5 +264,26 @@ public class Juego {
 	public void restarVidas() {
 		vidas--;
 		gui.modificarVida(vidas);
+	}
+	
+	public void crearObstaculos() {
+		if (OBSTACULO_1!=null && OBSTACULO_2!=null) {
+			gui.remove(obst1);
+			gui.remove(obst2);
+		}
+		
+		Random rand = new Random();
+		
+		OBSTACULO_1 = new Point(rand.nextInt(5), rand.nextInt(9));
+		OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
+		while (OBSTACULO_2.getX()==OBSTACULO_1.getX() && OBSTACULO_2.getY()==OBSTACULO_1.getY()) {
+			OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
+		}
+		
+		gui.getPanelMapa().add(obst1);
+		obst1.setLocation((int) OBSTACULO_1.getY()*75, (int) OBSTACULO_1.getX()*75);
+		
+		gui.getPanelMapa().add(obst2);
+		obst2.setLocation((int) OBSTACULO_2.getY()*75, (int) OBSTACULO_2.getX()*75);
 	}
 }
