@@ -104,9 +104,7 @@ public class LionelMessi extends JFrame {
 		
 		public OyenteBoton(){}
 		
-		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			jugar();
 		}
 	}
