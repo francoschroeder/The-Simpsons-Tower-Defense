@@ -63,10 +63,10 @@ public class PanelMapa extends JPanel {
 	}
 	
 	private class OyentePanel implements MouseListener{
-		PanelMapa b;
+		
 		
 		public OyentePanel(PanelMapa b){
-			this.b = b;
+			
 		}
 		 public void mousePressed(MouseEvent e) {
 			
