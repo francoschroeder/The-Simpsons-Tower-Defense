@@ -108,6 +108,13 @@ public abstract class Personaje {
 	public abstract Disparo generarDisparo(Personaje p);
 	
 	public void actualizarVida() {
-		barraDeVida.setBounds(getImagen().getX(), getImagen().getY()-4,(vidaActual*75)/vidaMax, 5);
+		if (vidaActual==vidaMax)
+			barraDeVida.setBackground(Color.GREEN);
+		else if ((vidaActual*75)/vidaMax<=40)
+			barraDeVida.setBackground(Color.RED);
+		else
+			barraDeVida.setBackground(Color.YELLOW);
+		
+		barraDeVida.setBounds(getImagen().getX(), getImagen().getY(),(vidaActual*75)/vidaMax, 5);
 	}
 }
