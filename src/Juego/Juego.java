@@ -148,6 +148,7 @@ public class Juego {
 	
 	public void eliminar(Enemigo p) {
 		gui.getPanelMapa().remove(p.getImagen());
+		gui.getPanelMapa().remove(p.getBarraDeVida());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
@@ -211,6 +212,7 @@ public class Juego {
 	}
 	public void eliminar(Comprable p) {
 		gui.getPanelMapa().remove(p.getImagen());
+		gui.getPanelMapa().remove(p.getBarraDeVida());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 		synchronized (aliadosActivos) {aliadosActivos.remove(p);}

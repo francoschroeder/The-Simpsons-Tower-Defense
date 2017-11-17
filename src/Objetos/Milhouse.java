@@ -11,6 +11,7 @@ public class Milhouse extends Objeto {
 	
 	public Milhouse() {
 		vidaMax=1;
+		rango=0;
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 10000;
 		
@@ -27,5 +28,9 @@ public class Milhouse extends Objeto {
 	
 	public boolean estaMuerto() {
 		return tiempoTranscurrido>=tiempoDeVida;
+	}
+	
+	public void actualizarVida() {
+		barraDeVida.setBounds(getImagen().getX(), getImagen().getY()-4,((tiempoDeVida-tiempoTranscurrido)*75)/tiempoDeVida, 5);
 	}
 }

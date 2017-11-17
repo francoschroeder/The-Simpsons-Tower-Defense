@@ -18,11 +18,9 @@ public class HiloEnemigos extends Thread {
 	private Juego j;
 	private volatile boolean seguir;
 	private Stack<Enemigo> enemigosPorSalir;
-	private GUIPrincipal gui;
 	
-	public HiloEnemigos(Juego j, GUIPrincipal g) {
+	public HiloEnemigos(Juego j) {
 		this.j=j;
-		gui = g;
 		seguir=true;
 		enemigosPorSalir = crearEnemigosPorSalir();
 	}
@@ -97,13 +95,9 @@ public class HiloEnemigos extends Thread {
 							if (j.moverEnemigo(actual)){
 							
 								actual.avanzar();
-								gui.getPanelMapa().validate();
-								gui.getPanelMapa().repaint();
 							}
 						} else {
 							actual.avanzar();
-							gui.getPanelMapa().validate();
-							gui.getPanelMapa().repaint();
 						 }
 					  } 
 				   }

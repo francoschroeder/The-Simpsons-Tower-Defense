@@ -33,6 +33,7 @@ public class HiloAtaque extends Thread {
 			synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 					a.pasarTiempo(1000);
+					a.actualizarVida();
 					
 					//Pide un blanco dentro del rango de ataque
 					

@@ -46,7 +46,6 @@ public abstract class Personaje {
 
 	public void setVidaActual(int vidaActual) {
 		this.vidaActual = vidaActual;
-		actualizarVida();
 	}
 
 	public void setRango(int rango) {
