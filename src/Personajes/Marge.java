@@ -15,7 +15,7 @@ public class Marge extends Aliado {
 		vidaActual = vidaMax;
 		ataque=20;
 		rango=2;
-		costo=10;
+		costo=40;
 		miProyectil = new ProyectilAliado(ataque);
 		
 		

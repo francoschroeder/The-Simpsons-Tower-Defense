@@ -11,11 +11,11 @@ public class Homero extends Aliado {
 	public Homero(){	
 		super();
 		
-		vidaMax = 25;
+		vidaMax = 30;
 		vidaActual = vidaMax;
-		ataque = 25;
+		ataque = 20;
 		rango = 3;
-		costo = 10;
+		costo = 30;
 		miProyectil = new ProyectilAliado(ataque);
 		
 		imActual.put(Personaje.neutral_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroNeutral.gif")));

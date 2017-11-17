@@ -241,7 +241,7 @@ public class Juego {
 	
 	public void pasarDeNivel(HiloEnemigos e) {
 		nivelActual++;
-		gui.pasarNivel(e,nivelActual);
+		gui.modificarNivel(nivelActual);
 	}
 	
 	public boolean perdio() {
@@ -276,5 +276,6 @@ public class Juego {
 	
 	public int getNivel() {
 		return nivelActual;
+		
 	}
 }

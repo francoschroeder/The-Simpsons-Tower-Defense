@@ -37,7 +37,7 @@ public class HiloEnemigos extends Thread {
 		LinkedList<Enemigo> enemigos = new LinkedList<Enemigo>();
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		Random r = new Random();
-		int cantPorSalir = r.nextInt(6) +15;
+		int cantPorSalir = r.nextInt(6) +2*j.getNivel();
 		
 		Enemigo s1 = new Skinner();
 		Enemigo s2 = new PerrosBurns();
@@ -65,6 +65,7 @@ public class HiloEnemigos extends Thread {
 	
 	public void run() {
 		int cont=0;
+		int velAparicion = 80;
 		Enemigo aSalir;
 		aSalir = enemigosPorSalir.pop();
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
@@ -108,16 +109,23 @@ public class HiloEnemigos extends Thread {
 			} catch(Exception e) {}
 			 
 			cont++;
+			System.out.println("cont"+ cont);
 			
-			if (cont==80 && !enemigosPorSalir.isEmpty()) {
+			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
 				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				cont=0;
+				velAparicion = (int) velAparicion/j.getNivel();
+				if(velAparicion <= 20) {
+					velAparicion = 20;
+				}
+				System.out.println("vel"+ velAparicion);
 			}
 			
 			if (enemigosPorSalir.isEmpty()) {
 				j.pasarDeNivel(this);
 				enemigosPorSalir = crearEnemigosPorSalir();
+				cont = 0;
 			}
 		}
 	}

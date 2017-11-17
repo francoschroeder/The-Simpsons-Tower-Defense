@@ -17,8 +17,8 @@ public class Smithers extends Enemigo {
 		rango = 3;	
 		velocidadMaxima = 3;
 		velocidadActual = velocidadMaxima;
-		minMonedas = 3;
-		maxMonedas = 6;
+		minMonedas = 10;
+		maxMonedas = 14;
 		puntos = 100;
 		miProyectil = new ProyectilEnemigo(ataque);
 		

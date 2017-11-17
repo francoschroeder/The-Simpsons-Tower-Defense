@@ -11,7 +11,7 @@ public class DisparoEnemigo  extends Disparo{
 	}
 	
 	public boolean colisione(){
-		if ((imagen.getLocation().getX() > (destino.getPosicion().getY()*75 )-5))  {
+		if ((imagen.getLocation().getX() > (destino.getImagen().getLocation().getX()+4)))  {
 			return true;
 		}
 		else return false;

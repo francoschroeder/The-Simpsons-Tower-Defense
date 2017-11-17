@@ -17,8 +17,8 @@ public class Skinner extends Enemigo {
 		rango=2;
 		velocidadMaxima=2;
 		velocidadActual=velocidadMaxima;
-		minMonedas=5;
-		maxMonedas=8;
+		minMonedas= 15;
+		maxMonedas= 20;
 		puntos = 125;
 		miProyectil = new ProyectilEnemigo(ataque);
 		

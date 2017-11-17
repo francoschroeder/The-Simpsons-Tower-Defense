@@ -11,11 +11,11 @@ public class Lisa extends Aliado {
 	public Lisa() {
 		super();
 		
-		vidaMax=25;
+		vidaMax=40;
 		vidaActual = vidaMax;
-		ataque=10;
+		ataque=15;
 		rango=3;
-		costo=10;
+		costo=25;
 		miProyectil = new ProyectilAliado(ataque);
 		
 		imActual.put(Personaje.neutral_key,new ImageIcon(this.getClass().getResource("/sprites/homero/homeroNeutral.gif")));
