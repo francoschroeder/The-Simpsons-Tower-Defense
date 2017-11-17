@@ -40,7 +40,6 @@ public class LionelMessi extends JFrame {
 	private static HiloEnemigos h;
 	private static HiloDisparo disparo;
 	private static HiloAtaque a;
-	private static Stack<Enemigo> enemigosPorSalir;
 	private static GUIPrincipal gui;
 	private static Juego j;
 	
@@ -128,13 +127,11 @@ public class LionelMessi extends JFrame {
 	
 		
 	public void jugar() {		
-		enemigosPorSalir = new Stack<Enemigo>();
 		gui = new GUIPrincipal();
 		j = new Juego(gui);
-		crearEnemigosPorSalir();
 		Market market = new Market(j);
 		disparo = new HiloDisparo(gui.getPanelMapa()); 
-		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
+		h = new HiloEnemigos(j, gui);
 		a = new HiloAtaque(j,disparo);
 		
 		gui.setJuego(j);
@@ -143,52 +140,7 @@ public class LionelMessi extends JFrame {
 		h.start();
 		disparo.start();
 		a.start();
-		
-		/*while (!j.perdio()) {
-			if (!h.hayEnemigosPorSalir()) {
-				h.detener();
-				ganarNivel();
-			}
-		}*/
-		
 	}
-	
-	private static void crearEnemigosPorSalir() {
-		
-		LinkedList<Enemigo> enemigos = new LinkedList<Enemigo>();
-		Random r = new Random();
-		int cantPorSalir = r.nextInt(6) +15;
-		
-		Enemigo s1 = new Skinner();
-		Enemigo s2 = new PerrosBurns();
-		Enemigo s3 = new MrBurns();
-		Enemigo s4 = new Smithers();
-		Enemigo s5 = new Barney();
-		Enemigo s6 = new Nelson();
-		
-		enemigos.add(s1);
-		enemigos.add(s2);
-		enemigos.add(s3);
-		enemigos.add(s4);
-		enemigos.add(s5);
-		enemigos.add(s6);
-		
-		for(int i=0; i< cantPorSalir; i++) {
-			Enemigo e = enemigos.get(r.nextInt(enemigos.size())).clone();
-			Point pos = new Point(r.nextInt(6),0);
-			e.setPosicion(pos);
-			enemigosPorSalir.push(e);
-		}
-	}
-	
-	private static void actualizarNivel() {
-		j.pasarDeNivel();
-		enemigosPorSalir = new Stack<Enemigo>();
-		crearEnemigosPorSalir();
-		h = new HiloEnemigos(j, disparo, enemigosPorSalir);
-	}
-
-
 
 	/**
 	 * 
@@ -237,7 +189,7 @@ public class LionelMessi extends JFrame {
 		
 		}
 		public void actionPerformed(ActionEvent e){
-			actualizarNivel();
+			
 			}
  		}
  	}
