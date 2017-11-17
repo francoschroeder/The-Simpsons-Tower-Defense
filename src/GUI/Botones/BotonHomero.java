@@ -1,15 +1,13 @@
 package GUI.Botones;
 
+ import javax.swing.JButton;
+
 import Juego.Comprable;
+import Juego.Personaje;
 import Personajes.Homero;
 
 public class BotonHomero extends BotonCreacion {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	public BotonHomero(String a){
 		
 		super(a);

@@ -1,12 +1,16 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Point;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
+import com.sun.glass.events.MouseEvent;
+import com.sun.javafx.collections.MappingChange.Map;
 import GUI.Botones.BotonMaggie;
 import GUI.Botones.BotonMarge;
 import GUI.Botones.BotonMilhouse;
@@ -21,31 +25,50 @@ import GUI.Botones.Market;
 
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
 
+import Juego.Juego;
+import Juego.Personaje;
+import Personajes.Homero;
+import Personajes.Skinner;
+import PowerUp.PowerUp;
+import PowerUp.Bomba;
+
+import javax.swing.border.BevelBorder;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-
-import javax.swing.JTextField;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.GridLayout;
+import java.awt.Toolkit;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
 
 public class GUIPrincipal extends JFrame {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private PanelMapa panelMapa;
+	private Juego j;
 	private JLabel fondo;
 	private JPanel panelBotones;
+	private JPanel contentPane;
 	private Market mercado;	
+	private JButton skinner;
+	private JButton BorrarSkinner;
 	private JTextField monedas;
 	private JTextField puntos;
 	private JTextField nivel;
 	private JTextField vidas;
-	private JTextField txtEscudos;
-	private JTextField txtLuchadores;
 	/**
 	 * Launch the application.
 	 */
@@ -79,113 +102,6 @@ public class GUIPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1500 , 800);
 		setLocationRelativeTo(null);
-		
-		//Panel de los botones
-		
-		panelBotones = new JPanel();
-		getContentPane().add(panelBotones);
-		panelBotones.setBounds(216, 485, 915, 287);
-		
-	
-		
-		//Creo los botones y los agregos al panel
-		
-		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
-		homero.addActionListener(new OyenteBoton(homero));
-		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
-		bart.addActionListener(new OyenteBoton(bart));
-		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
-		lisa.addActionListener(new OyenteBoton(lisa));
-		BotonCreacion maggie = new BotonMaggie("/sprites/maggie/boton.png");
-		maggie.addActionListener(new OyenteBoton(maggie));
-		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
-		marge.addActionListener(new OyenteBoton(marge));
-		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
-		milhouse.addActionListener(new OyenteBoton(milhouse));
-		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
-		flanders.addActionListener(new OyenteBoton(flanders));
-		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/martin/boton.png");
-		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
-		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/selma/boton.png");
-		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
-		
-		txtEscudos = new JTextField();
-		txtEscudos.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		txtEscudos.setText("Escudos\n");
-		txtEscudos.setColumns(10);
-		
-		txtLuchadores = new JTextField();
-		txtLuchadores.setText("Luchadores\n");
-		txtLuchadores.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		txtLuchadores.setColumns(10);
-		GroupLayout gl_panelBotones = new GroupLayout(panelBotones);
-		gl_panelBotones.setHorizontalGroup(
-			gl_panelBotones.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panelBotones.createSequentialGroup()
-					.addGap(25)
-					.addGroup(gl_panelBotones.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, gl_panelBotones.createSequentialGroup()
-							.addComponent(txtEscudos, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
-							.addGap(33)
-							.addComponent(milhouse, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(flanders, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(bolaDeNieve, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-						.addGroup(Alignment.TRAILING, gl_panelBotones.createSequentialGroup()
-							.addComponent(txtLuchadores, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-							.addGap(18)
-							.addComponent(homero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(bart, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(lisa, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(maggie, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_panelBotones.createParallelGroup(Alignment.LEADING)
-						.addComponent(marge, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(ayudanteDeSanta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap())
-		);
-		gl_panelBotones.setVerticalGroup(
-			gl_panelBotones.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panelBotones.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_panelBotones.createParallelGroup(Alignment.LEADING)
-						.addComponent(marge, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addGroup(Alignment.TRAILING, gl_panelBotones.createSequentialGroup()
-							.addGroup(gl_panelBotones.createParallelGroup(Alignment.LEADING)
-								.addComponent(homero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(bart, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lisa, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(maggie, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addGroup(gl_panelBotones.createParallelGroup(Alignment.LEADING, false)
-								.addGroup(gl_panelBotones.createSequentialGroup()
-									.addGap(18)
-									.addGroup(gl_panelBotones.createParallelGroup(Alignment.TRAILING)
-										.addComponent(bolaDeNieve, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(flanders, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(ayudanteDeSanta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(milhouse, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-								.addGroup(Alignment.TRAILING, gl_panelBotones.createSequentialGroup()
-									.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(txtEscudos, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addGap(50))))))
-				.addGroup(gl_panelBotones.createSequentialGroup()
-					.addGap(53)
-					.addComponent(txtLuchadores, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(204, Short.MAX_VALUE))
-		);
-		panelBotones.setLayout(gl_panelBotones);
-		//Agrego y seteo panel que contiene en mapa en el frame.
-		
-		ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); ;
-		panelMapa = new PanelMapa(img.getImage());
-		panelMapa.setSize(750, 450);
-		getContentPane().add(panelMapa);
-		panelMapa.setForeground(Color.WHITE);
-		panelMapa.setLocation(381, 23);
 		
 		vidas = new JTextField();
 		vidas.setBackground(Color.YELLOW);
@@ -222,8 +138,64 @@ public class GUIPrincipal extends JFrame {
 		fondo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/fondito.png")));
         getContentPane().add(fondo);
 
+		//Agrego y seteo panel que contiene en mapa en el frame.
+		
+				ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
+				panelMapa = new PanelMapa(img.getImage());
+				panelMapa.setForeground(Color.WHITE);
+				panelMapa.setLocation(375, 75);;
+				fondo.add(panelMapa);
+				
+		//Panel de los botones
+				
+		panelBotones = new JPanel();
+		panelBotones.setBounds(370, 525, 760, 250);
+		fondo.add(panelBotones);
 		
 	
+		
+		//Creo los botones y los agregos al panel
+		
+		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.addActionListener(new OyenteBoton(homero));
+		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
+		bart.addActionListener(new OyenteBoton(bart));
+		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
+		lisa.addActionListener(new OyenteBoton(lisa));
+		BotonCreacion maggie = new BotonMaggie("/sprites/maggie/boton.png");
+		maggie.addActionListener(new OyenteBoton(maggie));
+		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
+		marge.addActionListener(new OyenteBoton(marge));
+		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
+		milhouse.addActionListener(new OyenteBoton(milhouse));
+		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
+		flanders.addActionListener(new OyenteBoton(flanders));
+		BotonCreacion bolaDeNieve = new BotonBolaNieve("/sprites/bolaDeNieve/boton.png");
+		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
+		BotonCreacion ayudanteDeSanta = new BotonAyudanteSanta("/sprites/ayudanteSanta/boton.png");
+		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
+		
+		
+
+		
+		// Agrego al panel de los botones
+		
+		panelBotones.add(homero);
+		panelBotones.add(bart);
+		panelBotones.add(lisa);
+		panelBotones.add(maggie);
+		panelBotones.add(marge);
+		panelBotones.add(milhouse);
+		panelBotones.add(flanders);
+		panelBotones.add(bolaDeNieve);
+		panelBotones.add(ayudanteDeSanta);
+	
+		
+	}
+	 // juego 
+	
+	public void setJuego(Juego j){
+		this.j = j;
 		
 	}
 	

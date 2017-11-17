@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Stack;
 
+import GUI.GUIPrincipal;
 import Personajes.Barney;
 import Personajes.MrBurns;
 import Personajes.Nelson;

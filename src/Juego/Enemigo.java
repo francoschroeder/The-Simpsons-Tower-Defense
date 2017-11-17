@@ -1,5 +1,7 @@
 package Juego;
 
+import javax.swing.ImageIcon;
+
 import PowerUp.VisitorPowerUp;
 
 import java.util.Random;

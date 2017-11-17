@@ -10,14 +10,14 @@ public class Flanders extends Objeto {
 									//vivo (en ms)
 	
 	public Flanders() {
+		vidaMax=1;
 		rango=0;
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 20000;
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/flanders/flandersNeutral.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/bart/bartNeutral.gif")));
 		
 		setImagen(Personaje.neutral_key);
-		
 	}
 	
 	public void serAtacado(Proyectil p) {}

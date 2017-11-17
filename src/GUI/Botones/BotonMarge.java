@@ -1,15 +1,14 @@
 package GUI.Botones;
 
+import javax.swing.JButton;
+
 import Juego.Comprable;
+import Juego.Personaje;
+import Personajes.Homero;
 import Personajes.Marge;
 
 public class BotonMarge extends BotonCreacion {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	public BotonMarge(String a){
 		
 		super(a);

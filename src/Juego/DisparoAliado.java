@@ -1,5 +1,7 @@
 package Juego;
 
+import javax.swing.ImageIcon;
+
 public class DisparoAliado extends Disparo{
 	
 	public DisparoAliado(Proyectil bala,Personaje inicio,Personaje destino){

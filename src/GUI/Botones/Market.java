@@ -5,7 +5,10 @@ import java.awt.Point;
 
 import javax.swing.JPanel;
 
+import GUI.PanelMapa;
 import Juego.Juego;
+import Juego.Personaje;
+import Juego.Aliado;
 import Juego.Comprable;
 
 public class Market {

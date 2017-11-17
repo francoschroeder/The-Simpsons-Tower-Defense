@@ -1,15 +1,12 @@
 package GUI.Botones;
 
 import Juego.Comprable;
+import Juego.Personaje;
 import Objetos.Milhouse;
+import Personajes.Skinner;
 
 public class BotonMilhouse extends BotonCreacion {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	public BotonMilhouse(String a){
 		
 		super(a);
