@@ -84,7 +84,6 @@ public class Juego {
 			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);
 		}
 		
-		mostrarMatriz();
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
@@ -133,7 +132,6 @@ public class Juego {
 			matriz[(int) posE.getX()][(int) posE.getY()] = null;
 			e.setPosicion(new Point((int)( posE.getX()), (int) posE.getY()+1));
 			e.getImagen().setLocation((int) e.getPosicion().getY()*75, (int) e.getPosicion().getX()*75);
-			this.mostrarMatriz();
 			return true;
 			
 		}
@@ -239,17 +237,6 @@ public class Juego {
 	
 	public boolean hayRalentizador(Enemigo e) {
 		return ((e.getPosicion().getX()==OBSTACULO_1.getX() && e.getPosicion().getY()==OBSTACULO_1.getY()) || (e.getPosicion().getX()==OBSTACULO_2.getX() && e.getPosicion().getY()==OBSTACULO_2.getY()));
-	}
-	
-	public void mostrarMatriz(){
-		System.out.println("------------------------------------------------");
-		for(int i = 0; i< matriz.length; i++) {
-			for(int e = 0; e < matriz[0].length; e++) {
-				if(matriz[i][e] != null) System.out.print(" 1 ");
-				else System.out.print(" 0 ");
-				}
-			System.out.println(" . ");
-		}
 	}
 	
 	public void pasarDeNivel() {
