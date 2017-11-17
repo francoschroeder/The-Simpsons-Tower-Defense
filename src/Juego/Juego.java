@@ -273,4 +273,8 @@ public class Juego {
 		gui.getPanelMapa().add(obst2);
 		obst2.setLocation((int) OBSTACULO_2.getY()*75, (int) OBSTACULO_2.getX()*75);
 	}
+	
+	public int getNivel() {
+		return nivelActual;
+	}
 }

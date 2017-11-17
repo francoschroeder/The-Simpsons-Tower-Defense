@@ -51,8 +51,7 @@ public abstract class Disparo {
 	public abstract void move();
 	
 	public boolean colisione(){
-		if (((int) destino.getPosicion().getY()*75 < (int) this.getImagen().getLocation().getX()) && 
-				(((int)destino.getPosicion().getY()*75)+75 > (int) this.getImagen().getLocation().getX())) {
+		if ((imagen.getLocation().getX() < (destino.getPosicion().getY()*75 )-5))  {
 			return true;
 		}
 		else return false;

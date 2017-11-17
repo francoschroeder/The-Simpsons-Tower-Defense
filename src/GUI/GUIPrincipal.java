@@ -1,8 +1,11 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 
+import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -26,6 +29,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JTextField;
+import javax.swing.GroupLayout.Alignment;
 
 public class GUIPrincipal extends JFrame {
 	/**
@@ -203,12 +207,68 @@ public class GUIPrincipal extends JFrame {
 		vidas.setText("Vidas: "+vida);
 	}
 	
-	public void modificarNivel(int nivel1) {
+	public void modificarNivel1(int nivel1) {
 		nivel.setText("Nivel: "+ nivel1);
 	}
 	
 	public void modificarPuntos(int punto) {
 		puntos.setText("Puntos: "+ punto);
 	}
+	int opa = 0;
+	public void modificarNivel(int a) {
+		modificarNivel1(a);
+		JFrame pantalla = new JFrame();
+		JButton pasarNivel = new JButton("Pasar de Nivel\n");
+		pasarNivel.addActionListener(new OyenteGanador());
+		JTextField txtGanaste = new JTextField();
+		txtGanaste.setFont(new Font("Marker Felt", Font.PLAIN, 74));
+		txtGanaste.setText("Ganaste!!!");
+		txtGanaste.setColumns(10);
+		GroupLayout groupLayout = new GroupLayout(pantalla.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(137)
+							.addComponent(pasarNivel, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(78)
+							.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(81, Short.MAX_VALUE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(35)
+					.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
+					.addGap(90)
+					.addComponent(pasarNivel, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(45, Short.MAX_VALUE))
+		);
+		pantalla.getContentPane().setLayout(groupLayout);
+		while(opa == 0) {
+			}
+	}
+	
+	private class OyenteGanador implements ActionListener{
+
+		public OyenteGanador(){
+			
+		}
+		public void actionPerformed(ActionEvent e){
+			opa=2;
+			
+		}
+	}
+	
+
+
+
+
+
+
+
+
 }
 
