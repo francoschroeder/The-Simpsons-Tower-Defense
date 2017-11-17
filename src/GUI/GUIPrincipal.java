@@ -185,7 +185,7 @@ public class GUIPrincipal extends JFrame {
 		panelMapa.setSize(750, 450);
 		getContentPane().add(panelMapa);
 		panelMapa.setForeground(Color.WHITE);
-		panelMapa.setLocation(381, 32);
+		panelMapa.setLocation(381, 23);
 		
 		vidas = new JTextField();
 		vidas.setBackground(Color.YELLOW);
