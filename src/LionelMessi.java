@@ -120,7 +120,7 @@ public class LionelMessi extends JFrame {
 		j = new Juego(gui);
 		Market market = new Market(j);
 		disparo = new HiloDisparo(gui.getPanelMapa()); 
-		h = new HiloEnemigos(j);
+		h = new 	HiloEnemigos(j);
 		a = new HiloAtaque(j,disparo);
 		
 		gui.setMarket(market);
