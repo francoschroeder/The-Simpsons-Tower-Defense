@@ -6,9 +6,9 @@ import Juego.Enemigo;
 import Juego.Personaje;
 import Juego.ProyectilEnemigo;
 
-public class PerrosBurns extends Enemigo {
+public class jefeGorgory extends Enemigo {
 	
-	public PerrosBurns() {
+	public jefeGorgory() {
 		super();
 		
 		vidaMax = 10;
@@ -30,6 +30,6 @@ public class PerrosBurns extends Enemigo {
 	}
 	
 	public Enemigo clone() {
-		return new PerrosBurns();
+		return new jefeGorgory();
 	}
 }
