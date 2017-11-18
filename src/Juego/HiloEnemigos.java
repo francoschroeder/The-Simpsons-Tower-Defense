@@ -9,7 +9,7 @@ import java.util.Stack;
 import Personajes.Barney;
 import Personajes.MrBurns;
 import Personajes.Nelson;
-import Personajes.PerrosBurns;
+import Personajes.jefeGorgory;
 import Personajes.Skinner;
 import Personajes.Smithers;
 
@@ -37,10 +37,10 @@ public class HiloEnemigos extends Thread {
 		LinkedList<Enemigo> enemigos = new LinkedList<Enemigo>();
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		Random r = new Random();
-		int cantPorSalir = r.nextInt(6) +2*j.getNivel();
+		int cantPorSalir = r.nextInt(6) +10*j.getNivel();
 		
 		Enemigo s1 = new Skinner();
-		Enemigo s2 = new PerrosBurns();
+		Enemigo s2 = new jefeGorgory();
 		Enemigo s3 = new MrBurns();
 		Enemigo s4 = new Smithers();
 		Enemigo s5 = new Barney();

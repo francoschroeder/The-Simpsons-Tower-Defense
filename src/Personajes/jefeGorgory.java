@@ -22,8 +22,8 @@ public class jefeGorgory extends Enemigo {
 		puntos = 50;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));
-		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/jefeGorgory/22.png")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/jefeGorgory/23.png")));
 		
 		setImagen(Personaje.neutral_key);
 		actualizarVida();
