@@ -8,8 +8,6 @@ public class Martin extends Objeto  {
 	public Martin() {
 		vidaMax=300;
 		vidaActual = vidaMax;
-		costo = 20;
-		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/martin/martinNeutral.gif")));
 		
 		setImagen(Personaje.neutral_key);

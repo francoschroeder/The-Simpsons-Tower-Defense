@@ -14,7 +14,6 @@ public class Milhouse extends Objeto {
 	public Milhouse() {
 		rango=0;
 		tiempoTranscurrido = 0;
-		costo = 5;
 		tiempoDeVida = 10000;
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/milhouse/milhouseNeutral.gif")));

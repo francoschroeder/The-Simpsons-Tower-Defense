@@ -15,7 +15,6 @@ public class Flanders extends Objeto {
 		rango=0;
 		tiempoTranscurrido = 0;
 		tiempoDeVida = 20000;
-		costo = 10;
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/flanders/flandersNeutral.gif")));
 		
