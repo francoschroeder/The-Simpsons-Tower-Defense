@@ -75,57 +75,54 @@ public class GUIPrincipal extends JFrame {
 		setBackground(new Color(154, 205, 50));
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1500 , 800);
+		setBounds(100, 100, 1206 , 734);
 		setLocationRelativeTo(null);
+		
+		ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png"));
+		panelMapa = new PanelMapa(img.getImage());
+		panelMapa.setSize(750, 450);
+		getContentPane().add(panelMapa);
+		panelMapa.setForeground(Color.WHITE);
+		panelMapa.setLocation(267, 6);
+		
+		nivel = new JTextField();
+		nivel.setBackground(Color.YELLOW);
+		nivel.setForeground(Color.BLACK);
+		nivel.setColumns(10);
+		nivel.setBounds(1029, 556, 157, 50);
+		getContentPane().add(nivel);
+		
+		
 		
 		vidas = new JTextField();
 		vidas.setBackground(Color.YELLOW);
 		vidas.setText("Vidas: ");
 		vidas.setForeground(Color.BLACK);
 		vidas.setColumns(10);
-		vidas.setBounds(1211, 722, 157, 50);
+		vidas.setBounds(1029, 618, 157, 50);
 		getContentPane().add(vidas);
-		
-		nivel = new JTextField();
-		nivel.setBackground(Color.YELLOW);
-		nivel.setForeground(Color.BLACK);
-		nivel.setColumns(10);
-		nivel.setBounds(1211, 660, 157, 50);
-		getContentPane().add(nivel);
-		
-		puntos = new JTextField();
-		puntos.setBackground(Color.YELLOW);
-		puntos.setForeground(Color.BLACK);
-		puntos.setBounds(1211, 598, 157, 50);
-		getContentPane().add(puntos);
-		puntos.setColumns(10);
 		
 		monedas = new JTextField();
 		monedas.setBackground(Color.YELLOW);
 		getContentPane().add(monedas);
-		monedas.setBounds(1211, 536, 157, 50);
+		monedas.setBounds(1029, 494, 157, 50);
 		monedas.setColumns(10);
 		monedas.setEditable(false);
 		
-		// fondo del frame pricipal
-		fondo = new JLabel();
-		fondo.setBounds(0,0, 1500, 800);
-		fondo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/fondito.png")));
-        getContentPane().add(fondo);
-
-		//Agrego y seteo panel que contiene en mapa en el frame.
+		puntos = new JTextField();
+		puntos.setBackground(Color.YELLOW);
+		puntos.setForeground(Color.BLACK);
+		puntos.setBounds(1029, 432, 157, 50);
+		getContentPane().add(puntos);
+		puntos.setColumns(10);
 		
-				ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png")); 
-				panelMapa = new PanelMapa(img.getImage());
-				panelMapa.setForeground(Color.WHITE);
-				panelMapa.setLocation(375, 75);;
-				fondo.add(panelMapa);
-				
+		
+		
 		//Panel de los botones
-				
+		
 		panelBotones = new JPanel();
-		panelBotones.setBounds(370, 525, 760, 250);
-		fondo.add(panelBotones);
+		getContentPane().add(panelBotones);
+		panelBotones.setBounds(257, 455, 760, 250);
 		
 	
 		
@@ -164,7 +161,15 @@ public class GUIPrincipal extends JFrame {
 		panelBotones.add(flanders);
 		panelBotones.add(bolaDeNieve);
 		panelBotones.add(ayudanteDeSanta);
-	
+		
+		// fondo del frame pricipal
+		fondo = new JLabel();
+		fondo.setBounds(0,0, 1200, 700);
+		fondo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/fondito.png")));
+		getContentPane().add(fondo);
+
+		//Agrego y seteo panel que contiene en mapa en el frame.
+		
 		
 	}
 	
