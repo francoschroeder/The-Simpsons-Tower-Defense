@@ -113,14 +113,15 @@ public class LionelMessi extends JFrame {
 	
 	
 		
-	public void jugar() {		
+	public void jugar() {
+		
 		gui = new GUIPrincipal();
 		j = new Juego(gui);
 		Market market = new Market(j);
 		disparo = new HiloDisparo(gui.getPanelMapa()); 
 		h = new HiloEnemigos(j);
 		a = new HiloAtaque(j,disparo);
-		
+
 		gui.setMarket(market);
 		gui.setVisible(true);
 		h.start();
@@ -131,51 +132,56 @@ public class LionelMessi extends JFrame {
 	/**
 	 * 
 	 */
- 	public void ganarNivel() {
- 		JFrame GanadorNivel = new JFrame();
- 		JTextField txtGanaste;
+ 	public void perder() {
+ 		h.detener();
+ 		disparo.detener();
+ 		a.detener();
+ 		JTextField txtPerdiste;
+		JFrame GanadorNivel = new JFrame();
+		GanadorNivel.setBounds(100, 100, 400, 300);
+		GanadorNivel.setVisible(true);
  		GanadorNivel.getContentPane().setBackground(Color.YELLOW);
-		JButton btnNewButton = new JButton("Siguiente nivel\n");
-		btnNewButton.addActionListener(new OyenteBoton1());
-		txtGanaste = new JTextField();
-		txtGanaste.setBackground(Color.YELLOW);
-		txtGanaste.setFont(new Font("Marker Felt", Font.PLAIN, 29));
-		txtGanaste.setText("GANASTE!");
-		txtGanaste.setColumns(10);
-		GroupLayout groupLayout = new GroupLayout(getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-					.addContainerGap(122, Short.MAX_VALUE)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
-					.addGap(162))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(186)
-					.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(187, Short.MAX_VALUE))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-					.addGap(59)
-					.addComponent(txtGanaste, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
-					.addGap(34))
-		);
-		getContentPane().setLayout(groupLayout);
+ 		
+ 		JButton btnNewButton = new JButton("Jugar de Nuevo\n");
+ 		btnNewButton.addActionListener(new OyenteBoton1()); 
+		 btnNewButton.setBounds(34, 34, 50,50);
+		 
+		 txtPerdiste = new JTextField();
+		 txtPerdiste.setFont(new Font("Marker Felt", Font.PLAIN, 34));
+		 txtPerdiste.setText("Perdiste!!\n");
+		 txtPerdiste.setColumns(10);
+		 GroupLayout groupLayout = new GroupLayout(GanadorNivel.getContentPane());
+		 groupLayout.setHorizontalGroup(
+		 	groupLayout.createParallelGroup(Alignment.LEADING)
+		 		.addGroup(groupLayout.createSequentialGroup()
+		 			.addContainerGap(84, Short.MAX_VALUE)
+		 			.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(124))
+		 		.addGroup(groupLayout.createSequentialGroup()
+		 			.addGap(147)
+		 			.addComponent(txtPerdiste, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE)
+		 			.addContainerGap(150, Short.MAX_VALUE))
+		 );
+		 groupLayout.setVerticalGroup(
+		 	groupLayout.createParallelGroup(Alignment.LEADING)
+		 		.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+		 			.addContainerGap(47, Short.MAX_VALUE)
+		 			.addComponent(txtPerdiste, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(44)
+		 			.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(29))
+		 );
+		 GanadorNivel.getContentPane().setLayout(groupLayout);
+	}
 	
- 	
-		
-				
-			}
+
  	private class OyenteBoton1 implements ActionListener{
 		 
 		public OyenteBoton1(){
 		
 		}
 		public void actionPerformed(ActionEvent e){
-			
+			main(new String[4]);
 			}
  		}
  	}
