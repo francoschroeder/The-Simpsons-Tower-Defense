@@ -27,6 +27,8 @@ public class HiloEnemigos extends Thread {
 		enemigosPorSalir = crearEnemigosPorSalir();
 	}
 	
+	
+
 	public void detener() {
 		seguir=false;
 	}

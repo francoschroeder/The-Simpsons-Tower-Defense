@@ -21,9 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class LionelMessi extends JFrame {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	protected JLabel fondo;
 	private static HiloEnemigos h;

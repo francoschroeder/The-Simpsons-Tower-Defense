@@ -62,6 +62,7 @@ public class HiloDisparo extends Thread {
 			disparo.getImagen().setVisible(true);
 		}
 	}
+
 	
 }
 	
