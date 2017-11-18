@@ -22,8 +22,8 @@ public class MrBurns extends Enemigo {
 		puntos = 200;
 		miProyectil = new ProyectilEnemigo(ataque);
 		
-		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerNeutral.gif")));
-		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/skinner/skinnerAttack.gif")));
+		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/burns/burns.png")));
+		imActual.put(Personaje.shoot_key, new ImageIcon(this.getClass().getResource("/sprites/burns/burns.png")));
 		
 		setImagen(Personaje.neutral_key);
 		actualizarVida();
