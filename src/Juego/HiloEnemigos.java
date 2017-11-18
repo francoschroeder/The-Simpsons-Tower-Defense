@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Stack;
 
+import Messi.LionelMessi;
 import Personajes.Barney;
 import Personajes.MrBurns;
 import Personajes.Nelson;
@@ -17,9 +18,11 @@ public class HiloEnemigos extends Thread {
 	private Juego j;
 	private volatile boolean seguir;
 	private Stack<Enemigo> enemigosPorSalir;
+	private LionelMessi lm;
 	
-	public HiloEnemigos(Juego j) {
+	public HiloEnemigos(Juego j, LionelMessi lm) {
 		this.j=j;
+		this.lm = lm;
 		seguir=true;
 		enemigosPorSalir = crearEnemigosPorSalir();
 	}
@@ -109,7 +112,6 @@ public class HiloEnemigos extends Thread {
 			} catch(Exception e) {}
 			 
 			cont++;
-			System.out.println("cont"+ cont);
 			
 			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
@@ -125,6 +127,10 @@ public class HiloEnemigos extends Thread {
 				j.pasarDeNivel(this);
 				enemigosPorSalir = crearEnemigosPorSalir();
 				cont = 0;
+			}
+			
+			if (j.perdio()) {
+				lm.perder();
 			}
 		}
 	}
