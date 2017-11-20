@@ -16,7 +16,6 @@ public class Marge extends Aliado {
 		ataque=20;
 		rango=2;
 		costo=40;
-		imagen.setBounds(0, 0, 150, 75);
 		miProyectil = new ProyectilAliado(ataque);
 		
 		

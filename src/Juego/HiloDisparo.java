@@ -19,10 +19,6 @@ public class HiloDisparo extends Thread {
 		this.panel = gui;
 	}
 
-	public void detener() {
-		seguir=false;
-	}
-	
 	public void run(){
 		
 		while (seguir){
@@ -62,7 +58,6 @@ public class HiloDisparo extends Thread {
 			disparo.getImagen().setVisible(true);
 		}
 	}
-
 	
 }
 	
