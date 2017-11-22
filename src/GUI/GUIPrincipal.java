@@ -1,11 +1,8 @@
 package GUI;
 
 import java.awt.EventQueue;
-import java.awt.Font;
 
-import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,7 +18,6 @@ import GUI.Botones.BotonFlanders;
 import GUI.Botones.BotonHomero;
 import GUI.Botones.BotonLisa;
 import GUI.Botones.Market;
-import Juego.HiloEnemigos;
 
 import java.awt.event.ActionListener;
 
@@ -29,7 +25,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JTextField;
-import javax.swing.GroupLayout.Alignment;
+import java.awt.Dimension;
 
 public class GUIPrincipal extends JFrame {
 	/**
@@ -129,22 +125,33 @@ public class GUIPrincipal extends JFrame {
 		//Creo los botones y los agregos al panel
 		
 		BotonCreacion homero = new BotonHomero("/sprites/homero/CaraHomeroBoton.jpg");
+		homero.setToolTipText("");
+		homero.setText("30 Monedas");
 		homero.addActionListener(new OyenteBoton(homero));
 		BotonCreacion bart = new BotonBart("/sprites/bart/boton.png");
+		bart.setMinimumSize(new Dimension(90, 60));
+		bart.setText("10 Monedas");
 		bart.addActionListener(new OyenteBoton(bart));
 		BotonCreacion lisa = new BotonLisa("/sprites/lisa/boton.png");
+		lisa.setText("25 Monedas");
 		lisa.addActionListener(new OyenteBoton(lisa));
 		BotonCreacion maggie = new BotonMaggie("/sprites/maggie/boton.png");
+		maggie.setText("60 Monedas");
 		maggie.addActionListener(new OyenteBoton(maggie));
 		BotonCreacion marge = new BotonMarge("/sprites/marge/boton.png");
+		marge.setText("40 Monedas");
 		marge.addActionListener(new OyenteBoton(marge));
 		BotonCreacion milhouse = new BotonMilhouse("/sprites/milhouse/boton.png");
+		milhouse.setText("5 Monedas");
 		milhouse.addActionListener(new OyenteBoton(milhouse));
 		BotonCreacion flanders = new BotonFlanders("/sprites/flanders/boton.png");
+		flanders.setText("10 Monedas");
 		flanders.addActionListener(new OyenteBoton(flanders));
 		BotonCreacion bolaDeNieve = new BotonMartin("/sprites/martin/boton.png");
+		bolaDeNieve.setText("20 Monedas");
 		bolaDeNieve.addActionListener(new OyenteBoton(bolaDeNieve));
 		BotonCreacion ayudanteDeSanta = new BotonSelma("/sprites/selma/boton.png");
+		ayudanteDeSanta.setText("15 Monedas");
 		ayudanteDeSanta.addActionListener(new OyenteBoton(ayudanteDeSanta));
 		
 		
