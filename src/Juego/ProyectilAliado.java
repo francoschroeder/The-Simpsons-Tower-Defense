@@ -12,9 +12,5 @@ public class ProyectilAliado extends Proyectil {
 		e.reducirVida(ataque);
 	}
 	
-	public void atacarObjeto(Objeto o) {
-		o.reducirVida(ataque);
-	}
-	
-	
+	public void atacarObjeto(Objeto o) {}
 }
