@@ -8,12 +8,11 @@ import Juego.Objeto;
 public class VisitorCuracion extends VisitorPowerUp {
 	 
 	 	public VisitorCuracion() {
-	 		
+	 		estrategia = new estrategiaAfectarCuracion(); 
 	 	}
 	 	
 	 	public void afectar(Aliado a) {
-	 		a.setVidaActual(a.getVidaMax());
-	 		a.actualizarVida();
+	 		estrategia.afectar(a);
 	 	}
 	 	
 	 	public void afectar(Enemigo e) {
@@ -21,12 +20,15 @@ public class VisitorCuracion extends VisitorPowerUp {
 	 	}
 	 	
 		public void afectar(Objeto o) {
-	 		o.setVidaActual(o.getVidaMax());
-	 		o.actualizarVida();
+	 		estrategia.afectar(o);
 	 	}
 		
 		public void afectar(Market m) {
 	 		
 	 	}
+		
+		public void modoDesafectar() {
+			estrategia = new estrategiaDesafectarCuracion();
+		}
 	 
 	 }

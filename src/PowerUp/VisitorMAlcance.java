@@ -7,8 +7,12 @@ import Juego.Objeto;
 
 public class VisitorMAlcance extends VisitorPowerUp {
 
+	public VisitorMAlcance() {
+		estrategia = new estrategiaAfectarAlcance();
+	}
+	
 	public void afectar(Aliado a) {
-		a.setRango(a.getRango()+2);
+		estrategia.afectar(a);
 	}
 	
 	public void afectar(Enemigo e) {
@@ -22,4 +26,8 @@ public class VisitorMAlcance extends VisitorPowerUp {
 	public void afectar(Market m) {
  		
  	}
+	
+	public void modoDesafectar() {
+		estrategia = new estrategiaDesafectarAlcance();
+	}
 }

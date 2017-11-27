@@ -8,7 +8,7 @@ import Juego.Objeto;
 public class VisitorObjetoPrecioso extends VisitorPowerUp {
  
  	public VisitorObjetoPrecioso() {
- 		
+ 		estrategia = new estrategiaAfectarObjetoPrecioso();
  	}
  	public void afectar(Aliado a) {
  		
@@ -22,6 +22,10 @@ public class VisitorObjetoPrecioso extends VisitorPowerUp {
  		
  	}
  	public void afectar(Market m) {
- 		m.sumarMonedas(100);
+ 		estrategia.afectar(m);
+ 	}
+ 	
+ 	public void modoDesafectar() {
+ 		estrategia = new  estrategiaDesafectarObjetosPrecisos();
  	}
  }

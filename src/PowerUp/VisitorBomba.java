@@ -7,15 +7,15 @@ import Juego.Aliado;
  public class VisitorBomba extends VisitorPowerUp {
  
  	public VisitorBomba() {
- 		
+ 		estrategia = new estrategiaAfectarBomba();
  	}
  	
  	public void afectar(Aliado a) {
- 		a.setVidaActual(a.getVidaActual()-15);
+ 		estrategia.afectar(a);
 	}
  	
  	public void afectar(Enemigo e) {
- 		e.setVidaActual(e.getVidaActual()-15);
+ 		estrategia.afectar(e);
  	}
  	
  	public void afectar(Objeto o) {
@@ -23,6 +23,10 @@ import Juego.Aliado;
  	
  	public void afectar(Market m) {
  		
+ 	}
+ 	
+ 	public void modoDesafectar() {
+ 		estrategia = new estrategiaDesafectarBomba();
  	}
  	
  	}

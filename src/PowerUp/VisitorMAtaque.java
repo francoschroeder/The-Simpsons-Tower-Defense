@@ -8,10 +8,10 @@ import Juego.Aliado;
  public class VisitorMAtaque extends VisitorPowerUp {
  
  	public VisitorMAtaque() {
- 		
+ 		estrategia = new estrategiaAfectarAtaque();
  	}
  	public void afectar(Aliado a) {
- 		a.setAtaque(a.getAtaque()+5);
+ 		estrategia.afectar(a);
  	}
  	
  	public void afectar(Enemigo e) {
@@ -23,5 +23,9 @@ import Juego.Aliado;
  	}
  	public void afectar(Market m) {
  		
+ 	}
+ 	
+ 	public void modoDesafectar() {
+ 		estrategia = new estrategiaDesafectarAtaque();
  	}
  }
