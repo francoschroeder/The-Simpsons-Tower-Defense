@@ -20,6 +20,7 @@ public class Juego {
 	private Personaje [][] matriz;
 	private LinkedList<Comprable> aliadosActivos;
 	private LinkedList<Enemigo> enemigosActivos;
+	private LinkedList<VisitorPowerUp> visitorActivos;
 	private GUIPrincipal gui;
 	private int nivelActual;
 	private int vidas;
@@ -186,6 +187,20 @@ public class Juego {
 	}
 	
 	public void aplicarPowerUp(VisitorPowerUp p) {
+		for(Enemigo e  : enemigosActivos ) {
+			e.afectar(p);
+		}
+		
+		for(Comprable a : aliadosActivos) {
+			a.afectar(p);
+		}
+		
+			gui.getMarket().afectar(p);
+	}
+	
+	public void eliminar(VisitorPowerUp p) {
+		visitorActivos.remove(p);
+		p.modoDesafectar();
 		for(Enemigo e  : enemigosActivos ) {
 			e.afectar(p);
 		}
