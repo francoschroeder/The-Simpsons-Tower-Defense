@@ -159,6 +159,7 @@ public class Juego {
 		mapeoPowerUp.put(1, new Curacion());
 		mapeoPowerUp.put(2, new MagiaAlcance());
 		mapeoPowerUp.put(3, new MagiaAtaque());
+		mapeoPowerUp.put(4, new ObjetoPrecioso());
 		
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque
