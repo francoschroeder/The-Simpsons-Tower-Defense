@@ -24,6 +24,7 @@ public class HiloAtaque extends Thread {
 	
 	public void detener() {
 		seguir=false;
+		pausa=true;
 	}
 	
 	public void run() {

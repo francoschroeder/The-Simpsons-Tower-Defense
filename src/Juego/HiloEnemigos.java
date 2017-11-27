@@ -37,7 +37,7 @@ public class HiloEnemigos extends Thread {
 
 	public void detener() {
 		seguir = false;
-		pausa = false;
+		pausa = true;
 	}
 	
 	public boolean hayEnemigosPorSalir() {

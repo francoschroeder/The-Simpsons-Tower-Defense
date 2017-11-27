@@ -29,6 +29,7 @@ public class HiloDisparo extends Thread {
 	
 	public void detener() {
 		seguir=false;
+		pausa=true;
 	}
 	
 	public void run(){
