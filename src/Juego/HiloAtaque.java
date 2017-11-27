@@ -56,6 +56,8 @@ public class HiloAtaque extends Thread {
 					juego.eliminar(v);
 				}
 				
+				aEliminar3 = new LinkedList<VisitorPowerUp>();
+				
 				synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 					a.pasarTiempo(1000);
