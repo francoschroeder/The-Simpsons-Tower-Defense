@@ -234,6 +234,7 @@ public class Juego {
 	public void pasarDeNivel(HiloEnemigos e) {
 		nivelActual++;
 		gui.modificarNivel(nivelActual);
+		crearObstaculos();
 	}
 	
 	public boolean perdio() {

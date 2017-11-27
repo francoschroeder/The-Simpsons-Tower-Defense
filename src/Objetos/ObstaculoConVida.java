@@ -17,7 +17,7 @@ public class ObstaculoConVida extends Objeto {
 		vidaActual=vidaMax;
 		Random rand = new Random();
 		
-		Point punto = new Point(rand.nextInt(5), rand.nextInt(9));
+		Point punto = new Point(rand.nextInt(4)+1, rand.nextInt(9));
 		setPosicion(punto);
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo1.png")));
 		setImagen(Personaje.neutral_key);
