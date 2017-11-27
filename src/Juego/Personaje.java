@@ -14,7 +14,9 @@ import java.util.Map;
 public abstract class Personaje {
 	protected int vidaMax;
 	protected int vidaActual;
+	protected int ataqueOriginal;
 	protected int ataque;
+	protected int rangoOriginal;
 	protected int rango;
 	protected Proyectil miProyectil;
 	protected Point posicion; // posicion en la matriz
@@ -80,13 +82,23 @@ public abstract class Personaje {
 	public int getAtaque() {
 		return ataque;
 	}
+	
+	public int getAtaqueOriginal() {
+		return ataqueOriginal;
+	}
+	
 	public void setAtaque(int at) {
 		ataque = at;
 	}
+	
 	public int getRango() {
 		return rango;
 	}
 
+	public int getRangoOriginal() {
+		return rangoOriginal;
+	}
+	
 	public abstract void serAtacado(Proyectil p);
 	
 	public void reducirVida(int v) {

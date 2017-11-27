@@ -95,11 +95,6 @@ public class HiloEnemigos extends Thread {
 				 
 				for (Enemigo actual : enemigos) {
 					if (!actual.estaMuerto()) {
-					
-						if (j.hayRalentizador(actual)) 
-							actual.ralentizar();
-						else
-							actual.desralentizar();
 						
 					if ((int) actual.getPosicion().getY()==9) {
 						j.restarVidas();

@@ -61,17 +61,9 @@ public abstract class Enemigo extends Personaje {
 		actualizarVida();
 	}
 	
-	public abstract Enemigo clone();
-	
-	public void ralentizar() {
-		velocidadActual = 1;
-	}
-	
-	public void desralentizar() {
-		velocidadActual = velocidadMaxima;
-	}
-	
 	public int getPuntos() {
 		return puntos;
 	}
+	
+	public abstract Enemigo clone();
 }

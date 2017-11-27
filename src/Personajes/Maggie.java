@@ -13,8 +13,10 @@ public class Maggie extends Aliado {
 		
 		vidaMax=100;
 		vidaActual = vidaMax;
-		ataque=35;
-		rango=3;
+		ataqueOriginal=35;
+		ataque=ataqueOriginal;
+		rangoOriginal=3;
+		rango=rangoOriginal;
 		costo=60;
 		miProyectil = new ProyectilAliado(ataque);
 		

@@ -13,8 +13,10 @@ public class Barney extends Enemigo {
 		
 		vidaMax = 50;
 		vidaActual = vidaMax;
-		ataque = 20;
-		rango = 4;
+		ataqueOriginal = 20;
+		ataque = ataqueOriginal;
+		rangoOriginal = 4;
+		rango = rangoOriginal;
 		velocidadMaxima = 2;
 		velocidadActual = velocidadMaxima;
 		minMonedas = 7;

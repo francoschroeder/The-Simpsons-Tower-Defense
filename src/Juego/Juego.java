@@ -227,10 +227,6 @@ public class Juego {
 		return (matriz[(int) p.getX()][(int) p.getY()] != null);
 	}
 	
-	public boolean hayRalentizador(Enemigo e) {
-		return ((e.getPosicion().getX()==obst1.getPosicion().getX() && e.getPosicion().getY()==obst1.getPosicion().getY()) || (e.getPosicion().getX()==obst2.getPosicion().getX() && e.getPosicion().getY()==obst2.getPosicion().getY()));
-	}
-	
 	public void pasarDeNivel(HiloEnemigos e) {
 		nivelActual++;
 		gui.modificarNivel(nivelActual);

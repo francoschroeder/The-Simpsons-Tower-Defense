@@ -13,8 +13,10 @@ public class Marge extends Aliado {
 		
 		vidaMax=160;
 		vidaActual = vidaMax;
-		ataque=20;
-		rango=2;
+		ataqueOriginal=20;
+		ataque=ataqueOriginal;
+		rangoOriginal=2;
+		rango=rangoOriginal;
 		costo=40;
 		imagen.setBounds(0, 0, 150, 75);
 		miProyectil = new ProyectilAliado(ataque);
