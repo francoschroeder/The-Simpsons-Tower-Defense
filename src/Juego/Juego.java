@@ -181,7 +181,7 @@ public class Juego {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			aplicarPowerUp(p.factory());
-			visitorActivos.add(p.factory());
+			synchronized (visitorActivos) {visitorActivos.add(p.factory());}
 			gui.getPanelMapa().remove(p);
 			gui.getPanelMapa().validate();
 			gui.getPanelMapa().repaint();
@@ -201,7 +201,8 @@ public class Juego {
 	}
 	
 	public void eliminar(VisitorPowerUp p) {
-		visitorActivos.remove(p);
+		System.out.println("eliminando powerUp");
+		synchronized (visitorActivos) {visitorActivos.remove(p);}
 		p.modoDesafectar();
 		for(Enemigo e  : enemigosActivos ) {
 			e.afectar(p);

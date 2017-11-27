@@ -11,6 +11,8 @@ import Juego.Aliado;
 	
  	public VisitorMAtaque() {
  		estrategia = new estrategiaAfectarAtaque();
+ 		 tiempoTranscurrido= 0;
+ 		tiempoDeVida = 10000;
  	}
  	public void afectar(Aliado a) {
  		estrategia.afectar(a);
@@ -28,6 +30,7 @@ import Juego.Aliado;
  	}
  	
  	public void modoDesafectar() {
+ 		
  		estrategia = new estrategiaDesafectarAtaque();
  	}
  	

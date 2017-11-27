@@ -12,7 +12,7 @@ public class VisitorMAlcance extends VisitorPowerUp {
 	public VisitorMAlcance() {
 		estrategia = new estrategiaAfectarAlcance();
 		tiempoTranscurrido=0;
-		tiempoDeVida=5000;
+		tiempoDeVida=10000;
 	}
 	
 	public void afectar(Aliado a) {
@@ -32,6 +32,7 @@ public class VisitorMAlcance extends VisitorPowerUp {
  	}
 	
 	public void modoDesafectar() {
+		
 		estrategia = new estrategiaDesafectarAlcance();
 	}
 	
