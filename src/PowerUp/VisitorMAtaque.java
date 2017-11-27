@@ -6,7 +6,9 @@ import Juego.Aliado;
  import Juego.Objeto;
  
  public class VisitorMAtaque extends VisitorPowerUp {
- 
+	private int tiempoTranscurrido;
+	private int tiempoDeVida;
+	
  	public VisitorMAtaque() {
  		estrategia = new estrategiaAfectarAtaque();
  	}
@@ -28,4 +30,12 @@ import Juego.Aliado;
  	public void modoDesafectar() {
  		estrategia = new estrategiaDesafectarAtaque();
  	}
+ 	
+ 	public void pasarTiempo(int t) {
+		tiempoTranscurrido+=t;
+	}
+	
+	public boolean pasoTiempo() {
+		return tiempoTranscurrido>=tiempoDeVida;
+	}
  }

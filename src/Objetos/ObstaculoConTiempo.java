@@ -22,7 +22,7 @@ public class ObstaculoConTiempo extends Objeto {
 		
 		Random rand = new Random();
 		
-		Point punto = new Point(rand.nextInt(4)+1, rand.nextInt(9));
+		Point punto = new Point(rand.nextInt(5), rand.nextInt(8)+1);
 		setPosicion(punto);
 		
 		imActual.put(Personaje.neutral_key, new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo2.png")));

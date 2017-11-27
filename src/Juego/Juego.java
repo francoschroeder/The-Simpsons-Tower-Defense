@@ -39,6 +39,7 @@ public class Juego {
 		gui.modificarPuntos(puntos);
 		aliadosActivos =  new LinkedList<Comprable>();
 		enemigosActivos =  new LinkedList<Enemigo>();
+		visitorActivos = new LinkedList<VisitorPowerUp>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
 		
 		//Se crean y posicionan los obstaculos en el mapa
@@ -153,7 +154,7 @@ public class Juego {
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque
 		
-		if (x<=0.20){ 	
+		if (x<=1){ 	
 			
 			Random generator = new Random();
 			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size()));
@@ -297,5 +298,9 @@ public class Juego {
 		gui.actualizarCartel();
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
+	}
+	
+	public LinkedList<VisitorPowerUp> getVisitorActivos() {
+		return visitorActivos;
 	}
 }

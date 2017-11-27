@@ -3,6 +3,8 @@ package Juego;
 import java.util.LinkedList;
 import java.util.List;
 
+import PowerUp.VisitorPowerUp;
+
 public class HiloAtaque extends Thread {
 	private Juego juego;
 	private volatile boolean seguir, pausa;
@@ -31,14 +33,29 @@ public class HiloAtaque extends Thread {
 		
 		LinkedList<Comprable> aEliminar = new LinkedList<Comprable>();
 		LinkedList<Enemigo> aEliminar2 = new LinkedList<Enemigo>();
+		LinkedList<VisitorPowerUp> aEliminar3 = new LinkedList<VisitorPowerUp>();
 		
 		Personaje aAtacar;
 		
 		List<Comprable> listaAliados = juego.getAliados();
 		List<Enemigo> listaEnemigos =  juego.getEnemigos();
+		List<VisitorPowerUp> listaPowerUp = juego.getVisitorActivos();
 		
 		while (seguir) {
 			while (!pausa) {
+				synchronized (listaPowerUp) {
+					for (VisitorPowerUp v:listaPowerUp) {
+						v.pasarTiempo(1000);
+						
+						if (v.pasoTiempo())
+							aEliminar3.add(v);
+					}
+				}
+				
+				for (VisitorPowerUp v:aEliminar3) {
+					juego.eliminar(v);
+				}
+				
 				synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 					a.pasarTiempo(1000);

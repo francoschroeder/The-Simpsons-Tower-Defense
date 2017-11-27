@@ -18,4 +18,10 @@ public abstract class VisitorPowerUp {
 
 		public abstract void modoDesafectar();
 
+		
+		public void pasarTiempo(int t) {}
+		
+		public boolean pasoTiempo() {
+			return true;
+		}
 }
