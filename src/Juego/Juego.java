@@ -282,4 +282,10 @@ public class Juego {
 		return nivelActual;
 		
 	}
+	
+	public void actualizarPanel() {
+		gui.actualizarCartel();
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
+	}
 }

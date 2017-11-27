@@ -41,6 +41,7 @@ public class Market {
 	
 	public void sumarMonedas(int m){
 		monedas+=m;
+		j.actualizarPanel();
 	}
 	
 	public void restarMonedas(int m){
