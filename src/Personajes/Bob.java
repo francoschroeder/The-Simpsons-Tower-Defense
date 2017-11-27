@@ -13,8 +13,10 @@ public class Bob extends Enemigo {
 		
 		vidaMax = 30;
 		vidaActual = vidaMax;
-		ataque = 10;
-		rango = 3;	
+		ataqueOriginal = 10;
+		ataque = ataqueOriginal;
+		rangoOriginal = 3;
+		rango = rangoOriginal;
 		velocidadMaxima = 3;
 		velocidadActual = velocidadMaxima;
 		minMonedas = 10;

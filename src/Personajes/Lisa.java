@@ -13,8 +13,10 @@ public class Lisa extends Aliado {
 		
 		vidaMax=40;
 		vidaActual = vidaMax;
-		ataque=15;
-		rango=3;
+		ataqueOriginal=15;
+		ataque=ataqueOriginal;
+		rangoOriginal=3;
+		rango=rangoOriginal;
 		costo=25;
 		miProyectil = new ProyectilAliado(ataque);
 		

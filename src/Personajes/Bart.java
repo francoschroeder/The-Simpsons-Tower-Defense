@@ -13,8 +13,10 @@ public class Bart extends Aliado {
 		
 		vidaMax=20;
 		vidaActual = vidaMax;
-		ataque=10;
-		rango=3;
+		ataqueOriginal=10;
+		ataque=ataqueOriginal;
+		rangoOriginal=3;
+		rango=rangoOriginal;
 		costo=10;
 		miProyectil = new ProyectilAliado(ataque);
 		

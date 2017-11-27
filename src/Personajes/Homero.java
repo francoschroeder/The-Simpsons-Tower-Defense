@@ -13,8 +13,10 @@ public class Homero extends Aliado {
 		
 		vidaMax = 30;
 		vidaActual = vidaMax;
-		ataque = 20;
-		rango = 3;
+		ataqueOriginal = 20;
+		ataque = ataqueOriginal;
+		rangoOriginal = 3;
+		rango = rangoOriginal;
 		costo = 30;
 		miProyectil = new ProyectilAliado(ataque);
 		

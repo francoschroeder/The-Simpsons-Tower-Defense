@@ -13,8 +13,10 @@ public class jefeGorgory extends Enemigo {
 		
 		vidaMax = 10;
 		vidaActual = vidaMax;
-		ataque = 5;
-		rango = 3;
+		ataqueOriginal = 5;
+		ataque = ataqueOriginal;
+		rangoOriginal = 3;
+		rango = rangoOriginal;
 		velocidadMaxima = 10;
 		velocidadActual = velocidadMaxima;
 		minMonedas = 5;

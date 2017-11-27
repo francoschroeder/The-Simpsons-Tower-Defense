@@ -13,8 +13,10 @@ public class Nelson extends Enemigo {
 		
 		vidaMax = 20;
 		vidaActual = vidaMax;
-		ataque = 7;
-		rango = 3;
+		ataqueOriginal = 7;
+		ataque = ataqueOriginal;
+		rangoOriginal = 3;
+		rango = rangoOriginal;
 		velocidadMaxima = 4;
 		velocidadActual = velocidadMaxima;
 		minMonedas = 10;
