@@ -181,6 +181,7 @@ public class Juego {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			aplicarPowerUp(p.factory());
+			visitorActivos.add(p.factory());
 			gui.getPanelMapa().remove(p);
 			gui.getPanelMapa().validate();
 			gui.getPanelMapa().repaint();
