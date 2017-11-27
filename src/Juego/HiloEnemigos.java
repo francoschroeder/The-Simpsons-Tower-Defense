@@ -19,12 +19,15 @@ public class HiloEnemigos extends Thread {
 	private volatile boolean seguir, pausa;
 	private Stack<Enemigo> enemigosPorSalir;
 	private LionelMessi lm;
+	private int oleada, velAparicion, cont;
 	
 	public HiloEnemigos(Juego j, LionelMessi lm) {
 		this.j=j;
 		this.lm = lm;
 		seguir=true;
 		pausa=false;
+		cont = 0;
+		velAparicion = 50;
 		enemigosPorSalir = crearEnemigosPorSalir();
 	}
 	
@@ -72,12 +75,12 @@ public class HiloEnemigos extends Thread {
 			enemigosPorSalir.push(e);
 		}
 		
+		oleada = enemigosPorSalir.size()/2;		//a la mitad de la pila termina una oleada
+		
 		return enemigosPorSalir;
 	}
 	
 	public void run() {
-		int cont=0;
-		int velAparicion = 80;
 		Enemigo aSalir;
 		aSalir = enemigosPorSalir.pop();
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
@@ -122,15 +125,24 @@ public class HiloEnemigos extends Thread {
 			 
 			cont++;
 			
+			if (oleada==enemigosPorSalir.size()) {
+				velAparicion=200;
+				
+				oleada=-1;
+			}
+			
 			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
 				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				cont=0;
+				velAparicion=50;
 				velAparicion = (int) velAparicion/j.getNivel();
 				if(velAparicion <= 20) {
 					velAparicion = 20;
 				}
 			}
+
+			
 			
 			if (enemigosPorSalir.isEmpty()) {
 				j.pasarDeNivel(this);
