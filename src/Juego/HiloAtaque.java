@@ -5,13 +5,21 @@ import java.util.List;
 
 public class HiloAtaque extends Thread {
 	private Juego juego;
-	private volatile boolean seguir;
+	private volatile boolean seguir, pausa;
 	private HiloDisparo disparos;
 	
 	public HiloAtaque(Juego j, HiloDisparo h) {
 		juego = j;
 		disparos = h;
 		seguir=true;
+		pausa=false;
+	}
+	
+	public void pausar() {
+		if (pausa)
+			pausa = false;
+		else
+			pausa = true;
 	}
 	
 	public void detener() {
@@ -29,8 +37,8 @@ public class HiloAtaque extends Thread {
 		List<Enemigo> listaEnemigos =  juego.getEnemigos();
 		
 		while (seguir) {
-			
-			synchronized (listaAliados) {
+			while (!pausa) {
+				synchronized (listaAliados) {
 				for (Comprable a:listaAliados) {
 					a.pasarTiempo(1000);
 					a.actualizarVida();
@@ -100,6 +108,8 @@ public class HiloAtaque extends Thread {
 			try {
 					Thread.sleep(1000);	}
 					catch (InterruptedException j) {}
+			}
+			
 			}// del while
 		}// del run
 	}// del thread

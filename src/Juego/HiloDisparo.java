@@ -7,18 +7,26 @@ import GUI.PanelMapa;
 
 public class HiloDisparo extends Thread {
 	
-	private boolean seguir;
+	private volatile boolean seguir, pausa;
 	private LinkedList<Disparo> disparos;
 	private LinkedList<Disparo> morirDisparo;
 	private PanelMapa panel;
 	
 	public HiloDisparo(PanelMapa gui){
 		seguir = true;
+		pausa = false;
 		morirDisparo = new LinkedList<Disparo>();
 		disparos = new LinkedList<Disparo>();
 		this.panel = gui;
 	}
 
+	public void pausar() {
+		if (pausa)
+			pausa = false;
+		else
+			pausa = true;
+	}
+	
 	public void detener() {
 		seguir=false;
 	}
@@ -26,7 +34,8 @@ public class HiloDisparo extends Thread {
 	public void run(){
 		
 		while (seguir){
-			try {
+			while (!pausa) {
+				try {
 				Thread.sleep(20);
 			} catch(Exception e) {} 
 			synchronized(disparos){
@@ -50,6 +59,8 @@ public class HiloDisparo extends Thread {
 				}
 			
 				
+			}
+			
 			}
 		
 		}

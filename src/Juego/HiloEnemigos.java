@@ -16,7 +16,7 @@ import Personajes.Bob;
 
 public class HiloEnemigos extends Thread {
 	private Juego j;
-	private volatile boolean seguir;
+	private volatile boolean seguir, pausa;
 	private Stack<Enemigo> enemigosPorSalir;
 	private LionelMessi lm;
 	
@@ -24,10 +24,16 @@ public class HiloEnemigos extends Thread {
 		this.j=j;
 		this.lm = lm;
 		seguir=true;
+		pausa=false;
 		enemigosPorSalir = crearEnemigosPorSalir();
 	}
 	
-	
+	public void pausar() {
+		if (pausa)
+			pausa = false;
+		else
+			pausa = true;
+	}
 
 	public void detener() {
 		seguir=false;
@@ -78,8 +84,8 @@ public class HiloEnemigos extends Thread {
 		List<Enemigo> enemigos = j.getEnemigos();
 		
 		while(seguir) {
-
-			
+			while(!pausa) {
+				
 			 if(!enemigos.isEmpty()) {
 				 
 				for (Enemigo actual : enemigos) {
@@ -127,6 +133,7 @@ public class HiloEnemigos extends Thread {
 			
 			if (enemigosPorSalir.isEmpty()) {
 				j.pasarDeNivel(this);
+				lm.pasarNivel();
 				enemigosPorSalir = crearEnemigosPorSalir();
 				cont = 0;
 			}
@@ -134,6 +141,8 @@ public class HiloEnemigos extends Thread {
 			if (j.perdio()) {
 				lm.perder();
 			}
+			}
+			
 		}
 	}
 }
