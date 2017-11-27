@@ -183,6 +183,7 @@ public class LionelMessi extends JFrame {
 		public void actionPerformed(ActionEvent e){
 			main(new String[4]);
 			ventana.dispose();
+			gui.dispose();
 			}
  	}
  	
