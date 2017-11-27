@@ -120,7 +120,7 @@ public class LionelMessi extends JFrame {
 		disparo = new HiloDisparo(gui.getPanelMapa()); 
 		h = new HiloEnemigos(j, this);
 		a = new HiloAtaque(j,disparo);
-
+		
 		gui.setMarket(market);
 		gui.setVisible(true);
 		h.start();
@@ -135,6 +135,7 @@ public class LionelMessi extends JFrame {
  		h.detener();
  		disparo.detener();
  		a.detener();
+ 		
  		JTextField txtPerdiste;
 		JFrame GanadorNivel = new JFrame();
 		GanadorNivel.setBounds(100, 100, 400, 300);
@@ -142,7 +143,7 @@ public class LionelMessi extends JFrame {
  		GanadorNivel.getContentPane().setBackground(Color.YELLOW);
  		
  		JButton btnNewButton = new JButton("Jugar de Nuevo\n");
- 		btnNewButton.addActionListener(new OyenteBoton1()); 
+ 		btnNewButton.addActionListener(new OyentePerder(GanadorNivel)); 
 		btnNewButton.setBounds(34, 34, 50,50);
 		 
 		 txtPerdiste = new JTextField();
@@ -174,13 +175,14 @@ public class LionelMessi extends JFrame {
 	}
 	
 
- 	private class OyenteBoton1 implements ActionListener{
-		 
-		public OyenteBoton1(){
-		
+ 	private class OyentePerder implements ActionListener{
+		 JFrame ventana;
+		public OyentePerder(JFrame a){
+			ventana = a;
 		}
 		public void actionPerformed(ActionEvent e){
 			main(new String[4]);
+			ventana.dispose();
 			}
  	}
  	
@@ -190,5 +192,54 @@ public class LionelMessi extends JFrame {
  		disparo.pausar();
  		
  		/*Aca va la GUI*/
+ 		JTextField txtPerdiste;
+		JFrame GanadorNivel = new JFrame();
+		GanadorNivel.setBounds(100, 100, 400, 300);
+		GanadorNivel.setVisible(true);
+ 		GanadorNivel.getContentPane().setBackground(Color.YELLOW);
+ 		
+ 		JButton btnNewButton = new JButton("Pasar De Nivel\n");
+ 		btnNewButton.addActionListener(new OyentePasarNivel(GanadorNivel)); 
+		btnNewButton.setBounds(34, 34, 70,50);
+		 
+		 txtPerdiste = new JTextField();
+		 txtPerdiste.setFont(new Font("Marker Felt", Font.PLAIN, 34));
+		 txtPerdiste.setText("Ganaste!!\n");
+		 txtPerdiste.setColumns(10);
+		 GroupLayout groupLayout = new GroupLayout(GanadorNivel.getContentPane());
+		 groupLayout.setHorizontalGroup(
+		 	groupLayout.createParallelGroup(Alignment.LEADING)
+		 		.addGroup(groupLayout.createSequentialGroup()
+		 			.addContainerGap(84, Short.MAX_VALUE)
+		 			.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(124))
+		 		.addGroup(groupLayout.createSequentialGroup()
+		 			.addGap(147)
+		 			.addComponent(txtPerdiste, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE)
+		 			.addContainerGap(150, Short.MAX_VALUE))
+		 );
+		 groupLayout.setVerticalGroup(
+		 	groupLayout.createParallelGroup(Alignment.LEADING)
+		 		.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+		 			.addContainerGap(47, Short.MAX_VALUE)
+		 			.addComponent(txtPerdiste, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(44)
+		 			.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(29))
+		 );
+		 GanadorNivel.getContentPane().setLayout(groupLayout);
+ 	}
+ 	
+ 	private class OyentePasarNivel implements ActionListener{
+		 JFrame ventana;
+		public OyentePasarNivel(JFrame a){
+			ventana = a;
+		}
+		public void actionPerformed(ActionEvent e){
+			h.pausar();
+	 		a.pausar();
+	 		disparo.pausar();
+	 		ventana.dispose();
+			}
  	}
  	}
