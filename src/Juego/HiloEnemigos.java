@@ -75,13 +75,14 @@ public class HiloEnemigos extends Thread {
 			enemigosPorSalir.push(e);
 		}
 		
-		oleada = enemigosPorSalir.size()/2;		//a la mitad de la pila termina una oleada
+		oleada = enemigosPorSalir.size()/3;		//a la mitad de la pila termina una oleada
 		
 		return enemigosPorSalir;
 	}
 	
 	public void run() {
 		Enemigo aSalir;
+		int multiplicador = 2;
 		aSalir = enemigosPorSalir.pop();
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
 			
@@ -125,16 +126,17 @@ public class HiloEnemigos extends Thread {
 			 
 			cont++;
 			
-			if (oleada==enemigosPorSalir.size()) {
-				velAparicion=200;
+			if (oleada*multiplicador==enemigosPorSalir.size()) {
+				velAparicion=250;
 				
-				oleada=-1;
+				multiplicador--;
 			}
 			
 			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
 				aSalir = enemigosPorSalir.pop();
 				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				cont=0;
+				multiplicador=2;
 				velAparicion=50;
 				velAparicion = (int) velAparicion/j.getNivel();
 				if(velAparicion <= 20) {
