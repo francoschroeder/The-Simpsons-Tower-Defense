@@ -7,18 +7,15 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-
 import GUI.GUIPrincipal;
+import Objetos.ObstaculoConTiempo;
+import Objetos.ObstaculoConVida;
 import PowerUp.*;
 
 public class Juego {
 	
-	private Point OBSTACULO_1;
-	private JLabel obst1;
-	private Point OBSTACULO_2;
-	private JLabel obst2;
+	private ObstaculoConVida obst1;
+	private ObstaculoConTiempo obst2;
 	
 	private Personaje [][] matriz;
 	private LinkedList<Comprable> aliadosActivos;
@@ -42,15 +39,6 @@ public class Juego {
 		aliadosActivos =  new LinkedList<Comprable>();
 		enemigosActivos =  new LinkedList<Enemigo>();
 		matriz = new Personaje[6][10]; //matriz[fila][columna]
-		
-		//Crear labels para los obstaculos
-		obst1 = new JLabel();
-		obst1.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo1.png")));
-		obst1.setBounds(0, 0, 75, 75);
-		
-		obst2 = new JLabel();
-		obst2.setIcon(new ImageIcon(this.getClass().getResource("/sprites/obstaculos/obstaculo2.png")));
-		obst2.setBounds(0, 0, 75, 75);
 		
 		//Se crean y posicionan los obstaculos en el mapa
 		crearObstaculos();
@@ -240,7 +228,7 @@ public class Juego {
 	}
 	
 	public boolean hayRalentizador(Enemigo e) {
-		return ((e.getPosicion().getX()==OBSTACULO_1.getX() && e.getPosicion().getY()==OBSTACULO_1.getY()) || (e.getPosicion().getX()==OBSTACULO_2.getX() && e.getPosicion().getY()==OBSTACULO_2.getY()));
+		return ((e.getPosicion().getX()==obst1.getPosicion().getX() && e.getPosicion().getY()==obst1.getPosicion().getY()) || (e.getPosicion().getX()==obst2.getPosicion().getX() && e.getPosicion().getY()==obst2.getPosicion().getY()));
 	}
 	
 	public void pasarDeNivel(HiloEnemigos e) {
@@ -258,24 +246,34 @@ public class Juego {
 	}
 	
 	public void crearObstaculos() {
-		if (OBSTACULO_1!=null && OBSTACULO_2!=null) {
-			gui.remove(obst1);
-			gui.remove(obst2);
+		obst1 = new ObstaculoConVida();
+		obst2 = new ObstaculoConTiempo();
+		
+		while (obst1.getPosicion().getX()==obst2.getPosicion().getX() && obst1.getPosicion().getY()==obst2.getPosicion().getY()) {
+			obst1 = new ObstaculoConVida();		//Para que no queden los dos obstaculos en el mismo lugar
 		}
 		
-		Random rand = new Random();
+		gui.getPanelMapa().add(obst1.getImagen());
+		obst1.getImagen().setLocation((int)(obst1.getPosicion().getY())*75+1,(int)(obst1.getPosicion().getX())*75);
+		matriz[(int)obst1.getPosicion().getX()][(int)obst1.getPosicion().getY()] = obst1;
+		obst1.actualizarVida();
+		gui.getPanelMapa().add(obst1.getBarraDeVida());
+		obst1.getImagen().setVisible(true);
+		obst1.getBarraDeVida().setVisible(true);
+		synchronized (aliadosActivos) {aliadosActivos.add(obst1);}
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 		
-		OBSTACULO_1 = new Point(rand.nextInt(5), rand.nextInt(9));
-		OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
-		while (OBSTACULO_2.getX()==OBSTACULO_1.getX() && OBSTACULO_2.getY()==OBSTACULO_1.getY()) {
-			OBSTACULO_2 = new Point(rand.nextInt(5), rand.nextInt(9));
-		}
-		
-		gui.getPanelMapa().add(obst1);
-		obst1.setLocation((int) OBSTACULO_1.getY()*75, (int) OBSTACULO_1.getX()*75);
-		
-		gui.getPanelMapa().add(obst2);
-		obst2.setLocation((int) OBSTACULO_2.getY()*75, (int) OBSTACULO_2.getX()*75);
+		gui.getPanelMapa().add(obst2.getImagen());
+		obst2.getImagen().setLocation((int)(obst2.getPosicion().getY())*75+1,(int)(obst2.getPosicion().getX())*75);
+		matriz[(int)obst2.getPosicion().getX()][(int)obst2.getPosicion().getY()] = obst2;
+		obst2.actualizarVida();
+		gui.getPanelMapa().add(obst2.getBarraDeVida());
+		obst2.getImagen().setVisible(true);
+		obst2.getBarraDeVida().setVisible(true);
+		synchronized (aliadosActivos) {aliadosActivos.add(obst2);}
+		gui.getPanelMapa().validate();
+		gui.getPanelMapa().repaint();
 	}
 	
 	public int getNivel() {
