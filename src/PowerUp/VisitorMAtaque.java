@@ -1,6 +1,7 @@
 package PowerUp;
  
- import Juego.Aliado;
+ import GUI.Botones.Market;
+import Juego.Aliado;
  import Juego.Enemigo;
  import Juego.Objeto;
  
@@ -18,6 +19,9 @@ package PowerUp;
  	}
  	
  	public void afectar(Objeto o) {
+ 		
+ 	}
+ 	public void afectar(Market m) {
  		
  	}
  }

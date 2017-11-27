@@ -6,6 +6,7 @@ import java.awt.Point;
 import javax.swing.JPanel;
 
 import Juego.Juego;
+import PowerUp.VisitorPowerUp;
 import Juego.Comprable;
 
 public class Market {
@@ -46,6 +47,9 @@ public class Market {
 		monedas-=m;
 	}
 	
+	public void afectar (VisitorPowerUp p) {
+		p.afectar(this);
+	}
 	
 	public void generarPersonaje(Point punto){
 		if(boton != null) {

@@ -1,5 +1,6 @@
 package PowerUp;
 
+import GUI.Botones.Market;
 import Juego.Aliado;
 import Juego.Enemigo;
 import Juego.Objeto;
@@ -22,6 +23,10 @@ public class VisitorCuracion extends VisitorPowerUp {
 		public void afectar(Objeto o) {
 	 		o.setVidaActual(o.getVidaMax());
 	 		o.actualizarVida();
+	 	}
+		
+		public void afectar(Market m) {
+	 		
 	 	}
 	 
 	 }

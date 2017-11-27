@@ -141,6 +141,7 @@ public class Juego {
 	
 	
 	public void eliminar(Enemigo p) {
+		
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().remove(p.getBarraDeVida());
 		gui.getPanelMapa().validate();
@@ -203,6 +204,8 @@ public class Juego {
 		for(Comprable a : aliadosActivos) {
 			a.afectar(p);
 		}
+		
+			gui.getMarket().afectar(p);
 	}
 	public void eliminar(Comprable p) {
 		gui.getPanelMapa().remove(p.getImagen());
