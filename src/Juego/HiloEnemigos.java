@@ -123,14 +123,14 @@ public class HiloEnemigos extends Thread {
 			
 			if (oleada*multiplicador==enemigosPorSalir.size()) {
 				velAparicion=250;
-				j.terminarOleada();
+				j.terminarOleada();	//Le aviso al juego que termina una oleada
 				
 				multiplicador--;
 			}
 			
 			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
 				if (velAparicion==250) {
-					j.arrancarOleada();
+					j.arrancarOleada();	//Le aviso al juego que arranca otra oleada
 				}
 				
 				aSalir = enemigosPorSalir.pop();
