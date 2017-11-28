@@ -4,6 +4,7 @@ import GUI.Botones.Market;
 import Juego.Aliado;
 import Juego.Enemigo;
 import Juego.Objeto;
+import Juego.Personaje;
 
 public class estrategiaDesafectarCampo extends estrategiaVisitar{
 	
@@ -12,7 +13,7 @@ public class estrategiaDesafectarCampo extends estrategiaVisitar{
 	}
 	
 	public void afectar(Aliado a) {
- 		a.cambiarEstado();
+ 		a.cambiarEstado(Personaje.normal);
 	}
  	
  	public void afectar(Enemigo e) {

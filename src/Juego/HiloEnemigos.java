@@ -53,6 +53,7 @@ public class HiloEnemigos extends Thread {
 		Stack<Enemigo> enemigosPorSalir = new Stack<Enemigo>();
 		Random r = new Random();
 		int cantPorSalir = r.nextInt(6) +10*j.getNivel();
+		int arreglaBug=-1;
 		
 		Enemigo s1 = new Skinner();
 		Enemigo s2 = new jefeGorgory();
@@ -71,6 +72,11 @@ public class HiloEnemigos extends Thread {
 		for(int i=0; i< cantPorSalir; i++) {
 			Enemigo e = enemigos.get(r.nextInt(enemigos.size())).clone();
 			Point pos = new Point(r.nextInt(6),0);
+			while ((int) pos.getX()==arreglaBug) {
+				pos = new Point(r.nextInt(6), 0);
+			}
+			
+			arreglaBug=(int) pos.getX();
 			e.setPosicion(pos);
 			enemigosPorSalir.push(e);
 		}
@@ -85,6 +91,7 @@ public class HiloEnemigos extends Thread {
 		int multiplicador = 2;
 		aSalir = enemigosPorSalir.pop();
 		j.agregarPersonaje(aSalir, aSalir.getPosicion());
+		double rand;
 			
 		List<Enemigo> enemigos = j.getEnemigos();
 		
@@ -133,7 +140,15 @@ public class HiloEnemigos extends Thread {
 					j.arrancarOleada();	//Le aviso al juego que arranca otra oleada
 				}
 				
+				for (Enemigo e:enemigos) {
+					e.cambiarEstado(Personaje.normal);
+				}
+				
+				rand=Math.random();
 				aSalir = enemigosPorSalir.pop();
+				if (rand<=0.15) {
+					aSalir.cambiarEstado(Personaje.protegido);
+				}
 				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				cont=0;
 				velAparicion=50;

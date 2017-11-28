@@ -47,6 +47,7 @@ public abstract class Personaje {
 		campo = new JLabel();
 		campo.setBounds(0, 0, 75, 75);
 		campo.setVisible(false);
+		campo.setIcon(new ImageIcon(this.getClass().getResource("/sprites/powerUp/campoDeProteccion.png")));
 		imActual = new HashMap<String, ImageIcon>();
 	}
 	
@@ -125,8 +126,8 @@ public abstract class Personaje {
 		return vidaActual<=0;
 	}
 	
-	public void cambiarEstado() {
-		estadoActual = 1-estadoActual;
+	public void cambiarEstado(int e) {
+		estadoActual = e;
 		estados[estadoActual].setCampoDeProteccion();
 	}
 	

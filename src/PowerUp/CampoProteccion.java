@@ -14,6 +14,6 @@ public class CampoProteccion extends PowerUp{
 		}
 		
 		public PowerUp clone() {
-			return new MagiaAtaque();
+			return new CampoProteccion();
 		}
 	}
