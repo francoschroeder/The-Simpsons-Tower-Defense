@@ -305,4 +305,12 @@ public class Juego {
 	public LinkedList<VisitorPowerUp> getVisitorActivos() {
 		return visitorActivos;
 	}
+	
+	public void terminarOleada() {
+		gui.terminarOleada();
+	}
+	
+	public void arrancarOleada() {
+		gui.arrancarOleada();
+	}
 }

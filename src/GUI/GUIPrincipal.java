@@ -26,6 +26,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JTextField;
 import java.awt.Dimension;
+import java.awt.Font;
 
 public class GUIPrincipal extends JFrame {
 	/**
@@ -40,6 +41,9 @@ public class GUIPrincipal extends JFrame {
 	private JTextField puntos;
 	private JTextField nivel;
 	private JTextField vidas;
+	private JTextField oleada;
+	private JTextField oleadaPo;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -75,6 +79,30 @@ public class GUIPrincipal extends JFrame {
 		setLocationRelativeTo(null);
 		
 		ImageIcon img= new ImageIcon(this.getClass().getResource("/sprites/fondo.png"));
+		
+		oleadaPo = new JTextField();
+		oleadaPo.setEditable(false);
+		oleadaPo.setFont(new Font("Kozuka Mincho Pr6N", Font.PLAIN, 24));
+		oleadaPo.setText("Se aproxima otra..");
+		oleadaPo.setBackground(Color.YELLOW);
+		oleadaPo.setBounds(6, 236, 237, 67);
+		getContentPane().add(oleadaPo);
+		oleadaPo.setColumns(10);
+		oleadaPo.setVisible(false);
+		
+		
+		
+		oleada = new JTextField();
+		oleada.setEditable(false);
+		oleada.setBackground(Color.YELLOW);
+		oleada.setFont(new Font("Kozuka Mincho Pr6N", Font.PLAIN, 24));
+		oleada.setToolTipText("");
+		oleada.setText("Termino la Oleada ");
+		oleada.setBounds(6, 140, 249, 59);
+		getContentPane().add(oleada);
+		oleada.setColumns(10);
+		oleada.setVisible(false);
+		
 		panelMapa = new PanelMapa(img.getImage());
 		panelMapa.setSize(750, 450);
 		getContentPane().add(panelMapa);
@@ -227,5 +255,14 @@ public class GUIPrincipal extends JFrame {
 		puntos.setText("Puntos: "+ punto);
 	}
 	
+	public void terminarOleada() {
+		oleada.setVisible(true);
+		oleadaPo.setVisible(true);
+	}
+	
+	public void arrancarOleada() {
+		oleada.setVisible(false);
+		oleadaPo.setVisible(false);
+	}
 }
 
