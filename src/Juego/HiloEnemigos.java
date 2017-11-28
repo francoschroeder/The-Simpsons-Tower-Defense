@@ -123,15 +123,19 @@ public class HiloEnemigos extends Thread {
 			
 			if (oleada*multiplicador==enemigosPorSalir.size()) {
 				velAparicion=250;
+				j.terminarOleada();
 				
 				multiplicador--;
 			}
 			
 			if (cont==velAparicion  && !enemigosPorSalir.isEmpty()) {
+				if (velAparicion==250) {
+					j.arrancarOleada();
+				}
+				
 				aSalir = enemigosPorSalir.pop();
 				j.agregarPersonaje(aSalir, aSalir.getPosicion());
 				cont=0;
-				multiplicador=2;
 				velAparicion=50;
 				velAparicion = (int) velAparicion/j.getNivel();
 				if(velAparicion <= 20) {
@@ -146,6 +150,7 @@ public class HiloEnemigos extends Thread {
 				lm.pasarNivel();
 				enemigosPorSalir = crearEnemigosPorSalir();
 				cont = 0;
+				multiplicador=2;
 			}
 			
 			if (j.perdio()) {
