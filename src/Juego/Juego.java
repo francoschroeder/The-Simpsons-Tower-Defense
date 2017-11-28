@@ -51,6 +51,8 @@ public class Juego {
 		gui.getPanelMapa().add(p.getImagen());
 		p.getImagen().setLocation((int)(punto.getY())*75+1,(int)(punto.getX())*75);
 		matriz[(int)punto.getX()][(int)punto.getY()] = p;
+		p.getCampo().setLocation((int)p.getPosicion().getY()*75+1,(int) p.getPosicion().getX()*75);
+		gui.getPanelMapa().add(p.getCampo());
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
@@ -74,6 +76,8 @@ public class Juego {
 			p.getImagen().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);
 		}
 		
+		p.getCampo().setLocation((int)p.getPosicion().getY()*75,(int) p.getPosicion().getX()*75);
+		gui.getPanelMapa().add(p.getCampo());
 		p.actualizarVida();
 		gui.getPanelMapa().add(p.getBarraDeVida());
 		p.getImagen().setVisible(true);
@@ -134,6 +138,7 @@ public class Juego {
 		
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().remove(p.getBarraDeVida());
+		gui.getPanelMapa().remove(p.getCampo());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 		synchronized (enemigosActivos) {enemigosActivos.remove(p);}
@@ -154,7 +159,7 @@ public class Juego {
 		//15% de posibilidades de generar powerUp
 		//Bomba, curacion, magia alcance, magia ataque
 		
-		if (x<=1){ 	
+		if (x<=0.20){ 	
 			
 			Random generator = new Random();
 			PowerUp  agregar = mapeoPowerUp.get(generator.nextInt(mapeoPowerUp.size()));
@@ -217,6 +222,7 @@ public class Juego {
 	public void eliminar(Comprable p) {
 		gui.getPanelMapa().remove(p.getImagen());
 		gui.getPanelMapa().remove(p.getBarraDeVida());
+		gui.getPanelMapa().remove(p.getCampo());
 		gui.getPanelMapa().validate();
 		gui.getPanelMapa().repaint();
 		synchronized (aliadosActivos) {aliadosActivos.remove(p);}

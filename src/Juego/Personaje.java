@@ -18,24 +18,40 @@ public abstract class Personaje {
 	protected int ataque;
 	protected int rangoOriginal;
 	protected int rango;
+	protected int estadoActual;
+	protected State[] estados;
 	protected Proyectil miProyectil;
 	protected Point posicion; // posicion en la matriz
 	protected JLabel imagen;
 	protected JLabel barraDeVida;
+	protected JLabel campo;
 	protected Map<String, ImageIcon> imActual;
 	
+	public static final int normal = 0;
+	public static final int protegido = 1;
 	public static final String neutral_key = "Neutral";
 	public static final String shoot_key = "Shoot";
 	
 	public Personaje() {
 		posicion = null;
+		estadoActual = normal;
+		estados = new State[2];
+		estados[normal] = new Normal(this);
+		estados[protegido] = new Protegido(this);
 		
 		imagen = new JLabel();
 		imagen.setBounds(0, 0, 75, 75);
 		barraDeVida = new JLabel();
 		barraDeVida.setBackground(Color.GREEN);
 		barraDeVida.setOpaque(true);
+		campo = new JLabel();
+		campo.setBounds(0, 0, 75, 75);
+		campo.setVisible(false);
 		imActual = new HashMap<String, ImageIcon>();
+	}
+	
+	public JLabel getCampo() {
+		return campo;
 	}
 	
 	public int getCantCelda() {
@@ -102,16 +118,16 @@ public abstract class Personaje {
 	public abstract void serAtacado(Proyectil p);
 	
 	public void reducirVida(int v) {
-		if (v>vidaActual)
-			vidaActual=0;
-		else
-			vidaActual-=v;
-		
-		actualizarVida();
+		estados[estadoActual].reducirVida(v);
 	}
 	
 	public boolean estaMuerto() {
 		return vidaActual<=0;
+	}
+	
+	public void cambiarEstado() {
+		estadoActual = 1-estadoActual;
+		estados[estadoActual].setCampoDeProteccion();
 	}
 	
 	public abstract void afectar(VisitorPowerUp p);

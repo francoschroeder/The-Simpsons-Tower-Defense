@@ -121,7 +121,7 @@ public class HiloEnemigos extends Thread {
 			 
 			cont++;
 			
-			if (oleada*multiplicador==enemigosPorSalir.size()) {
+			if (multiplicador!=0 && oleada*multiplicador==enemigosPorSalir.size()) {
 				velAparicion=250;
 				j.terminarOleada();	//Le aviso al juego que termina una oleada
 				

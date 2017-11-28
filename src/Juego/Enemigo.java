@@ -58,6 +58,7 @@ public abstract class Enemigo extends Personaje {
 	public void avanzar() {
 	
 		imagen.setLocation((int) (imagen.getLocation().getX()+velocidadActual), (int) (imagen.getLocation().getY()));
+		campo.setLocation((int) (campo.getLocation().getX()+velocidadActual), (int) (campo.getLocation().getY()));
 		actualizarVida();
 	}
 	
