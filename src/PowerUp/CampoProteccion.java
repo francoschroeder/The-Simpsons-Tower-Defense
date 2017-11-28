@@ -1,12 +1,19 @@
+package PowerUp;
 
-
-/* package PowerUp;
- BUSCAR SOLUCION COMO IMPLEMENTARLA.
 public class CampoProteccion extends PowerUp{
 	
-	public CampoProteccion() {
-		super("/sprites/powerUP/bomba.png");
+		private static final long serialVersionUID = 1L;
+
+		public CampoProteccion() {
+			super("/sprites/powerUP/campoDeProteccion.png");
+			visitor = new VisitorCampoDeProteccion();
+		}
+		
+		public VisitorPowerUp factory() {
+			return visitor;
+		}
+		
+		public PowerUp clone() {
+			return new MagiaAtaque();
+		}
 	}
-	
-	
-} */
