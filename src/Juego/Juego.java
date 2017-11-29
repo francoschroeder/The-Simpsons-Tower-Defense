@@ -269,10 +269,19 @@ public class Juego {
 	
 	public void crearObstaculos() {
 		obst1 = new ObstaculoConVida();
+		while (matriz[(int)obst1.getPosicion().getX()][(int)obst1.getPosicion().getY()]!=null) {
+			obst1 = new ObstaculoConVida();		//Para que no se ponga arriba de otro personaje
+		}
+		
 		obst2 = new ObstaculoConTiempo();
+		while (matriz[(int)obst2.getPosicion().getX()][(int)obst2.getPosicion().getY()]!=null) {
+			obst2 = new ObstaculoConTiempo();		//Para que no se ponga arriba de otro personaje
+		}
 		
 		while (obst1.getPosicion().getX()==obst2.getPosicion().getX() && obst1.getPosicion().getY()==obst2.getPosicion().getY()) {
-			obst1 = new ObstaculoConVida();		//Para que no queden los dos obstaculos en el mismo lugar
+			while (matriz[(int)obst1.getPosicion().getX()][(int)obst1.getPosicion().getY()]!=null) {
+				obst1 = new ObstaculoConVida();		//Para que no queden los dos obstaculos en el mismo lugar
+			}
 		}
 		
 		gui.getPanelMapa().add(obst1.getImagen());

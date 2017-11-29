@@ -160,7 +160,7 @@ public class HiloEnemigos extends Thread {
 
 			
 			
-			if (enemigosPorSalir.isEmpty()) {
+			if (enemigosPorSalir.isEmpty() && enemigos.isEmpty()) {
 				j.pasarDeNivel(this);
 				lm.pasarNivel();
 				enemigosPorSalir = crearEnemigosPorSalir();

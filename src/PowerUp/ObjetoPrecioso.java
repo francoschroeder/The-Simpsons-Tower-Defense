@@ -8,7 +8,7 @@ public class ObjetoPrecioso extends PowerUp {
 	private static final long serialVersionUID = 1L;
 
 	public ObjetoPrecioso() {
-		super("/sprites/powerUP/objetoPrecioso.jpg");
+		super("/sprites/powerUP/objetoPrecioso.png");
 		visitor = new VisitorObjetoPrecioso();
 	}
 	
